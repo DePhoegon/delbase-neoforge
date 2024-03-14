@@ -1,0 +1,21 @@
+{
+  "replace": false,
+  "values": [
+    "delbase:blood_sand_stone",
+    "delbase:white_sand_stone",
+    "delbase:orange_sand_stone",
+    "delbase:magenta_sand_stone",
+    "delbase:light_blue_sand_stone",
+    "delbase:yellow_sand_stone",
+    "delbase:lime_sand_stone",
+    "delbase:pink_sand_stone",
+    "delbase:gray_sand_stone",
+    "delbase:light_gray_sand_stone",
+    "delbase:cyan_sand_stone",
+    "delbase:purple_sand_stone",
+    "delbase:blue_sand_stone",
+    "delbase:green_sand_stone",
+    "delbase:brown_sand_stone",
+    "delbase:black_sand_stone"
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "replace": false,
+  "values": [
+    "delbase:red_concrete_wall",
+    "delbase:white_concrete_wall",
+    "delbase:orange_concrete_wall",
+    "delbase:magenta_concrete_wall",
+    "delbase:light_blue_concrete_wall",
+    "delbase:yellow_concrete_wall",
+    "delbase:lime_concrete_wall",
+    "delbase:pink_concrete_wall",
+    "delbase:gray_concrete_wall",
+    "delbase:light_gray_concrete_wall",
+    "delbase:cyan_concrete_wall",
+    "delbase:purple_concrete_wall",
+    "delbase:blue_concrete_wall",
+    "delbase:green_concrete_wall",
+    "delbase:brown_concrete_wall",
+    "delbase:black_concrete_wall"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "name": "Block Variants",
+  "icon": "minecraft:red_dye",
+  "category": "delbase:get_started",
+  "pages": [
+    {
+      "title": "Stairs",
+      "type": "patchouli:spotlight",
+      "item": "minecraft:sand",
+      "text": "Sand can be renewable. Check Sand JEI Under Block Cutter recipes"
+    },
+    {
+      "title": "Stairs",
+      "type": "patchouli:spotlight",
+      "item": "minecraft:gravel",
+      "text": "gravel can be renewable. Check Gravel JEI Under Block Cutter recipes"
+    },
+    {
+      "title": "Stairs",
+      "type": "patchouli:spotlight",
+      "item": "minecraft:dirt",
+      "text": "Dirt can be renewable. Check Sand JEI Under Block Cutter recipes, & Course Dirt recipe"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "type": "delbase:block_cutting",
+  "ingredients": [
+    {
+      "item": "delbase:fence_plans"
+    },
+    {
+      "item": "minecraft:acacia_leaves"
+    }
+  ],
+  "output": {
+    "item": "delbase:acacia_leaf_fence",
+    "count": 1
+  }
+}

@@ -1,0 +1,6 @@
+{
+"parent": "minecraft:block/fence_inventory",
+"textures": {
+"texture": "delbase:block/pink_sand_stone_top"
+}
+}

@@ -1,0 +1,9 @@
+{
+  "parent": "delbase:block/template/outer_stairs",
+  "textures": {
+    "bottom": "minecraft:block/smooth_basalt",
+    "top": "minecraft:block/smooth_basalt",
+    "side": "minecraft:block/smooth_basalt",
+    "inside": "minecraft:block/smooth_basalt"
+  }
+}

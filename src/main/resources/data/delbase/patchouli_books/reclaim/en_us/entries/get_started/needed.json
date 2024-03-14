@@ -1,0 +1,31 @@
+{
+  "name": "00 - What's Needed",
+  "icon": "minecraft:cobblestone",
+  "category": "delbase:get_started",
+  "pages": [
+    {
+      "title": "Block Cutting",
+      "type": "patchouli:spotlight",
+      "item": "delbase:block_cutting_station",
+      "text": "The one and only 'machine' needed for this Mod$(br2)-$(item)Iron ingot$()$(br)-$(item)Cobblestone$() x4$(br)-an $(l:tag/energy_dust)Energy Dust$(/l)$(br)-$(item)Sticks$() x2$(br)-A Piece of $(item)Paper$()$(br2)Recipe $(l:recipes/block_cutter)Here$(/l)"
+    },
+    {
+      "title": "Material Reclaiming",
+      "type": "patchouli:spotlight",
+      "item": "delbase:armor_compound",
+      "text": "Useful for breaking down tools & armor into components$(br2)-1 $(l:tag/raw_food)Raw Food$(/l)$(br)-1 $(l:tag/dye)Dye$(/l)$(br)- 1 $(l:tag/sands)Sand$(/l) Block$(br2)Recipe $(l:recipes/armor_compound)Here$(/l)"
+    },
+    {
+      "title": "Dye Staring point",
+      "type": "patchouli:spotlight",
+      "item": "delbase:cleanse_shift_dye",
+      "text": "Starting point to get more dyes from other dyes.$(br2)-1 $(item)Stick$()$(br)-$(item)3 $(item)Iron Nuggets$()$(br)-1 $(l:tag/energy_dust)Energy Dust$(/l)$(br)-Recipe $(l:dye/cleanse)Here$(/l)"
+    },
+    {
+      "title": "Spare Book",
+      "type": "patchouli:spotlight",
+      "item": "patchouli:guide_book{\"patchouli:book\": \"delbase:reclaim\"}",
+      "text": "Get a Spare book$(br)-1 Minecraft $(item)book$()$(br)-1 $(l:tag/dye)Dye$(/l)$(br2)- Recipe $(l:recipes/spare_book)Here$(/l)"
+    }
+  ]
+}

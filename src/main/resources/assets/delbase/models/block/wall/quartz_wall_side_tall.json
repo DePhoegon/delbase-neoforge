@@ -1,0 +1,7 @@
+{
+  "parent": "delbase:block/template/wall_side_tall",
+  "textures": {
+    "wall": "minecraft:block/quartz_block_side",
+    "top": "minecraft:block/quartz_block_side"
+  }
+}

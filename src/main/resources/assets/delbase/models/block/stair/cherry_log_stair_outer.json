@@ -1,0 +1,10 @@
+{
+  "parent": "delbase:block/template/outer_stairs_column",
+  "textures": {
+    "bottom": "minecraft:block/cherry_log_top",
+    "top": "minecraft:block/cherry_log_top",
+    "side": "minecraft:block/cherry_log",
+    "inside": "delbase:block/cherry_log_inside_side",
+    "inside_base": "minecraft:block/cherry_log_top"
+  }
+}

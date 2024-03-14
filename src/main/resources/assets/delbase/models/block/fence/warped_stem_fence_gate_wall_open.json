@@ -1,0 +1,7 @@
+{
+  "parent": "delbase:block/template/fence_gate_wall_open",
+  "textures": {
+    "texture": "minecraft:block/warped_stem_top",
+    "postside": "minecraft:block/warped_stem"
+  }
+}

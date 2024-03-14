@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:campfire_cooking",
+  "ingredient": {
+    "item": "delbase:cobbled_deepslate_fence"
+  },
+  "result": "delbase:deepslate_fence",
+  "experience": 0.35,
+  "cookingtime": 300
+}

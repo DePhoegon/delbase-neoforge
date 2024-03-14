@@ -1,0 +1,15 @@
+{
+  "type": "delbase:block_cutting",
+  "ingredients": [
+    {
+      "item": "delbase:fence_gate_plans"
+    },
+    {
+      "item": "minecraft:sculk"
+    }
+  ],
+  "output": {
+    "item": "delbase:sculk_fence_gate",
+    "count": 1
+  }
+}

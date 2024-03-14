@@ -1,0 +1,18 @@
+{
+  "replace": false,
+  "values": [
+    "#delbase:fences/wooden_fences",
+    "#delbase:fences/stripped_wooden_fences",
+    "#delbase:fences/sand_fences",
+    "#delbase:fences/concrete_fences",
+    "#delbase:fences/terracotta_fences",
+    "#delbase:fences/chiseled_sand_stone_fences",
+    "#delbase:fences/cut_sand_stone_fences",
+    "#delbase:fences/misc_gemlike_fences",
+    "#delbase:fences/misc_metallike_fences",
+    "#delbase:fences/misc_stonelike_fences",
+    "#delbase:fences/misc_woodlike_fences",
+    "#delbase:fences/sand_stone_fences",
+    "#delbase:fences/smooth_sand_stone_fences"
+  ]
+}

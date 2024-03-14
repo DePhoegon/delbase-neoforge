@@ -1,0 +1,19 @@
+{
+"type": "minecraft:crafting_shaped",
+"pattern": [
+"S#S",
+"S#S"
+],
+"key": {
+"S": {
+"item": "minecraft:stick"
+},
+"#": {
+"item": "minecraft:warped_hyphae"
+}
+},
+"result": {
+"item": "delbase:warped_hyphae_fence_gate",
+"count": 2
+}
+}

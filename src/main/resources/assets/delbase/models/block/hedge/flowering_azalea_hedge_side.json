@@ -1,0 +1,7 @@
+{
+  "parent": "delbase:block/template/wall_side_leaves",
+  "textures": {
+    "wall": "minecraft:block/flowering_azalea_leaves",
+    "top": "minecraft:block/flowering_azalea_leaves"
+  }
+}

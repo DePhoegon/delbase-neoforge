@@ -1,0 +1,6 @@
+{
+"parent": "minecraft:block/fence_side",
+"textures": {
+"texture": "delbase:block/magenta_sand_stone_top"
+}
+}

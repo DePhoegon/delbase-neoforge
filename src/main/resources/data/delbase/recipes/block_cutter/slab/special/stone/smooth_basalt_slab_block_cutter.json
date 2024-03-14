@@ -1,0 +1,15 @@
+{
+"type": "delbase:block_cutting",
+"ingredients": [
+{
+"item": "delbase:slab_plans"
+},
+{
+"item": "minecraft:smooth_basalt"
+}
+],
+"output": {
+"item": "delbase:smooth_basalt_slab",
+  "count": 2
+}
+}

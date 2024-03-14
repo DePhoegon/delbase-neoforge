@@ -1,0 +1,6 @@
+{ 
+  "parent": "minecraft:block/cube_all", 
+   "textures": { 
+     "all": "delbase:block/brown_sand_stone_top"
+  } 
+} 

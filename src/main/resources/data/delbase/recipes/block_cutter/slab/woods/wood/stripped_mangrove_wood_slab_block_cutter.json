@@ -1,0 +1,15 @@
+{
+  "type": "delbase:block_cutting",
+  "ingredients": [
+    {
+      "item": "delbase:slab_plans"
+    },
+    {
+      "item": "minecraft:stripped_mangrove_wood"
+    }
+  ],
+  "output": {
+    "item": "delbase:stripped_mangrove_wood_slab",
+    "count": 2
+  }
+}

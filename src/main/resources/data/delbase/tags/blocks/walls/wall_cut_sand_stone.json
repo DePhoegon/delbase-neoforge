@@ -1,0 +1,23 @@
+{
+  "replace": false,
+  "values": [
+    "delbase:cut_sand_stone_wall",
+    "delbase:red_cut_sand_stone_wall",
+    "delbase:blood_cut_sand_stone_wall",
+    "delbase:white_cut_sand_stone_wall",
+    "delbase:orange_cut_sand_stone_wall",
+    "delbase:magenta_cut_sand_stone_wall",
+    "delbase:light_blue_cut_sand_stone_wall",
+    "delbase:yellow_cut_sand_stone_wall",
+    "delbase:lime_cut_sand_stone_wall",
+    "delbase:pink_cut_sand_stone_wall",
+    "delbase:gray_cut_sand_stone_wall",
+    "delbase:light_gray_cut_sand_stone_wall",
+    "delbase:cyan_cut_sand_stone_wall",
+    "delbase:purple_cut_sand_stone_wall",
+    "delbase:blue_cut_sand_stone_wall",
+    "delbase:green_cut_sand_stone_wall",
+    "delbase:brown_cut_sand_stone_wall",
+    "delbase:black_cut_sand_stone_wall"
+  ]
+}

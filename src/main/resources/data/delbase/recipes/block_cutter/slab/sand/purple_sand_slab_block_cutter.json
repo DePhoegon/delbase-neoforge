@@ -1,0 +1,15 @@
+{
+"type": "delbase:block_cutting",
+"ingredients": [
+{
+"item": "delbase:slab_plans"
+},
+{
+"item": "delbase:purple_solid_sand"
+}
+],
+"output": {
+"item": "delbase:purple_sand_slab",
+  "count": 2
+}
+}

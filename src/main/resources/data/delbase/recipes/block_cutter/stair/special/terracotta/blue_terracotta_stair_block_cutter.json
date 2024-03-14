@@ -1,0 +1,15 @@
+{
+"type": "delbase:block_cutting",
+"ingredients": [
+{
+"item": "delbase:stair_plans"
+},
+{
+"item": "minecraft:blue_terracotta"
+}
+],
+"output": {
+"item": "delbase:blue_terracotta_stair",
+  "count": 1
+}
+}

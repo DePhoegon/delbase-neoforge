@@ -1,0 +1,8 @@
+{ 
+  "parent": "minecraft:block/slab_top", 
+  "textures": { 
+    "bottom": "delbase:block/cyan_sand_stone_top",
+    "top": "delbase:block/cyan_sand_stone_top",
+    "side": "delbase:block/cyan_cut_sand_stone" 
+  } 
+} 

@@ -1,0 +1,80 @@
+{
+  "render_type": "cutout",
+  "textures": {
+    "particle": "#top"
+  },
+  "elements": [
+    {
+      "from": [ 4, 0, 8 ],
+      "to": [ 12, 16, 8 ],
+      "faces": {
+        "north": { "texture": "#wall", "tintindex": 0 },
+        "south": { "texture": "#wall", "tintindex": 0 }
+      },
+      "__comment": "Center post, Separate Texture for top & bottom for textured walls"
+    },
+    {
+      "from": [ 8, 0, 4 ],
+      "to": [ 8, 16, 12 ],
+      "faces": {
+        "west":  { "texture": "#wall", "tintindex": 0 },
+        "east":  { "texture": "#wall", "tintindex": 0 }
+      },
+      "__comment": "Center post, Separate Texture for top & bottom for textured walls"
+    },
+    {
+      "from": [ 4, 15.998, 4 ],
+      "to": [ 12, 16, 12 ],
+      "faces": {
+        "down":  { "texture": "#top", "cullface": "down", "tintindex": 0 },
+        "up":    { "texture": "#top", "cullface": "up", "tintindex": 0 }
+      },
+      "__comment": "Center post, Separate Texture for top & bottom for textured walls"
+    },
+    {
+      "from": [ 4, 0, 4 ],
+      "to": [ 12, 0.002, 12 ],
+      "faces": {
+        "down":  { "texture": "#top", "cullface": "down", "tintindex": 0 },
+        "up":    { "texture": "#top", "cullface": "up", "tintindex": 0 }
+      },
+      "__comment": "Center post, Separate Texture for top & bottom for textured walls"
+    },
+    {
+      "from": [ 4, 0, 11.998 ],
+      "to": [ 12, 16, 12 ],
+      "faces": {
+        "north": { "texture": "#wall", "tintindex": 0 },
+        "south": { "texture": "#wall", "tintindex": 0 }
+      },
+      "__comment": "Center post, Separate Texture for top & bottom for textured walls"
+    },
+    {
+      "from": [ 4, 0, 4 ],
+      "to": [ 12, 16, 4.002 ],
+      "faces": {
+        "north": { "texture": "#wall", "tintindex": 0 },
+        "south": { "texture": "#wall", "tintindex": 0 }
+      },
+      "__comment": "Center post, Separate Texture for top & bottom for textured walls"
+    },
+    {
+      "from": [ 11.998, 0, 4 ],
+      "to": [ 12, 16, 12 ],
+      "faces": {
+        "west":  { "texture": "#wall", "tintindex": 0 },
+        "east":  { "texture": "#wall", "tintindex": 0 }
+      },
+      "__comment": "Center post, Separate Texture for top & bottom for textured walls"
+    },
+    {
+      "from": [ 4, 0, 4 ],
+      "to": [ 4.998, 16, 12 ],
+      "faces": {
+        "west":  { "texture": "#wall", "tintindex": 0 },
+        "east":  { "texture": "#wall", "tintindex": 0 }
+      },
+      "__comment": "Center post, Separate Texture for top & bottom for textured walls"
+    }
+  ]
+}

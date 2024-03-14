@@ -1,0 +1,19 @@
+-- Dones --
+Setup Initial environment
+- Tested Worked
+
+Porting resources from forge 1.20.1 version
+
+Setup initial Config
+setup Stock backbones
+setup kb work
+setup creative tabs
+
+-- To Do ---
+
+Finish putting in rest of backbone registrations
+Fix/adapt minor things.
+get rest of blocks / items put in
+Test mixin ability
+verify kb functionality
+doublecheck each thing.

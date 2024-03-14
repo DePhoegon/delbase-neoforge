@@ -1,0 +1,16 @@
+{
+  "name": "Gray Dye",
+  "icon": "delbase:gray_shift_dye",
+  "category": "delbase:dye_category",
+  "pages": [
+    {
+      "type": "patchouli:crafting",
+      "recipe": "delbase:table/generic/dye/gray_shaped"
+    },
+    {
+      "title": "Gray",
+      "type": "patchouli:image",
+      "images": [ "delbase:textures/screens/gray.png" ]
+    }
+  ]
+}

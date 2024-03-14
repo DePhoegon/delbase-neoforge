@@ -1,0 +1,15 @@
+{
+"type": "delbase:block_cutting",
+"ingredients": [
+{
+"item": "delbase:stair_plans"
+},
+{
+"item": "minecraft:warped_stem"
+}
+],
+"output": {
+"item": "delbase:warped_stem_stair",
+  "count": 1
+}
+}

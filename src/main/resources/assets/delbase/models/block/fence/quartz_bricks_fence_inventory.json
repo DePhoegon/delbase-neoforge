@@ -1,0 +1,7 @@
+{
+  "parent": "delbase:block/template/fence_inventory",
+  "textures": {
+    "texture": "minecraft:block/quartz_bricks",
+    "postside": "minecraft:block/quartz_bricks"
+  }
+}

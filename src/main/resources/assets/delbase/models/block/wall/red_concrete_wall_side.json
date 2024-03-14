@@ -1,0 +1,7 @@
+{
+  "parent": "delbase:block/template/wall_side",
+  "textures": {
+    "wall": "minecraft:block/red_concrete",
+    "top": "minecraft:block/red_concrete"
+  }
+}

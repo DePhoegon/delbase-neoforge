@@ -1,0 +1,14 @@
+{
+  "replace": false,
+  "values": [
+    "delbase:dried_kelp_stair",
+    "delbase:shroomlight_stair",
+    "delbase:mud_stair",
+    "delbase:muddy_mangrove_root_stair",
+    "delbase:mangrove_root_stair",
+    "delbase:ochre_froglight_stair",
+    "delbase:verdant_froglight_stair",
+    "delbase:pearlescent_froglight_stair",
+    "#delbase:stairs/stair_leaves_woodlike"
+  ]
+}

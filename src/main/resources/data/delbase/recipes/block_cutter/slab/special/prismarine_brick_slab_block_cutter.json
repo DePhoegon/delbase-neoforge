@@ -1,0 +1,15 @@
+{
+  "type": "delbase:block_cutting",
+  "ingredients": [
+    {
+      "item": "delbase:slab_plans"
+    },
+    {
+      "item": "minecraft:prismarine_bricks"
+    }
+  ],
+  "output": {
+    "item": "minecraft:prismarine_brick_slab",
+    "count": 2
+  }
+}

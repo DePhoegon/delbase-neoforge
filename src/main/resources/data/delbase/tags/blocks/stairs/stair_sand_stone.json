@@ -1,0 +1,21 @@
+{
+  "replace": false,
+  "values": [
+    "delbase:blood_sand_stone_stair",
+    "delbase:white_sand_stone_stair",
+    "delbase:orange_sand_stone_stair",
+    "delbase:magenta_sand_stone_stair",
+    "delbase:light_blue_sand_stone_stair",
+    "delbase:yellow_sand_stone_stair",
+    "delbase:lime_sand_stone_stair",
+    "delbase:pink_sand_stone_stair",
+    "delbase:gray_sand_stone_stair",
+    "delbase:light_gray_sand_stone_stair",
+    "delbase:cyan_sand_stone_stair",
+    "delbase:purple_sand_stone_stair",
+    "delbase:blue_sand_stone_stair",
+    "delbase:green_sand_stone_stair",
+    "delbase:brown_sand_stone_stair",
+    "delbase:black_sand_stone_stair"
+  ]
+}

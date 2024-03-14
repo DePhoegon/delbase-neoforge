@@ -1,0 +1,7 @@
+{
+"parent": "delbase:block/template/fence_gate_wall_open",
+"textures": {
+"texture": "delbase:block/orange_sand_stone_top",
+"postside": "delbase:block/orange_chiseled_sand_stone"
+}
+}

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [ "yyy" ],
+  "key": {
+    "y": {
+      "item": "minecraft:chiseled_sandstone"
+    }
+  },
+  "result":{
+    "item": "delbase:chiseled_sand_stone_slab",
+    "count": 6
+  }
+}

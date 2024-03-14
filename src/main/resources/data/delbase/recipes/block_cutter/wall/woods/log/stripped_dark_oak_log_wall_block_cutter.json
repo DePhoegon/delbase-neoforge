@@ -1,0 +1,15 @@
+{
+"type": "delbase:block_cutting",
+"ingredients": [
+{
+"item": "delbase:wall_plans"
+},
+{
+"item": "minecraft:stripped_dark_oak_log"
+}
+],
+"output": {
+"item": "delbase:stripped_dark_oak_log_wall",
+  "count": 1
+}
+}

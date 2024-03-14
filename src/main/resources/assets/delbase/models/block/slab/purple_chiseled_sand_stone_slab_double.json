@@ -1,0 +1,8 @@
+{ 
+  "parent": "minecraft:block/cube_bottom_top", 
+  "textures": { 
+    "bottom": "delbase:block/purple_sand_stone_top",
+    "top": "delbase:block/purple_sand_stone_top",
+    "side": "delbase:block/purple_chiseled_sand_stone" 
+  } 
+} 

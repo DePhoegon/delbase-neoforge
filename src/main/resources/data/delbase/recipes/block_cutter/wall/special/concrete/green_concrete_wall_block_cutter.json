@@ -1,0 +1,15 @@
+{
+"type": "delbase:block_cutting",
+"ingredients": [
+{
+"item": "delbase:wall_plans"
+},
+{
+"item": "minecraft:green_concrete"
+}
+],
+"output": {
+"item": "delbase:green_concrete_wall",
+  "count": 1
+}
+}

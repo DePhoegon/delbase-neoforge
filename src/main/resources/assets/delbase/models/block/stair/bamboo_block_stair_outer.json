@@ -1,0 +1,10 @@
+{
+  "parent": "delbase:block/template/outer_stairs_column",
+  "textures": {
+    "bottom": "minecraft:block/bamboo_block_top",
+    "top": "minecraft:block/bamboo_block_top",
+    "side": "minecraft:block/bamboo_block",
+    "inside": "minecraft:block/bamboo_block",
+    "inside_base": "minecraft:block/bamboo_block_top"
+  }
+}

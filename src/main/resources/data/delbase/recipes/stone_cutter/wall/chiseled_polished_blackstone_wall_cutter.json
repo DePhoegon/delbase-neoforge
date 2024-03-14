@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "tag": "delbase:grouped/blackstone_blocks"
+  },
+  "result": "delbase:chiseled_polished_blackstone_wall",
+  "count": 1
+}

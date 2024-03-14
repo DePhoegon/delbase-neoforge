@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "S#S",
+    "S#S"
+  ],
+  "key": {
+    "S": {
+      "item": "minecraft:stick"
+    },
+    "#": {
+      "item": "minecraft:birch_leaves"
+    }
+  },
+  "result": {
+    "item": "delbase:birch_leaf_fence_gate",
+    "count": 2
+  }
+}

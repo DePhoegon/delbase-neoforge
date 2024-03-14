@@ -1,0 +1,7 @@
+{
+  "parent": "delbase:block/template/wall_side",
+  "textures": {
+    "wall": "minecraft:block/acacia_planks",
+    "top": "delbase:block/acacia_planks_wall_top"
+  }
+}

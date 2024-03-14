@@ -1,0 +1,7 @@
+{
+  "parent": "delbase:block/template/wall_post_kelp",
+  "textures": {
+    "wall": "minecraft:block/dried_kelp_side",
+    "top": "minecraft:block/dried_kelp_top"
+  }
+}

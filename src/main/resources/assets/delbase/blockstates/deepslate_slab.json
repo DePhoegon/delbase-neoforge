@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "delbase:block/slab/deepslate_slab"
+    },
+    "type=double": {
+      "model": "delbase:block/slab/deepslate_slab_double"
+    },
+    "type=top": {
+      "model": "delbase:block/slab/deepslate_slab_top"
+    }
+  }
+}

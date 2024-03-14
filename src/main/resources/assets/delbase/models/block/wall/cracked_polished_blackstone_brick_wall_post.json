@@ -1,0 +1,7 @@
+{
+  "parent": "delbase:block/template/wall_post",
+  "textures": {
+    "wall": "minecraft:block/cracked_polished_blackstone_bricks",
+    "top": "minecraft:block/cracked_polished_blackstone_bricks"
+  }
+}

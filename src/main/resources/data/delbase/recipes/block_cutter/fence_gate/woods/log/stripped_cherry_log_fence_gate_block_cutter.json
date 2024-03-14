@@ -1,0 +1,15 @@
+{
+  "type": "delbase:block_cutting",
+  "ingredients": [
+    {
+      "item": "delbase:fence_gate_plans"
+    },
+    {
+      "item": "minecraft:stripped_cherry_log"
+    }
+  ],
+  "output": {
+    "item": "delbase:stripped_cherry_log_fence_gate",
+    "count": 1
+  }
+}

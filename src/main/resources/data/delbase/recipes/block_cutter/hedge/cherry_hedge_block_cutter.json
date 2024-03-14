@@ -1,0 +1,15 @@
+{
+  "type": "delbase:block_cutting",
+  "ingredients": [
+    {
+      "item": "delbase:wall_plans"
+    },
+    {
+      "item": "minecraft:cherry_leaves"
+    }
+  ],
+  "output": {
+    "item": "delbase:cherry_hedge",
+    "count": 1
+  }
+}

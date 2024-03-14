@@ -1,0 +1,16 @@
+{
+  "name": "Brown Dye",
+  "icon": "delbase:brown_shift_dye",
+  "category": "delbase:dye_category",
+  "pages": [
+    {
+      "type": "patchouli:crafting",
+      "recipe": "delbase:table/generic/dye/brown_shaped"
+    },
+    {
+      "title": "Brown",
+      "type": "patchouli:image",
+      "images": [ "delbase:textures/screens/brown.png" ]
+    }
+  ]
+}

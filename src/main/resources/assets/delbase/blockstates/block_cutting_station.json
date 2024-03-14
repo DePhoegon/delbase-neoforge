@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "delbase:block/machine/block_cutting_machine" },
+    "facing=east": { "model": "delbase:block/machine/block_cutting_machine", "y": 90 },
+    "facing=south": { "model": "delbase:block/machine/block_cutting_machine", "y": 180 },
+    "facing=west": { "model": "delbase:block/machine/block_cutting_machine", "y": 270 }
+  }
+}

@@ -1,0 +1,15 @@
+{
+"type": "delbase:block_cutting",
+"ingredients": [
+{
+"item": "delbase:fence_gate_plans"
+},
+{
+"item": "minecraft:quartz_bricks"
+}
+],
+"output": {
+"item": "delbase:quartz_bricks_fence_gate",
+  "count": 1
+}
+}

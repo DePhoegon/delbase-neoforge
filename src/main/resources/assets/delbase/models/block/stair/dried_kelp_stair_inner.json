@@ -1,0 +1,9 @@
+{
+  "parent": "delbase:block/template/inner_stairs_kelp",
+  "textures": {
+    "bottom": "minecraft:block/dried_kelp_top",
+    "top": "minecraft:block/dried_kelp_top",
+    "side": "minecraft:block/dried_kelp_side",
+    "inside": "minecraft:block/dried_kelp_top"
+  }
+}

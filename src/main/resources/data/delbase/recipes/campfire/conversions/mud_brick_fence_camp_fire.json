@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:campfire_cooking",
+  "ingredient": {
+    "item": "delbase:packed_mud_fence"
+  },
+  "result": "delbase:mud_brick_fence",
+  "experience": 0.35,
+  "cookingtime": 300
+}

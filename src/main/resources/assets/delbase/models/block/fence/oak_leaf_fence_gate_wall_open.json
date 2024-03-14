@@ -1,0 +1,7 @@
+{
+  "parent": "delbase:block/template/fence_gate_wall_open_leaves",
+  "textures": {
+    "texture": "minecraft:block/oak_leaves",
+    "postside": "minecraft:block/oak_leaves"
+  }
+}

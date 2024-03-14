@@ -1,0 +1,7 @@
+{
+  "parent": "delbase:block/template/wall_side",
+  "textures": {
+    "wall": "minecraft:block/glowstone",
+    "top": "minecraft:block/glowstone"
+  }
+}

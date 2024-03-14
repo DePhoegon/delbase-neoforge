@@ -1,0 +1,19 @@
+{
+"type": "minecraft:crafting_shaped",
+"pattern": [
+"#S#",
+"#S#"
+],
+"key": {
+"S": {
+"item": "minecraft:stick"
+},
+"#": {
+"item": "minecraft:spruce_wood"
+}
+},
+"result": {
+"item": "delbase:spruce_wood_fence",
+"count": 4
+}
+}

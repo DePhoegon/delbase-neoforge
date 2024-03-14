@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "tag": "delbase:grouped/stone_blocks"
+  },
+  "result": "delbase:stone_wall",
+  "count": 1
+}

@@ -1,0 +1,23 @@
+{
+  "replace": false,
+  "values": [
+    "delbase:sand_wall",
+    "delbase:red_sand_wall",
+    "delbase:blood_sand_wall",
+    "delbase:white_sand_wall",
+    "delbase:orange_sand_wall",
+    "delbase:magenta_sand_wall",
+    "delbase:light_blue_sand_wall",
+    "delbase:yellow_sand_wall",
+    "delbase:lime_sand_wall",
+    "delbase:pink_sand_wall",
+    "delbase:gray_sand_wall",
+    "delbase:light_gray_sand_wall",
+    "delbase:cyan_sand_wall",
+    "delbase:purple_sand_wall",
+    "delbase:blue_sand_wall",
+    "delbase:green_sand_wall",
+    "delbase:brown_sand_wall",
+    "delbase:black_sand_wall"
+  ]
+}

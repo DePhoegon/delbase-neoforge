@@ -1,0 +1,7 @@
+{ 
+  "parent": "delbase:block/template/wall_inventory",
+  "textures": { 
+    "wall": "delbase:block/cyan_cut_sand_stone",
+    "top": "delbase:block/cyan_sand_stone_top"
+  } 
+} 

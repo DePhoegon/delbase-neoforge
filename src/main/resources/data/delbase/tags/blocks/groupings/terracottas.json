@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "#delbase:fences/terracotta_fence_gates",
+    "#delbase:fences/terracotta_fences",
+    "#delbase:slabs/slab_terracotta",
+    "#delbase:stairs/stair_terracotta",
+    "#delbase:walls/wall_terracotta"
+  ]
+}

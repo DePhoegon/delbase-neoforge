@@ -1,0 +1,9 @@
+{
+  "parent": "delbase:block/template/inner_stairs",
+  "textures": {
+    "bottom": "minecraft:block/chiseled_quartz_block_top",
+    "top": "minecraft:block/chiseled_quartz_block_top",
+    "side": "minecraft:block/chiseled_quartz_block",
+    "inside": "minecraft:block/chiseled_quartz_block_top"
+  }
+}

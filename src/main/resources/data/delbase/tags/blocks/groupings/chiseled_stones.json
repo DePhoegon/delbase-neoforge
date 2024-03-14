@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "#delbase:fences/chiseled_sand_stone_fence_gates",
+    "#delbase:fences/chiseled_sand_stone_fences",
+    "#delbase:slabs/slab_chiseled_sand_stone",
+    "#delbase:solids/chiseled_sand_stone_block",
+    "#delbase:stairs/stair_chiseled_sand_stone",
+    "#delbase:walls/wall_chiseled_sand_stone"
+  ]
+}

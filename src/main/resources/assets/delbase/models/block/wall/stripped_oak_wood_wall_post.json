@@ -1,0 +1,7 @@
+{
+  "parent": "delbase:block/template/wall_post",
+  "textures": {
+    "wall": "minecraft:block/stripped_oak_log",
+    "top": "minecraft:block/stripped_oak_log"
+  }
+}

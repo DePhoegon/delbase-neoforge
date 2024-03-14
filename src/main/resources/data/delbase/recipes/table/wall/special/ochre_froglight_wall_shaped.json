@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:ochre_froglight"
+    }
+  },
+  "result": {
+    "item": "delbase:ochre_froglight_wall",
+    "count": 6
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "type": "delbase:block_cutting",
+  "ingredients": [
+    {
+      "item": "delbase:slab_plans"
+    },
+    {
+      "item": "minecraft:acacia_leaves"
+    }
+  ],
+  "output": {
+    "item": "delbase:acacia_leaf_slab",
+    "count": 2
+  }
+}

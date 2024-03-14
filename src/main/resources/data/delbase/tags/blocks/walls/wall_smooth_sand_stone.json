@@ -1,0 +1,23 @@
+{
+  "replace": false,
+  "values": [
+    "delbase:smooth_sand_stone_wall",
+    "delbase:red_smooth_sand_stone_wall",
+    "delbase:blood_smooth_sand_stone_wall",
+    "delbase:white_smooth_sand_stone_wall",
+    "delbase:orange_smooth_sand_stone_wall",
+    "delbase:magenta_smooth_sand_stone_wall",
+    "delbase:light_blue_smooth_sand_stone_wall",
+    "delbase:yellow_smooth_sand_stone_wall",
+    "delbase:lime_smooth_sand_stone_wall",
+    "delbase:pink_smooth_sand_stone_wall",
+    "delbase:gray_smooth_sand_stone_wall",
+    "delbase:light_gray_smooth_sand_stone_wall",
+    "delbase:cyan_smooth_sand_stone_wall",
+    "delbase:purple_smooth_sand_stone_wall",
+    "delbase:blue_smooth_sand_stone_wall",
+    "delbase:green_smooth_sand_stone_wall",
+    "delbase:brown_smooth_sand_stone_wall",
+    "delbase:black_smooth_sand_stone_wall"
+  ]
+}

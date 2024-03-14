@@ -1,0 +1,7 @@
+{
+  "parent": "delbase:block/template/wall_inventory",
+  "textures": {
+    "wall": "minecraft:block/brown_concrete",
+    "top": "minecraft:block/brown_concrete"
+  }
+}

@@ -1,0 +1,17 @@
+{
+"type": "minecraft:crafting_shaped",
+"pattern": [
+"#  ",
+"## ",
+"###"
+],
+"key": {
+"#": {
+"item": "minecraft:shroomlight"
+}
+},
+"result": {
+"item": "delbase:shroomlight_stair",
+"count": 4
+}
+}

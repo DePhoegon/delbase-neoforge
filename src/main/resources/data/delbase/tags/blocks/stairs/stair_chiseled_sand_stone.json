@@ -1,0 +1,22 @@
+{
+  "replace": false,
+  "values": [
+    "delbase:blood_chiseled_sand_stone_stair",
+    "delbase:red_chiseled_sand_stone_stair",
+    "delbase:white_chiseled_sand_stone_stair",
+    "delbase:orange_chiseled_sand_stone_stair",
+    "delbase:magenta_chiseled_sand_stone_stair",
+    "delbase:light_blue_chiseled_sand_stone_stair",
+    "delbase:yellow_chiseled_sand_stone_stair",
+    "delbase:lime_chiseled_sand_stone_stair",
+    "delbase:pink_chiseled_sand_stone_stair",
+    "delbase:gray_chiseled_sand_stone_stair",
+    "delbase:light_gray_chiseled_sand_stone_stair",
+    "delbase:cyan_chiseled_sand_stone_stair",
+    "delbase:purple_chiseled_sand_stone_stair",
+    "delbase:blue_chiseled_sand_stone_stair",
+    "delbase:green_chiseled_sand_stone_stair",
+    "delbase:brown_chiseled_sand_stone_stair",
+    "delbase:black_chiseled_sand_stone_stair"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "type": "delbase:block_cutting",
+  "ingredients": [
+    {
+      "item": "delbase:slab_plans"
+    },
+    {
+      "item": "minecraft:cherry_wood"
+    }
+  ],
+  "output": {
+    "item": "delbase:cherry_wood_slab",
+    "count": 2
+  }
+}

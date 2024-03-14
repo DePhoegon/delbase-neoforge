@@ -1,0 +1,15 @@
+{
+"type": "delbase:block_cutting",
+"ingredients": [
+{
+"item": "delbase:wall_plans"
+},
+{
+"item": "minecraft:netherrack"
+}
+],
+"output": {
+"item": "delbase:netherrack_wall",
+  "count": 1
+}
+}

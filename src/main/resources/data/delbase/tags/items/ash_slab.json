@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    "#delbase:grouped/base_wood_slabs",
+    "#delbase:grouped/delbase_wood_slabs"
+  ]
+}

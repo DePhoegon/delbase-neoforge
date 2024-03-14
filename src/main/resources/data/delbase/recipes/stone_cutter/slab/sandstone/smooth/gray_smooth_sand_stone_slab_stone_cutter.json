@@ -1,0 +1,8 @@
+{ 
+  "type": "minecraft:stonecutting", 
+  "ingredient": {
+    "tag": "delbase:crafting_sets/color/gray_sand_stone_set"
+  }, 
+  "result": "delbase:gray_smooth_sand_stone_slab",
+  "count": 2 
+} 

@@ -1,0 +1,10 @@
+{
+"parent": "delbase:block/template/stairs_column",
+"textures": {
+"bottom": "minecraft:block/mangrove_log",
+"top": "minecraft:block/mangrove_log",
+"side": "minecraft:block/mangrove_log",
+"inside": "delbase:block/mangrove_inside",
+"inside_base": "minecraft:block/mangrove_log"
+}
+}

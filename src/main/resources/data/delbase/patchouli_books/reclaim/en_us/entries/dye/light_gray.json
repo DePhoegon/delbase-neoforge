@@ -1,0 +1,16 @@
+{
+  "name": "Light Gray Dye",
+  "icon": "delbase:light_gray_shift_dye",
+  "category": "delbase:dye_category",
+  "pages": [
+    {
+      "type": "patchouli:crafting",
+      "recipe": "delbase:table/generic/dye/light_gray_shaped"
+    },
+    {
+      "title": "Light Gray",
+      "type": "patchouli:image",
+      "images": [ "delbase:textures/screens/light_gray.png" ]
+    }
+  ]
+}

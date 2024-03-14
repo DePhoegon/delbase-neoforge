@@ -1,0 +1,25 @@
+{
+  "replace": false,
+  "values": [
+    "delbase:stripped_spruce_log_stair",
+    "delbase:stripped_oak_log_stair",
+    "delbase:stripped_warped_stem_stair",
+    "delbase:stripped_crimson_stem_stair",
+    "delbase:stripped_dark_oak_log_stair",
+    "delbase:stripped_acacia_log_stair",
+    "delbase:stripped_jungle_log_stair",
+    "delbase:stripped_birch_log_stair",
+    "delbase:stripped_mangrove_log_stair",
+    "delbase:stripped_cherry_log_stair",
+    "delbase:spruce_log_stair",
+    "delbase:oak_log_stair",
+    "delbase:warped_stem_stair",
+    "delbase:crimson_stem_stair",
+    "delbase:dark_oak_log_stair",
+    "delbase:acacia_log_stair",
+    "delbase:jungle_log_stair",
+    "delbase:birch_log_stair",
+    "delbase:mangrove_log_stair",
+    "delbase:cherry_log_stair"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+"type": "minecraft:crafting_shaped",
+"pattern": [
+"#  ",
+"## ",
+"###"
+],
+"key": {
+"#": {
+"item": "minecraft:orange_terracotta"
+}
+},
+"result": {
+"item": "delbase:orange_terracotta_stair",
+"count": 4
+}
+}

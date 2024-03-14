@@ -1,0 +1,17 @@
+{
+"type": "minecraft:crafting_shaped",
+"pattern": [
+"#  ",
+"## ",
+"###"
+],
+"key": {
+"#": {
+"item": "minecraft:chiseled_quartz_block"
+}
+},
+"result": {
+"item": "delbase:chiseled_quartz_stair",
+"count": 4
+}
+}

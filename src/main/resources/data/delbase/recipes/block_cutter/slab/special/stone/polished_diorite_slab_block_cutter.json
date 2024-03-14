@@ -1,0 +1,15 @@
+{
+  "type": "delbase:block_cutting",
+  "ingredients": [
+    {
+      "item": "delbase:slab_plans"
+    },
+    {
+      "item": "minecraft:polished_diorite"
+    }
+  ],
+  "output": {
+    "item": "minecraft:polished_diorite_slab",
+    "count": 2
+  }
+}

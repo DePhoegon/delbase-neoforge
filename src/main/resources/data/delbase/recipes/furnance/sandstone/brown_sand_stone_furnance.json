@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "delbase:brown_solid_sand"
+  },
+  "result": "delbase:brown_sand_stone",
+  "experience": 0.1,
+  "cookingtime": 200
+}

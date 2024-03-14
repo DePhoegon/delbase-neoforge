@@ -1,0 +1,61 @@
+# eclipse
+bin
+*.launch
+.settings
+.metadata
+.classpath
+.project
+
+# idea
+out
+*.ipr
+*.iws
+*.iml
+.idea
+
+# gradle
+build
+.gradle
+
+# other
+eclipse
+
+#client
+runs/client/config
+runs/client/downloads
+runs/client/defaultconfigs
+runs/client/world/
+runs/client/logs
+runs/client/mods
+runs/client/patchouli_books
+runs/client/resourcepacks
+runs/client/saves
+runs/client/options.txt
+runs/client/*.json
+runs/client/crash-reports
+runs/client/servers.*
+
+#server
+runs/server/config
+runs/server/defaultconfigs
+runs/server/logs
+runs/server/mods
+runs/server/world
+runs/server/*.json
+
+
+
+runs/gameTestServer/
+runs/data/
+
+# Files from Forge MDK
+forge*changelog.txt
+
+*.db
+Thumbs.db
+src/generated/
+src/test/
+
+/run/patchouli_data.json
+run/banned-ips.json
+run/banned-players.json

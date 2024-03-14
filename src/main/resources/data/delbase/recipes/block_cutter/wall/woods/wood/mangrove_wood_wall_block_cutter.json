@@ -1,0 +1,15 @@
+{
+  "type": "delbase:block_cutting",
+  "ingredients": [
+    {
+      "item": "delbase:wall_plans"
+    },
+    {
+      "item": "minecraft:mangrove_wood"
+    }
+  ],
+  "output": {
+    "item": "delbase:mangrove_wood_wall",
+    "count": 1
+  }
+}

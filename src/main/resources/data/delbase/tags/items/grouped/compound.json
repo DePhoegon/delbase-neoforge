@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    "#delbase:grouped/dyes",
+    "delbase:armor_compound"
+  ]
+}

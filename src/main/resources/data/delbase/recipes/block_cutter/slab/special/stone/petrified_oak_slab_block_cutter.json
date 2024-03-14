@@ -1,0 +1,15 @@
+{
+  "type": "delbase:block_cutting",
+  "ingredients": [
+    {
+      "item": "delbase:slab_plans"
+    },
+    {
+      "item": "delbase:hardened_oak_planks"
+    }
+  ],
+  "output": {
+    "item": "minecraft:petrified_oak_slab",
+    "count": 2
+  }
+}

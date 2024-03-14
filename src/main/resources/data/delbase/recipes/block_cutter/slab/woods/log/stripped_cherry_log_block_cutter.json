@@ -1,0 +1,15 @@
+{
+  "type": "delbase:block_cutting",
+  "ingredients": [
+    {
+      "item": "delbase:slab_plans"
+    },
+    {
+      "item": "minecraft:stripped_cherry_log"
+    }
+  ],
+  "output": {
+    "item": "delbase:stripped_cherry_log_slab",
+    "count": 2
+  }
+}

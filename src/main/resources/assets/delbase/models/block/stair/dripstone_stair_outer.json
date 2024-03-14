@@ -1,0 +1,9 @@
+{
+  "parent": "delbase:block/template/outer_stairs",
+  "textures": {
+    "bottom": "minecraft:block/dripstone_block",
+    "top": "minecraft:block/dripstone_block",
+    "side": "minecraft:block/dripstone_block",
+    "inside": "minecraft:block/dripstone_block"
+  }
+}

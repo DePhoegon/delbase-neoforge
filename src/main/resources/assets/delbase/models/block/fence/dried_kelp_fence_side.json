@@ -1,0 +1,7 @@
+{
+"parent": "delbase:block/template/fence_side",
+"textures": {
+"texture": "delbase:block/dried_kelp_noband",
+"postside": "delbase:block/dried_kelp_noband"
+}
+}

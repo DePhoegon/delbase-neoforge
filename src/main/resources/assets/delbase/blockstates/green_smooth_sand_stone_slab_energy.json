@@ -1,0 +1,13 @@
+{ 
+  "variants": { 
+   "type=bottom": { 
+"model": "delbase:block/slab/green_smooth_sand_stone_slab" 
+    }, 
+   "type=double": { 
+"model": "delbase:block/slab/green_smooth_sand_stone_slab_double" 
+    }, 
+   "type=top": { 
+"model": "delbase:block/slab/green_smooth_sand_stone_slab_top" 
+    } 
+  } 
+} 

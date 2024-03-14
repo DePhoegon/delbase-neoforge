@@ -1,0 +1,8 @@
+{ 
+  "parent": "minecraft:block/outer_stairs", 
+  "textures": { 
+    "bottom": "delbase:block/blue_sand",
+    "top": "delbase:block/blue_sand",
+    "side": "delbase:block/blue_sand"
+   } 
+} 

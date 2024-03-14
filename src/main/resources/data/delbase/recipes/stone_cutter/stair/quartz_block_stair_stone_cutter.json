@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "tag": "delbase:grouped/quartz_blocks"
+  },
+  "result": "minecraft:quartz_stairs",
+  "count": 1
+}

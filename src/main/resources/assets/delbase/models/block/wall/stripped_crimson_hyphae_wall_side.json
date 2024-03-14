@@ -1,0 +1,7 @@
+{
+  "parent": "delbase:block/template/wall_side",
+  "textures": {
+    "wall": "minecraft:block/stripped_crimson_stem",
+    "top": "delbase:block/stripped_crimson_stem_wall_top"
+  }
+}

@@ -1,0 +1,7 @@
+{
+"parent": "delbase:block/template/fence_post_kelp",
+"textures": {
+"texture": "minecraft:block/dried_kelp_top",
+"postside": "minecraft:block/dried_kelp_side"
+}
+}

@@ -1,0 +1,23 @@
+{
+  "replace": false,
+  "values": [
+    "delbase:chiseled_sand_stone_wall",
+    "delbase:red_chiseled_sand_stone_wall",
+    "delbase:blood_chiseled_sand_stone_wall",
+    "delbase:white_chiseled_sand_stone_wall",
+    "delbase:orange_chiseled_sand_stone_wall",
+    "delbase:magenta_chiseled_sand_stone_wall",
+    "delbase:light_blue_chiseled_sand_stone_wall",
+    "delbase:yellow_chiseled_sand_stone_wall",
+    "delbase:lime_chiseled_sand_stone_wall",
+    "delbase:pink_chiseled_sand_stone_wall",
+    "delbase:gray_chiseled_sand_stone_wall",
+    "delbase:light_gray_chiseled_sand_stone_wall",
+    "delbase:cyan_chiseled_sand_stone_wall",
+    "delbase:purple_chiseled_sand_stone_wall",
+    "delbase:blue_chiseled_sand_stone_wall",
+    "delbase:green_chiseled_sand_stone_wall",
+    "delbase:brown_chiseled_sand_stone_wall",
+    "delbase:black_chiseled_sand_stone_wall"
+  ]
+}

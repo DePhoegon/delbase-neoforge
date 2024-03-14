@@ -1,0 +1,15 @@
+{
+  "type": "delbase:block_cutting",
+  "ingredients": [
+    {
+      "item": "delbase:wall_plans"
+    },
+    {
+      "item": "minecraft:muddy_mangrove_roots"
+    }
+  ],
+  "output": {
+    "item": "delbase:muddy_mangrove_root_wall",
+    "count": 1
+  }
+}

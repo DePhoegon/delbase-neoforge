@@ -1,0 +1,15 @@
+{
+  "type": "delbase:block_cutting",
+  "ingredients": [
+    {
+      "item": "delbase:fence_gate_plans"
+    },
+    {
+      "item": "minecraft:dark_oak_leaves"
+    }
+  ],
+  "output": {
+    "item": "delbase:dark_oak_leaf_fence_gate",
+    "count": 1
+  }
+}

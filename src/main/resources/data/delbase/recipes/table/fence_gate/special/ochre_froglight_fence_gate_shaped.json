@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "S#S",
+    "S#S"
+  ],
+  "key": {
+    "S": {
+      "item": "minecraft:stick"
+    },
+    "#": {
+      "item": "minecraft:ochre_froglight"
+    }
+  },
+  "result": {
+    "item": "delbase:ochre_froglight_fence_gate",
+    "count": 2
+  }
+}

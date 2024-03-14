@@ -1,0 +1,13 @@
+{ 
+  "type": "minecraft:crafting_shaped", 
+  "pattern": [ "yy","yy" ], 
+  "key": { 
+    "y": { 
+      "item": "delbase:blood_sand_stone" 
+    } 
+  }, 
+  "result":{ 
+    "item": "delbase:blood_cut_sand_stone", 
+    "count": 4 
+  } 
+} 

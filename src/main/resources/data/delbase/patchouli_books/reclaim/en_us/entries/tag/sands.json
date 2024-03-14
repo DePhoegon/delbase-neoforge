@@ -1,0 +1,18 @@
+{
+  "name": "Sands",
+  "icon": "minecraft:name_tag",
+  "category": "delbase:tags",
+  "pages": [
+    {
+      "title": "Blank",
+      "type": "patchouli:text",
+      "anchor": "",
+      "text": "Sand is any of the following.$(br)=Only 1 of the following is used per 'Sand' $(br)-Sand$(br)-Red Sand$(br)-Dark Red Sand$(br)-White Sand$(br)-Orange Sand$(br)-Magenta Sand$(br)-Light Blue Sand"
+    },
+    {
+      "title": "Blank",
+      "type": "patchouli:text",
+      "text": "-Yellow Sand$(br)-Lime Sand$(br)-Pink Sand$(br)-Gray Sand$(br)-Light Gray Sand$(br)-Cyan Sand$(br)-Purple Sand$(br)-Blue Sand$(br)-Green Sand$(br)-Brown Sand$(br)-Black Sand"
+    }
+  ]
+}

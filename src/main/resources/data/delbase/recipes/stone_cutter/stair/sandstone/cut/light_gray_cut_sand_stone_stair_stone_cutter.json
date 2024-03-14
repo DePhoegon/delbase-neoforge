@@ -1,0 +1,8 @@
+{ 
+  "type": "minecraft:stonecutting", 
+  "ingredient": {
+    "tag": "delbase:crafting_sets/color/light_gray_sand_stone_set"
+  }, 
+  "result": "delbase:light_gray_cut_sand_stone_stair",
+  "count": 1 
+} 

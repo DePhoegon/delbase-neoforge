@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#S#",
+    "#S#"
+  ],
+  "key": {
+    "S": {
+      "item": "minecraft:stick"
+    },
+    "#": {
+      "item": "minecraft:packed_mud"
+    }
+  },
+  "result": {
+    "item": "delbase:packed_mud_fence",
+    "count": 4
+  }
+}

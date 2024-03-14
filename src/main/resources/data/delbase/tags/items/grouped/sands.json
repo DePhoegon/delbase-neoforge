@@ -1,0 +1,23 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:sand",
+    "minecraft:red_sand",
+    "delbase:blood_sand",
+    "delbase:white_sand",
+    "delbase:orange_sand",
+    "delbase:magenta_sand",
+    "delbase:light_blue_sand",
+    "delbase:yellow_sand",
+    "delbase:lime_sand",
+    "delbase:pink_sand",
+    "delbase:gray_sand",
+    "delbase:light_gray_sand",
+    "delbase:cyan_sand",
+    "delbase:purple_sand",
+    "delbase:blue_sand",
+    "delbase:green_sand",
+    "delbase:brown_sand",
+    "delbase:black_sand"
+  ]
+}

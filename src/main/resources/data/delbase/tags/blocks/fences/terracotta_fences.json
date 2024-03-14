@@ -1,0 +1,22 @@
+{
+  "replace": false,
+  "values": [
+    "delbase:white_terracotta_fence",
+    "delbase:orange_terracotta_fence",
+    "delbase:magenta_terracotta_fence",
+    "delbase:light_blue_terracotta_fence",
+    "delbase:yellow_terracotta_fence",
+    "delbase:lime_terracotta_fence",
+    "delbase:pink_terracotta_fence",
+    "delbase:gray_terracotta_fence",
+    "delbase:light_gray_terracotta_fence",
+    "delbase:cyan_terracotta_fence",
+    "delbase:purple_terracotta_fence",
+    "delbase:blue_terracotta_fence",
+    "delbase:brown_terracotta_fence",
+    "delbase:green_terracotta_fence",
+    "delbase:red_terracotta_fence",
+    "delbase:black_terracotta_fence",
+    "delbase:terracotta_fence"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#S#",
+    "#S#"
+  ],
+  "key": {
+    "S": {
+      "item": "minecraft:stick"
+    },
+    "#": {
+      "item": "delbase:solid_sand"
+    }
+  },
+  "result": {
+    "item": "delbase:sand_fence",
+    "count": 4
+  }
+} 

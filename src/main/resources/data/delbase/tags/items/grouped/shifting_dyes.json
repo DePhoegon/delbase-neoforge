@@ -1,0 +1,24 @@
+{
+  "replace": false,
+  "values": [
+    "delbase:cleanse_shift_dye",
+    "delbase:red_shift_dye",
+    "delbase:black_shift_dye",
+    "delbase:blue_shift_dye",
+    "delbase:brown_shift_dye",
+    "delbase:cyan_shift_dye",
+    "delbase:blood_shift_dye",
+    "delbase:gray_shift_dye",
+    "delbase:green_shift_dye",
+    "delbase:light_blue_shift_dye",
+    "delbase:light_gray_shift_dye",
+    "delbase:lime_shift_dye",
+    "delbase:magenta_shift_dye",
+    "delbase:orange_shift_dye",
+    "delbase:pink_shift_dye",
+    "delbase:purple_shift_dye",
+    "delbase:red_shift_dye",
+    "delbase:white_shift_dye",
+    "delbase:yellow_shift_dye"
+  ]
+}

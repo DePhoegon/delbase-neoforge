@@ -1,0 +1,10 @@
+{
+  "parent": "delbase:block/template/stairs_column",
+  "textures": {
+    "bottom": "minecraft:block/dark_oak_log_top",
+    "top": "minecraft:block/dark_oak_log_top",
+    "side": "minecraft:block/dark_oak_log",
+    "inside": "delbase:block/dark_oak_log_inside_side",
+    "inside_base": "minecraft:block/dark_oak_log_top"
+  }
+}

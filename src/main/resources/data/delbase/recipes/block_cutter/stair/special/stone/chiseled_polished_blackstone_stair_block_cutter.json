@@ -1,0 +1,15 @@
+{
+"type": "delbase:block_cutting",
+"ingredients": [
+{
+"item": "delbase:stair_plans"
+},
+{
+"item": "minecraft:chiseled_polished_blackstone"
+}
+],
+"output": {
+"item": "delbase:chiseled_polished_blackstone_stair",
+  "count": 1
+}
+}

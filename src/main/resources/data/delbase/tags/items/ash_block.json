@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    "#delbase:grouped/logs",
+    "#delbase:grouped/woods"
+  ]
+}

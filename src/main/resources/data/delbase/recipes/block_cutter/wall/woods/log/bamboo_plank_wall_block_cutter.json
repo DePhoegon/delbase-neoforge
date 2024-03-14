@@ -1,0 +1,15 @@
+{
+  "type": "delbase:block_cutting",
+  "ingredients": [
+    {
+      "item": "delbase:wall_plans"
+    },
+    {
+      "item": "minecraft:bamboo_planks"
+    }
+  ],
+  "output": {
+    "item": "delbase:bamboo_plank_wall",
+    "count": 1
+  }
+}

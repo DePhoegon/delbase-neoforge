@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "bottom": "delbase:block/ash_log_top",
+    "top": "delbase:block/ash_log_top",
+    "side": "delbase:block/ash_log"
+  }
+}

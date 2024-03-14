@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "#D#",
+    "###"
+  ],
+  "key": {
+    "D": {
+      "item": "minecraft:red_dye"
+    },
+    "#": {
+      "item": "minecraft:red_sand"
+    }
+  },
+  "result": {
+    "item": "delbase:blood_sand",
+    "count": 8
+  }
+}

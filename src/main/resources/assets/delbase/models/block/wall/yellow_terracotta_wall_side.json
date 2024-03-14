@@ -1,0 +1,7 @@
+{
+  "parent": "delbase:block/template/wall_side",
+  "textures": {
+    "wall": "minecraft:block/yellow_terracotta",
+    "top": "minecraft:block/yellow_terracotta"
+  }
+}

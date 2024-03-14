@@ -1,0 +1,10 @@
+{
+  "parent": "delbase:block/template/stairs_column",
+  "textures": {
+    "bottom": "minecraft:block/bone_block_top",
+    "top": "minecraft:block/bone_block_top",
+    "side": "minecraft:block/bone_block_side",
+    "inside": "delbase:block/bone_block_inside_side",
+    "inside_base": "minecraft:block/bone_block_top"
+  }
+}

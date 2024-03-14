@@ -1,0 +1,15 @@
+{
+  "replace": false,
+  "values": [
+    "#delbase:fences/stripped_wooden_fence_gates",
+    "#delbase:fences/stripped_wooden_fences",
+    "#delbase:fences/wooden_fence_gates",
+    "#delbase:fences/wooden_fences",
+    "#delbase:slabs/slab_wood",
+    "#delbase:slabs/slab_log",
+    "#delbase:stairs/stair_wood",
+    "#delbase:stairs/stair_log",
+    "#delbase:walls/wall_wood",
+    "#delbase:walls/wall_log"
+  ]
+}

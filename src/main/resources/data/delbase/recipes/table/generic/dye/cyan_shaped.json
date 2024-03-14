@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "#D#",
+    "###"
+  ],
+  "key": {
+    "D": {
+      "item": "minecraft:cyan_dye"
+    },
+    "#": {
+      "tag": "delbase:grouped/shifting_dyes"
+    }
+  },
+  "result": {
+    "item": "delbase:cyan_shift_dye",
+    "count": 8
+  }
+}

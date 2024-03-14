@@ -1,0 +1,23 @@
+{
+  "replace": false,
+  "values": [
+    "delbase:smooth_sand_stone_fence_gate",
+    "delbase:red_smooth_sand_stone_fence_gate",
+    "delbase:lime_smooth_sand_stone_fence_gate",
+    "delbase:blood_smooth_sand_stone_fence_gate",
+    "delbase:white_smooth_sand_stone_fence_gate",
+    "delbase:orange_smooth_sand_stone_fence_gate",
+    "delbase:magenta_smooth_sand_stone_fence_gate",
+    "delbase:light_blue_smooth_sand_stone_fence_gate",
+    "delbase:yellow_smooth_sand_stone_fence_gate",
+    "delbase:pink_smooth_sand_stone_fence_gate",
+    "delbase:gray_smooth_sand_stone_fence_gate",
+    "delbase:light_gray_smooth_sand_stone_fence_gate",
+    "delbase:cyan_smooth_sand_stone_fence_gate",
+    "delbase:purple_smooth_sand_stone_fence_gate",
+    "delbase:blue_smooth_sand_stone_fence_gate",
+    "delbase:brown_smooth_sand_stone_fence_gate",
+    "delbase:green_smooth_sand_stone_fence_gate",
+    "delbase:black_smooth_sand_stone_fence_gate"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+"type": "minecraft:crafting_shaped",
+"pattern": [
+"S#S",
+"S#S"
+],
+"key": {
+"S": {
+"item": "minecraft:stick"
+},
+"#": {
+"item": "delbase:yellow_cut_sand_stone"
+}
+},
+"result": {
+"item": "delbase:yellow_cut_sand_stone_fence_gate",
+"count": 2
+}
+}

@@ -1,0 +1,21 @@
+{
+  "replace": false,
+  "values": [
+    "delbase:red_concrete_stair",
+    "delbase:white_concrete_stair",
+    "delbase:orange_concrete_stair",
+    "delbase:magenta_concrete_stair",
+    "delbase:light_blue_concrete_stair",
+    "delbase:yellow_concrete_stair",
+    "delbase:lime_concrete_stair",
+    "delbase:pink_concrete_stair",
+    "delbase:gray_concrete_stair",
+    "delbase:light_gray_concrete_stair",
+    "delbase:cyan_concrete_stair",
+    "delbase:purple_concrete_stair",
+    "delbase:blue_concrete_stair",
+    "delbase:green_concrete_stair",
+    "delbase:brown_concrete_stair",
+    "delbase:black_concrete_stair"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "type": "delbase:block_cutting",
+  "ingredients": [
+    {
+      "item": "delbase:stair_plans"
+    },
+    {
+      "item": "minecraft:cherry_log"
+    }
+  ],
+  "output": {
+    "item": "delbase:cherry_log_stair",
+    "count": 1
+  }
+}

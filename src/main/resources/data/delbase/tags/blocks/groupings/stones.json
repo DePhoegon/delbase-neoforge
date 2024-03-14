@@ -1,0 +1,16 @@
+{
+  "replace": false,
+  "values": [
+    "#delbase:groupings/chiseled_stones",
+    "#delbase:groupings/concretes",
+    "#delbase:groupings/cut_stones",
+    "#delbase:groupings/sand_stones",
+    "#delbase:groupings/smooth_stones",
+    "#delbase:groupings/terracottas",
+    "#delbase:fences/misc_stonelike_fence_gates",
+    "#delbase:fences/misc_stonelike_fences",
+    "#delbase:slabs/slab_misc_stonelike",
+    "#delbase:stairs/stair_misc_stonelike",
+    "#delbase:walls/wall_misc_stonelike"
+  ]
+}

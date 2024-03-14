@@ -1,0 +1,7 @@
+{
+"parent": "delbase:block/template/wall_inventory",
+"textures": {
+"wall": "minecraft:block/mangrove_planks",
+"top": "delbase:block/stripped_mangrove_log_wall_top"
+}
+}

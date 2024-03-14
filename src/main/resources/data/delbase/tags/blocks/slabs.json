@@ -1,0 +1,19 @@
+{
+  "replace": false,
+  "values": [
+    "delbase:ash_slab",
+    "#delbase:slabs/slab_chiseled_sand_stone",
+    "#delbase:slabs/slab_concrete",
+    "#delbase:slabs/slab_cut_sand_stone",
+    "#delbase:slabs/slab_log",
+    "#delbase:slabs/slab_misc_gemlike",
+    "#delbase:slabs/slab_misc_metallike",
+    "#delbase:slabs/slab_misc_stonelike",
+    "#delbase:slabs/slab_misc_woodlike",
+    "#delbase:slabs/slab_sand",
+    "#delbase:slabs/slab_sand_stone",
+    "#delbase:slabs/slab_smooth_sand_stone",
+    "#delbase:slabs/slab_terracotta",
+    "#delbase:slabs/slab_wood"
+  ]
+}

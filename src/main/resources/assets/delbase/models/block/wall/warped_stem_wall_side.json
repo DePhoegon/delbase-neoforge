@@ -1,0 +1,7 @@
+{
+  "parent": "delbase:block/template/wall_side",
+  "textures": {
+    "wall": "minecraft:block/warped_planks",
+    "top": "delbase:block/warped_planks_wall_top"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:campfire_cooking",
+  "ingredient": {
+    "item": "delbase:pink_sand"
+  },
+  "result": "delbase:pink_solid_sand",
+  "experience": 0.35,
+  "cookingtime": 300
+}

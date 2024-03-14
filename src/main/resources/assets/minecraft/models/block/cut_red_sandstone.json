@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "delbase:block/red_sandstone_top",
+    "side": "delbase:block/cut_red_sandstone"
+  }
+}

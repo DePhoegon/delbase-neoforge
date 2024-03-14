@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "#delbase:groupings/gemlikes",
+    "#delbase:groupings/concretes",
+    "#delbase:groupings/metals"
+  ]
+}

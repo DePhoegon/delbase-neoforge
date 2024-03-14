@@ -1,0 +1,22 @@
+{
+  "replace": false,
+  "values": [
+    "delbase:white_terracotta_stair",
+    "delbase:orange_terracotta_stair",
+    "delbase:magenta_terracotta_stair",
+    "delbase:light_blue_terracotta_stair",
+    "delbase:lime_terracotta_stair",
+    "delbase:pink_terracotta_stair",
+    "delbase:gray_terracotta_stair",
+    "delbase:light_gray_terracotta_stair",
+    "delbase:cyan_terracotta_stair",
+    "delbase:yellow_terracotta_stair",
+    "delbase:purple_terracotta_stair",
+    "delbase:blue_terracotta_stair",
+    "delbase:brown_terracotta_stair",
+    "delbase:green_terracotta_stair",
+    "delbase:red_terracotta_stair",
+    "delbase:black_terracotta_stair",
+    "delbase:terracotta_stair"
+  ]
+}

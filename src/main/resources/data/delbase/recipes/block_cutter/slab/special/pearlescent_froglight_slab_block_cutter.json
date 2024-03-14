@@ -1,0 +1,15 @@
+{
+  "type": "delbase:block_cutting",
+  "ingredients": [
+    {
+      "item": "delbase:slab_plans"
+    },
+    {
+      "item": "minecraft:pearlescent_froglight"
+    }
+  ],
+  "output": {
+    "item": "delbase:pearlescent_froglight_slab",
+    "count": 2
+  }
+}

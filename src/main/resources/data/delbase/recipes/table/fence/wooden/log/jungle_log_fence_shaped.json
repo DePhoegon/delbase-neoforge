@@ -1,0 +1,19 @@
+{
+"type": "minecraft:crafting_shaped",
+"pattern": [
+"#S#",
+"#S#"
+],
+"key": {
+"S": {
+"item": "minecraft:stick"
+},
+"#": {
+"item": "minecraft:jungle_log"
+}
+},
+"result": {
+"item": "delbase:jungle_log_fence",
+"count": 4
+}
+}

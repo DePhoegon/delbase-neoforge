@@ -1,0 +1,7 @@
+{
+  "parent": "delbase:block/template/fence_post",
+  "textures": {
+    "texture": "minecraft:block/stone",
+    "postside": "minecraft:block/stone"
+  }
+}

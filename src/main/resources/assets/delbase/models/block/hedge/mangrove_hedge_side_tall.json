@@ -1,0 +1,7 @@
+{
+  "parent": "delbase:block/template/wall_side_tall_leaves",
+  "textures": {
+    "wall": "minecraft:block/mangrove_leaves",
+    "top": "minecraft:block/mangrove_leaves"
+  }
+}

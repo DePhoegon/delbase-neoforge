@@ -1,0 +1,15 @@
+{
+  "type": "delbase:block_cutting",
+  "ingredients": [
+    {
+      "item": "delbase:armor_compound"
+    },
+    {
+      "item": "minecraft:iron_helmet"
+    }
+  ],
+  "output": {
+    "item": "minecraft:iron_ingot",
+    "count": 2
+  }
+}

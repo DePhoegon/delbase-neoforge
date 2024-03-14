@@ -1,0 +1,9 @@
+{
+  "parent": "delbase:block/template/stairs",
+  "textures": {
+    "bottom": "minecraft:block/light_blue_terracotta",
+    "top": "minecraft:block/light_blue_terracotta",
+    "side": "minecraft:block/light_blue_terracotta",
+    "inside": "minecraft:block/light_blue_terracotta"
+  }
+}

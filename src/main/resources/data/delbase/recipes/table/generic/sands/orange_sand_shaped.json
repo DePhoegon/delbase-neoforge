@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "#D#",
+    "###"
+  ],
+  "key": {
+    "D": {
+      "item": "minecraft:orange_dye"
+    },
+    "#": {
+      "tag": "delbase:grouped/sands"
+    }
+  },
+  "result": {
+    "item": "delbase:orange_sand",
+    "count": 8
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#S#",
+    "#S#"
+  ],
+  "key": {
+    "S": {
+      "item": "minecraft:stick"
+    },
+    "#": {
+      "item": "minecraft:verdant_froglight"
+    }
+  },
+  "result": {
+    "item": "delbase:verdant_froglight_fence",
+    "count": 4
+  }
+}

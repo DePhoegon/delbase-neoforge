@@ -1,0 +1,10 @@
+{
+  "parent": "delbase:block/template/inner_stairs_column",
+  "textures": {
+    "bottom": "minecraft:block/quartz_pillar_top",
+    "top": "minecraft:block/quartz_pillar_top",
+    "side": "minecraft:block/quartz_pillar",
+    "inside": "delbase:block/quartz_pillar_inside_side",
+    "inside_base": "minecraft:block/quartz_pillar_top"
+  }
+}

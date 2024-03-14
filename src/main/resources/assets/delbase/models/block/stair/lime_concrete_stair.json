@@ -1,0 +1,9 @@
+{
+  "parent": "delbase:block/template/stairs",
+  "textures": {
+    "bottom": "minecraft:block/lime_concrete",
+    "top": "minecraft:block/lime_concrete",
+    "side": "minecraft:block/lime_concrete",
+    "inside": "minecraft:block/lime_concrete"
+  }
+}
