@@ -1,0 +1,20 @@
+{
+  "replace": false,
+  "values": {
+    "delbase:mangrove_hedge": {
+      "chance": 0.3
+    },
+    "delbase:mangrove_leaf_stair": {
+      "chance": 0.3
+    },
+    "delbase:mangrove_leaf_slab": {
+      "chance": 0.3
+    },
+    "delbase:mangrove_leaf_fence": {
+      "chance": 0.3
+    },
+    "delbase:mangrove_leaf_fence_gate": {
+      "chance": 0.3
+    }
+  }
+}

@@ -8,9 +8,9 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
@@ -23,7 +23,7 @@ public class genBlock extends Block {
     private final boolean flame;
     private final int spread;
     private final int flammability;
-    public genBlock(BlockBehaviour.Properties properties, @NotNull String normToolTip, String shiftToolTip, String ctrlToolTip, boolean flames, int fireChance, int fireSpread) {
+    public genBlock(Properties properties, @NotNull String normToolTip, String shiftToolTip, String ctrlToolTip, boolean flames, int fireChance, int fireSpread) {
         super(properties);
         if(normToolTip.isEmpty()) { tip0 = null; } else { tip0 = normToolTip; }
         if(shiftToolTip.isEmpty()) { tip1 = null; } else { tip1 = shiftToolTip; }
@@ -32,7 +32,7 @@ public class genBlock extends Block {
         spread = fireSpread;
         flammability = fireChance;
     }
-    public genBlock(BlockBehaviour.Properties properties, boolean flames, int fireChance, int fireSpread) {
+    public genBlock(Properties properties, boolean flames, int fireChance, int fireSpread) {
         super(properties);
         tip0 = null;
         tip1 = null;
@@ -41,8 +41,8 @@ public class genBlock extends Block {
         spread = fireSpread;
         flammability = fireChance;
     }
-    public void appendHoverText(@NotNull ItemStack pStack, @javax.annotation.Nullable BlockGetter pLevel, @NotNull List<Component> toolTip, @NotNull TooltipFlag pFlag) {
-        super.appendHoverText(pStack, pLevel, toolTip, pFlag);
+    public void appendHoverText(@NotNull ItemStack stack, @Nullable BlockGetter worldIn, @NotNull List<Component> toolTip, @NotNull TooltipFlag flag) {
+        super.appendHoverText(stack, worldIn, toolTip, flag);
         if(!(kb.HShift()) && !(kb.HCtrl()) && tip0 != null) { toolTip.add(Component.translatable(tip0)); } //if neither pressed, show tip0 (if not empty)
         if(kb.HCtrl() && tip2 != null) { toolTip.add(Component.translatable(tip2)); } //if ctrl, show tip2 (if not empty), do first
         if(kb.HShift() && tip1 != null) { toolTip.add(Component.translatable(tip1)); }//if shifted, show tip1 (if not empty)
@@ -63,5 +63,6 @@ public class genBlock extends Block {
         if (flame) { return spread; }
         return 0;
     }
+    @SuppressWarnings({"SameReturnValue", "unused"})
     public static boolean never(BlockState p_50806_, BlockGetter p_50807_, BlockPos p_50808_) { return false; }
 }

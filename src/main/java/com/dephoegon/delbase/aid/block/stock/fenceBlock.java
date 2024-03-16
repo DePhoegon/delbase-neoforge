@@ -85,8 +85,6 @@ public class fenceBlock extends FenceBlock {
             Boolean WEST = world.getBlockState(blockPos).getValue(PipeBlock.WEST);
             Boolean WATERLOGGED = world.getBlockState(blockPos).getValue(BlockStateProperties.WATERLOGGED);
             return stripped.setValue(PipeBlock.NORTH, NORTH).setValue(PipeBlock.SOUTH, SOUTH).setValue(PipeBlock.EAST, EAST).setValue(PipeBlock.WEST, WEST).setValue(BlockStateProperties.WATERLOGGED, WATERLOGGED);
-        } else {
-            return null;
-        }
+        } else { return null; }
     }
 }

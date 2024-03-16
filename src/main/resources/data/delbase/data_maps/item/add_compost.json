@@ -1,0 +1,16 @@
+{
+  "replace":false,
+  "values": [
+    "#delbase:types/add_base",
+    "#delbase:types/acacia",
+    "#delbase:types/azalea",
+    "#delbase:types/birch",
+    "#delbase:types/cherry",
+    "#delbase:types/dark_oak",
+    "#delbase:types/flowering_azalea",
+    "#delbase:types/jungle",
+    "#delbase:types/mangrove",
+    "#delbase:types/oak",
+    "#delbase:types/spruce"
+  ]
+}

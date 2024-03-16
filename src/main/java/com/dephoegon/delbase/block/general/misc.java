@@ -36,11 +36,12 @@ public class misc {
     private static <T extends Block> @NotNull DeferredBlock<T> register(String name, Supplier<T> block, int burn) {
         DeferredBlock<T> exit = BLOCKS.register(name, block);
         ITEMS.register(name, () -> new BlockItem(exit.get(), new Item.Properties().stacksTo(64)){
-            public int getBurnTime(@NotNull ItemStack stack, @Nullable RecipeType<?> recipeType) { return burn; }
+            public int getBurnTime(@NotNull ItemStack stack, @Nullable RecipeType<?> recipeType) {
+                if (burn > 0) { return burn; } else return -1;
+            }
         });
         return exit;
     }
-
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);
         ITEMS.register(eventBus);

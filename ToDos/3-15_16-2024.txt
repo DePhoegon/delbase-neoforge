@@ -1,0 +1,54 @@
+-- Dones --
+Added rest of backbones for registration of blocks/items
+fixed plantables in sands.
+eventBustEvents
+got ready for mixins if needed
+-- Addressed can survive on method in the sand classes.
+moved compostables into the json tag section
+
+
+-- ToDos --
+ typeSelector (Missing items registered, then have to link them)
+ cuttingStationBlock (missing block entity of cutting station for link)
+ blockArrayList (missing registered blocks (glowstones)
+ creativeTabs (missing registered items to use as icons, blockcutters station)
+ creatuveTabsArrayLists (missing registered blocks)
+ regList (missing classes with registers for blocks/items/events)
+ blockcuttingstation (not completely ported, missing nest of other registrations for functionality/display)
+ Fix Recipes to match new Codec.
+ update block to look at the number of items for input & plans (if armor compound) to eat from the stack.
+
+
+-- Further out ToDos --
+Verify things are working
+
+New format
+{
+  "type": "delbase:block_cutting",
+  "input": {
+    "item": "delbase:minecraft:chainmail_chestplate",
+    "count": 1
+  },
+  "plans": {
+    "item": "delbase:armor_compound",
+    "count": 1
+  },
+  "output": {
+    "item": "minecraft:chain",
+    "count": 7
+  }
+}
+--
+{
+  "type": "delbase:block_cutting",
+  "input": {
+    "item": "delbase:minecraft:chainmail_chestplate"
+  },
+  "plans": {
+    "item": "delbase:armor_compound"
+  },
+  "output": {
+    "item": "minecraft:chain",
+    "count": 7
+  }
+}

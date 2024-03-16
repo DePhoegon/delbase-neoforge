@@ -1,10 +1,13 @@
 package com.dephoegon.delbase.aid.util;
 
+import com.dephoegon.delbase.aid.block.colorshift.grav.solidSandBlock;
+import com.dephoegon.delbase.aid.block.stock.energySlab;
 import net.minecraft.world.level.block.Block;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 
+import static com.dephoegon.delbase.block.slab.slabMisc.GLOWSTONE_SLAB;
 import static net.minecraft.world.level.block.Blocks.*;
 
 public class blockArrayList {

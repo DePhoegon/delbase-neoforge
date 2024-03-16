@@ -10,7 +10,6 @@ import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.WallBlock;
-import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.WallSide;
 import net.neoforged.neoforge.common.ToolAction;
@@ -30,7 +29,7 @@ public class wallBlock extends WallBlock {
     private final int spread;
     private final int flammability;
     private final BlockState stripped;
-    public wallBlock(BlockBehaviour.Properties properties, @NotNull String normToolTip, String shiftToolTip, String ctrlToolTip, boolean flames, int fireChance, int fireSpread, BlockState strippedState) {
+    public wallBlock(Properties properties, @NotNull String normToolTip, String shiftToolTip, String ctrlToolTip, boolean flames, int fireChance, int fireSpread, BlockState strippedState) {
         super(properties);
         if(normToolTip.isEmpty()) { tip0 = null; } else { tip0 = normToolTip; }
         if(shiftToolTip.isEmpty()) { tip1 = null; } else { tip1 = shiftToolTip; }
@@ -40,7 +39,7 @@ public class wallBlock extends WallBlock {
         flammability = fireChance;
         stripped = strippedState;
     }
-    public wallBlock(BlockBehaviour.Properties properties, boolean flames, int fireChance, int fireSpread, BlockState strippedState) {
+    public wallBlock(Properties properties, boolean flames, int fireChance, int fireSpread, BlockState strippedState) {
         super(properties);
         tip0 = null;
         tip1 = null;
@@ -56,13 +55,13 @@ public class wallBlock extends WallBlock {
         if(kb.HCtrl() && tip2 != null) { toolTip.add(Component.translatable(tip2)); } //if ctrl, show tip2 (if not empty), do first
         if(kb.HShift() && tip1 != null) { toolTip.add(Component.translatable(tip1)); }//if shifted, show tip1 (if not empty)
     }
-    public boolean isFlammable(@NotNull BlockState state, @NotNull BlockGetter world, @NotNull BlockPos pos, @NotNull Direction face)
-    {
+    public boolean isFlammable(@NotNull BlockState state, @NotNull BlockGetter world, @NotNull BlockPos pos, @NotNull Direction face) {
+        boolean flam = false;
         if (flame && !state.getValue(WATERLOGGED)) {
             rngBurn(world, state, pos, 40, 60);
-            return true;
+            flam = true;
         }
-        return false;
+        return flam;
     }
     public int getFlammability(@NotNull BlockState state, @NotNull BlockGetter world, @NotNull BlockPos pos, @NotNull Direction face) {
         if (flame) { return flammability; }

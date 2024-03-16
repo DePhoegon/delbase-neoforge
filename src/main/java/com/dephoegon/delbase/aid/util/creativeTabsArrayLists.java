@@ -10,8 +10,13 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 
+import static com.dephoegon.delbase.block.axis.axiCutSandStones.*;
 import static com.dephoegon.delbase.block.general.ash.*;
+import static com.dephoegon.delbase.block.general.genSandStones.*;
 import static com.dephoegon.delbase.block.general.misc.ASH_BLOCK;
+import static com.dephoegon.delbase.block.slab.slabMisc.*;
+import static com.dephoegon.delbase.item.blockCutterPlans.*;
+import static com.dephoegon.delbase.item.shiftingDyes.*;
 
 public class creativeTabsArrayLists {
     public static @NotNull ArrayList<DeferredItem<Item>> setBlockCutterPlansList() {

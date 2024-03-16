@@ -27,7 +27,7 @@ public class gravBlock extends ColoredFallingBlock {
     private final String tip1;
     private final String tip2;
     private final boolean fall;
-    public gravBlock(ColorRGBA dustColorIn, Properties properties, String normToolTip, String shiftToolTip, String ctrlToolTip, boolean falls) {
+    public gravBlock(ColorRGBA dustColorIn, Properties properties, @NotNull String normToolTip, String shiftToolTip, String ctrlToolTip, boolean falls) {
         super(dustColorIn, properties);
         if (normToolTip.isEmpty()) { tip0 = null; } else { tip0 = normToolTip; }
         if (shiftToolTip.isEmpty()) { tip1 = null; } else { tip1 = shiftToolTip; }
@@ -72,12 +72,9 @@ public class gravBlock extends ColoredFallingBlock {
         Block bob = worldIn.getBlockState(pos).getBlock();
         if (blockArrayList.checkFallLock(bob)) { last = true; }
         else if (
-            // Recursive call as it allows for go up through custom gravity block class
-            // includes checks for sand & red sand
-            // Will expand exceptions if gravBlock also expands beyond sand & solid sand
                 bob instanceof gravBlock && l_count < 7 ||
-                        bob.defaultBlockState() == SAND.defaultBlockState() && l_count < 7 ||
-                        bob.defaultBlockState() == RED_SAND.defaultBlockState() && l_count < 7
+                bob.defaultBlockState() == SAND.defaultBlockState() && l_count < 7 ||
+                bob.defaultBlockState() == RED_SAND.defaultBlockState() && l_count < 7
         ) { last = spider(pos.above(), worldIn, l_count); }
         else { last = false; }
         return last;

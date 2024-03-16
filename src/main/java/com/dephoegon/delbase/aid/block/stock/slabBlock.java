@@ -14,6 +14,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.SlabType;
 import net.neoforged.neoforge.common.ToolAction;
 import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
@@ -28,7 +29,6 @@ public class slabBlock extends SlabBlock {
     private final int spread;
     private final int flammability;
     private final BlockState stripped;
-
     public slabBlock(Properties properties, @NotNull String normToolTip, String shiftToolTip, String ctrlToolTip, boolean flames, int fireChance, int fireSpread, BlockState strippedState) {
         super(properties);
         if(normToolTip.isEmpty()) { tip0 = null; } else { tip0 = normToolTip; }
@@ -49,19 +49,18 @@ public class slabBlock extends SlabBlock {
         flammability = fireChance;
         stripped = strippedState;
     }
-    public void appendHoverText(@NotNull ItemStack pStack, @javax.annotation.Nullable BlockGetter pLevel, @NotNull List<Component> toolTip, @NotNull TooltipFlag pFlag) {
-        super.appendHoverText(pStack, pLevel, toolTip, pFlag);
+    public void appendHoverText(@NotNull ItemStack stack, @Nullable BlockGetter worldIn, @NotNull List<Component> toolTip, @NotNull TooltipFlag flag) {
+        super.appendHoverText(stack, worldIn, toolTip, flag);
         if(!(kb.HShift()) && !(kb.HCtrl()) && tip0 != null) { toolTip.add(Component.translatable(tip0)); } //if neither pressed, show tip0 (if not empty)
         if(kb.HCtrl() && tip2 != null) { toolTip.add(Component.translatable(tip2)); } //if ctrl, show tip2 (if not empty), do first
-        if(kb.HShift() && tip1 != null) { toolTip.add(Component.translatable(tip1)); }//if shifted, show tip1 (if not empty)
+        if(kb.HShift() && tip1 != null) { toolTip.add(Component.translatable(tip1)); } //if shifted, show tip1 (if not empty)
     }
     public boolean isFlammable(@NotNull BlockState state, @NotNull BlockGetter level, @NotNull BlockPos pos, @NotNull Direction direction)
     {
         if (flame) {
             rngBurn(level, state, pos, 40, 60);
-            return true;
         }
-        return false;
+        return flame;
     }
     public int getFlammability(@NotNull BlockState state, @NotNull BlockGetter world, @NotNull BlockPos pos, @NotNull Direction face) {
         if (flame) { return flammability; }

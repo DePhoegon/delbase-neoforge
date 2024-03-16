@@ -3,8 +3,13 @@ plugins {
     id 'eclipse'
     id 'idea'
     id 'maven-publish'
-    id 'net.neoforged.gradle.userdev' version '7.0.80'
-    id 'net.neoforged.gradle.mixin' version '7.0.80'
+    id 'net.neoforged.gradle.userdev' version "7.+"
+    id 'net.neoforged.gradle.mixin' version "7.+"
+}
+
+mixin {
+    config "${mod_id}.mixins.json"
+    // config "${mod_id}.neoforge.mixins.json"
 }
 
 version = delbase_ver+'-'+minecraft_version

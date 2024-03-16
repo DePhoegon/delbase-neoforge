@@ -1,0 +1,20 @@
+{
+  "replace": false,
+  "values": {
+    "delbase:cherry_hedge": {
+      "chance": 0.3
+    },
+    "delbase:cherry_leaf_stair": {
+      "chance": 0.3
+    },
+    "delbase:cherry_leaf_slab": {
+      "chance": 0.3
+    },
+    "delbase:cherry_leaf_fence": {
+      "chance": 0.3
+    },
+    "delbase:cherry_leaf_fence_gate": {
+      "chance": 0.3
+    }
+  }
+}
