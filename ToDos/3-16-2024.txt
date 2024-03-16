@@ -1,0 +1,50 @@
+-- Dones ---
+Recipes* supposedly
+Blocks put in
+fix references to items
+modified colorLogic to use blocks for the colors to save space in type selector from over 800+ instances of .defaultBlockState()  [ for maybe 80-100 of it in the other spot ]
+fixed creative tabs
+moved the block
+codec settlement
+
+-- ToDos --
+Finish block cutter including menus & such
+blockCuttingStation - address
+JEI support / Integration
+fix block cutter json recipes
+
+
+-- Further out ToDos --
+test functionality.
+Verify things are working
+
+New format
+{
+  "type": "delbase:block_cutting",
+  "input": {
+    "item": "delbase:minecraft:chainmail_chestplate",
+    "count": 1
+  },
+  "plans": {
+    "item": "delbase:armor_compound",
+    "count": 1
+  },
+  "output": {
+    "item": "minecraft:chain",
+    "count": 7
+  }
+}
+--
+{
+  "type": "delbase:block_cutting",
+  "input": {
+    "item": "delbase:minecraft:chainmail_chestplate"
+  },
+  "plans": {
+    "item": "delbase:armor_compound"
+  },
+  "output": {
+    "item": "minecraft:chain",
+    "count": 7
+  }
+}

@@ -4,7 +4,6 @@ import com.dephoegon.delbase.aid.block.stock.gravBlock;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.tags.FluidTags;
-import net.minecraft.util.ColorRGBA;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.SoundType;
@@ -17,10 +16,10 @@ import net.neoforged.neoforge.common.PlantType;
 import org.jetbrains.annotations.NotNull;
 
 public class sandBlock extends gravBlock {
-    public sandBlock(ColorRGBA dustColorIn, MapColor color, String normToolTip, String shiftToolTip, String ctrlToolTip, boolean falls) {
+    public sandBlock(int dustColorIn, MapColor color, String normToolTip, String shiftToolTip, String ctrlToolTip, boolean falls) {
         super(dustColorIn, BlockBehaviour.Properties.of().mapColor(color).instrument(NoteBlockInstrument.SNARE).strength(0.5F).sound(SoundType.SAND), normToolTip, shiftToolTip, ctrlToolTip, falls);
     }
-    public sandBlock(ColorRGBA dustColorIn, MapColor color, boolean falls) {
+    public sandBlock(int dustColorIn, MapColor color, boolean falls) {
         super(dustColorIn, BlockBehaviour.Properties.of().mapColor(color).instrument(NoteBlockInstrument.SNARE).strength(0.5F).sound(SoundType.SAND), "", "", "", falls);
     }
     @Override

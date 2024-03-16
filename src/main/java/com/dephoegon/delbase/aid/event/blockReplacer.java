@@ -41,7 +41,7 @@ public class blockReplacer {
 
         world.setBlockAndUpdate(blockPos, defaultBlockState.setValue(TYPE, type).setValue(SlabBlock.WATERLOGGED, waterlogged));
     }
-    public static void axisPlacement(Level world, BlockPos blockPos, BlockState defaultBlockState, boolean cut_lock) {
+    public static void gen_AxisPlacement(Level world, BlockPos blockPos, BlockState defaultBlockState, boolean cut_lock) {
         if(cut_lock) { world.setBlockAndUpdate(blockPos, defaultBlockState); } else {
             Direction.Axis axis = world.getBlockState(blockPos).getValue(AXIS);
             world.setBlockAndUpdate(blockPos, defaultBlockState.setValue(AXIS, axis));

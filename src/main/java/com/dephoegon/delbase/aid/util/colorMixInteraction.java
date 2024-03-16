@@ -7,6 +7,7 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 import org.jetbrains.annotations.NotNull;
 
@@ -15,418 +16,398 @@ import static com.dephoegon.delbase.item.shiftingDyes.*;
 
 
 public class colorMixInteraction {
-    @SuppressWarnings("ConstantConditions")
-    public static InteractionResult ColorLogic(Level world, BlockPos blockPos, BlockState TargetBlock, BlockState BaseDefaultBlock, BlockState RedBaseDefaultBlock, BlockState DarkRedDefaultBlock, BlockState WhiteDefaultBlock, BlockState OrangeDefaultBlock, BlockState MagentaDefaultBlock, BlockState LightBlueDefaultBlock, BlockState YellowDefaultBlock, BlockState LimeDefaultBlock, BlockState PinkDefaultBlock, BlockState GrayDefaultBlock, BlockState LightGrayDefaultBlock, BlockState CyanDefaultBlock, BlockState PurpleDefaultBlock, BlockState BlueDefaultBlock, BlockState GreenDefaultBlock, BlockState BrownDefaultBlock, BlockState BlackDefaultBlock, int DefaultBlockIndex, @NotNull Item inHand, Player playerEntity) {
-        BlockState place_me = null;
+    @SuppressWarnings("DataFlowIssue")
+    public static InteractionResult ColorLogic(Level world, BlockPos blockPos, BlockState TargetBlock, Block baseBlock, Block redBlock, Block darkRedBlock, Block whiteBlock, Block orangeBlock, Block magentaBLock, Block lightBlueBlock, Block yellowBlock, Block limeBlock, Block pinkBlock, Block grayBlock, Block lightGrayBlock, Block cyanBlock, Block purpleBlock, Block blueBlock, Block greenBlock, Block brownBlock, Block blackBlock, int blockIndex, @NotNull Item inHand, Player playerEntity) {
+        Block place_me = null;
         boolean place = false;
         boolean lock_cut = false;
 
-        if (inHand.equals(cleanse.getItem()) && BaseDefaultBlock != null) {
-                if (TargetBlock != BaseDefaultBlock && BaseDefaultBlock != null) {
+        if (inHand.equals(cleanse.getItem()) && baseBlock != null) {
+                if (TargetBlock != baseBlock.defaultBlockState() && baseBlock != null) {
                     place = true;
                 }
-                if (TargetBlock == RedBaseDefaultBlock && RedBaseDefaultBlock != null) {
+                if (TargetBlock == redBlock.defaultBlockState() && redBlock != null) {
                     playerEntity.addItem(new ItemStack(RED_SHIFT_DYE.get().asItem()));
                 }
-                if (TargetBlock == DarkRedDefaultBlock && DarkRedDefaultBlock != null) {
+                if (TargetBlock == darkRedBlock.defaultBlockState() && darkRedBlock != null) {
                     playerEntity.addItem(new ItemStack(BLOOD_SHIFT_DYE.get().asItem()));
                 }
-                if (TargetBlock == WhiteDefaultBlock && WhiteDefaultBlock != null) {
+                if (TargetBlock == whiteBlock.defaultBlockState() && whiteBlock != null) {
                     playerEntity.addItem(new ItemStack(WHITE_SHIFT_DYE.get().asItem()));
                 }
-                if (TargetBlock == OrangeDefaultBlock && OrangeDefaultBlock != null) {
+                if (TargetBlock == orangeBlock.defaultBlockState() && orangeBlock != null) {
                     playerEntity.addItem(new ItemStack(ORANGE_SHIFT_DYE.get().asItem()));
                 }
-                if (TargetBlock == MagentaDefaultBlock && MagentaDefaultBlock != null) {
+                if (TargetBlock == magentaBLock.defaultBlockState() && magentaBLock != null) {
                     playerEntity.addItem(new ItemStack(MAGENTA_SHIFT_DYE.get().asItem()));
                 }
-                if (TargetBlock == LightBlueDefaultBlock && LightBlueDefaultBlock != null) {
+                if (TargetBlock == lightBlueBlock.defaultBlockState() && lightBlueBlock != null) {
                     playerEntity.addItem(new ItemStack(LIGHT_BLUE_SHIFT_DYE.get().asItem()));
                 }
-                if (TargetBlock == YellowDefaultBlock && YellowDefaultBlock != null) {
+                if (TargetBlock == yellowBlock.defaultBlockState() && yellowBlock != null) {
                     playerEntity.addItem(new ItemStack(YELLOW_SHIFT_DYE.get().asItem()));
                 }
-                if (TargetBlock == LimeDefaultBlock && LimeDefaultBlock != null) {
+                if (TargetBlock == limeBlock.defaultBlockState() && limeBlock != null) {
                     playerEntity.addItem(new ItemStack(LIME_SHIFT_DYE.get().asItem()));
                 }
-                if (TargetBlock == PinkDefaultBlock && PinkDefaultBlock != null) {
+                if (TargetBlock == pinkBlock.defaultBlockState() && pinkBlock != null) {
                     playerEntity.addItem(new ItemStack(PINK_SHIFT_DYE.get().asItem()));
                 }
-                if (TargetBlock == GrayDefaultBlock && GrayDefaultBlock != null) {
+                if (TargetBlock == grayBlock.defaultBlockState() && grayBlock != null) {
                     playerEntity.addItem(new ItemStack(GRAY_SHIFT_DYE.get().asItem()));
                 }
-                if (TargetBlock == LightGrayDefaultBlock && LightGrayDefaultBlock != null) {
+                if (TargetBlock == lightGrayBlock.defaultBlockState() && lightGrayBlock != null) {
                     playerEntity.addItem(new ItemStack(LIGHT_GRAY_SHIFT_DYE.get().asItem()));
                 }
-                if (TargetBlock == CyanDefaultBlock && CyanDefaultBlock != null) {
+                if (TargetBlock == cyanBlock.defaultBlockState() && cyanBlock != null) {
                     playerEntity.addItem(new ItemStack(CYAN_SHIFT_DYE.get().asItem()));
                 }
-                if (TargetBlock == PurpleDefaultBlock && PurpleDefaultBlock != null) {
+                if (TargetBlock == purpleBlock.defaultBlockState() && purpleBlock != null) {
                     playerEntity.addItem(new ItemStack(PURPLE_SHIFT_DYE.get().asItem()));
                 }
-                if (TargetBlock == BlueDefaultBlock && BlueDefaultBlock != null) {
+                if (TargetBlock == blueBlock.defaultBlockState() && blueBlock != null) {
                     playerEntity.addItem(new ItemStack(BLUE_SHIFT_DYE.get().asItem()));
                 }
-                if (TargetBlock == GreenDefaultBlock && GreenDefaultBlock != null) {
+                if (TargetBlock == greenBlock.defaultBlockState() && greenBlock != null) {
                     playerEntity.addItem(new ItemStack(GREEN_SHIFT_DYE.get().asItem()));
                 }
-                if (TargetBlock == BrownDefaultBlock && BrownDefaultBlock != null) {
+                if (TargetBlock == brownBlock.defaultBlockState() && brownBlock != null) {
                     playerEntity.addItem(new ItemStack(BROWN_SHIFT_DYE.get().asItem()));
                 }
-                if (TargetBlock == BlackDefaultBlock && BlackDefaultBlock != null) {
+                if (TargetBlock == blackBlock.defaultBlockState() && blackBlock != null) {
                     playerEntity.addItem(new ItemStack(BLACK_SHIFT_DYE.get().asItem()));
                 }
                 if (place) {
-                    place_me = BaseDefaultBlock;
+                    place_me = baseBlock;
                     lock_cut = true;
                 }
         }
         if (inHand.equals(red.getItem())) {
-            if (RedBaseDefaultBlock != null) { place = true; }
-            if (TargetBlock == RedBaseDefaultBlock && DarkRedDefaultBlock != null) {
+            if (redBlock != null) { place = true; }
+            if (TargetBlock == redBlock.defaultBlockState() && darkRedBlock != null) {
                 playerEntity.addItem(new ItemStack(CLEANSE_SHIFT_DYE.get().asItem()));
-                place_me = DarkRedDefaultBlock;
+                place_me = darkRedBlock;
                 lock_cut = true;
                 place = true;
             }
-            if (TargetBlock == YellowDefaultBlock && OrangeDefaultBlock != null) {
-                place_me = OrangeDefaultBlock;
+            if (TargetBlock == yellowBlock.defaultBlockState() && orangeBlock != null) {
+                place_me = orangeBlock;
                 playerEntity.addItem(new ItemStack(ORANGE_SHIFT_DYE.get().asItem()));
                 place = true;
             }
-            if (TargetBlock == BlueDefaultBlock && PurpleDefaultBlock != null) {
-                place_me = PurpleDefaultBlock;
+            if (TargetBlock == blueBlock.defaultBlockState() && purpleBlock != null) {
+                place_me = purpleBlock;
                 playerEntity.addItem(new ItemStack(PURPLE_SHIFT_DYE.get().asItem()));
                 place = true;
             }
-            if (TargetBlock == WhiteDefaultBlock && PinkDefaultBlock != null) {
-                place_me = PinkDefaultBlock;
+            if (TargetBlock == whiteBlock.defaultBlockState() && pinkBlock != null) {
+                place_me = pinkBlock;
                 playerEntity.addItem(new ItemStack(PINK_SHIFT_DYE.get().asItem()));
                 place = true;
             }
-            if (TargetBlock == DarkRedDefaultBlock && RedBaseDefaultBlock != null) {
-                place_me = RedBaseDefaultBlock;
+            if (TargetBlock == darkRedBlock.defaultBlockState() && redBlock != null) {
+                place_me = redBlock;
                 playerEntity.addItem(new ItemStack(RED_SHIFT_DYE.get().asItem()));
                 place = true;
                 lock_cut = true;
             }
             if (place && place_me == null) {
-                place_me = RedBaseDefaultBlock;
+                place_me = redBlock;
                 lock_cut = true;
                 playerEntity.addItem(new ItemStack(CLEANSE_SHIFT_DYE.get().asItem()));
             }
         }
         if (inHand.equals(blood.getItem())) {
-            if (TargetBlock != DarkRedDefaultBlock && DarkRedDefaultBlock != null) { place = true; }
-            if (TargetBlock == BaseDefaultBlock && BaseDefaultBlock != null) { lock_cut = true; }
-            if (TargetBlock == RedBaseDefaultBlock && DarkRedDefaultBlock != null) {
+            if (TargetBlock != darkRedBlock.defaultBlockState() && darkRedBlock != null) { place = true; }
+            if (TargetBlock == baseBlock.defaultBlockState() && baseBlock != null) { lock_cut = true; }
+            if (TargetBlock == redBlock.defaultBlockState() && darkRedBlock != null) {
                 lock_cut = true;
                 playerEntity.addItem(new ItemStack(RED_SHIFT_DYE.get().asItem()));
-                place_me = DarkRedDefaultBlock;
+                place_me = darkRedBlock;
                 place = true;
             }
-            if (TargetBlock == YellowDefaultBlock && OrangeDefaultBlock != null) {
-                place_me = OrangeDefaultBlock;
+            if (TargetBlock == yellowBlock.defaultBlockState() && orangeBlock != null) {
+                place_me = orangeBlock;
                 playerEntity.addItem(new ItemStack(RED_SHIFT_DYE.get().asItem()));
                 place = true;
             }
-            if (TargetBlock == BlueDefaultBlock && PurpleDefaultBlock != null) {
-                place_me = PurpleDefaultBlock;
+            if (TargetBlock == blueBlock.defaultBlockState() && purpleBlock != null) {
+                place_me = purpleBlock;
                 playerEntity.addItem(new ItemStack(RED_SHIFT_DYE.get().asItem()));
                 place = true;
             }
-            if (TargetBlock == WhiteDefaultBlock && PinkDefaultBlock != null) {
-                place_me = PinkDefaultBlock;
+            if (TargetBlock == whiteBlock.defaultBlockState() && pinkBlock != null) {
+                place_me = pinkBlock;
                 playerEntity.addItem(new ItemStack(RED_SHIFT_DYE.get().asItem()));
                 place = true;
             }
             if (place_me == null && place) {
-                place_me = DarkRedDefaultBlock;
+                place_me = darkRedBlock;
                 playerEntity.addItem(new ItemStack(CLEANSE_SHIFT_DYE.get().asItem()));
             }
         }
         if (inHand.equals(white.getItem())) {
-            if (TargetBlock != WhiteDefaultBlock && WhiteDefaultBlock != null) { place = true; }
-            if (TargetBlock == RedBaseDefaultBlock && PinkDefaultBlock != null) {
+            if (TargetBlock != whiteBlock.defaultBlockState() && whiteBlock != null) { place = true; }
+            if (TargetBlock == redBlock.defaultBlockState() && pinkBlock != null) {
                 lock_cut = true;
-                place_me = PinkDefaultBlock;
+                place_me = pinkBlock;
                 playerEntity.addItem(new ItemStack(PINK_SHIFT_DYE.get().asItem()));
                 place = true;
             }
-            if (TargetBlock == BaseDefaultBlock && BaseDefaultBlock != null) { lock_cut = true; }
-            if (TargetBlock == DarkRedDefaultBlock && PinkDefaultBlock != null) {
-                place_me = PinkDefaultBlock;
+            if (TargetBlock == baseBlock.defaultBlockState() && baseBlock != null) { lock_cut = true; }
+            if (TargetBlock == darkRedBlock.defaultBlockState() && pinkBlock != null) {
+                place_me = pinkBlock;
                 playerEntity.addItem(new ItemStack(PINK_SHIFT_DYE.get().asItem()));
                 place = true;
             }
-            if (TargetBlock == GreenDefaultBlock && LimeDefaultBlock != null) {
-                place_me = LimeDefaultBlock;
+            if (TargetBlock == greenBlock.defaultBlockState() && limeBlock != null) {
+                place_me = limeBlock;
                 playerEntity.addItem(new ItemStack(LIME_SHIFT_DYE.get().asItem()));
                 place = true;
             }
-            if (TargetBlock == BlueDefaultBlock && LightBlueDefaultBlock != null) {
-                place_me = LightBlueDefaultBlock;
+            if (TargetBlock == blueBlock.defaultBlockState() && lightBlueBlock != null) {
+                place_me = lightBlueBlock;
                 playerEntity.addItem(new ItemStack(LIGHT_BLUE_SHIFT_DYE.get().asItem()));
                 place = true;
             }
-            if (TargetBlock == BlackDefaultBlock && GrayDefaultBlock != null) {
-                place_me = GrayDefaultBlock;
+            if (TargetBlock == blackBlock.defaultBlockState() && grayBlock != null) {
+                place_me = grayBlock;
                 playerEntity.addItem(new ItemStack(GRAY_SHIFT_DYE.get().asItem()));
                 place = true;
             }
-            if (TargetBlock == GrayDefaultBlock && LightGrayDefaultBlock != null) {
-                place_me = LightGrayDefaultBlock;
+            if (TargetBlock == grayBlock.defaultBlockState() && lightGrayBlock != null) {
+                place_me = lightGrayBlock;
                 playerEntity.addItem(new ItemStack(LIGHT_GRAY_SHIFT_DYE.get().asItem()));
                 place = true;
             }
             if (place && place_me == null) {
-                place_me = WhiteDefaultBlock;
+                place_me = whiteBlock;
                 playerEntity.addItem(new ItemStack(CLEANSE_SHIFT_DYE.get().asItem()));
             }
         }
         if (inHand.equals(orange.getItem())) {
-            if (TargetBlock != OrangeDefaultBlock && OrangeDefaultBlock != null) { place = true; }
-            if (TargetBlock == RedBaseDefaultBlock && BaseDefaultBlock != null) { lock_cut = true; }
-            if (TargetBlock == BaseDefaultBlock && BaseDefaultBlock != null) { lock_cut = true; }
+            if (TargetBlock != orangeBlock.defaultBlockState() && orangeBlock != null) { place = true; }
+            if (TargetBlock == redBlock.defaultBlockState() && baseBlock != null) { lock_cut = true; }
+            if (TargetBlock == baseBlock.defaultBlockState() && baseBlock != null) { lock_cut = true; }
             if (place) {
-                place_me = OrangeDefaultBlock;
+                place_me = orangeBlock;
                 playerEntity.addItem(new ItemStack(CLEANSE_SHIFT_DYE.get().asItem()));
             }
         }
         if (inHand.equals(magenta.getItem())) {
-            if (TargetBlock != MagentaDefaultBlock && MagentaDefaultBlock != null) { place = true; }
-            if (TargetBlock == RedBaseDefaultBlock && BaseDefaultBlock != null) { lock_cut = true; }
-            if (TargetBlock == BaseDefaultBlock && BaseDefaultBlock != null) { lock_cut = true; }
+            if (TargetBlock != magentaBLock.defaultBlockState() && magentaBLock != null) { place = true; }
+            if (TargetBlock == redBlock.defaultBlockState() && baseBlock != null) { lock_cut = true; }
+            if (TargetBlock == baseBlock.defaultBlockState() && baseBlock != null) { lock_cut = true; }
             if (place) {
-                place_me = MagentaDefaultBlock;
+                place_me = magentaBLock;
                 playerEntity.addItem(new ItemStack(CLEANSE_SHIFT_DYE.get().asItem()));
             }
         }
         if (inHand.equals(light_blue.getItem())) {
-            if (TargetBlock != LightBlueDefaultBlock && LightBlueDefaultBlock != null) { place = true; }
-            if (TargetBlock == RedBaseDefaultBlock && BaseDefaultBlock != null) { lock_cut = true; }
-            if (TargetBlock == BaseDefaultBlock && BaseDefaultBlock != null) { lock_cut = true; }
+            if (TargetBlock != lightBlueBlock.defaultBlockState() && lightBlueBlock != null) { place = true; }
+            if (TargetBlock == redBlock.defaultBlockState() && baseBlock != null) { lock_cut = true; }
+            if (TargetBlock == baseBlock.defaultBlockState() && baseBlock != null) { lock_cut = true; }
             if (place) {
-                place_me = LightBlueDefaultBlock;
+                place_me = lightBlueBlock;
                 playerEntity.addItem(new ItemStack(CLEANSE_SHIFT_DYE.get().asItem()));
             }
         }
         if (inHand.equals(yellow.getItem())) {
-            if (TargetBlock != YellowDefaultBlock && YellowDefaultBlock != null) { place = true; }
-            if (TargetBlock == RedBaseDefaultBlock && OrangeDefaultBlock != null) {
+            if (TargetBlock != yellowBlock.defaultBlockState() && yellowBlock != null) { place = true; }
+            if (TargetBlock == redBlock.defaultBlockState() && orangeBlock != null) {
                 lock_cut = true;
-                place_me = OrangeDefaultBlock;
+                place_me = orangeBlock;
                 playerEntity.addItem(new ItemStack(ORANGE_SHIFT_DYE.get().asItem()));
                 place = true;
             }
-            if (TargetBlock == BaseDefaultBlock && BaseDefaultBlock != null) { lock_cut = true; }
-            if (TargetBlock == DarkRedDefaultBlock && OrangeDefaultBlock != null) {
-                place_me = OrangeDefaultBlock;
+            if (TargetBlock == baseBlock.defaultBlockState() && baseBlock != null) { lock_cut = true; }
+            if (TargetBlock == darkRedBlock.defaultBlockState() && orangeBlock != null) {
+                place_me = orangeBlock;
                 playerEntity.addItem(new ItemStack(RED_SHIFT_DYE.get().asItem()));
                 place = true;
             }
             if (place && place_me == null) {
-                place_me = YellowDefaultBlock;
+                place_me = yellowBlock;
                 playerEntity.addItem(new ItemStack(CLEANSE_SHIFT_DYE.get().asItem()));
             }
         }
         if (inHand.equals(lime.getItem())) {
-            if (TargetBlock != LimeDefaultBlock && LimeDefaultBlock != null) { place = true; }
-            if (TargetBlock == RedBaseDefaultBlock && BaseDefaultBlock != null) { lock_cut = true; }
-            if (TargetBlock == BaseDefaultBlock && BaseDefaultBlock != null) { lock_cut = true; }
+            if (TargetBlock != limeBlock.defaultBlockState() && limeBlock != null) { place = true; }
+            if (TargetBlock == redBlock.defaultBlockState() && baseBlock != null) { lock_cut = true; }
+            if (TargetBlock == baseBlock.defaultBlockState() && baseBlock != null) { lock_cut = true; }
             if (place) {
-                place_me = LimeDefaultBlock;
+                place_me = limeBlock;
                 playerEntity.addItem(new ItemStack(CLEANSE_SHIFT_DYE.get().asItem()));
             }
         }
         if (inHand.equals(pink.getItem())) {
-            if (TargetBlock != PinkDefaultBlock && PinkDefaultBlock != null) { place = true; }
-            if (TargetBlock == RedBaseDefaultBlock && BaseDefaultBlock != null) { lock_cut = true; }
-            if (TargetBlock == BaseDefaultBlock && BaseDefaultBlock != null) { lock_cut = true; }
-            if (TargetBlock == PurpleDefaultBlock && MagentaDefaultBlock != null) {
-                place_me = MagentaDefaultBlock;
+            if (TargetBlock != pinkBlock.defaultBlockState() && pinkBlock != null) { place = true; }
+            if (TargetBlock == redBlock.defaultBlockState() && baseBlock != null) { lock_cut = true; }
+            if (TargetBlock == baseBlock.defaultBlockState() && baseBlock != null) { lock_cut = true; }
+            if (TargetBlock == purpleBlock.defaultBlockState() && magentaBLock != null) {
+                place_me = magentaBLock;
                 playerEntity.addItem(new ItemStack(MAGENTA_SHIFT_DYE.get().asItem()));
                 place = true;
             }
-            if (TargetBlock == BlackDefaultBlock && RedBaseDefaultBlock != null) {
-                place_me = RedBaseDefaultBlock;
+            if (TargetBlock == blackBlock.defaultBlockState() && redBlock != null) {
+                place_me = redBlock;
                 lock_cut = true;
                 playerEntity.addItem(new ItemStack(RED_SHIFT_DYE.get().asItem()));
                 place = true;
             }
             if (place && place_me == null) {
-                place_me = PinkDefaultBlock;
+                place_me = pinkBlock;
                 playerEntity.addItem(new ItemStack(CLEANSE_SHIFT_DYE.get().asItem()));
             }
         }
         if (inHand.equals(gray.getItem())) {
-            if (TargetBlock != GrayDefaultBlock && GrayDefaultBlock != null) { place = true; }
-            if (TargetBlock == RedBaseDefaultBlock && BaseDefaultBlock != null) { lock_cut = true; }
-            if (TargetBlock == BaseDefaultBlock && BaseDefaultBlock != null) { lock_cut = true; }
-            if (TargetBlock == WhiteDefaultBlock && LightGrayDefaultBlock != null) {
-                place_me = LightGrayDefaultBlock;
+            if (TargetBlock != grayBlock.defaultBlockState() && grayBlock != null) { place = true; }
+            if (TargetBlock == redBlock.defaultBlockState() && baseBlock != null) { lock_cut = true; }
+            if (TargetBlock == baseBlock.defaultBlockState() && baseBlock != null) { lock_cut = true; }
+            if (TargetBlock == whiteBlock.defaultBlockState() && lightGrayBlock != null) {
+                place_me = lightGrayBlock;
                 playerEntity.addItem(new ItemStack(LIGHT_GRAY_SHIFT_DYE.get().asItem()));
                 place = true;
             }
             if (place && place_me == null) {
-                place_me = GrayDefaultBlock;
+                place_me = grayBlock;
                 playerEntity.addItem(new ItemStack(CLEANSE_SHIFT_DYE.get().asItem()));
             }
         }
         if (inHand.equals(light_gray.getItem())) {
-            if (TargetBlock != LightGrayDefaultBlock && LightGrayDefaultBlock != null) { place = true; }
-            if (TargetBlock == RedBaseDefaultBlock && BaseDefaultBlock != null) { lock_cut = true; }
-            if (TargetBlock == BaseDefaultBlock && BaseDefaultBlock != null) { lock_cut = true; }
-            if (TargetBlock == BlackDefaultBlock && GrayDefaultBlock != null) {
-                place_me = GrayDefaultBlock;
+            if (TargetBlock != lightGrayBlock.defaultBlockState() && lightGrayBlock != null) { place = true; }
+            if (TargetBlock == redBlock.defaultBlockState() && baseBlock != null) { lock_cut = true; }
+            if (TargetBlock == baseBlock.defaultBlockState() && baseBlock != null) { lock_cut = true; }
+            if (TargetBlock == blackBlock.defaultBlockState() && grayBlock != null) {
+                place_me = grayBlock;
                 playerEntity.addItem(new ItemStack(GRAY_SHIFT_DYE.get().asItem()));
                 place = true;
             }
             if (place && place_me == null) {
-                place_me = LightGrayDefaultBlock;
+                place_me = lightGrayBlock;
                 playerEntity.addItem(new ItemStack(CLEANSE_SHIFT_DYE.get().asItem()));
             }
         }
         if (inHand.equals(cyan.getItem())) {
-            if (TargetBlock != CyanDefaultBlock && CyanDefaultBlock != null) { place = true; }
-            if (TargetBlock == RedBaseDefaultBlock && BaseDefaultBlock != null) { lock_cut = true; }
-            if (TargetBlock == BaseDefaultBlock && BaseDefaultBlock != null) { lock_cut = true; }
+            if (TargetBlock != cyanBlock.defaultBlockState() && cyanBlock != null) { place = true; }
+            if (TargetBlock == redBlock.defaultBlockState() && baseBlock != null) { lock_cut = true; }
+            if (TargetBlock == baseBlock.defaultBlockState() && baseBlock != null) { lock_cut = true; }
             if (place) {
-                place_me = CyanDefaultBlock;
+                place_me = cyanBlock;
                 playerEntity.addItem(new ItemStack(CLEANSE_SHIFT_DYE.get().asItem()));
             }
         }
         if (inHand.equals(purple.getItem())) {
-            if (TargetBlock != PurpleDefaultBlock && PurpleDefaultBlock != null) { place = true; }
-            if (TargetBlock == RedBaseDefaultBlock && BaseDefaultBlock != null) { lock_cut = true; }
-            if (TargetBlock == BaseDefaultBlock && BaseDefaultBlock != null) { lock_cut = true; }
-            if (TargetBlock == PinkDefaultBlock && MagentaDefaultBlock != null) {
-                place_me = MagentaDefaultBlock;
+            if (TargetBlock != purpleBlock.defaultBlockState() && purpleBlock != null) { place = true; }
+            if (TargetBlock == redBlock.defaultBlockState() && baseBlock != null) { lock_cut = true; }
+            if (TargetBlock == baseBlock.defaultBlockState() && baseBlock != null) { lock_cut = true; }
+            if (TargetBlock == pinkBlock.defaultBlockState() && magentaBLock != null) {
+                place_me = magentaBLock;
                 playerEntity.addItem(new ItemStack(MAGENTA_SHIFT_DYE.get().asItem()));
                 place = true;
             }
             if (place && place_me == null) {
-                place_me = PurpleDefaultBlock;
+                place_me = purpleBlock;
                 playerEntity.addItem(new ItemStack(CLEANSE_SHIFT_DYE.get().asItem()));
             }
         }
         if (inHand.equals(blue.getItem())) {
-            if (TargetBlock != BlueDefaultBlock && BlueDefaultBlock != null) { place = true; }
-            if (TargetBlock == RedBaseDefaultBlock && PurpleDefaultBlock != null) {
+            if (TargetBlock != blueBlock.defaultBlockState() && blueBlock != null) { place = true; }
+            if (TargetBlock == redBlock.defaultBlockState() && purpleBlock != null) {
                 lock_cut = true;
-                place_me = PurpleDefaultBlock;
+                place_me = purpleBlock;
                 playerEntity.addItem(new ItemStack(PURPLE_SHIFT_DYE.get().asItem()));
                 place = true;
             }
-            if (TargetBlock == BaseDefaultBlock && BaseDefaultBlock != null) { lock_cut = true; }
-            if (TargetBlock == GreenDefaultBlock && CyanDefaultBlock != null) {
-                place_me = CyanDefaultBlock;
+            if (TargetBlock == baseBlock.defaultBlockState() && baseBlock != null) { lock_cut = true; }
+            if (TargetBlock == greenBlock.defaultBlockState() && cyanBlock != null) {
+                place_me = cyanBlock;
                 playerEntity.addItem(new ItemStack(CYAN_SHIFT_DYE.get().asItem()));
                 place = true;
             }
-            if (TargetBlock == WhiteDefaultBlock && LightBlueDefaultBlock != null) {
-                place_me = LightBlueDefaultBlock;
+            if (TargetBlock == whiteBlock.defaultBlockState() && lightBlueBlock != null) {
+                place_me = lightBlueBlock;
                 playerEntity.addItem(new ItemStack(LIGHT_BLUE_SHIFT_DYE.get().asItem()));
                 place = true;
             }
             if (place && place_me == null) {
-                place_me = BlueDefaultBlock;
+                place_me = blueBlock;
                 playerEntity.addItem(new ItemStack(CLEANSE_SHIFT_DYE.get().asItem()));
             }
 
         }
         if (inHand.equals(green.getItem())) {
-            if (TargetBlock != GrayDefaultBlock && GrayDefaultBlock != null) { place = true; }
-            if (TargetBlock == RedBaseDefaultBlock && BaseDefaultBlock != null) { lock_cut = true; }
-            if (TargetBlock == BaseDefaultBlock && BaseDefaultBlock != null) { lock_cut = true; }
-            if (TargetBlock == WhiteDefaultBlock && LimeDefaultBlock != null) {
-                place_me = LimeDefaultBlock;
+            if (TargetBlock != grayBlock.defaultBlockState() && grayBlock != null) { place = true; }
+            if (TargetBlock == redBlock.defaultBlockState() && baseBlock != null) { lock_cut = true; }
+            if (TargetBlock == baseBlock.defaultBlockState() && baseBlock != null) { lock_cut = true; }
+            if (TargetBlock == whiteBlock.defaultBlockState() && limeBlock != null) {
+                place_me = limeBlock;
                 playerEntity.addItem(new ItemStack(LIME_SHIFT_DYE.get().asItem()));
                 place = true;
             }
-            if (TargetBlock == BlueDefaultBlock && PurpleDefaultBlock != null) {
-                place_me = PurpleDefaultBlock;
+            if (TargetBlock == blueBlock.defaultBlockState() && purpleBlock != null) {
+                place_me = purpleBlock;
                 playerEntity.addItem(new ItemStack(PURPLE_SHIFT_DYE.get().asItem()));
                 place = true;
             }
             if (place && place_me == null) {
-                place_me = GreenDefaultBlock;
+                place_me = greenBlock;
                 playerEntity.addItem(new ItemStack(CLEANSE_SHIFT_DYE.get().asItem()));
             }
         }
         if (inHand.equals(brown.getItem())) {
-            if (TargetBlock != BrownDefaultBlock && BrownDefaultBlock != null) { place = true; }
-            if (TargetBlock == RedBaseDefaultBlock && BaseDefaultBlock != null) { lock_cut = true; }
-            if (TargetBlock == BaseDefaultBlock && BaseDefaultBlock != null) { lock_cut = true; }
+            if (TargetBlock != brownBlock.defaultBlockState() && brownBlock != null) { place = true; }
+            if (TargetBlock == redBlock.defaultBlockState() && baseBlock != null) { lock_cut = true; }
+            if (TargetBlock == baseBlock.defaultBlockState() && baseBlock != null) { lock_cut = true; }
             if (place) {
-                place_me = BrownDefaultBlock;
+                place_me = brownBlock;
                 playerEntity.addItem(new ItemStack(CLEANSE_SHIFT_DYE.get().asItem()));
             }
         }
         if (inHand.equals(black.getItem())) {
-            if (TargetBlock != BlackDefaultBlock && BlackDefaultBlock != null) { place = true; }
-            if (TargetBlock == RedBaseDefaultBlock && BaseDefaultBlock != null) { lock_cut = true; }
-            if (TargetBlock == BaseDefaultBlock && BaseDefaultBlock != null) { lock_cut = true; }
-            if (TargetBlock == LightGrayDefaultBlock && GrayDefaultBlock != null) {
-                place_me = GrayDefaultBlock;
+            if (TargetBlock != blackBlock.defaultBlockState() && blackBlock != null) { place = true; }
+            if (TargetBlock == redBlock.defaultBlockState() && baseBlock != null) { lock_cut = true; }
+            if (TargetBlock == baseBlock.defaultBlockState() && baseBlock != null) { lock_cut = true; }
+            if (TargetBlock == lightGrayBlock.defaultBlockState() && grayBlock != null) {
+                place_me = grayBlock;
                 playerEntity.addItem(new ItemStack(GRAY_SHIFT_DYE.get().asItem()));
                 place = true;
             }
-            if (TargetBlock == LightBlueDefaultBlock && BlueDefaultBlock != null) {
-                place_me = BlueDefaultBlock;
+            if (TargetBlock == lightBlueBlock.defaultBlockState() && blueBlock != null) {
+                place_me = blueBlock;
                 playerEntity.addItem(new ItemStack(BLUE_SHIFT_DYE.get().asItem()));
                 place = true;
             }
-            if (TargetBlock == LimeDefaultBlock && GreenDefaultBlock != null) {
-                place_me = GreenDefaultBlock;
+            if (TargetBlock == limeBlock.defaultBlockState() && greenBlock != null) {
+                place_me = greenBlock;
                 playerEntity.addItem(new ItemStack(GREEN_SHIFT_DYE.get().asItem()));
                 place = true;
             }
-            if (TargetBlock == PinkDefaultBlock && RedBaseDefaultBlock != null) {
-                place_me = RedBaseDefaultBlock;
+            if (TargetBlock == pinkBlock.defaultBlockState() && redBlock != null) {
+                place_me = redBlock;
                 playerEntity.addItem(new ItemStack(RED_SHIFT_DYE.get().asItem()));
                 lock_cut = true;
                 place = true;
             }
             if (place && place_me == null) {
-                place_me = BlackDefaultBlock;
+                place_me = blackBlock;
                 playerEntity.addItem(new ItemStack(CLEANSE_SHIFT_DYE.get().asItem()));
             }
         }
         if (place) {
-            switch (DefaultBlockIndex) {
-                case 1 ->
-                    //walls
-                        blockReplacer.wallPlacement(world, blockPos, place_me);
-                case 2 ->
-                    //Stairs
-                        blockReplacer.stairPlacement(world, blockPos, place_me);
-                case 3 ->
-                    //Slabs
-                        blockReplacer.slabPlacement(world, blockPos, place_me);
-                case 4 ->
-                    //Axis, lock_cut used to mix 'non-axis' default blocks with axis blocks in the set (cut_sandstone // cut_red_sandstone) as example
-                    //Is triggered only one base block & red block, (dumb method) possible to rework stack to allow cutLocking on any... but no reason to atm
-                        blockReplacer.axisPlacement(world, blockPos, place_me, lock_cut);
-                case 5 ->
-                    //DefaultBocks with no special placements
-                        blockReplacer.axisPlacement(world, blockPos, place_me, true);
-
-                //AxisPlacement set to do default states on which suits default blocks
-                case 6 ->
-                    //Fence Blocks
-                        blockReplacer.fencePlacement(world, blockPos, place_me);
-                case 7 ->
-                    //Fence Gate Blocks
-                        blockReplacer.fenceGatePlacement(world, blockPos, place_me);
-                default -> {
-                    //catch all, return fail
-                    return InteractionResult.FAIL;
-                }
+            BlockState to_place = place_me.defaultBlockState();
+            switch (blockIndex) {
+                case 1 -> blockReplacer.wallPlacement(world, blockPos, to_place); // Walls
+                case 2 -> blockReplacer.stairPlacement(world, blockPos, to_place); // Stairs
+                case 3 -> blockReplacer.slabPlacement(world, blockPos, to_place); // Slabs
+                case 4 -> blockReplacer.gen_AxisPlacement(world, blockPos, to_place, lock_cut); //Axis blocks with, optional lock (for cut_sandstone & red_cut_sandstone)
+                case 5 -> blockReplacer.gen_AxisPlacement(world, blockPos, to_place, true);  //AxisPlacement & DefaultBlocks set to do default states on which suits default blocks
+                case 6 -> blockReplacer.fencePlacement(world, blockPos, to_place); //Fence Blocks
+                case 7 -> blockReplacer.fenceGatePlacement(world, blockPos, to_place); //Fence Gate Blocks
+                default -> { return InteractionResult.FAIL; }
             }
             playerEntity.getMainHandItem().setCount(playerEntity.getMainHandItem().getCount()-1);
             return InteractionResult.SUCCESS;
-
         } else return InteractionResult.FAIL;
     }
 }

@@ -4,6 +4,7 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.ItemLike;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredHolder;
@@ -15,34 +16,33 @@ import java.util.ArrayList;
 
 import static com.dephoegon.delbase.aid.util.creativeTabsArrayLists.*;
 import static com.dephoegon.delbase.aid.util.creativeTabsArrayLists.setWoodenFenceGates;
+import static com.dephoegon.delbase.block.general.machineBlocks.BLOCK_CUTTING_STATION;
 import static com.dephoegon.delbase.block.general.misc.HARDENED_OAK_PLANKS;
 import static com.dephoegon.delbase.delbase.MODID;
+import static com.dephoegon.delbase.item.blockCutterPlans.WALL_PLANS;
 
 public class creativeTabs {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MODID);
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab> DELBASE_ITEM = CREATIVE_MODE_TABS.register("dephoegon_items", () -> CreativeModeTab.builder()
             .title(Component.translatable("itemGroup.dephoegon_items"))
             .withTabsBefore(CreativeModeTabs.COMBAT)
-            .icon(() -> EXAMPLE_ITEM.get().getDefaultInstance())
-            .displayItems((parameters, output) -> {
-                output.accept(EXAMPLE_ITEM.get());
-            }).build());
+            .icon(() -> new ItemStack(WALL_PLANS.get())).build());
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab> DELBASE_BLOCK = CREATIVE_MODE_TABS.register("dephoegon_blocks", () -> CreativeModeTab.builder()
             .title(Component.translatable("itemGroup.dephoegon_blocks"))
             .withTabsBefore(CreativeModeTabs.COMBAT)
-            .icon(() -> EXAMPLE_ITEM.get().getDefaultInstance())
-            .displayItems((parameters, output) -> {
-                output.accept(EXAMPLE_ITEM.get());
-            }).build());
+            .icon(() -> new ItemStack(BLOCK_CUTTING_STATION.get())).build());
 
     public static @NotNull ArrayList<DeferredItem<? extends ItemLike>> getDelItemList() {
         ArrayList<DeferredItem<? extends ItemLike>> out = new ArrayList<>();
-        out.add(BLOCK_CUTTING_STATION);
         out.addAll(setBlockCutterPlansList());
         out.addAll(setShiftingDyesList());
         return out;
     }
-
+    public static @NotNull ArrayList<DeferredBlock<? extends ItemLike>> getDelItemBlockList() {
+        ArrayList<DeferredBlock<? extends ItemLike>> out = new ArrayList<>();
+        out.add(BLOCK_CUTTING_STATION);
+        return out;
+    }
     public static @NotNull ArrayList<DeferredBlock<? extends ItemLike>> getDelNaturalBlockList() {
         ArrayList<DeferredBlock<? extends ItemLike>> out = new ArrayList<>(setSands());
         return out;

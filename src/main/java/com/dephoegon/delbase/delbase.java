@@ -54,10 +54,13 @@ public class delbase
     }
 
     // Add the example block item to the building blocks tab
-    private void addCreative(@NotNull BuildCreativeModeTabContentsEvent event)
-    {
-        if (event.getTabKey() == DELBASE_ITEM.getKey() || event.getTabKey() == CreativeModeTabs.INGREDIENTS) { getDelItemList().forEach(event::accept); }
+    private void addCreative(@NotNull BuildCreativeModeTabContentsEvent event) {
+        if (event.getTabKey() == DELBASE_ITEM.getKey()) {
+            getDelItemList().forEach(event::accept);
+            getDelItemBlockList().forEach(event::accept);
+        }
         if (event.getTabKey() == DELBASE_BLOCK.getKey()) { getDelFullBlockList().forEach(event::accept); }
+        if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) { getDelItemList().forEach(event::accept); }
         if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) { getDelBlockList().forEach(event::accept); }
         if (event.getTabKey() == CreativeModeTabs.FUNCTIONAL_BLOCKS) { getDelFunctionalBlockList().forEach(event::accept); }
         if (event.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS) { getDelNaturalBlockList().forEach(event::accept); }

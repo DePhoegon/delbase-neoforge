@@ -27,15 +27,15 @@ public class gravBlock extends ColoredFallingBlock {
     private final String tip1;
     private final String tip2;
     private final boolean fall;
-    public gravBlock(ColorRGBA dustColorIn, Properties properties, @NotNull String normToolTip, String shiftToolTip, String ctrlToolTip, boolean falls) {
-        super(dustColorIn, properties);
+    public gravBlock(int dustColorIn, Properties properties, @NotNull String normToolTip, String shiftToolTip, String ctrlToolTip, boolean falls) {
+        super(new ColorRGBA(dustColorIn), properties);
         if (normToolTip.isEmpty()) { tip0 = null; } else { tip0 = normToolTip; }
         if (shiftToolTip.isEmpty()) { tip1 = null; } else { tip1 = shiftToolTip; }
         if (ctrlToolTip.isEmpty()) { tip2 = null; } else { tip2 = ctrlToolTip; }
         fall = falls;
     }
-    public gravBlock(ColorRGBA dustColorIn, Properties properties, boolean falls) {
-        super(dustColorIn, properties);
+    public gravBlock(int dustColorIn, Properties properties, boolean falls) {
+        super(new ColorRGBA(dustColorIn), properties);
         tip0 = null;
         tip1 = null;
         tip2 = null;

@@ -4,7 +4,6 @@ import com.dephoegon.delbase.aid.block.stock.gravBlock;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.tags.FluidTags;
-import net.minecraft.util.ColorRGBA;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
@@ -15,10 +14,10 @@ import net.neoforged.neoforge.common.PlantType;
 import org.jetbrains.annotations.NotNull;
 
 public class solidSandBlock extends gravBlock {
-    public solidSandBlock(ColorRGBA dustColorIn, Block block, String normToolTip, String shiftToolTip, String ctrlToolTip) {
+    public solidSandBlock(int dustColorIn, Block block, String normToolTip, String shiftToolTip, String ctrlToolTip) {
         super(dustColorIn, BlockBehaviour.Properties.ofFullCopy(block), normToolTip, shiftToolTip, ctrlToolTip, false);
     }
-    public solidSandBlock(ColorRGBA dustColorIn, Block block) {
+    public solidSandBlock(int dustColorIn, Block block) {
         super(dustColorIn, BlockBehaviour.Properties.ofFullCopy(block), "", "", "", false);
     }
     @Override

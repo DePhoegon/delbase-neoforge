@@ -2,10 +2,13 @@ package com.dephoegon.delbase.aid.util;
 
 import com.dephoegon.delbase.aid.recipe.modRecipes;
 import com.dephoegon.delbase.block.axis.axiCutSandStones;
-import com.dephoegon.delbase.block.general.ash;
-import com.dephoegon.delbase.block.general.genSandStones;
-import com.dephoegon.delbase.block.general.misc;
-import com.dephoegon.delbase.block.slab.slabMisc;
+import com.dephoegon.delbase.block.fence.*;
+import com.dephoegon.delbase.block.general.*;
+import com.dephoegon.delbase.block.gravity.gravColorSands;
+import com.dephoegon.delbase.block.gravity.solidSandColors;
+import com.dephoegon.delbase.block.slab.*;
+import com.dephoegon.delbase.block.stair.*;
+import com.dephoegon.delbase.block.wall.*;
 import com.dephoegon.delbase.item.blockCutterPlans;
 import com.dephoegon.delbase.item.shiftingDyes;
 import net.neoforged.bus.api.IEventBus;
@@ -15,7 +18,7 @@ public class regList {
         //aid
         blockArrayList.setBlockArrays();
         //Special block
-        miscSpecialCases.register(eventBus);
+        misc.register(eventBus);
         // Sand
         gravColorSands.register(eventBus);
         // SandStone
@@ -103,7 +106,7 @@ public class regList {
         stoneFences.register(eventBus);
 
         // Specials
-        ashBlocks.register(eventBus);
+        ash.register(eventBus);
         machineBlocks.register(eventBus);
         blockEntities.register(eventBus);
 
