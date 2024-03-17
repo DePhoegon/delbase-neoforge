@@ -17,7 +17,7 @@ import static com.dephoegon.delbase.block.entity.blocks.blockCuttingStation.inpu
 import static com.dephoegon.delbase.block.entity.blocks.blockCuttingStation.planSlot;
 
 public class blockCuttingStationRecipes implements Recipe<SimpleContainer> {
-    private static final String ID = "block_cutting";
+    public static final String ID = "block_cutting";
     private final ItemStack output;
     private final ItemStack input;
     private final ItemStack plans;

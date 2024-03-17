@@ -2,6 +2,9 @@ package com.dephoegon.delbase;
 
 import com.dephoegon.delbase.aid.config.commonConfig;
 import com.dephoegon.delbase.aid.util.regList;
+import com.dephoegon.delbase.block.entity.blockEntities;
+import com.dephoegon.delbase.block.entity.screen.blockCuttingStationScreen;
+import com.dephoegon.delbase.block.entity.screen.menuTypes;
 import com.mojang.logging.LogUtils;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.neoforged.api.distmarker.Dist;
@@ -10,11 +13,11 @@ import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.ModLoadingContext;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.config.ModConfig;
-import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.neoforged.neoforge.capabilities.RegisterCapabilitiesEvent;
+import net.neoforged.neoforge.client.event.RegisterMenuScreensEvent;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
-import net.neoforged.neoforge.event.server.ServerStartingEvent;
 import org.jetbrains.annotations.NotNull;
 import org.slf4j.Logger;
 
@@ -40,9 +43,8 @@ public class delbase
         modEventBus.addListener(this::commonSetup);
         CREATIVE_MODE_TABS.register(modEventBus);
         NeoForge.EVENT_BUS.register(this);
-
-        // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
+        modEventBus.addListener(this::registerCapabilities);
 
         // Register our mod's ModConfigSpec so that FML can create and load the config file for us
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, commonConfig.SPEC);
@@ -52,8 +54,6 @@ public class delbase
     {
 
     }
-
-    // Add the example block item to the building blocks tab
     private void addCreative(@NotNull BuildCreativeModeTabContentsEvent event) {
         if (event.getTabKey() == DELBASE_ITEM.getKey()) {
             getDelItemList().forEach(event::accept);
@@ -65,22 +65,20 @@ public class delbase
         if (event.getTabKey() == CreativeModeTabs.FUNCTIONAL_BLOCKS) { getDelFunctionalBlockList().forEach(event::accept); }
         if (event.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS) { getDelNaturalBlockList().forEach(event::accept); }
     }
+    private void registerCapabilities(RegisterCapabilitiesEvent event) {
+        blockEntities.registerCapabilities(event);
+    }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
-    @SubscribeEvent
-    public void onServerStarting(ServerStartingEvent event)
-    {
 
-    }
 
     // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
     @Mod.EventBusSubscriber(modid = MODID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
     public static class ClientModEvents
     {
         @SubscribeEvent
-        public static void onClientSetup(FMLClientSetupEvent event)
-        {
-
+        public void onRegisterMenuScreens(@NotNull RegisterMenuScreensEvent event) {
+            event.register(menuTypes.BLOCK_CUTTING_STATION_MENU.get(), blockCuttingStationScreen::new);
         }
     }
 }

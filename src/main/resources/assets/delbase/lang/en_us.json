@@ -1288,5 +1288,6 @@
 
   "tooltip.key.category": "Delbase Tooltip Hotkeys (Supports KeyBoard Keys Only)",
   "tooltip.key.shift": "Show First Tooltip",
-  "tooltip.key.ctrl": "Show Second Tooltip"
+  "tooltip.key.ctrl": "Show Second Tooltip",
+  "station.delbase.block_cutter": "Block Cutting Station"
 }

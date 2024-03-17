@@ -5,7 +5,6 @@ import com.dephoegon.delbase.block.entity.blockEntities;
 import com.dephoegon.delbase.block.entity.blocks.blockCuttingStation;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
-import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
@@ -24,7 +23,6 @@ import net.minecraft.world.phys.shapes.BooleanOp;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
-import net.minecraftforge.network.NetworkHooks;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
@@ -144,6 +142,6 @@ public class cuttingStationBlock extends horizontalFacingBlocksBaseEntities {
     public BlockEntity newBlockEntity(@NotNull BlockPos pPos, @NotNull BlockState pState) { return new blockCuttingStation(pPos, pState); }
     @Nullable
     public <T extends BlockEntity>BlockEntityTicker<T> getTicker(@NotNull Level pLevel, @NotNull BlockState pState, @NotNull BlockEntityType<T> pBlockEntityType) {
-        return createTickerHelper(pBlockEntityType, blockEntities.BLOCK_CUTTING_STATION_BLOCK_ENTITY.get(), blockCuttingStation::tick);
+        return createTickerHelper(pBlockEntityType, blockEntities.BLOCK_ENTITY_BLOCK_CUTTER.get(), blockCuttingStation::tick);
     }
 }

@@ -2,6 +2,8 @@ package com.dephoegon.delbase.aid.util;
 
 import com.dephoegon.delbase.aid.recipe.modRecipes;
 import com.dephoegon.delbase.block.axis.axiCutSandStones;
+import com.dephoegon.delbase.block.entity.blockEntities;
+import com.dephoegon.delbase.block.entity.screen.menuTypes;
 import com.dephoegon.delbase.block.fence.*;
 import com.dephoegon.delbase.block.general.*;
 import com.dephoegon.delbase.block.gravity.gravColorSands;
