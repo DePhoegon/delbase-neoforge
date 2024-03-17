@@ -1,15 +1,14 @@
 {
-"type": "delbase:block_cutting",
-"ingredients": [
-{
-"item": "delbase:fence_gate_plans"
-},
-{
-"item": "minecraft:oak_wood"
-}
-],
-"output": {
-"item": "delbase:oak_wood_fence_gate",
-  "count": 1
-}
+  "type": "delbase:block_cutting",
+  "input": {
+    "item": "minecraft:oak_wood",
+    "count": 1
+  },
+  "plans": {
+    "item": "delbase:fence_gate_plans"
+  },
+  "output": {
+    "item": "delbase:oak_wood_fence_gate",
+    "count": 1
+  }
 }

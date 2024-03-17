@@ -1,15 +1,14 @@
 {
-"type": "delbase:block_cutting",
-"ingredients": [
-{
-"item": "delbase:wall_plans"
-},
-{
-"item": "minecraft:chiseled_polished_blackstone"
-}
-],
-"output": {
-"item": "delbase:chiseled_polished_blackstone_wall",
-  "count": 1
-}
+  "type": "delbase:block_cutting",
+  "input": {
+    "item": "minecraft:chiseled_polished_blackstone",
+    "count": 1
+  },
+  "plans": {
+    "item": "delbase:wall_plans"
+  },
+  "output": {
+    "item": "delbase:chiseled_polished_blackstone_wall",
+    "count": 1
+  }
 }

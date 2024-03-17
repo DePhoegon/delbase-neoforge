@@ -1,15 +1,14 @@
 {
-"type": "delbase:block_cutting",
-"ingredients": [
-{
-"item": "delbase:fence_gate_plans"
-},
-{
-"item": "minecraft:smooth_basalt"
-}
-],
-"output": {
-"item": "delbase:smooth_basalt_fence_gate",
-  "count": 1
-}
+  "type": "delbase:block_cutting",
+  "input": {
+    "item": "minecraft:smooth_basalt",
+    "count": 1
+  },
+  "plans": {
+    "item": "delbase:fence_gate_plans"
+  },
+  "output": {
+    "item": "delbase:smooth_basalt_fence_gate",
+    "count": 1
+  }
 }

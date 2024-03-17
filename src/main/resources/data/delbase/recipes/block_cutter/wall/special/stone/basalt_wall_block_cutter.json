@@ -1,13 +1,12 @@
 {
   "type": "delbase:block_cutting",
-  "ingredients": [
-    {
-      "item": "delbase:wall_plans"
-    },
-    {
-      "item": "delbase:cobbled_basalt_wall"
-    }
-  ],
+  "input": {
+    "item": "delbase:cobbled_basalt_wall",
+    "count": 1
+  },
+  "plans": {
+    "item": "delbase:wall_plans"
+  },
   "output": {
     "item": "delbase:basalt_wall",
     "count": 1

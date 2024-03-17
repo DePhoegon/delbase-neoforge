@@ -1,15 +1,14 @@
 {
-"type": "delbase:block_cutting",
-"ingredients": [
-{
-"item": "delbase:wall_plans"
-},
-{
-"item": "minecraft:pink_terracotta"
-}
-],
-"output": {
-"item": "delbase:pink_terracotta_wall",
-  "count": 1
-}
+  "type": "delbase:block_cutting",
+  "input": {
+    "item": "minecraft:pink_terracotta",
+    "count": 1
+  },
+  "plans": {
+    "item": "delbase:wall_plans"
+  },
+  "output": {
+    "item": "delbase:pink_terracotta_wall",
+    "count": 1
+  }
 }

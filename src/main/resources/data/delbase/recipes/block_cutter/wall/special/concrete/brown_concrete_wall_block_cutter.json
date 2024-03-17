@@ -1,15 +1,14 @@
 {
-"type": "delbase:block_cutting",
-"ingredients": [
-{
-"item": "delbase:wall_plans"
-},
-{
-"item": "minecraft:brown_concrete"
-}
-],
-"output": {
-"item": "delbase:brown_concrete_wall",
-  "count": 1
-}
+  "type": "delbase:block_cutting",
+  "input": {
+    "item": "minecraft:brown_concrete",
+    "count": 1
+  },
+  "plans": {
+    "item": "delbase:wall_plans"
+  },
+  "output": {
+    "item": "delbase:brown_concrete_wall",
+    "count": 1
+  }
 }

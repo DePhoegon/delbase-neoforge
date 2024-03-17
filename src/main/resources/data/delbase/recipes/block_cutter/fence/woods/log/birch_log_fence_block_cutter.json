@@ -1,15 +1,14 @@
 {
-"type": "delbase:block_cutting",
-"ingredients": [
-{
-"item": "delbase:fence_plans"
-},
-{
-"item": "minecraft:birch_log"
-}
-],
-"output": {
-"item": "delbase:birch_log_fence",
-  "count": 1
-}
+  "type": "delbase:block_cutting",
+  "input": {
+    "item": "minecraft:birch_log",
+    "count": 1
+  },
+  "plans": {
+    "item": "delbase:fence_plans"
+  },
+  "output": {
+    "item": "delbase:birch_log_fence",
+    "count": 1
+  }
 }

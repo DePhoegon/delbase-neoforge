@@ -1,13 +1,12 @@
 {
   "type": "delbase:block_cutting",
-  "ingredients": [
-    {
-      "item": "delbase:slab_plans"
-    },
-    {
-      "item": "minecraft:muddy_mangrove_roots"
-    }
-  ],
+  "input": {
+    "item": "minecraft:muddy_mangrove_roots",
+    "count": 1
+  },
+  "plans": {
+    "item": "delbase:slab_plans"
+  },
   "output": {
     "item": "delbase:muddy_mangrove_root_slab",
     "count": 2

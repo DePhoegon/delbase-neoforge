@@ -1,15 +1,14 @@
 {
-"type": "delbase:block_cutting",
-"ingredients": [
-{
-"item": "delbase:stair_plans"
-},
-{
-"item": "minecraft:dripstone_block"
-}
-],
-"output": {
-"item": "delbase:dripstone_stair",
-  "count": 1
-}
+  "type": "delbase:block_cutting",
+  "input": {
+    "item": "minecraft:dripstone_block",
+    "count": 1
+  },
+  "plans": {
+    "item": "delbase:stair_plans"
+  },
+  "output": {
+    "item": "delbase:dripstone_stair",
+    "count": 1
+  }
 }

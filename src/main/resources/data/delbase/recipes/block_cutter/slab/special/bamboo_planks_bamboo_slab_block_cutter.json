@@ -1,13 +1,12 @@
 {
   "type": "delbase:block_cutting",
-  "ingredients": [
-    {
-      "item": "delbase:slab_plans"
-    },
-    {
-      "item": "minecraft:bamboo_planks"
-    }
-  ],
+  "input": {
+    "item": "minecraft:bamboo_planks",
+    "count": 1
+  },
+  "plans": {
+    "item": "delbase:slab_plans"
+  },
   "output": {
     "item": "minecraft:bamboo_slab",
     "count": 2

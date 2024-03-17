@@ -1,13 +1,12 @@
 {
   "type": "delbase:block_cutting",
-  "ingredients": [
-    {
-      "item": "delbase:fence_plans"
-    },
-    {
-      "item": "minecraft:warped_planks"
-    }
-  ],
+  "input": {
+    "item": "minecraft:warped_planks",
+    "count": 1
+  },
+  "plans": {
+    "item": "delbase:fence_plans"
+  },
   "output": {
     "item": "minecraft:warped_fence",
     "count": 1

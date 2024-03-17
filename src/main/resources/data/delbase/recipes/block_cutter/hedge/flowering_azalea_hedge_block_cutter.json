@@ -1,13 +1,12 @@
 {
   "type": "delbase:block_cutting",
-  "ingredients": [
-    {
-      "item": "delbase:wall_plans"
-    },
-    {
-      "item": "minecraft:flowering_azalea_leaves"
-    }
-  ],
+  "input": {
+    "item": "minecraft:flowering_azalea_leaves",
+    "count": 1
+  },
+  "plans": {
+    "item": "delbase:wall_plans"
+  },
   "output": {
     "item": "delbase:flowering_azalea_hedge",
     "count": 1

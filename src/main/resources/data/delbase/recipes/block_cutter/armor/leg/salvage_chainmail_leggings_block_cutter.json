@@ -1,13 +1,13 @@
 {
   "type": "delbase:block_cutting",
-  "ingredients": [
-    {
-      "item": "delbase:armor_compound"
-    },
-    {
-      "item": "minecraft:chainmail_leggings"
-    }
-  ],
+  "input": {
+    "item": "minecraft:chainmail_leggings",
+    "count": 1
+  },
+  "plans": {
+    "item": "delbase:armor_compound",
+    "count": 1
+  },
   "output": {
     "item": "minecraft:chain",
     "count": 6

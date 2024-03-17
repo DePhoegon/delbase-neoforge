@@ -1,15 +1,14 @@
 {
-"type": "delbase:block_cutting",
-"ingredients": [
-{
-"item": "delbase:wall_plans"
-},
-{
-"item": "minecraft:raw_iron_block"
-}
-],
-"output": {
-"item": "delbase:raw_iron_wall",
-  "count": 1
-}
+  "type": "delbase:block_cutting",
+  "input": {
+    "item": "minecraft:raw_iron_block",
+    "count": 1
+  },
+  "plans": {
+    "item": "delbase:wall_plans"
+  },
+  "output": {
+    "item": "delbase:raw_iron_wall",
+    "count": 1
+  }
 }

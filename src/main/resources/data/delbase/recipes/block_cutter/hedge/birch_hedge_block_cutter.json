@@ -1,13 +1,12 @@
 {
   "type": "delbase:block_cutting",
-  "ingredients": [
-    {
-      "item": "delbase:wall_plans"
-    },
-    {
-      "item": "minecraft:birch_leaves"
-    }
-  ],
+  "input": {
+    "item": "minecraft:birch_leaves",
+    "count": 1
+  },
+  "plans": {
+    "item": "delbase:wall_plans"
+  },
   "output": {
     "item": "delbase:birch_hedge",
     "count": 1

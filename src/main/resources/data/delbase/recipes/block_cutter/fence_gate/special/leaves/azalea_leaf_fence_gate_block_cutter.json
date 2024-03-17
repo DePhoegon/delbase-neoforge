@@ -1,13 +1,12 @@
 {
   "type": "delbase:block_cutting",
-  "ingredients": [
-    {
-      "item": "delbase:fence_gate_plans"
-    },
-    {
-      "item": "minecraft:azalea_leaves"
-    }
-  ],
+  "input": {
+    "item": "minecraft:azalea_leaves",
+    "count": 1
+  },
+  "plans": {
+    "item": "delbase:fence_gate_plans"
+  },
   "output": {
     "item": "delbase:azalea_leaf_fence_gate",
     "count": 1

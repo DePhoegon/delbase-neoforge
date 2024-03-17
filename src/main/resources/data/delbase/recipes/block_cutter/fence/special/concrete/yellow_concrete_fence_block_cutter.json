@@ -1,15 +1,14 @@
 {
-"type": "delbase:block_cutting",
-"ingredients": [
-{
-"item": "delbase:fence_plans"
-},
-{
-"item": "minecraft:yellow_concrete"
-}
-],
-"output": {
-"item": "delbase:yellow_concrete_fence",
-  "count": 1
-}
+  "type": "delbase:block_cutting",
+  "input": {
+    "item": "minecraft:yellow_concrete",
+    "count": 1
+  },
+  "plans": {
+    "item": "delbase:fence_plans"
+  },
+  "output": {
+    "item": "delbase:yellow_concrete_fence",
+    "count": 1
+  }
 }

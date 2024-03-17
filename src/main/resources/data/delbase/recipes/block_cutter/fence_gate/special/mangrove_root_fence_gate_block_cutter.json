@@ -1,13 +1,12 @@
 {
   "type": "delbase:block_cutting",
-  "ingredients": [
-    {
-      "item": "delbase:fence_gate_plans"
-    },
-    {
-      "item": "minecraft:mangrove_roots"
-    }
-  ],
+  "input": {
+    "item": "minecraft:mangrove_roots",
+    "count": 1
+  },
+  "plans": {
+    "item": "delbase:fence_gate_plans"
+  },
   "output": {
     "item": "delbase:mangrove_root_fence_gate",
     "count": 1

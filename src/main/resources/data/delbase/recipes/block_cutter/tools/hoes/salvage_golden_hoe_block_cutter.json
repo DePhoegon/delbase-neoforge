@@ -1,13 +1,13 @@
 {
   "type": "delbase:block_cutting",
-  "ingredients": [
-    {
-      "item": "delbase:armor_compound"
-    },
-    {
-      "item": "minecraft:golden_hoe"
-    }
-  ],
+  "input": {
+    "item": "minecraft:golden_hoe",
+    "count": 1
+  },
+  "plans": {
+    "item": "delbase:armor_compound",
+    "count": 1
+  },
   "output": {
     "item": "minecraft:gold_ingot",
     "count": 1

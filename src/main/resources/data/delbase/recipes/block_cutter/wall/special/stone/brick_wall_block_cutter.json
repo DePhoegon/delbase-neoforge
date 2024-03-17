@@ -1,13 +1,12 @@
 {
   "type": "delbase:block_cutting",
-  "ingredients": [
-    {
-      "item": "delbase:wall_plans"
-    },
-    {
-      "item": "minecraft:bricks"
-    }
-  ],
+  "input": {
+    "item": "minecraft:bricks",
+    "count": 1
+  },
+  "plans": {
+    "item": "delbase:wall_plans"
+  },
   "output": {
     "item": "minecraft:brick_wall",
     "count": 1

@@ -1,15 +1,14 @@
 {
-"type": "delbase:block_cutting",
-"ingredients": [
-{
-"item": "delbase:fence_plans"
-},
-{
-"item": "delbase:blood_solid_sand"
-}
-],
-"output": {
-"item": "delbase:blood_sand_fence",
-  "count": 1
-}
+  "type": "delbase:block_cutting",
+  "input": {
+    "item": "delbase:blood_solid_sand",
+    "count": 1
+  },
+  "plans": {
+    "item": "delbase:fence_plans"
+  },
+  "output": {
+    "item": "delbase:blood_sand_fence",
+    "count": 1
+  }
 }

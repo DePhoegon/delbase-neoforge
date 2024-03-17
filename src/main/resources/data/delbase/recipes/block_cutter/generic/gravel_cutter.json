@@ -1,13 +1,13 @@
 {
   "type": "delbase:block_cutting",
-  "ingredients": [
-    {
-      "item": "delbase:armor_compound"
-    },
-    {
-      "item": "minecraft:cobblestone"
-    }
-  ],
+  "input": {
+    "item": "minecraft:cobblestone",
+    "count": 1
+  },
+  "plans": {
+    "item": "delbase:armor_compound",
+    "count": 1
+  },
   "output": {
     "item": "minecraft:gravel",
     "count": 2
