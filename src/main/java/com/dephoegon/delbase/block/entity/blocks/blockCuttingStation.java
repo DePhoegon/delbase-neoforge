@@ -2,6 +2,7 @@ package com.dephoegon.delbase.block.entity.blocks;
 
 import com.dephoegon.delbase.aid.config.commonConfig;
 import com.dephoegon.delbase.aid.recipe.blockCuttingStationRecipes;
+import com.dephoegon.delbase.aid.recipe.modRecipes;
 import com.dephoegon.delbase.block.entity.blockEntities;
 import com.dephoegon.delbase.block.entity.screen.blockCuttingStationMenu;
 import com.dephoegon.delbase.delbase;
@@ -193,8 +194,7 @@ public class blockCuttingStation extends BlockEntity implements MenuProvider {
         SimpleContainer inventory = new SimpleContainer(entity.itemHandler.getSlots());
         for (int i =0; i < entity.itemHandler.getSlots(); i++) { inventory.setItem(i, entity.itemHandler.getStackInSlot(i)); }
         assert level != null;
-        Optional<RecipeHolder<blockCuttingStationRecipes>> match = level.getRecipeManager()
-                .getRecipeFor(blockCuttingStationRecipes.Type.INSTANCE, inventory, level);
+        Optional<RecipeHolder<blockCuttingStationRecipes>> match = level.getRecipeManager().getRecipeFor(modRecipes.BLOCK_CUTTER_TYPE.get(), inventory, level);
         if (match.isPresent()){
             Item planSlotItem;
             if (entity.itemHandler.getStackInSlot(planSlot).isEmpty()) { return false; } else { planSlotItem = entity.itemHandler.getStackInSlot(planSlot).getItem(); }
@@ -232,7 +232,7 @@ public class blockCuttingStation extends BlockEntity implements MenuProvider {
 
         assert level != null;
         Optional<RecipeHolder<blockCuttingStationRecipes>> match = level.getRecipeManager()
-                .getRecipeFor(blockCuttingStationRecipes.Type.INSTANCE, inventory, level);
+                .getRecipeFor(modRecipes.BLOCK_CUTTER_TYPE.get(), inventory, level);
 
         if (match.isPresent()) {
             Item resultItem = match.get().value().getOutput().getItem();

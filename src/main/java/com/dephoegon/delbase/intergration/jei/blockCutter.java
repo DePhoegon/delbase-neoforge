@@ -1,6 +1,7 @@
 package com.dephoegon.delbase.intergration.jei;
 
 import com.dephoegon.delbase.aid.recipe.blockCuttingStationRecipes;
+import com.dephoegon.delbase.aid.recipe.modRecipes;
 import mezz.jei.api.constants.VanillaTypes;
 import mezz.jei.api.gui.builder.IRecipeLayoutBuilder;
 import mezz.jei.api.gui.drawable.IDrawable;
@@ -26,8 +27,7 @@ import static net.minecraft.world.item.Items.*;
 public class blockCutter implements IRecipeCategory<RecipeHolder<blockCuttingStationRecipes>> {
     public final static ResourceLocation UID = new ResourceLocation(MODID, "block_cutting");
     public final static ResourceLocation TEXTURE = new ResourceLocation(MODID, "textures/gui/block_cutting_station_gui_jei.png");
-    public  static final RecipeType<RecipeHolder<blockCuttingStationRecipes>> TYPE = RecipeType.createFromVanilla(blockCuttingStationRecipes.Type.INSTANCE);
-
+    public  static final RecipeType<RecipeHolder<blockCuttingStationRecipes>> TYPE = RecipeType.createFromVanilla(modRecipes.BLOCK_CUTTER_TYPE.get());
     private final IDrawable background;
     private final IDrawable icon;
 
@@ -42,10 +42,10 @@ public class blockCutter implements IRecipeCategory<RecipeHolder<blockCuttingSta
 
     public void setRecipe(@NotNull IRecipeLayoutBuilder builder, @NotNull RecipeHolder<blockCuttingStationRecipes> recipe, @NotNull IFocusGroup iFocusGroup) {
         ItemStack itemStack = recipe.value().getOutput();
-        builder.addSlot(RecipeIngredientRole.INPUT, 57, 18).addItemStack(recipe.value().getPlans());
-        builder.addSlot(RecipeIngredientRole.INPUT, 103, 18).addItemStack(recipe.value().getInput());
+        builder.addSlot(RecipeIngredientRole.INPUT, 57, 18).addItemStack(recipe.value().getInput());
+        builder.addSlot(RecipeIngredientRole.INPUT, 103, 18).addItemStack(recipe.value().getPlans());
         boolean useStatic = true;
-        if (recipe.value().getOutput().getItem().asItem() == DIRT.asItem()) {
+        if (itemStack.getItem().getDefaultInstance().toString().equals(DIRT.asItem().getDefaultInstance().toString())) {
             useStatic = false;
             builder.addSlot(RecipeIngredientRole.OUTPUT, 80, 60).addItemStacks(List.of(
                     new ItemStack(STICK),
@@ -59,7 +59,7 @@ public class blockCutter implements IRecipeCategory<RecipeHolder<blockCuttingSta
                     new ItemStack(OAK_PLANKS)
             ));
         }
-        if (recipe.value().getOutput().getItem().asItem() == GRASS_BLOCK.asItem()) {
+        if (itemStack.getItem().getDefaultInstance().toString().equals(GRASS_BLOCK.asItem().getDefaultInstance().toString())) {
             useStatic = false;
             builder.addSlot(RecipeIngredientRole.OUTPUT, 80, 60).addItemStacks(List.of(
                     new ItemStack(STICK),
@@ -68,7 +68,7 @@ public class blockCutter implements IRecipeCategory<RecipeHolder<blockCuttingSta
                     new ItemStack(COBBLESTONE)
             ));
         }
-        if (recipe.value().getOutput().getItem().asItem() == NETHERITE_INGOT.asItem()) {
+        if (itemStack.getItem().getDefaultInstance().toString().equals(NETHERITE_INGOT.asItem().getDefaultInstance().toString())) {
             useStatic = false;
             builder.addSlot(RecipeIngredientRole.OUTPUT, 80, 60).addItemStacks(List.of(
                     new ItemStack(NETHERITE_INGOT),
@@ -76,8 +76,8 @@ public class blockCutter implements IRecipeCategory<RecipeHolder<blockCuttingSta
             ));
         }
         if (useStatic){
-            if (recipe.value().getOutput().getItem() instanceof ArmorItem armor) {
-                boolean netherrite = armor.getMaterial() == ArmorMaterials.NETHERITE;
+            if (itemStack.getItem() instanceof ArmorItem armor) {
+                boolean netherrite = armor.getMaterial().toString().equals(ArmorMaterials.NETHERITE.toString());
                 if (netherrite) {
                     builder.addSlot(RecipeIngredientRole.OUTPUT, 80, 60).addItemStacks(List.of(
                             new ItemStack(NETHERITE_INGOT),
@@ -93,5 +93,4 @@ public class blockCutter implements IRecipeCategory<RecipeHolder<blockCuttingSta
             }
         }
     }
-
 }

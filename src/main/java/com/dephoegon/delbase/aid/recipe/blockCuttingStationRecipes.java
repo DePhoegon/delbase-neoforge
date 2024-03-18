@@ -1,8 +1,10 @@
 package com.dephoegon.delbase.aid.recipe;
 
 import com.dephoegon.delbase.aid.util.CodecFix;
+import com.dephoegon.delbase.delbase;
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
+import com.sun.jna.platform.linux.Udev;
 import net.minecraft.core.RegistryAccess;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.resources.ResourceLocation;
@@ -37,7 +39,7 @@ public class blockCuttingStationRecipes implements Recipe<SimpleContainer> {
     @Override
     public boolean matches(@NotNull SimpleContainer pContainer, @NotNull Level pLevel) {
         if (getInput().equals(ItemStack.EMPTY) || getPlans().equals(ItemStack.EMPTY)) { return false; }
-        return getDefault(getInput()).equals(pContainer.getItem(inputSlot).getItem().getDefaultInstance()) && getDefault(getPlans()).equals(pContainer.getItem(planSlot).getItem().getDefaultInstance());
+        return getDefault(getInput()).toString().equals(getDefault(pContainer.getItem(inputSlot)).toString()) && getDefault(getPlans()).toString().equals(getDefault(pContainer.getItem(planSlot)).toString());
     }
     public @NotNull ItemStack assemble(@NotNull SimpleContainer pContainer, @NotNull RegistryAccess pRegistryAccess) { return output.copy(); }
     public boolean canCraftInDimensions(int pWidth, int pHeight) { return true; }
@@ -45,10 +47,10 @@ public class blockCuttingStationRecipes implements Recipe<SimpleContainer> {
         return output.copy();
     }
     public @NotNull RecipeSerializer<?> getSerializer() {
-        return blockCuttingStationRecipes.Serializer.INSTANCE;
+        return modRecipes.BLOCK_CUTTER_SERIALIZER.get();
     }
-    public  @NotNull RecipeType<?> getType() {
-        return blockCuttingStationRecipes.Type.INSTANCE;
+    public @NotNull RecipeType<?> getType() {
+        return modRecipes.BLOCK_CUTTER_TYPE.get();
     }
     public boolean isSpecial() { return true; }
     public static final class Type implements RecipeType<blockCuttingStationRecipes> {

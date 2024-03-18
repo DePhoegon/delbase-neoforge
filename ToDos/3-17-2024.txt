@@ -1,0 +1,14 @@
+......  Dones .....
+everything added & implimented
+added JEI support
+
+---- Solutions ----
+items & itemstack comparisons buggy,
+-- used string versions to do the matching for the crafting.
+
+
+---- To Do Checks ----
+Do things burn?
+Does color replace blocks properly?
+Do hopers interact with the crafter properly?
+Does the sand work properly?
