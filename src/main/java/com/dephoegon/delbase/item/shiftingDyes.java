@@ -27,7 +27,7 @@ public class shiftingDyes {
     public static final DeferredItem<Item> LIGHT_GRAY_SHIFT_DYE = register("light_gray_shift_dye", DyeColor.LIGHT_GRAY);
     public static final DeferredItem<Item> CYAN_SHIFT_DYE = register("cyan_shift_dye", DyeColor.CYAN);
     public static final DeferredItem<Item> PURPLE_SHIFT_DYE = register("purple_shift_dye", DyeColor.PURPLE);
-    public static final DeferredItem<Item> BLUE_SHIFT_DYE = register("purple_shift_dye", DyeColor.BLUE);
+    public static final DeferredItem<Item> BLUE_SHIFT_DYE = register("blue_shift_dye", DyeColor.BLUE);
     public static final DeferredItem<Item> GREEN_SHIFT_DYE = register("green_shift_dye", DyeColor.GREEN);
     public static final DeferredItem<Item> BROWN_SHIFT_DYE = register("brown_shift_dye", DyeColor.BROWN);
     public static final DeferredItem<Item> BLACK_SHIFT_DYE = register("black_shift_dye", DyeColor.BLACK);

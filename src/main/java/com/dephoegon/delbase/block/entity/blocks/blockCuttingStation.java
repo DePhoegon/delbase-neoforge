@@ -4,6 +4,7 @@ import com.dephoegon.delbase.aid.config.commonConfig;
 import com.dephoegon.delbase.aid.recipe.blockCuttingStationRecipes;
 import com.dephoegon.delbase.block.entity.blockEntities;
 import com.dephoegon.delbase.block.entity.screen.blockCuttingStationMenu;
+import com.dephoegon.delbase.delbase;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;
@@ -69,7 +70,6 @@ public class blockCuttingStation extends BlockEntity implements MenuProvider {
             setChanged();
         }
     };
-    private final Optional<IItemHandler> lazyItemHandler = Optional.of(itemHandler);
     private final ItemStackHandler inputHandle = new ItemStackHandler(1) {
         @Override
         protected void onContentsChanged(int slot) {
@@ -100,9 +100,6 @@ public class blockCuttingStation extends BlockEntity implements MenuProvider {
             }
         }
     };
-    private final Optional<IItemHandler> lazyInput = Optional.of(inputHandle);
-    private final Optional<IItemHandler> lazyOutput = Optional.of(outputHandle);
-    private final Optional<IItemHandler> lazyPlan = Optional.of(planHandle);
 
     protected final ContainerData data;
     private int progress = 0;
@@ -228,7 +225,7 @@ public class blockCuttingStation extends BlockEntity implements MenuProvider {
     // hasRecipe for checking for if an item is in a slot or not.
 
     private static void craftItem(@NotNull blockCuttingStation entity) {
-        Level level = entity.level;
+        Level level = entity.getLevel();
         BlockPos worldPosition = entity.worldPosition;
         SimpleContainer inventory = new SimpleContainer(entity.itemHandler.getSlots());
         for (int i = 0; i < entity.itemHandler.getSlots(); i++) { inventory.setItem(i, entity.itemHandler.getStackInSlot(i)); }

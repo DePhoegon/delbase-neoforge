@@ -13,8 +13,8 @@ public class modRecipes {
     public static final DeferredRegister<RecipeSerializer<?>> RECIPE_SERIALIZERS = DeferredRegister.create(BuiltInRegistries.RECIPE_SERIALIZER, delbase.MODID);
     public static final DeferredRegister<RecipeType<?>> RECIPE_TYPE_DEFERRED_REGISTER = DeferredRegister.create(BuiltInRegistries.RECIPE_TYPE, delbase.MODID);
 
-    public static final Supplier<RecipeSerializer<blockCuttingStationRecipes>> BLOCK_CUTTER_SERIALIZER = RECIPE_SERIALIZERS.register(blockCuttingStationRecipes.Serializer.ID, () -> blockCuttingStationRecipes.Serializer.INSTANCE);
-    public static final Supplier<RecipeType<blockCuttingStationRecipes>> BLOCK_CUTTER_TYPE = RECIPE_TYPE_DEFERRED_REGISTER.register(blockCuttingStationRecipes.Type.ID, () -> blockCuttingStationRecipes.Type.INSTANCE);
+    public static final Supplier<RecipeSerializer<blockCuttingStationRecipes>> BLOCK_CUTTER_SERIALIZER = RECIPE_SERIALIZERS.register(blockCuttingStationRecipes.ID, () -> blockCuttingStationRecipes.Serializer.INSTANCE);
+    public static final Supplier<RecipeType<blockCuttingStationRecipes>> BLOCK_CUTTER_TYPE = RECIPE_TYPE_DEFERRED_REGISTER.register(blockCuttingStationRecipes.ID, () -> blockCuttingStationRecipes.Type.INSTANCE);
 
     public static void register(IEventBus eventBus) {
         RECIPE_SERIALIZERS.register(eventBus);

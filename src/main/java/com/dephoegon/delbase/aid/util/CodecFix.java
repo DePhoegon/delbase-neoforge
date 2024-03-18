@@ -6,6 +6,7 @@ import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.ItemLike;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.Optional;
 
@@ -15,26 +16,20 @@ public final class CodecFix {
     public static final Codec<ItemStack> OPTIONAL_ITEM_STACK_CODEC = RecordCodecBuilder.create((instance) -> {
         return instance.group(BuiltInRegistries.ITEM.byNameCodec().fieldOf("item").forGetter(ItemStack::getItem),
                 Codec.intRange(1,64).optionalFieldOf("count", 1).forGetter(ItemStack::getCount),
-                CompoundTag.CODEC.optionalFieldOf("tag").forGetter((stack) -> {
-                    return Optional.ofNullable(stack.getTag());
-                })).apply(instance, CodecFix::createItemStackFix);
+                CompoundTag.CODEC.optionalFieldOf("tag").forGetter((stack) -> Optional.ofNullable(stack.getTag()))).apply(instance, CodecFix::createItemStackFix);
     });
     public static final Codec<ItemStack> ITEM_STACK_CODEC = RecordCodecBuilder.create((instance) -> {
         return instance.group(BuiltInRegistries.ITEM.byNameCodec().fieldOf("item").forGetter(ItemStack::getItem),
                 Codec.intRange(1, 64).fieldOf("count").forGetter(ItemStack::getCount),
-                CompoundTag.CODEC.optionalFieldOf("tag").forGetter((stack) -> {
-                    return Optional.ofNullable(stack.getTag());
-                })).apply(instance, CodecFix::createItemStackFix);
+                CompoundTag.CODEC.optionalFieldOf("tag").forGetter((stack) -> Optional.ofNullable(stack.getTag()))).apply(instance, CodecFix::createItemStackFix);
     });
     public static final Codec<ItemStack> SINGLE_ITEM_STACK_CODEC = RecordCodecBuilder.create((instance) -> {
         return instance.group(BuiltInRegistries.ITEM.byNameCodec().fieldOf("item").forGetter(ItemStack::getItem),
                 Codec.intRange(1, 64).optionalFieldOf("hidden", 1).forGetter(ItemStack::getCount),
-                CompoundTag.CODEC.optionalFieldOf("tag").forGetter((stack) -> {
-                    return Optional.ofNullable(stack.getTag());
-                })).apply(instance, CodecFix::createItemStackFix);
+                CompoundTag.CODEC.optionalFieldOf("tag").forGetter((stack) -> Optional.ofNullable(stack.getTag()))).apply(instance, CodecFix::createItemStackFix);
     });
 
-    private static ItemStack createItemStackFix(ItemLike item, int count, Optional<CompoundTag> nbt) {
+    private static @NotNull ItemStack createItemStackFix(ItemLike item, int count, @NotNull Optional<CompoundTag> nbt) {
         ItemStack itemStack = new ItemStack(item, count);
         nbt.ifPresent(itemStack::setTag);
         return itemStack;

@@ -8,6 +8,8 @@ import org.jetbrains.annotations.NotNull;
 import java.util.ArrayList;
 
 import static com.dephoegon.delbase.block.slab.slabMisc.GLOWSTONE_SLAB;
+import static com.dephoegon.delbase.block.stair.stairMisc.GLOWSTONE_STAIR;
+import static com.dephoegon.delbase.block.wall.wallMisc.GLOWSTONE_WALL;
 import static net.minecraft.world.level.block.Blocks.*;
 
 public class blockArrayList {

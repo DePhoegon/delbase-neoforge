@@ -72,8 +72,8 @@ dependencies {
     runtimeOnly "mezz.jei:jei-${minecraft_version}-neoforge:${jei_version}"
 
     // Mixins
-    implementation 'org.spongepowered:mixin:0.8.5'
-    annotationProcessor 'org.spongepowered:mixin:0.8.5'
+    // implementation 'org.spongepowered:mixin:0.8.5'
+    // annotationProcessor 'org.spongepowered:mixin:0.8.5'
 }
 
 tasks.withType(ProcessResources).configureEach {
