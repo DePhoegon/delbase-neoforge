@@ -47,13 +47,9 @@ public class genBlock extends Block {
         if(kb.HCtrl() && tip2 != null) { toolTip.add(Component.translatable(tip2)); } //if ctrl, show tip2 (if not empty), do first
         if(kb.HShift() && tip1 != null) { toolTip.add(Component.translatable(tip1)); }//if shifted, show tip1 (if not empty)
     }
-    public boolean isFlammable(@NotNull BlockState state, @NotNull BlockGetter level, @NotNull BlockPos pos, @NotNull Direction direction)
-    {
-        if (flame) {
-            rngBurn(level, state, pos, 40, 60);
-            return true;
-        }
-        return false;
+    public boolean isFlammable(@NotNull BlockState state, @NotNull BlockGetter level, @NotNull BlockPos pos, @NotNull Direction direction) {
+        if (flame) { rngBurn(level, state, pos, 40, 60); }
+        return flame;
     }
     public int getFlammability(@NotNull BlockState state, @NotNull BlockGetter world, @NotNull BlockPos pos, @NotNull Direction face) {
         if (flame) { return flammability; }

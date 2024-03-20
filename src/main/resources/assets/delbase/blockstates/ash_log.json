@@ -1,7 +1,7 @@
 {
   "variants": {
     "axis=x": {
-      "model": "delbase:block/pillar/ash_log",
+      "model": "delbase:block/pillar/ash_log_horizontal",
       "x": 90,
       "y": 90
     },
@@ -9,8 +9,8 @@
       "model": "delbase:block/pillar/ash_log"
     },
     "axis=z": {
-      "model": "delbase:block/pillar/ash_log",
+      "model": "delbase:block/pillar/ash_log_horizontal",
       "x": 90
     }
   }
-} 
+}

@@ -58,11 +58,8 @@ public class fenceBlock extends FenceBlock {
         if (kb.HShift() && tip1 != null) { toolTip.add(Component.translatable(tip1)); }//if shifted, show tip1 (if not empty)
     }
     public boolean isFlammable(@NotNull BlockState state, @NotNull BlockGetter world, @NotNull BlockPos pos, @NotNull Direction face) {
-        if (flame && !state.getValue(WATERLOGGED)) {
-            rngBurn(world, state, pos, 40, 60);
-            return true;
-        }
-        return false;
+        if (flame && !state.getValue(WATERLOGGED)) { rngBurn(world, state, pos, 40, 60); }
+        return flame && !state.getValue(WATERLOGGED);
     }
     public int getFlammability(@NotNull BlockState state, @NotNull BlockGetter world, @NotNull BlockPos pos, @NotNull Direction face) {
         if (flame) { return flammability; }

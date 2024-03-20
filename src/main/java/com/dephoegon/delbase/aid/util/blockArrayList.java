@@ -20,6 +20,7 @@ public class blockArrayList {
     private static ArrayList<Object> general_list = new ArrayList<>();
     private static ArrayList<Object> gravity_list = new ArrayList<>();
     private static ArrayList<Object> wall_list = new ArrayList<>();
+    private static ArrayList<Object> vanilla_wood_list = new ArrayList<>();
     private static ArrayList<Object> axis_list = new ArrayList<>();
     private static ArrayList<Object> fall_hold = new ArrayList<>();
     private static ArrayList<Object> concretePowder_list = new ArrayList<>();
@@ -180,6 +181,27 @@ public class blockArrayList {
         wall_set.add(RED_SANDSTONE_WALL.defaultBlockState());
         wall_list = wall_set;
     }
+    public static ArrayList<Object> getVanilla_wood_list() { return vanilla_wood_list; }
+    private static void setVanillaWoodList() {
+        ArrayList<Object> setWood_list = new ArrayList<>();
+        setWood_list.add(STRIPPED_MANGROVE_WOOD.defaultBlockState());
+        setWood_list.add(MANGROVE_WOOD.defaultBlockState());
+        setWood_list.add(STRIPPED_DARK_OAK_WOOD.defaultBlockState());
+        setWood_list.add(DARK_OAK_WOOD.defaultBlockState());
+        setWood_list.add(STRIPPED_CHERRY_WOOD.defaultBlockState());
+        setWood_list.add(CHERRY_WOOD.defaultBlockState());
+        setWood_list.add(STRIPPED_ACACIA_WOOD.defaultBlockState());
+        setWood_list.add(ACACIA_WOOD.defaultBlockState());
+        setWood_list.add(STRIPPED_JUNGLE_WOOD.defaultBlockState());
+        setWood_list.add(JUNGLE_WOOD.defaultBlockState());
+        setWood_list.add(STRIPPED_BIRCH_WOOD.defaultBlockState());
+        setWood_list.add(BIRCH_WOOD.defaultBlockState());
+        setWood_list.add(STRIPPED_SPRUCE_WOOD.defaultBlockState());
+        setWood_list.add(SPRUCE_WOOD.defaultBlockState());
+        setWood_list.add(STRIPPED_OAK_WOOD.defaultBlockState());
+        setWood_list.add(OAK_WOOD.defaultBlockState());
+        vanilla_wood_list = setWood_list;
+    }
     public static ArrayList<Object> getWall_list() { return wall_list; }
 
     // call methods to set private lists, called first in a register list to avoid any issue
@@ -190,6 +212,7 @@ public class blockArrayList {
         setStair_list();
         setGravity_list();
         setWall_list();
+        setVanillaWoodList();
         setAxis_list();
     }
 }

@@ -1,45 +1,55 @@
 package com.dephoegon.delbase.aid.recipe;
 
+import com.dephoegon.delbase.aid.block.item.cutterPlans;
 import com.dephoegon.delbase.aid.util.CodecFix;
 import com.dephoegon.delbase.delbase;
+import com.google.common.collect.ImmutableMap;
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import com.sun.jna.platform.linux.Udev;
 import net.minecraft.core.RegistryAccess;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.Container;
 import net.minecraft.world.SimpleContainer;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.crafting.Recipe;
-import net.minecraft.world.item.crafting.RecipeSerializer;
-import net.minecraft.world.item.crafting.RecipeType;
+import net.minecraft.world.item.crafting.*;
 import net.minecraft.world.level.Level;
 import org.jetbrains.annotations.NotNull;
+
+import java.util.Collections;
+import java.util.Map;
+import java.util.Optional;
 
 import static com.dephoegon.delbase.block.entity.blocks.blockCuttingStation.inputSlot;
 import static com.dephoegon.delbase.block.entity.blocks.blockCuttingStation.planSlot;
 import static com.dephoegon.delbase.delbase.MODID;
+import static com.dephoegon.delbase.item.blockCutterPlans.ARMOR_COMPOUND;
 
 public class blockCuttingStationRecipes implements Recipe<SimpleContainer> {
     public static final String ID = "block_cutting";
     private final ItemStack output;
     private final ItemStack input;
     private final ItemStack plans;
+    private Map<RecipeType<?>, Map<ResourceLocation, RecipeHolder<?>>> recipes = ImmutableMap.of();
     public blockCuttingStationRecipes(ItemStack output, ItemStack input, ItemStack plans) {
         this.output = output;
         this.input = input;
         this.plans = plans;
     }
-    public ItemStack getOutput() {
-        return output;
-    }
+    public ItemStack getOutput() { return output.copy(); }
     public ItemStack getPlans() { return plans; }
     public ItemStack getInput() { return input; }
     private @NotNull ItemStack getDefault(@NotNull ItemStack input) { return input.getItem().getDefaultInstance(); }
     @Override
     public boolean matches(@NotNull SimpleContainer pContainer, @NotNull Level pLevel) {
         if (getInput().equals(ItemStack.EMPTY) || getPlans().equals(ItemStack.EMPTY)) { return false; }
-        return getDefault(getInput()).toString().equals(getDefault(pContainer.getItem(inputSlot)).toString()) && getDefault(getPlans()).toString().equals(getDefault(pContainer.getItem(planSlot)).toString());
+        boolean hold = getDefault(getInput()).toString().equals(getDefault(pContainer.getItem(inputSlot)).toString()) && getDefault(getPlans()).toString().equals(getDefault(pContainer.getItem(planSlot)).toString());
+        if (hold) {
+            int planSlots = getDefault(getPlans()).toString().equals(ARMOR_COMPOUND.get().getDefaultInstance().toString()) ? getPlans().getCount() : 1;
+            hold = planSlots <= pContainer.getItem(planSlot).getCount() && getInput().getCount() <= pContainer.getItem(inputSlot).getCount();
+        }
+        return hold;
     }
     public @NotNull ItemStack assemble(@NotNull SimpleContainer pContainer, @NotNull RegistryAccess pRegistryAccess) { return output.copy(); }
     public boolean canCraftInDimensions(int pWidth, int pHeight) { return true; }
@@ -71,10 +81,12 @@ public class blockCuttingStationRecipes implements Recipe<SimpleContainer> {
             final ItemStack output = pBuffer.readItem();
             final ItemStack input = pBuffer.readItem();
             final ItemStack plans = pBuffer.readItem();
+            if (plans.getItem() instanceof cutterPlans) { plans.setCount(1); }
             return new blockCuttingStationRecipes(output, input, plans);
         }
         public void toNetwork(final @NotNull FriendlyByteBuf pBuffer, final @NotNull blockCuttingStationRecipes pRecipe) {
             pBuffer.writeItem(pRecipe.output);
+            if (pRecipe.input.getItem() instanceof cutterPlans) { pRecipe.input.setCount(1); }
             pBuffer.writeItem(pRecipe.input);
             pBuffer.writeItem(pRecipe.plans);
         }

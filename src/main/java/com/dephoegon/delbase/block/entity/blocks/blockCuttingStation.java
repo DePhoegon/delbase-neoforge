@@ -19,6 +19,7 @@ import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.ContainerData;
 import net.minecraft.world.item.*;
 import net.minecraft.world.item.crafting.RecipeHolder;
+import net.minecraft.world.item.crafting.RecipeManager;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.entity.BlockEntity;
@@ -231,8 +232,7 @@ public class blockCuttingStation extends BlockEntity implements MenuProvider {
         for (int i = 0; i < entity.itemHandler.getSlots(); i++) { inventory.setItem(i, entity.itemHandler.getStackInSlot(i)); }
 
         assert level != null;
-        Optional<RecipeHolder<blockCuttingStationRecipes>> match = level.getRecipeManager()
-                .getRecipeFor(modRecipes.BLOCK_CUTTER_TYPE.get(), inventory, level);
+        Optional<RecipeHolder<blockCuttingStationRecipes>> match = level.getRecipeManager().getRecipeFor(modRecipes.BLOCK_CUTTER_TYPE.get(), inventory, level);
 
         if (match.isPresent()) {
             Item resultItem = match.get().value().getOutput().getItem();

@@ -5,6 +5,7 @@ import com.dephoegon.delbase.aid.block.alt.concreteWall;
 import com.dephoegon.delbase.aid.block.colorshift.axis.cutSandStone;
 import com.dephoegon.delbase.aid.block.colorshift.fence.*;
 import com.dephoegon.delbase.aid.block.colorshift.gen.chiseledSandStone;
+import com.dephoegon.delbase.aid.block.colorshift.gen.normSandStone;
 import com.dephoegon.delbase.aid.block.colorshift.gen.smoothSandStone;
 import com.dephoegon.delbase.aid.block.colorshift.grav.sandBlock;
 import com.dephoegon.delbase.aid.block.colorshift.grav.solidSandBlock;
@@ -117,7 +118,7 @@ public class typeSelector {
         if (block instanceof chiseledSandStone || state == CHISELED_SANDSTONE.defaultBlockState() || state == CHISELED_RED_SANDSTONE.defaultBlockState()) {
             return ColorLogic(world, blockPos, state, CHISELED_SANDSTONE, CHISELED_RED_SANDSTONE, BLOOD_CHISELED_SAND_STONE.get(), WHITE_CHISELED_SAND_STONE.get(), ORANGE_CHISELED_SAND_STONE.get(), MAGENTA_CHISELED_SAND_STONE.get(), LIGHT_BLUE_CHISELED_SAND_STONE.get(), YELLOW_CHISELED_SAND_STONE.get(), LIME_CHISELED_SAND_STONE.get(), PINK_CHISELED_SAND_STONE.get(), GRAY_CHISELED_SAND_STONE.get(), LIGHT_GRAY_CHISELED_SAND_STONE.get(), CYAN_CHISELED_SAND_STONE.get(), PURPLE_CHISELED_SAND_STONE.get(), BLUE_CHISELED_SAND_STONE.get(), GREEN_CHISELED_SAND_STONE.get(), BROWN_CHISELED_SAND_STONE.get(), BLACK_CHISELED_SAND_STONE.get(), blockIndex, inHand, playerEntity);
         }
-        if (state == SANDSTONE.defaultBlockState() || state == RED_SANDSTONE.defaultBlockState()) {
+        if (block instanceof normSandStone || state == SANDSTONE.defaultBlockState() || state == RED_SANDSTONE.defaultBlockState()) {
             return ColorLogic(world, blockPos, state, SANDSTONE, RED_SANDSTONE, BLOOD_SAND_STONE.get(), WHITE_SAND_STONE.get(), ORANGE_SAND_STONE.get(), MAGENTA_SAND_STONE.get(), LIGHT_BLUE_SAND_STONE.get(), YELLOW_SAND_STONE.get(), LIME_SAND_STONE.get(), PINK_SAND_STONE.get(), GRAY_SAND_STONE.get(), LIGHT_GRAY_SAND_STONE.get(), CYAN_SAND_STONE.get(), PURPLE_SAND_STONE.get(), BLUE_SAND_STONE.get(), GREEN_SAND_STONE.get(), BROWN_SAND_STONE.get(), BLACK_SAND_STONE.get(), blockIndex, inHand, playerEntity);
         }
         if (block instanceof smoothSandStone || state == SMOOTH_SANDSTONE.defaultBlockState() || state == SMOOTH_RED_SANDSTONE.defaultBlockState()) {

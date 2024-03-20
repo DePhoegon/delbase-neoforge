@@ -58,12 +58,12 @@ public class stairBlock extends StairBlock {
         if(kb.HShift() && tip1 != null) { toolTip.add(Component.translatable(tip1)); }//if shifted, show tip1 (if not empty)
     }
     public boolean isFlammable(@NotNull BlockState state, @NotNull BlockGetter world, @NotNull BlockPos pos, @NotNull Direction face) {
-        boolean flam = false;
+        boolean flames = false;
         if (flame && !state.getValue(WATERLOGGED)) {
             rngBurn(world, state, pos, 40 ,60);
-            flam =  state.getValue(StairBlock.HALF) == Half.TOP;
+            flames =  state.getValue(StairBlock.HALF) == Half.TOP;
         }
-        return flam;
+        return flames;
     }
     public int getFlammability(@NotNull BlockState state, @NotNull BlockGetter world, @NotNull BlockPos pos, @NotNull Direction face) {
         if (flame) { return flammability; }

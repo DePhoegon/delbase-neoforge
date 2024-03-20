@@ -16,6 +16,7 @@ import java.util.Random;
 
 import static com.dephoegon.delbase.aid.config.commonConfig.burnChanceNumber;
 import static com.dephoegon.delbase.aid.config.commonConfig.burnChanceNumberCap;
+import static com.dephoegon.delbase.aid.util.blockArrayList.getVanilla_wood_list;
 import static com.dephoegon.delbase.block.general.ash.*;
 import static com.dephoegon.delbase.block.general.misc.ASH_BLOCK;
 import static net.minecraft.world.level.block.StairBlock.SHAPE;
@@ -29,9 +30,10 @@ public class burnChance {
     private static boolean threshHold(int cap, int thresh) { return randomNum(cap) > thresh; }
     public static void rngBurn(@NotNull BlockGetter world, @NotNull BlockState burningBlock, BlockPos pos, int burnThreshHold, int burnCap){
         // Double Comparison is used to avoid drastic failure.  They should always match, but if for some reason it manages to pull the wrong blockstate, it won't break the game.
-        boolean genBlock;
         boolean waterlogged = false;
+        boolean notGenBlock = false;
         if (burningBlock.getBlock() instanceof WallBlock) {
+            notGenBlock = true;
             if (threshHold(burnCap, burnThreshHold)) {
                 WallSide east = burningBlock.getValue(EAST_WALL);
                 WallSide west = burningBlock.getValue(WEST_WALL);
@@ -39,12 +41,12 @@ public class burnChance {
                 WallSide south = burningBlock.getValue(SOUTH_WALL);
                 boolean up = burningBlock.getValue(WallBlock.UP);
                 if (ashReplaceRNG()){
-
                     ((Level) world).setBlockAndUpdate(pos, ASH_WALL.get().defaultBlockState().setValue(WallBlock.WATERLOGGED, waterlogged).setValue(WallBlock.EAST_WALL, east).setValue(WallBlock.WEST_WALL, west).setValue(WallBlock.NORTH_WALL, north).setValue(WallBlock.SOUTH_WALL, south).setValue(WallBlock.UP, up));
                 } // chance to replace block with supplied ashBlock.
             }
         }
         if (burningBlock.getBlock() instanceof StairBlock) {
+            notGenBlock = true;
             if (threshHold(burnCap, burnThreshHold)) {
                 Direction facing = burningBlock.getValue(StairBlock.FACING);
                 Half half = burningBlock.getValue(StairBlock.HALF);
@@ -56,23 +58,26 @@ public class burnChance {
             }
         }
         if (burningBlock.getBlock() instanceof SlabBlock) {
+            notGenBlock = true;
             if (threshHold(burnCap,burnThreshHold)) {
                 SlabType type = burningBlock.getValue(SlabBlock.TYPE);
                 if (ashReplaceRNG()) {
-
                     ((Level) world).setBlockAndUpdate(pos, ASH_SLAB.get().defaultBlockState().setValue(SlabBlock.TYPE, type).setValue(SlabBlock.WATERLOGGED, waterlogged));
                 } // chance to replace block with supplied ashBlock.
             }
         }
         if (burningBlock.getBlock() instanceof RotatedPillarBlock) {
+            notGenBlock = true;
             if (threshHold(burnCap, burnThreshHold)) {
                 Direction.Axis axis = burningBlock.getValue(AXIS);
+                BlockState blockState = getVanilla_wood_list().contains(burningBlock.getBlock().defaultBlockState()) ? ASH_BLOCK.get().defaultBlockState() : ASH_LOG.get().defaultBlockState();
                 if(ashReplaceRNG()) {
-                    ((Level) world).setBlockAndUpdate(pos, ASH_LOG.get().defaultBlockState().setValue(AXIS, axis));
+                    ((Level) world).setBlockAndUpdate(pos, blockState.setValue(AXIS, axis));
                 } // chance to replace block with supplied ashBlock.
             }
         }
         if (burningBlock.getBlock() instanceof FenceBlock) {
+            notGenBlock = true;
             if (threshHold(burnCap, burnThreshHold)) {
                 Boolean east = burningBlock.getValue(CrossCollisionBlock.EAST);
                 Boolean west = burningBlock.getValue(CrossCollisionBlock.WEST);
@@ -84,6 +89,7 @@ public class burnChance {
             }
         }
         if (burningBlock.getBlock() instanceof FenceGateBlock) {
+            notGenBlock = true;
             if (threshHold(burnCap, burnThreshHold)) {
                 Boolean open = burningBlock.getValue(OPEN);
                 Boolean powered = burningBlock.getValue(POWERED);
@@ -94,15 +100,11 @@ public class burnChance {
                 }
             }
         }
-        genBlock = !(burningBlock.getBlock() instanceof WallBlock) && !(burningBlock.getBlock() instanceof StairBlock) &&
-                !(burningBlock.getBlock() instanceof SlabBlock) && !(burningBlock.getBlock() instanceof RotatedPillarBlock) &&
-                !(burningBlock.getBlock() instanceof FenceBlock) && !(burningBlock.getBlock() instanceof FenceGateBlock);
-        if (genBlock) {
-            if (ashReplaceRNG()) {
-                BlockState defaultBlock = ASH_BLOCK.get().defaultBlockState().getBlock().defaultBlockState();
-                ((Level) world).setBlockAndUpdate(pos, defaultBlock);
-            } // chance to replace block with supplied ashBlock.
-        }
+        if (notGenBlock) { return; }
+        if (threshHold(burnCap, burnThreshHold)) {
+            BlockState defaultBlock = ASH_BLOCK.get().defaultBlockState();
+            ((Level) world).setBlockAndUpdate(pos, defaultBlock);
+        } // chance to replace block with supplied ashBlock.
     }
     private static int randomNum(int max) {
         Random random = new Random();

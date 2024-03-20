@@ -11,8 +11,6 @@ public class itemSlot extends SlotItemHandler {
     public itemSlot(IItemHandler itemHandler, int index, int xPosition, int yPosition) {
         super(itemHandler, index, xPosition, yPosition);
     }
-
-    @Override
     public boolean mayPlace(@NotNull ItemStack itemStack) {
         return !isPlansSlotItem(itemStack.getItem().asItem());
     }

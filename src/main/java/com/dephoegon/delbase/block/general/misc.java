@@ -1,5 +1,6 @@
 package com.dephoegon.delbase.block.general;
 
+import com.dephoegon.delbase.aid.block.stock.axisBlock;
 import com.dephoegon.delbase.aid.block.stock.genBlock;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -28,7 +29,7 @@ public class misc {
             () -> new genBlock(BlockBehaviour.Properties.ofFullCopy(STONE).sound(SoundType.STONE),
                     "","","",false, 0,0));
     public static final DeferredBlock<Block> ASH_BLOCK = register("ash_block",
-            ()-> new genBlock(BlockBehaviour.Properties.ofFullCopy(OAK_PLANKS).sound(SoundType.WOOD),
+            ()-> new axisBlock(BlockBehaviour.Properties.ofFullCopy(OAK_PLANKS).sound(SoundType.WOOD),
                     "","","", false, 0, 0),16000);
 
     @SuppressWarnings("SameParameterValue")

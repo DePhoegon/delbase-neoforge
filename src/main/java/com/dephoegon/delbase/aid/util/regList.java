@@ -34,7 +34,7 @@ public class regList {
     public static void listOrder(IEventBus eventBus) {
         //Items
         shiftingDyes.register(eventBus);
-        blockCutterPlans.register(eventBus);
+        blockCutterPlans.regPlans(eventBus);
 
         //Pillars
         axiCutSandStones.register(eventBus);

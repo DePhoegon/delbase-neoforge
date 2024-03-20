@@ -9,12 +9,6 @@ public class resultSlots extends SlotItemHandler {
     public resultSlots(IItemHandler itemHandler, int index, int xPosition, int yPosition) {
         super(itemHandler, index, xPosition, yPosition);
     }
-    @Override
-    public boolean mayPlace(@NotNull ItemStack itemStack) {
-        return false;
-    }
-    @Override
-    public int getMaxStackSize() {
-        return 64;
-    }
+    public boolean mayPlace(@NotNull ItemStack itemStack) { return false; }
+    public int getMaxStackSize() { return 64; }
 }
