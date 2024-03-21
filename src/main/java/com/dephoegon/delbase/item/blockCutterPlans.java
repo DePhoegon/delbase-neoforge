@@ -1,6 +1,6 @@
 package com.dephoegon.delbase.item;
 
-import com.dephoegon.delbase.aid.block.item.compoundItems;
+import com.dephoegon.delbase.aid.block.item.compoundPlans;
 import com.dephoegon.delbase.aid.block.item.cutterPlans;
 import net.minecraft.world.item.Item;
 import net.neoforged.bus.api.IEventBus;
@@ -21,6 +21,6 @@ public class blockCutterPlans {
     public static final DeferredItem<Item> ARMOR_COMPOUND = regCompound("armor_compound", 64);
 
     private static @NotNull DeferredItem<Item> regPlans(String name, int stack) { return ITEMS.register(name, () -> new cutterPlans(new Item.Properties().stacksTo(stack))); }
-    private static @NotNull DeferredItem<Item> regCompound(String name, int stack) { return ITEMS.register(name, () -> new compoundItems(new Item.Properties().stacksTo(stack))); }
+    private static @NotNull DeferredItem<Item> regCompound(String name, int stack) { return ITEMS.register(name, () -> new compoundPlans(new Item.Properties().stacksTo(stack))); }
     public static void regPlans(IEventBus eventBus) { ITEMS.register(eventBus); }
 }

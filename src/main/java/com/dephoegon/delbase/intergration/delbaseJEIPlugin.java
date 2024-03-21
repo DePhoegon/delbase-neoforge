@@ -1,7 +1,7 @@
 package com.dephoegon.delbase.intergration;
 
 import com.dephoegon.delbase.aid.recipe.blockCuttingStationRecipes;
-import com.dephoegon.delbase.intergration.jei.blockCutter;
+import com.dephoegon.delbase.aid.recipe.blockCutter;
 import mezz.jei.api.IModPlugin;
 import mezz.jei.api.JeiPlugin;
 import mezz.jei.api.recipe.RecipeType;
@@ -11,11 +11,8 @@ import mezz.jei.api.registration.IRecipeRegistration;
 import net.minecraft.client.Minecraft;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.crafting.RecipeHolder;
 import net.minecraft.world.item.crafting.RecipeManager;
 import org.jetbrains.annotations.NotNull;
-
-import java.util.List;
 
 import static com.dephoegon.delbase.aid.recipe.modRecipes.BLOCK_CUTTER_TYPE;
 import static com.dephoegon.delbase.block.general.machineBlocks.BLOCK_CUTTING_STATION;

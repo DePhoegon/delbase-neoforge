@@ -1,30 +1,25 @@
 package com.dephoegon.delbase.aid.recipe;
 
+import com.dephoegon.delbase.aid.block.item.compoundPlans;
 import com.dephoegon.delbase.aid.block.item.cutterPlans;
 import com.dephoegon.delbase.aid.util.CodecFix;
-import com.dephoegon.delbase.delbase;
 import com.google.common.collect.ImmutableMap;
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
-import com.sun.jna.platform.linux.Udev;
 import net.minecraft.core.RegistryAccess;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.Container;
 import net.minecraft.world.SimpleContainer;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.*;
 import net.minecraft.world.level.Level;
 import org.jetbrains.annotations.NotNull;
 
-import java.util.Collections;
 import java.util.Map;
-import java.util.Optional;
 
 import static com.dephoegon.delbase.block.entity.blocks.blockCuttingStation.inputSlot;
 import static com.dephoegon.delbase.block.entity.blocks.blockCuttingStation.planSlot;
 import static com.dephoegon.delbase.delbase.MODID;
-import static com.dephoegon.delbase.item.blockCutterPlans.ARMOR_COMPOUND;
 
 public class blockCuttingStationRecipes implements Recipe<SimpleContainer> {
     public static final String ID = "block_cutting";
@@ -44,9 +39,12 @@ public class blockCuttingStationRecipes implements Recipe<SimpleContainer> {
     @Override
     public boolean matches(@NotNull SimpleContainer pContainer, @NotNull Level pLevel) {
         if (getInput().equals(ItemStack.EMPTY) || getPlans().equals(ItemStack.EMPTY)) { return false; }
-        boolean hold = getDefault(getInput()).toString().equals(getDefault(pContainer.getItem(inputSlot)).toString()) && getDefault(getPlans()).toString().equals(getDefault(pContainer.getItem(planSlot)).toString());
-        if (hold) {
-            int planSlots = getDefault(getPlans()).toString().equals(ARMOR_COMPOUND.get().getDefaultInstance().toString()) ? getPlans().getCount() : 1;
+        boolean inputs = getDefault(getInput()).toString().equals(getDefault(pContainer.getItem(inputSlot)).toString());
+        boolean outputs = false;
+        boolean hold = false;
+        if (inputs) { outputs = getDefault(getPlans()).toString().equals(getDefault(pContainer.getItem(planSlot)).toString()); }
+        if (inputs && outputs) {
+            int planSlots = getPlans().getItem() instanceof compoundPlans ? getPlans().getCount() : 1;
             hold = planSlots <= pContainer.getItem(planSlot).getCount() && getInput().getCount() <= pContainer.getItem(inputSlot).getCount();
         }
         return hold;

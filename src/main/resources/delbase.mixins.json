@@ -4,7 +4,12 @@
   "compatibilityLevel": "JAVA_17",
   "refmap": "delbase.refmap.json",
   "mixins": [
-    "RotatedPillarBlockMixin"
+    "FenceBlockMixin",
+    "FenceGateBlockMixin",
+    "RotatedPillarBlockMixin",
+    "SlabBlockMixin",
+    "StairBlockMixin",
+    "WallBlockMixin"
   ],
   "client": [],
   "server": [],

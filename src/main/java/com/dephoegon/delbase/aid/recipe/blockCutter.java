@@ -1,4 +1,4 @@
-package com.dephoegon.delbase.intergration.jei;
+package com.dephoegon.delbase.aid.recipe;
 
 import com.dephoegon.delbase.aid.recipe.blockCuttingStationRecipes;
 import com.dephoegon.delbase.aid.recipe.modRecipes;
