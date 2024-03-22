@@ -5,7 +5,10 @@ import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.ArmorItem;
 import org.jetbrains.annotations.NotNull;
 
+import java.util.Random;
+
 public class countAid {
+    public static boolean threshHold(int cap, int thresh) { return randomNum(cap) > thresh; }
     private static final int nether_chest = commonConfig.netherriteChestRoll;
     private static final int nether_helmet = commonConfig.netherriteHelmetRoll;
     private static final int nether_legs = commonConfig.netherriteLeggingsRoll;
@@ -17,5 +20,9 @@ public class countAid {
         if (recycle.getEquipmentSlot() == EquipmentSlot.HEAD) { count = nether_helmet; }
         if (recycle.getEquipmentSlot() == EquipmentSlot.LEGS) { count = nether_legs; }
         return count;
+    }
+    private static int randomNum(int max){
+        Random random = new Random();
+        return random.nextInt(max)+1;
     }
 }

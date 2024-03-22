@@ -5,7 +5,8 @@
     "count": 1
   },
   "plans": {
-    "item": "delbase:slab_plans"
+    "item": "delbase:slab_plans",
+    "count": 1
   },
   "output": {
     "item": "delbase:lime_sand_stone_slab",

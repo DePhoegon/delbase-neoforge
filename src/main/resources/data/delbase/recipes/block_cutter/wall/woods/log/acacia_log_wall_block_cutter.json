@@ -5,7 +5,8 @@
     "count": 1
   },
   "plans": {
-    "item": "delbase:wall_plans"
+    "item": "delbase:wall_plans",
+    "count": 1
   },
   "output": {
     "item": "delbase:acacia_log_wall",

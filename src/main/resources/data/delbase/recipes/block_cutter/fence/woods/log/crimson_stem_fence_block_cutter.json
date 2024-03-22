@@ -5,7 +5,8 @@
     "count": 1
   },
   "plans": {
-    "item": "delbase:fence_plans"
+    "item": "delbase:fence_plans",
+    "count": 1
   },
   "output": {
     "item": "delbase:crimson_stem_fence",

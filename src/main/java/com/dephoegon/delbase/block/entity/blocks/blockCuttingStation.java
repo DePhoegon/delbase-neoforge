@@ -5,7 +5,6 @@ import com.dephoegon.delbase.aid.recipe.blockCuttingStationRecipes;
 import com.dephoegon.delbase.aid.recipe.modRecipes;
 import com.dephoegon.delbase.block.entity.blockEntities;
 import com.dephoegon.delbase.block.entity.screen.blockCuttingStationMenu;
-import com.dephoegon.delbase.delbase;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;
@@ -19,7 +18,6 @@ import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.ContainerData;
 import net.minecraft.world.item.*;
 import net.minecraft.world.item.crafting.RecipeHolder;
-import net.minecraft.world.item.crafting.RecipeManager;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.entity.BlockEntity;
@@ -32,6 +30,7 @@ import org.jetbrains.annotations.Nullable;
 import java.util.Optional;
 
 import static com.dephoegon.delbase.aid.recipe.countAid.netherriteDiamondBonus;
+import static com.dephoegon.delbase.aid.recipe.countAid.threshHold;
 import static com.dephoegon.delbase.aid.recipe.tierRandomDropAid.*;
 import static com.dephoegon.delbase.aid.slots.planSlots.isPlansSlotItem;
 import static com.dephoegon.delbase.item.blockCutterPlans.*;
@@ -43,13 +42,16 @@ public class blockCuttingStation extends BlockEntity implements MenuProvider {
     public static final int planSlot = 2;
     public static final int blockCuttingStationSlotCount = 3;
     private static final ItemStackHandler blockPlans = new ItemStackHandler(1) {
-        public boolean isItemValid(int slot, @NotNull ItemStack stack) {
-            return false;
-        }
-        protected void onContentsChanged(int slot) {  }
+        // Static read only for getting plans in a static form
+        public boolean isItemValid(int slot, @NotNull ItemStack stack) { return false; }
     };
     public static ItemStackHandler iHandler = null;
     private final ItemStackHandler itemHandler = new ItemStackHandler(blockCuttingStationSlotCount) {
+        public boolean isItemValid(int slot, @NotNull ItemStack stack) {
+            if (slot == inputSlot) { return  !isPlansSlotItem(stack.getItem()); }
+            if (slot == planSlot) { return  isPlansSlotItem(stack.getItem()); }
+            return false;
+        }
         @Override
         protected void onContentsChanged(int slot) {
             if (slot == inputSlot) {
@@ -73,7 +75,7 @@ public class blockCuttingStation extends BlockEntity implements MenuProvider {
         }
     };
     private final ItemStackHandler inputHandle = new ItemStackHandler(1) {
-        @Override
+        public boolean isItemValid(int slot, ItemStack stack) { return !isPlansSlotItem(stack.getItem()); }
         protected void onContentsChanged(int slot) {
             if (inputHandle.getStackInSlot(slot) != itemHandler.getStackInSlot(inputSlot)) {
                 itemHandler.setStackInSlot(inputSlot, inputHandle.getStackInSlot(slot));
@@ -81,9 +83,7 @@ public class blockCuttingStation extends BlockEntity implements MenuProvider {
         }
     };
     private final ItemStackHandler outputHandle = new ItemStackHandler(1){
-        @Override
         public boolean isItemValid(int slot, @NotNull ItemStack stack) { return false; }
-        @Override
         protected void onContentsChanged(int slot) {
             if (outputHandle.getStackInSlot(slot) != itemHandler.getStackInSlot(outputSlot)) {
                 itemHandler.setStackInSlot(outputSlot, outputHandle.getStackInSlot(slot));
@@ -92,13 +92,12 @@ public class blockCuttingStation extends BlockEntity implements MenuProvider {
     };
     private final ItemStackHandler planHandle = new ItemStackHandler(1){
         public boolean isItemValid(int slot, @NotNull ItemStack stack) {
-            return isPlansSlotItem(stack.getItem().asItem());
+            return isPlansSlotItem(stack.getItem());
         }
         @Override
         protected void onContentsChanged(int slot) {
             if (planHandle.getStackInSlot(slot) != itemHandler.getStackInSlot(planSlot)) {
                 itemHandler.setStackInSlot(planSlot, planHandle.getStackInSlot(slot));
-                blockPlans.setStackInSlot(slot, planHandle.getStackInSlot(slot));
             }
         }
     };
@@ -242,7 +241,7 @@ public class blockCuttingStation extends BlockEntity implements MenuProvider {
             if (entity.itemHandler.getStackInSlot(planSlot).getItem() == ARMOR_COMPOUND.get().asItem()) {
                 Item le_item = entity.itemHandler.getStackInSlot(inputSlot).getItem();
                 int armCompCount = match.get().value().getPlans().getCount();
-                boolean CompoundEat = true;
+                boolean compoundEat = true;
                 if (le_item instanceof ArmorItem recycle) {
                     if (recycle.getMaterial() == ArmorMaterials.NETHERITE) {
                         count = 1;
@@ -257,16 +256,17 @@ public class blockCuttingStation extends BlockEntity implements MenuProvider {
                 if (le_item instanceof TieredItem tieredItem) {
                     if (tieredItem.getTier() == Tiers.STONE) {
                         skipOutputSlot = true;
-                        CompoundEat = false;
+                        compoundEat = threshHold(100, 25);
                         keyString = "stone";
                     }
                     if (tieredItem.getTier() == Tiers.WOOD) {
                         skipOutputSlot = true;
-                        CompoundEat = false;
+                        compoundEat = threshHold(100, 50);
                         keyString = "wood";
                     }
                     if (tieredItem.getTier() == Tiers.NETHERITE) {
                         skipOutputSlot = true;
+                        compoundEat = threshHold(100, 10);
                         keyString = "netherite";
                         if (le_item instanceof SwordItem) {
                             count = commonConfig.netherriteSwordRoll;
@@ -287,7 +287,7 @@ public class blockCuttingStation extends BlockEntity implements MenuProvider {
                         //Special Behaviors for the Tiers of items
                     }
                 }
-                if (!(CompoundEat)){ entity.itemHandler.extractItem(planSlot, armCompCount, false); }
+                if (compoundEat){ entity.itemHandler.extractItem(planSlot, armCompCount, false); }
             }
             entity.itemHandler.extractItem(inputSlot, 1, false);
             if (skipOutputSlot) {
@@ -305,20 +305,17 @@ public class blockCuttingStation extends BlockEntity implements MenuProvider {
                 }
                 if (keyString.equals("netherite")) {
                     stone = netherriteToolsBonus(count);
-                    entity.itemHandler.setStackInSlot(outputSlot, new ItemStack(resultItem,
-                            entity.itemHandler.getStackInSlot(outputSlot).getCount() + 1));
+                    entity.itemHandler.setStackInSlot(outputSlot, new ItemStack(resultItem, entity.itemHandler.getStackInSlot(outputSlot).getCount() + 1));
                     //put into the slot, as Netherite is a high tier. diamond(s) still allowed pop out like confetti.
                 }
                 if (keyString.equals("tools")) {
                     stone = ToolsBonus();
-                    entity.itemHandler.setStackInSlot(outputSlot, new ItemStack(resultItem,
-                            entity.itemHandler.getStackInSlot(outputSlot).getCount() + count));
+                    entity.itemHandler.setStackInSlot(outputSlot, new ItemStack(resultItem, entity.itemHandler.getStackInSlot(outputSlot).getCount() + count));
                     //pops sticks like confetti, puts the output item
                 }
                 Containers.dropContents(level, worldPosition, stone);
             } else {
-                entity.itemHandler.setStackInSlot(outputSlot, new ItemStack(resultItem,
-                        entity.itemHandler.getStackInSlot(outputSlot).getCount() + count));
+                entity.itemHandler.setStackInSlot(outputSlot, new ItemStack(resultItem, entity.itemHandler.getStackInSlot(outputSlot).getCount() + count));
             }
             entity.resetProgress();
         }

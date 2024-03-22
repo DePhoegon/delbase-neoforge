@@ -4,3 +4,4 @@
 /gamerule randomTickSpeed 10000
 /gamerule randomTickSpeed 20
 /gamerule randomTickSpeed 10000
+/gamerule randomTickSpeed 20
