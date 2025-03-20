@@ -1,6 +1,7 @@
 package com.dephoegon.delbase.aid.event;
 
 import com.dephoegon.delbase.aid.util.composable;
+import com.dephoegon.delbase.aid.util.compostable;
 import com.dephoegon.delbase.block.entity.screen.blockCuttingStationScreen;
 import com.dephoegon.delbase.block.entity.screen.menuTypes;
 import net.minecraft.client.color.block.BlockColor;
@@ -43,5 +44,5 @@ public class eventBusEvents {
         ColoredLeaves().forEach((block) -> event.register((stack, color) -> event.getBlockColors().getColor(((BlockItem) stack.getItem()).getBlock().defaultBlockState(), null, null, color), block.get()));
         MangroveColoredLeaves().forEach((block) -> event.register((itemColor, itemLike) -> FoliageColor.getMangroveColor(), block.get().asItem()));
     }
-    public static void onServerStartAddCompostItems(ServerStartedEvent ignoredEvent) { composable.addToList(); }
+    public static void onServerStartAddCompostItems(ServerStartedEvent ignoredEvent) { compostable.addToList(); }
 }
