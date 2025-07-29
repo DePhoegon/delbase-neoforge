@@ -12,13 +12,13 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 import java.util.function.Supplier;
 
 import static com.dephoegon.delbase.block.gravity.gravColorSands.*;
-import static com.dephoegon.delbase.Delabse.MOD_ID;
+import static com.dephoegon.delbase.Delabse.Mod_ID;
 import static net.minecraft.world.level.block.Blocks.RED_SAND;
 import static net.minecraft.world.level.block.Blocks.SAND;
 
 public class stairSands {
-    private static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(MOD_ID);
-    private static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(MOD_ID);
+    private static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(Mod_ID);
+    private static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(Mod_ID);
 
     public static final DeferredBlock<StairBlock> SAND_STAIR = registerBlock("sand_stair",
             ()-> new sandStair(SAND));

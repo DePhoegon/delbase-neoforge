@@ -1,0 +1,19 @@
+{
+  "values": {
+    "minecraft:rotten_flesh": { "chance": 0.65 },
+    "minecraft:spider_eye": { "chance": 0.65 },
+    "minecraft:cod": { "chance": 0.85 },
+    "minecraft:salmon": { "chance": 0.85 },
+    "minecraft:tropical_fish": { "chance": 0.85 },
+    "minecraft:pufferfish": { "chance": 0.85 },
+    "minecraft:beef": { "chance": 0.85 },
+    "minecraft:chicken": { "chance": 0.85 },
+    "minecraft:rabbit": { "chance": 0.85 },
+    "minecraft:mutton": { "chance": 0.85 },
+    "minecraft:cooked_beef": { "chance": 0.85 },
+    "minecraft:cooked_cod": { "chance": 0.85 },
+    "minecraft:cooked_chicken": { "chance": 0.85 },
+    "minecraft:cooked_rabbit": { "chance": 0.85 },
+    "minecraft:cooked_mutton": { "chance": 0.85 }
+  }
+}

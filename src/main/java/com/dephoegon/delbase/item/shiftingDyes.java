@@ -9,7 +9,7 @@ import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
 public class shiftingDyes {
-    private static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(Delabse.MOD_ID);
+    private static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(Delabse.Mod_ID);
     
     public static final DeferredItem<Item> CLEANSE_SHIFT_DYE = ITEMS.register("cleanse_shift_dye",
             () -> new blockDye(DyeColor.WHITE, new Item.Properties().stacksTo(64),

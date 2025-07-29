@@ -16,12 +16,12 @@ import net.minecraft.world.level.block.ColoredFallingBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import org.jetbrains.annotations.NotNull;
 
-import javax.annotation.Nullable;
 import java.util.List;
 
 import static net.minecraft.world.level.block.Blocks.RED_SAND;
 import static net.minecraft.world.level.block.Blocks.SAND;
 
+@SuppressWarnings("unused")
 public class gravBlock extends ColoredFallingBlock {
     private final String tip0;
     private final String tip1;
@@ -41,7 +41,7 @@ public class gravBlock extends ColoredFallingBlock {
         tip2 = null;
         fall = falls;
     }
-    public void appendHoverText(@NotNull ItemStack stack, @Nullable Item.TooltipContext worldIn, @NotNull List<Component> toolTip, @NotNull TooltipFlag flag) {
+    public void appendHoverText(@NotNull ItemStack stack, Item.@NotNull TooltipContext worldIn, @NotNull List<Component> toolTip, @NotNull TooltipFlag flag) {
         super.appendHoverText(stack, worldIn, toolTip, flag);
         if(!(kb.HShift()) && !(kb.HCtrl()) && tip0 != null) { toolTip.add(Component.translatable(tip0)); } //if neither pressed, show tip0 (if not empty)
         if(kb.HCtrl() && tip2 != null) { toolTip.add(Component.translatable(tip2)); } //if ctrl, show tip2 (if not empty), do first
@@ -73,7 +73,7 @@ public class gravBlock extends ColoredFallingBlock {
         if (blockArrayList.checkFallLock(bob)) { last = true; }
         else if (
             // Recursive call as it allows for go up through custom gravity block class
-            // includes checks for sand & red sand
+            // includes checks for sand and red sand
             // Will expand exceptions if gravBlock also expands beyond sand & solid sand
                 bob instanceof gravBlock && l_count < 7 ||
                         bob.defaultBlockState() == SAND.defaultBlockState() && l_count < 7 ||

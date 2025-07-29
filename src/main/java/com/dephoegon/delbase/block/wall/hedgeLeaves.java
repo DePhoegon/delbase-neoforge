@@ -12,12 +12,12 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 
 import java.util.function.Supplier;
 
-import static com.dephoegon.delbase.Delabse.MOD_ID;
+import static com.dephoegon.delbase.Delabse.Mod_ID;
 import static net.minecraft.world.level.block.Blocks.*;
 
 public class hedgeLeaves {
-    private static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(MOD_ID);
-    private static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(MOD_ID);
+    private static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(Mod_ID);
+    private static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(Mod_ID);
 
     public static final DeferredBlock<WallBlock> OAK_HEDGE = registerBlock("oak_hedge",
             () -> new woodWall(OAK_LEAVES, SoundType.GRASS, true, null));

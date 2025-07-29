@@ -15,6 +15,9 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.Random;
 
+import static com.dephoegon.delbase.aid.util.blockArrayList.getVanilla_wood_list;
+import static com.dephoegon.delbase.block.general.ashBlocks.*;
+import static com.dephoegon.delbase.block.general.miscSpecialCases.ASH_BLOCK;
 import static net.minecraft.world.level.block.StairBlock.SHAPE;
 import static net.minecraft.world.level.block.state.properties.BlockStateProperties.*;
 import static net.minecraft.world.level.block.state.properties.BlockStateProperties.IN_WALL;
@@ -25,7 +28,8 @@ public class burnChance {
     } //used to control % odds for replacing blocks/spawning fire
     public static boolean threshHold(int cap, int thresh) { return randomNum(cap) > thresh; }
     public static void rngBurn(@NotNull BlockGetter world, @NotNull BlockState burningBlock, BlockPos pos, int burnThreshHold, int burnCap){
-        // Double Comparison is used to avoid drastic failure.  They should always match, but if for some reason it manages to pull the wrong blockstate, it won't break the game.
+        // Double Comparison is used to avoid drastic failure.
+        // They should always match, but if for some reason it manages to pull the wrong BlockState, it won't break the game.
         boolean genBlock = true;
         boolean waterlogged = false;
         if (burningBlock.getBlock() instanceof WallBlock) {

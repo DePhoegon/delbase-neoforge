@@ -15,6 +15,7 @@ import static com.dephoegon.delbase.aid.util.dyeList.black;
 import static com.dephoegon.delbase.item.shiftingDyes.*;
 
 public class colorMixInteraction {
+    @SuppressWarnings("DataFlowIssue")
     public static InteractionResult ColorLogic(Level world, BlockPos blockPos, BlockState TargetBlock, BlockState BaseDefaultBlock, BlockState RedBaseDefaultBlock, BlockState DarkRedDefaultBlock, BlockState WhiteDefaultBlock, BlockState OrangeDefaultBlock, BlockState MagentaDefaultBlock, BlockState LightBlueDefaultBlock, BlockState YellowDefaultBlock, BlockState LimeDefaultBlock, BlockState PinkDefaultBlock, BlockState GrayDefaultBlock, BlockState LightGrayDefaultBlock, BlockState CyanDefaultBlock, BlockState PurpleDefaultBlock, BlockState BlueDefaultBlock, BlockState GreenDefaultBlock, BlockState BrownDefaultBlock, BlockState BlackDefaultBlock, int DefaultBlockIndex, @NotNull Item inHand, Player playerEntity) {
         ItemStack pHand = playerEntity.getMainHandItem();
         if (TargetBlock == null || inHand != pHand.getItem()) { return InteractionResult.FAIL; }
@@ -372,7 +373,7 @@ public class colorMixInteraction {
                         blockReplacer.slabPlacement(world, blockPos, place_me);
                 case 4 ->
                     //Axis, lock_cut used to mix 'non-axis' default blocks with axis blocks in the set (cut_sandstone // cut_red_sandstone) as example
-                    //Is triggered only one base block & red block, (dumb method) possible to rework stack to allow cutLocking on any... but no reason to atm
+                    //Is triggered only one base block and red block, (dumb method) possible to rework stack to allow cutLocking on any... but no reason to atm
                         blockReplacer.axisPlacement(world, blockPos, place_me, lock_cut);
                 case 5 ->
                     //DefaultBocks with no special placements

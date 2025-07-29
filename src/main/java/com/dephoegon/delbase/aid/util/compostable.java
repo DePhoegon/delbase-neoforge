@@ -2,11 +2,14 @@ package com.dephoegon.delbase.aid.util;
 
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.ItemLike;
+import net.minecraft.world.level.block.ComposterBlock;
 import org.jetbrains.annotations.NotNull;
 
 import static com.dephoegon.delbase.aid.util.creativeTabsArrayLists.getAllLeaves;
-import static net.minecraft.world.level.block.ComposterBlock.COMPOSTABLES;
 
+// addToList() is called in eventBusEvents class, but is commented out for now under NeoForge 1.21.1 because #COMPOSTABLES is deprecated.
+// Left in place for now, so it can be uncommented later if needed, or removed if not needed with the other loaders ports to 1.21.1+ (Fabric) is not needed.
+@SuppressWarnings({"deprecation", "unused"})
 public class compostable {
     private static void compost() {
         float f = 0.3F;
@@ -31,6 +34,6 @@ public class compostable {
         add(f3, Items.COOKED_RABBIT);
         add(f3, Items.COOKED_MUTTON);
     }
-    private static void add(float pChance, @NotNull ItemLike pItem) { if (!COMPOSTABLES.containsKey(pItem.asItem())) { COMPOSTABLES.put(pItem.asItem(), pChance); } }
+    private static void add(float pChance, @NotNull ItemLike pItem) { if (!ComposterBlock.COMPOSTABLES.containsKey(pItem.asItem())) { ComposterBlock.COMPOSTABLES.put(pItem.asItem(), pChance); } }
     public static void addToList() { compost(); }
 }

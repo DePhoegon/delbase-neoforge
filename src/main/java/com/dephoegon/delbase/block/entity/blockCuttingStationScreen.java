@@ -1,6 +1,5 @@
 package com.dephoegon.delbase.block.entity;
 
-import com.dephoegon.delbase.block.entity.blocks.blockCuttingStation;
 import com.mojang.blaze3d.systems.RenderSystem;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
@@ -11,25 +10,26 @@ import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.item.Item;
 import org.jetbrains.annotations.NotNull;
 
-import static com.dephoegon.delbase.aid.slots.planSlots.*;
-import static com.dephoegon.delbase.Delabse.MOD_ID;
+import static com.dephoegon.delbase.Delabse.Mod_ID;
+import static com.dephoegon.delbase.aid.slots.planSlots.isPlansSlotItem;
 import static com.dephoegon.delbase.item.blockCutterPlans.*;
+import static net.minecraft.resources.ResourceLocation.fromNamespaceAndPath;
 
 public class blockCuttingStationScreen extends AbstractContainerScreen<blockCuttingStationMenu> {
     private static final ResourceLocation EMPTY_TEXTURE =
-            new ResourceLocation(Mod_ID, "textures/gui/block_cutting_station_gui_empty.png");
+            fromNamespaceAndPath(Mod_ID, "textures/gui/block_cutting_station_gui_empty.png");
     private static final ResourceLocation COMPOUND_TEXTURE =
-            new ResourceLocation(Mod_ID, "textures/gui/block_cutting_station_gui_compound.png");
+            fromNamespaceAndPath(Mod_ID, "textures/gui/block_cutting_station_gui_compound.png");
     private static final ResourceLocation PLANS_WALL_TEXTURE =
-            new ResourceLocation(Mod_ID, "textures/gui/block_cutting_station_gui_wall.png");
+            fromNamespaceAndPath(Mod_ID, "textures/gui/block_cutting_station_gui_wall.png");
     private static final ResourceLocation PLANS_SLAB_TEXTURE =
-            new ResourceLocation(Mod_ID, "textures/gui/block_cutting_station_gui_slab.png");
+            fromNamespaceAndPath(Mod_ID, "textures/gui/block_cutting_station_gui_slab.png");
     private static final ResourceLocation PLANS_STAIR_TEXTURE =
-            new ResourceLocation(Mod_ID, "textures/gui/block_cutting_station_gui_stair.png");
+            fromNamespaceAndPath(Mod_ID, "textures/gui/block_cutting_station_gui_stair.png");
     private static final ResourceLocation PLANS_FENCE_TEXTURE =
-            new ResourceLocation(Mod_ID, "textures/gui/block_cutting_station_gui_fence.png");
+            fromNamespaceAndPath(Mod_ID, "textures/gui/block_cutting_station_gui_fence.png");
     private static final ResourceLocation PLANS_FENCE_GATE_TEXTURE =
-            new ResourceLocation(Mod_ID, "textures/gui/block_cutting_station_gui_fence_gate.png");
+            fromNamespaceAndPath(Mod_ID, "textures/gui/block_cutting_station_gui_fence_gate.png");
     public blockCuttingStationScreen(blockCuttingStationMenu pMenu, Inventory pPlayerInventory, Component pTitle) {
         super(pMenu, pPlayerInventory, pTitle);
     }
@@ -63,7 +63,7 @@ public class blockCuttingStationScreen extends AbstractContainerScreen<blockCutt
     }
     @Override
     public void render(@NotNull GuiGraphics pPoseStack, int mouseX, int mouseY, float delta) {
-        renderBackground(pPoseStack);
+        renderBackground(pPoseStack, mouseX, mouseY, delta);
         super.render(pPoseStack, mouseX, mouseY, delta);
         renderTooltip(pPoseStack, mouseX, mouseY);
     }

@@ -13,13 +13,13 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 
 import java.util.function.Supplier;
 
-import static com.dephoegon.delbase.Delabse.MOD_ID;
+import static com.dephoegon.delbase.Delabse.Mod_ID;
 import static net.minecraft.world.level.block.Blocks.DEEPSLATE;
 import static net.minecraft.world.level.block.Blocks.STONE;
 
 public class wallStones {
-    private static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(MOD_ID);
-    private static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(MOD_ID);
+    private static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(Mod_ID);
+    private static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(Mod_ID);
 
     public static final DeferredBlock<WallBlock> STONE_WALL = registerBlock("stone_wall",
             () -> new wallBlock(BlockBehaviour.Properties.ofFullCopy(STONE).sound(SoundType.STONE), false, 0, 0, null));

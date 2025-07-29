@@ -11,12 +11,12 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 
 import java.util.function.Supplier;
 
-import static com.dephoegon.delbase.Delabse.MOD_ID;
+import static com.dephoegon.delbase.Delabse.Mod_ID;
 import static net.minecraft.world.level.block.Blocks.*;
 
 public class stairConcrete {
-    private static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(MOD_ID);
-    private static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(MOD_ID);
+    private static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(Mod_ID);
+    private static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(Mod_ID);
 
     public static final DeferredBlock<StairBlock> RED_CONCRETE_STAIR = registerBlock("red_concrete_stair",
             () -> new concreteStair(RED_CONCRETE));

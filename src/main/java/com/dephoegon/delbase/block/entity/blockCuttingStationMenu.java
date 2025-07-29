@@ -3,7 +3,6 @@ package com.dephoegon.delbase.block.entity;
 import com.dephoegon.delbase.aid.slots.itemSlot;
 import com.dephoegon.delbase.aid.slots.planSlots;
 import com.dephoegon.delbase.aid.slots.resultSlots;
-import com.dephoegon.delbase.block.entity.blocks.blockCuttingStation;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
@@ -11,11 +10,13 @@ import net.minecraft.world.inventory.*;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
+import net.neoforged.neoforge.capabilities.Capabilities;
+import net.neoforged.neoforge.items.IItemHandler;
 import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
-import static com.dephoegon.delbase.block.entity.blocks.blockCuttingStation.*;
+import static com.dephoegon.delbase.block.entity.blockCuttingStation.*;
 import static com.dephoegon.delbase.block.general.machineBlocks.BLOCK_CUTTING_STATION;
-import static net.minecraftforge.common.capabilities.ForgeCapabilities.ITEM_HANDLER;
 
 public class blockCuttingStationMenu extends AbstractContainerMenu {
     private final blockCuttingStation blockEntity;
@@ -35,12 +36,13 @@ public class blockCuttingStationMenu extends AbstractContainerMenu {
         addPlayerInventory(inv);
         addPlayerHotbar(inv);
 
-        this.blockEntity.getCapability(ITEM_HANDLER).ifPresent(handler -> {
-            this.addSlot(new itemSlot(handler, inputSlot, 57, 18));
-            this.addSlot(new planSlots(handler, planSlot, 103, 18));
-            this.addSlot(new resultSlots(handler, outputSlot, 80, 60));
+        @Nullable IItemHandler itemHandler = this.blockEntity.getCapability(Capabilities.ItemHandler.BLOCK, null);
+         if (itemHandler != null) {
+            this.addSlot(new itemSlot(itemHandler, inputSlot, 57, 18));
+            this.addSlot(new planSlots(itemHandler, planSlot, 103, 18));
+            this.addSlot(new resultSlots(itemHandler, outputSlot, 80, 60));
 
-        });
+        }
         addDataSlots(data);
     }
     public boolean isCrafting() {
@@ -71,7 +73,7 @@ public class blockCuttingStationMenu extends AbstractContainerMenu {
             return ItemStack.EMPTY;
         }
         ItemStack sourceStack = sourceSlot.getItem();
-        ItemStack copyOfSourceStack = sourceStack.ofFullCopy();
+        ItemStack copyOfSourceStack = sourceStack.copy();
 
         if (index < VANILLA_FIRST_SLOT_INDEX + VANILLA_SLOT_COUNT) {
             if (!moveItemStackTo(sourceStack, TE_INVENTORY_FIRST_SLOT_INDEX, TE_INVENTORY_FIRST_SLOT_INDEX + TE_INVENTORY_SLOT_COUNT, false)) {
@@ -82,7 +84,7 @@ public class blockCuttingStationMenu extends AbstractContainerMenu {
                 return ItemStack.EMPTY;
             }
         } else {
-            System.out.println("Delbase (BlockCuttingScreen) - Invalid SlotIndex: "+index);
+            System.out.println("DelBase (BlockCuttingScreen) - Invalid SlotIndex: "+index);
             return ItemStack.EMPTY;
         }
         if (sourceStack.getCount() == 0) {

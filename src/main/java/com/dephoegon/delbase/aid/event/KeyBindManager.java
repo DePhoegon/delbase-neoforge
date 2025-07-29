@@ -11,7 +11,7 @@ import org.jetbrains.annotations.NotNull;
 
 import static net.neoforged.api.distmarker.Dist.CLIENT;
 
-@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD, modid = Delabse.MOD_ID, value = CLIENT)
+@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD, modid = Delabse.Mod_ID, value = CLIENT)
 public class KeyBindManager {
     public static final Lazy<KeyMapping> tooltipShift = Lazy.of(() -> new KeyMapping("tooltip.key.shift", InputConstants.KEY_LSHIFT, "tooltip.key.category"));
     public static final Lazy<KeyMapping> tooltipCtrl = Lazy.of(() -> new KeyMapping("tooltip.key.ctrl", InputConstants.KEY_LCONTROL, "tooltip.key.category"));

@@ -14,13 +14,13 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 import java.util.function.Supplier;
 
 import static com.dephoegon.delbase.block.general.genSmoothSandStones.*;
-import static com.dephoegon.delbase.Delabse.MOD_ID;
+import static com.dephoegon.delbase.Delabse.Mod_ID;
 import static net.minecraft.world.level.block.Blocks.RED_SANDSTONE;
 import static net.minecraft.world.level.block.Blocks.SANDSTONE;
 
 public class smoothSandStoneFences {
-    private static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(MOD_ID);
-    private static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(MOD_ID);
+    private static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(Mod_ID);
+    private static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(Mod_ID);
 
     public static final DeferredBlock<FenceBlock> WHITE_SMOOTH_SAND_STONE_FENCE = registerBlock("white_smooth_sand_stone_fence",
             () -> new smoothSandStoneFence(WHITE_SMOOTH_SAND_STONE.get()));

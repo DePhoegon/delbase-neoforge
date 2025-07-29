@@ -1,10 +1,12 @@
 package com.dephoegon.delbase.block.entity;
 
-import com.dephoegon.delbase.block.entity.blocks.blockCuttingStation;
 import com.dephoegon.delbase.block.general.machineBlocks;
 import net.minecraft.world.level.block.entity.BlockEntityType;
+import net.neoforged.bus.api.IEventBus;
+import net.neoforged.neoforge.registries.DeferredBlock;
+import net.neoforged.neoforge.registries.DeferredRegister;
 
-import static com.dephoegon.delbase.Delabse.MOD_ID;
+import static com.dephoegon.delbase.Delabse.Mod_ID;
 
 public class blockEntities {
     public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITIES =

@@ -1,8 +1,8 @@
 package com.dephoegon.delbase.aid.block.alt;
 
-import com.dephoegon.delbase.aid.block.stock.horizontalFacingBlocksBaseEntities;
+import com.dephoegon.delbase.aid.block.stock.horizontalFacingBlockBaseEntities;
+import com.dephoegon.delbase.block.entity.blockCuttingStation;
 import com.dephoegon.delbase.block.entity.blockEntities;
-import com.dephoegon.delbase.block.entity.blocks.blockCuttingStation;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerPlayer;
@@ -24,7 +24,6 @@ import net.minecraft.world.phys.shapes.BooleanOp;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
-import net.minecraftforge.network.NetworkHooks;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
@@ -32,12 +31,11 @@ import java.util.stream.Stream;
 
 
 @SuppressWarnings("RedundantMethodOverride")
-public class cuttingStationBlock extends horizontalFacingBlocksBaseEntities {
+public class cuttingStationBlock extends horizontalFacingBlockBaseEntities {
     public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
     public cuttingStationBlock(Properties properties, String normToolTip, String shiftToolTip, String ctrlToolTip) {
         super(properties, normToolTip, shiftToolTip, ctrlToolTip, false, 0, 0);
     }
-    @SuppressWarnings("deprecation")
     public @NotNull VoxelShape getShape(@NotNull BlockState pState, @NotNull BlockGetter pLevel, @NotNull BlockPos pPos, @NotNull CollisionContext pContext) {
         Direction direction = pState.getValue(FACING);
         return switch (direction) {
@@ -128,14 +126,15 @@ public class cuttingStationBlock extends horizontalFacingBlocksBaseEntities {
         }
         super.onRemove(pState, pLevel, pPos, pNewState, pIsMoving);
     }
+    @SuppressWarnings("RedundantCast")
     public @NotNull InteractionResult use(@NotNull BlockState pState, @NotNull Level pLevel, @NotNull BlockPos pPos,
                                           @NotNull Player pPlayer, @NotNull InteractionHand pHand, @NotNull BlockHitResult pHit) {
         if(!pLevel.isClientSide()) {
             BlockEntity entity = pLevel.getBlockEntity(pPos);
             if(entity instanceof blockCuttingStation) {
-                NetworkHooks.openScreen(((ServerPlayer) pPlayer), (blockCuttingStation)entity, pPos);
+                ((ServerPlayer) pPlayer).openMenu((blockCuttingStation) entity);
             } else {
-                throw new IllegalStateException("Delbase Container Provider is Missing - Block Cutting Station");
+                throw new IllegalStateException("DelBase Container Provider is Missing - Block Cutting Station");
             }
         }
         return InteractionResult.sidedSuccess(pLevel.isClientSide());

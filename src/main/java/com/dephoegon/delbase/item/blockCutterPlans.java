@@ -9,8 +9,9 @@ import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import org.jetbrains.annotations.NotNull;
 
+@SuppressWarnings("SameParameterValue")
 public class blockCutterPlans {
-    private static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(Delabse.MOD_ID);
+    private static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(Delabse.Mod_ID);
 
     public static final DeferredItem<Item> WALL_PLANS = regPlans("wall_plans", 1);
     public static final DeferredItem<Item> SLAB_PLANS = regPlans("slab_plans", 1);

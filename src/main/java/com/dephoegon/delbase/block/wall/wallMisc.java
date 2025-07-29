@@ -13,16 +13,17 @@ import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
+import org.jetbrains.annotations.NotNull;
 
 import javax.annotation.Nullable;
 import java.util.function.Supplier;
 
-import static com.dephoegon.delbase.Delabse.MOD_ID;
+import static com.dephoegon.delbase.Delabse.Mod_ID;
 import static net.minecraft.world.level.block.Blocks.*;
 
 public class wallMisc {
-    private static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(MOD_ID);
-    private static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(MOD_ID);
+    private static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(Mod_ID);
+    private static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(Mod_ID);
 
     public static final DeferredBlock<WallBlock> END_STONE_WALL = registerBlock("end_stone_wall",
             () -> new wallBlock(BlockBehaviour.Properties.ofFullCopy(END_STONE).sound(SoundType.STONE), false, 0, 0, null));
@@ -87,7 +88,7 @@ public class wallMisc {
         DeferredBlock<T> exit = BLOCKS.register(name, block);
         ITEMS.register(name, () -> new BlockItem(exit.get(),
                 new Item.Properties().stacksTo(64)){
-            public int getBurnTime(ItemStack stack, @Nullable RecipeType<?> recipeType) {
+            public int getBurnTime(@NotNull ItemStack stack, @Nullable RecipeType<?> recipeType) {
                 return burn;
             }
         });
