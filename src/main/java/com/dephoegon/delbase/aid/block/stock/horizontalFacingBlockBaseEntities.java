@@ -1,6 +1,7 @@
 package com.dephoegon.delbase.aid.block.stock;
 
 import com.dephoegon.delbase.aid.util.kb;
+import com.dephoegon.delbase.block.entity.blockCuttingStation;
 import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -37,7 +38,7 @@ public class horizontalFacingBlockBaseEntities extends BaseEntityBlock {
     private final boolean flame;
     private final int spread;
     private final int flammability;
-    public horizontalFacingBlocksBaseEntities(Properties properties, @NotNull String normToolTip, String shiftToolTip, String ctrlToolTip, boolean flames, int fireChance, int fireSpread) {
+    public horizontalFacingBlockBaseEntities(Properties properties, @NotNull String normToolTip, String shiftToolTip, String ctrlToolTip, boolean flames, int fireChance, int fireSpread) {
         super(properties);
         if(normToolTip.isEmpty()) { tip0 = null; } else { tip0 = normToolTip; }
         if(shiftToolTip.isEmpty()) { tip1 = null; } else { tip1 = shiftToolTip; }
@@ -46,7 +47,7 @@ public class horizontalFacingBlockBaseEntities extends BaseEntityBlock {
         spread = fireSpread;
         flammability = fireChance;
     }
-    public horizontalFacingBlocksBaseEntities(Properties properties, boolean flames, int fireChance, int fireSpread) {
+    public horizontalFacingBlockBaseEntities(Properties properties, boolean flames, int fireChance, int fireSpread) {
         super(properties);
         tip0 = null;
         tip1 = null;
