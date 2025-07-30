@@ -1,0 +1,15 @@
+{
+  "type": "delbase:block_cutting",
+  "input": {
+    "item": "minecraft:chiseled_quartz_block",
+    "count": 1
+  },
+  "plans": {
+    "item": "delbase:fence_plans",
+    "count": 1
+  },
+  "output": {
+    "item": "delbase:chiseled_quartz_block_fence",
+    "count": 1
+  }
+}

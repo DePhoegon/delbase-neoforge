@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "delbase:cobbled_basalt_fence"
+  },
+  "result": "delbase:basalt_fence",
+  "experience": 0.1,
+  "cookingtime": 200
+}

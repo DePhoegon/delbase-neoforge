@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#S#",
+    "#S#"
+  ],
+  "key": {
+    "S": {
+      "item": "minecraft:stick"
+    },
+    "#": {
+      "item": "minecraft:mud_bricks"
+    }
+  },
+  "result": {
+    "item": "delbase:mud_brick_fence",
+    "count": 4
+  }
+}

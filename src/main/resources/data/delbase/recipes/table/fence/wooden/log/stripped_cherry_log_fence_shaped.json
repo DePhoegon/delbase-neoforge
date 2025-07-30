@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#S#",
+    "#S#"
+  ],
+  "key": {
+    "S": {
+      "item": "minecraft:stick"
+    },
+    "#": {
+      "item": "minecraft:stripped_cherry_log"
+    }
+  },
+  "result": {
+    "item": "delbase:stripped_cherry_log_fence",
+    "count": 4
+  }
+}

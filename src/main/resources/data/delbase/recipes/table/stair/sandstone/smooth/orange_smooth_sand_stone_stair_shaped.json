@@ -1,0 +1,17 @@
+{
+"type": "minecraft:crafting_shaped",
+"pattern": [
+"#  ",
+"## ",
+"###"
+],
+"key": {
+"#": {
+"item": "delbase:orange_smooth_sand_stone"
+}
+},
+"result": {
+"item": "delbase:orange_smooth_sand_stone_stair",
+"count": 4
+}
+}

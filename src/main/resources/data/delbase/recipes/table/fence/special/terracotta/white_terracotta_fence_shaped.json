@@ -1,0 +1,19 @@
+{
+"type": "minecraft:crafting_shaped",
+"pattern": [
+"#S#",
+"#S#"
+],
+"key": {
+"S": {
+"item": "minecraft:stick"
+},
+"#": {
+"item": "minecraft:white_terracotta"
+}
+},
+"result": {
+"item": "delbase:white_terracotta_fence",
+"count": 4
+}
+}

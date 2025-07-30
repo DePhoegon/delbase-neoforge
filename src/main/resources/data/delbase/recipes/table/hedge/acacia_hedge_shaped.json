@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:acacia_leaves"
+    }
+  },
+  "result": {
+    "item": "delbase:acacia_hedge",
+    "count": 6
+  }
+}

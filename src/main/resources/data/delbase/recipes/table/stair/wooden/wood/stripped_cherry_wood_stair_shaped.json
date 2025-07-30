@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:stripped_cherry_wood"
+    }
+  },
+  "result": {
+    "item": "delbase:stripped_cherry_wood_stair",
+    "count": 4
+  }
+}

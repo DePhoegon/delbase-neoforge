@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:campfire_cooking",
+  "ingredient": {
+    "item": "delbase:packed_mud_fence_gate"
+  },
+  "result": "delbase:mud_brick_fence_gate",
+  "experience": 0.35,
+  "cookingtime": 300
+}

@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "delbase:hardened_oak_planks"
+  },
+  "result": "minecraft:petrified_oak_slab",
+  "count": 2
+}

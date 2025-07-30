@@ -1,0 +1,15 @@
+{
+  "type": "delbase:block_cutting",
+  "input": {
+    "item": "minecraft:cracked_polished_blackstone_bricks",
+    "count": 1
+  },
+  "plans": {
+    "item": "delbase:fence_gate_plans",
+    "count": 1
+  },
+  "output": {
+    "item": "delbase:cracked_polished_blackstone_brick_fence_gate",
+    "count": 1
+  }
+}

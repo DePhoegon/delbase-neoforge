@@ -1,0 +1,9 @@
+{ 
+  "type": "minecraft:campfire_cooking", 
+  "ingredient": { 
+    "item": "delbase:black_solid_sand"
+  }, 
+  "result": "delbase:black_smooth_sand_stone",
+  "experience": 0.35, 
+  "cookingtime": 300 
+} 

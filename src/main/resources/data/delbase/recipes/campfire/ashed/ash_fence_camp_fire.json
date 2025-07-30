@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:campfire_cooking",
+  "ingredient": {
+    "tag": "delbase:ash_fence"
+  },
+  "result": "delbase:ash_fence",
+  "experience": 0.35,
+  "cookingtime": 300
+}

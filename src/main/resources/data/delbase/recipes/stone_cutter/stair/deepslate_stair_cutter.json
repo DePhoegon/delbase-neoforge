@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "tag": "delbase:grouped/deepslate_blocks"
+  },
+  "result": "delbase:deepslate_stair",
+  "count": 1
+}

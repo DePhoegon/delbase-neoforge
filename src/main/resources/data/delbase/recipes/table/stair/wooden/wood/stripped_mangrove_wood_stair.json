@@ -1,0 +1,17 @@
+{
+"type": "minecraft:crafting_shaped",
+"pattern": [
+"#  ",
+"## ",
+"###"
+],
+"key": {
+"#": {
+"item": "minecraft:stripped_mangrove_wood"
+}
+},
+"result": {
+"item": "delbase:stripped_mangrove_wood_stair",
+"count": 4
+}
+}

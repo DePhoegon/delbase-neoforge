@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " D ",
+    "###"
+  ],
+  "key": {
+    "D": {
+      "tag": "delbase:energy_dust"
+    },
+    "#": {
+      "item": "minecraft:paper"
+    }
+  },
+  "result": {
+    "item": "delbase:slab_plans",
+    "count": 1
+  }
+}

@@ -1,0 +1,17 @@
+{
+"type": "minecraft:crafting_shaped",
+"pattern": [
+"#  ",
+"## ",
+"###"
+],
+"key": {
+"#": {
+"item": "minecraft:raw_copper_block"
+}
+},
+"result": {
+"item": "delbase:raw_copper_stair",
+"count": 4
+}
+}

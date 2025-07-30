@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " # ",
+    "NDN",
+    " N "
+  ],
+  "key": {
+    "D": {
+      "tag": "delbase:energy_dust"
+    },
+    "N": {
+      "item": "minecraft:iron_nugget"
+    },
+    "#": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "delbase:cleanse_shift_dye",
+    "count": 8
+  }
+}

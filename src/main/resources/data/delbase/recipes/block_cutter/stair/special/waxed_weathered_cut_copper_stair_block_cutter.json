@@ -1,0 +1,15 @@
+{
+  "type": "delbase:block_cutting",
+  "input": {
+    "item": "minecraft:waxed_weathered_cut_copper",
+    "count": 1
+  },
+  "plans": {
+    "item": "delbase:stair_plans",
+    "count": 1
+  },
+  "output": {
+    "item": "minecraft:waxed_weathered_cut_copper_stairs",
+    "count": 1
+  }
+}

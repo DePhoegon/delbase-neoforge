@@ -1,0 +1,19 @@
+{
+"type": "minecraft:crafting_shaped",
+"pattern": [
+"#S#",
+"#S#"
+],
+"key": {
+"S": {
+"item": "minecraft:stick"
+},
+"#": {
+"item": "minecraft:basalt"
+}
+},
+"result": {
+"item": "delbase:cobbled_basalt_fence",
+"count": 4
+}
+}

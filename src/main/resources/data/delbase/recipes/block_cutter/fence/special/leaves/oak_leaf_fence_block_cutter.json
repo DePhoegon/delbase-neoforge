@@ -1,0 +1,15 @@
+{
+  "type": "delbase:block_cutting",
+  "input": {
+    "item": "minecraft:oak_leaves",
+    "count": 1
+  },
+  "plans": {
+    "item": "delbase:fence_plans",
+    "count": 1
+  },
+  "output": {
+    "item": "delbase:oak_leaf_fence",
+    "count": 1
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "delbase:blood_cut_sand_stone_slab"
+    },
+    {
+      "tag": "delbase:energy_dust"
+    }
+  ],
+  "result":{
+    "item": "delbase:blood_cut_sand_stone_slab_energy",
+    "count": 1
+  }
+}

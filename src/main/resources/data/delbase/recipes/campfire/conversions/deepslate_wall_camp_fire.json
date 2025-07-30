@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:campfire_cooking",
+  "ingredient": {
+    "item": "minecraft:cobbled_deepslate_wall"
+  },
+  "result": "delbase:deepslate_wall",
+  "experience": 0.35,
+  "cookingtime": 300
+}

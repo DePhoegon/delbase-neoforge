@@ -1,0 +1,8 @@
+{ 
+  "type": "minecraft:stonecutting", 
+  "ingredient": {
+    "tag": "delbase:crafting_sets/color/brown_sand_stone_set"
+  }, 
+  "result": "delbase:brown_chiseled_sand_stone_wall",
+  "count": 1 
+} 

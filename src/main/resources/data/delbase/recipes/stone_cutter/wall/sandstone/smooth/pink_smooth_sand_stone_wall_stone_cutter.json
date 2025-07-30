@@ -1,0 +1,8 @@
+{ 
+  "type": "minecraft:stonecutting", 
+  "ingredient": {
+    "tag": "delbase:crafting_sets/color/pink_sand_stone_set"
+  }, 
+  "result": "delbase:pink_smooth_sand_stone_wall",
+  "count": 1 
+} 

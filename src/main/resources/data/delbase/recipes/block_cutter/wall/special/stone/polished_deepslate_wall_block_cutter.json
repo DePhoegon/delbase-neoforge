@@ -1,0 +1,15 @@
+{
+  "type": "delbase:block_cutting",
+  "input": {
+    "item": "minecraft:polished_deepslate",
+    "count": 1
+  },
+  "plans": {
+    "item": "delbase:wall_plans",
+    "count": 1
+  },
+  "output": {
+    "item": "minecraft:polished_deepslate_wall",
+    "count": 1
+  }
+}

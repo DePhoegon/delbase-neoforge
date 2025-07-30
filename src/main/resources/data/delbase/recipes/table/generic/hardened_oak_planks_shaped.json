@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:oak_slab"
+    },
+    {
+      "item": "minecraft:oak_slab"
+    },
+    {
+      "tag": "delbase:energy_dust"
+    }
+  ],
+  "result":{
+    "item": "delbase:hardened_oak_planks",
+    "count": 1
+  }
+}

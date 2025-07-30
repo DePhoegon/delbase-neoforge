@@ -1,0 +1,13 @@
+{ 
+  "type": "minecraft:crafting_shaped", 
+  "pattern": [ "yyy" ],
+  "key": { 
+    "y": { 
+      "item": "delbase:magenta_solid_sand"
+    } 
+  }, 
+  "result":{ 
+    "item": "delbase:magenta_sand_slab", 
+    "count": 6 
+  } 
+} 

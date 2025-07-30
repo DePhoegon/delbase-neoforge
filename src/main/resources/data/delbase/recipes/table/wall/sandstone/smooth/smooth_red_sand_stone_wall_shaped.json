@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [ "yyy","yyy" ],
+  "key": {
+    "y": {
+      "item": "minecraft:smooth_red_sandstone"
+    }
+  },
+  "result":{
+    "item": "delbase:red_smooth_sand_stone_wall",
+    "count": 6
+  }
+} 

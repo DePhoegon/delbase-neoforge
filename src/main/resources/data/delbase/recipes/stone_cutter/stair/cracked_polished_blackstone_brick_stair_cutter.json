@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "tag": "delbase:grouped/blackstone_blocks"
+  },
+  "result": "delbase:cracked_polished_blackstone_brick_stair",
+  "count": 1
+}

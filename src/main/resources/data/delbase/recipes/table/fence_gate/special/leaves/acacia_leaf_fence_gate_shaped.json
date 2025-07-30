@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "S#S",
+    "S#S"
+  ],
+  "key": {
+    "S": {
+      "item": "minecraft:stick"
+    },
+    "#": {
+      "item": "minecraft:acacia_leaves"
+    }
+  },
+  "result": {
+    "item": "delbase:acacia_leaf_fence_gate",
+    "count": 2
+  }
+}

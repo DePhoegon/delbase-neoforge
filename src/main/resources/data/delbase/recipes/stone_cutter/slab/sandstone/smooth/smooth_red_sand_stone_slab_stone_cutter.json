@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "tag": "delbase:crafting_sets/color/red_sand_stone_set"
+  },
+  "result": "minecraft:smooth_red_sandstone_slab",
+  "count": 2
+}

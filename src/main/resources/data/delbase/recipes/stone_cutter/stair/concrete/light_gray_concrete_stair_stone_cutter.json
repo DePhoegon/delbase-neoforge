@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "minecraft:light_gray_concrete"
+  },
+  "result": "delbase:light_gray_concrete_stair",
+  "count": 2
+} 

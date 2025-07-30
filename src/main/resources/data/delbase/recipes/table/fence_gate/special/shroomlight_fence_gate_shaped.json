@@ -1,0 +1,19 @@
+{
+"type": "minecraft:crafting_shaped",
+"pattern": [
+"S#S",
+"S#S"
+],
+"key": {
+"S": {
+"item": "minecraft:stick"
+},
+"#": {
+"item": "minecraft:shroomlight"
+}
+},
+"result": {
+"item": "delbase:shroomlight_fence_gate",
+"count": 2
+}
+}

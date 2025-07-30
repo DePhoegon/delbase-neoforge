@@ -1,0 +1,17 @@
+{
+"type": "minecraft:crafting_shaped",
+"pattern": [
+"#  ",
+"## ",
+"###"
+],
+"key": {
+"#": {
+"item": "minecraft:basalt"
+}
+},
+"result": {
+"item": "delbase:cobbled_basalt_stair",
+"count": 4
+}
+}

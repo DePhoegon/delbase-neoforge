@@ -1,0 +1,19 @@
+{
+"type": "minecraft:crafting_shaped",
+"pattern": [
+"#S#",
+"#S#"
+],
+"key": {
+"S": {
+"item": "minecraft:stick"
+},
+"#": {
+"item": "minecraft:crimson_hyphae"
+}
+},
+"result": {
+"item": "delbase:crimson_hyphae_fence",
+"count": 4
+}
+}

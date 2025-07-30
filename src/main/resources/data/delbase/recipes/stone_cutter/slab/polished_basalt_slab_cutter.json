@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "tag": "delbase:grouped/basalt_blocks"
+  },
+  "result": "delbase:polished_basalt_slab",
+  "count": 2
+}

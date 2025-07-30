@@ -1,0 +1,16 @@
+{
+  "type": "delbase:block_cutting",
+  "input": {
+    "item": "minecraft:netherite_sword",
+    "count": 1
+  },
+  "plans": {
+    "item": "delbase:armor_compound",
+    "count": 1
+  },
+  "output": {
+    "item": "minecraft:netherite_ingot",
+    "count": 1,
+    "_comment": "Count is # of Diamonds."
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:campfire_cooking",
+  "ingredient": {
+    "item": "delbase:cobbled_basalt_fence"
+  },
+  "result": "delbase:basalt_fence",
+  "experience": 0.35,
+  "cookingtime": 300
+}

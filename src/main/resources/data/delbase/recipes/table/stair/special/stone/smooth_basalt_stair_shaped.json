@@ -1,0 +1,17 @@
+{
+"type": "minecraft:crafting_shaped",
+"pattern": [
+"#  ",
+"## ",
+"###"
+],
+"key": {
+"#": {
+"item": "minecraft:smooth_basalt"
+}
+},
+"result": {
+"item": "delbase:smooth_basalt_stair",
+"count": 4
+}
+}

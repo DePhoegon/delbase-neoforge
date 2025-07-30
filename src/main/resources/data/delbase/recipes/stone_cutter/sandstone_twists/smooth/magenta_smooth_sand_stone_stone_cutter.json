@@ -1,0 +1,8 @@
+{ 
+  "type": "minecraft:stonecutting", 
+  "ingredient": {
+    "tag": "delbase:crafting_sets/color/magenta_sand_stone_set"
+  }, 
+  "result": "delbase:magenta_smooth_sand_stone",
+  "count": 1 
+} 

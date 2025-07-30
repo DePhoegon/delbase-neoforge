@@ -1,0 +1,17 @@
+{
+"type": "minecraft:crafting_shaped",
+"pattern": [
+"#  ",
+"## ",
+"###"
+],
+"key": {
+"#": {
+"item": "minecraft:acacia_wood"
+}
+},
+"result": {
+"item": "delbase:acacia_wood_stair",
+"count": 4
+}
+}

@@ -1,0 +1,17 @@
+{
+"type": "minecraft:crafting_shaped",
+"pattern": [
+"#  ",
+"## ",
+"###"
+],
+"key": {
+"#": {
+"item": "minecraft:crimson_hyphae"
+}
+},
+"result": {
+"item": "delbase:crimson_hyphae_stair",
+"count": 4
+}
+}

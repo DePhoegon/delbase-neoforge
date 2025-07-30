@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "minecraft:gray_terracotta"
+  },
+  "result": "delbase:gray_terracotta_stair",
+  "count": 1
+}

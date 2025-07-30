@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "S#S",
+    "S#S"
+  ],
+  "key": {
+    "S": {
+      "item": "minecraft:stick"
+    },
+    "#": {
+      "item": "minecraft:smooth_quartz"
+    }
+  },
+  "result": {
+    "item": "delbase:smooth_quartz_fence_gate",
+    "count": 2
+  }
+}

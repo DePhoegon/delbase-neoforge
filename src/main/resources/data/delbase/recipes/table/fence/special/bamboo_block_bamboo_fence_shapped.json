@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#S#",
+    "#S#"
+  ],
+  "key": {
+    "S": {
+      "item": "minecraft:bamboo"
+    },
+    "#": {
+      "item": "minecraft:bamboo_block"
+    }
+  },
+  "result": {
+    "item": "minecraft:bamboo_fence",
+    "count": 12
+  }
+}

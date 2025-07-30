@@ -1,0 +1,13 @@
+{ 
+  "type": "minecraft:crafting_shaped", 
+  "pattern": [ "yy","yy" ], 
+  "key": { 
+    "y": { 
+      "item": "delbase:brown_sand_stone" 
+    } 
+  }, 
+  "result":{ 
+    "item": "delbase:brown_cut_sand_stone", 
+    "count": 4 
+  } 
+} 

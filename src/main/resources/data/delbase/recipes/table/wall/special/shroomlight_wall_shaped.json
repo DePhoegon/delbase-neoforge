@@ -1,0 +1,16 @@
+{
+"type": "minecraft:crafting_shaped",
+"pattern": [
+"###",
+"###"
+],
+"key": {
+"#": {
+"item": "minecraft:shroomlight"
+}
+},
+"result": {
+"item": "delbase:shroomlight_wall",
+"count": 6
+}
+}

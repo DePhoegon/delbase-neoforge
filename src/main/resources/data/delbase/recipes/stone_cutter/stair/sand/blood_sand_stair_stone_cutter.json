@@ -1,0 +1,8 @@
+{ 
+  "type": "minecraft:stonecutting", 
+  "ingredient": { 
+    "item": "delbase:blood_solid_sand"
+  }, 
+  "result": "delbase:blood_sand_stair",
+  "count": 1 
+} 

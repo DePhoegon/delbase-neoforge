@@ -1,0 +1,17 @@
+{
+"type": "minecraft:crafting_shaped",
+"pattern": [
+"#  ",
+"## ",
+"###"
+],
+"key": {
+"#": {
+"item": "minecraft:raw_gold_block"
+}
+},
+"result": {
+"item": "delbase:raw_gold_stair",
+"count": 4
+}
+}

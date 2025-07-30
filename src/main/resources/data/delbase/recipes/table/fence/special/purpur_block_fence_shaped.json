@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#S#",
+    "#S#"
+  ],
+  "key": {
+    "S": {
+      "item": "minecraft:stick"
+    },
+    "#": {
+      "item": "minecraft:purpur_block"
+    }
+  },
+  "result": {
+    "item": "delbase:purpur_block_fence",
+    "count": 4
+  }
+}

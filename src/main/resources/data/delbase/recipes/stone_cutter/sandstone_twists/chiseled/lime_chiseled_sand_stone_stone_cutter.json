@@ -1,0 +1,8 @@
+{ 
+  "type": "minecraft:stonecutting", 
+  "ingredient": {
+    "tag": "delbase:crafting_sets/color/lime_sand_stone_set"
+  }, 
+  "result": "delbase:lime_chiseled_sand_stone",
+  "count": 1 
+} 
