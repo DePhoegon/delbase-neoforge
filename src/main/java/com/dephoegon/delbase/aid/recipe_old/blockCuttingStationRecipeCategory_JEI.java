@@ -1,4 +1,4 @@
-package com.dephoegon.delbase.aid.recipe;
+package com.dephoegon.delbase.aid.recipe_old;
 
 import com.dephoegon.delbase.integration.jeiDelbaseModPlugin;
 import mezz.jei.api.constants.VanillaTypes;
@@ -24,22 +24,22 @@ import static com.dephoegon.delbase.block.general.machineBlocks.BLOCK_CUTTING_ST
 import static com.dephoegon.delbase.delbase.Mod_ID;
 import static net.minecraft.world.item.Items.*;
 
-public class blockCuttingStationRecipeCategory implements IRecipeCategory<blockCuttingStationRecipes> {
+public class blockCuttingStationRecipeCategory_JEI implements IRecipeCategory<blockCuttingStationRecipes_forge1_20_1> {
     public final static ResourceLocation UID = new ResourceLocation(Mod_ID, "block_cutting");
     public final static ResourceLocation TEXTURE = new ResourceLocation(Mod_ID, "textures/gui/block_cutting_station_gui_jei.png");
 
     private final IDrawable background;
     private final IDrawable icon;
 
-    public blockCuttingStationRecipeCategory(@NotNull IGuiHelper helper) {
+    public blockCuttingStationRecipeCategory_JEI(@NotNull IGuiHelper helper) {
         this.background = helper.createDrawable(TEXTURE, 0,0, 176, 85);
         this.icon = helper.createDrawableIngredient(VanillaTypes.ITEM_STACK, new ItemStack(BLOCK_CUTTING_STATION.get()));
     }
-    public @NotNull RecipeType<blockCuttingStationRecipes> getRecipeType() { return jeiDelbaseModPlugin.BLOCK_CUTTING_STATION_RECIPE; }
+    public @NotNull RecipeType<blockCuttingStationRecipes_forge1_20_1> getRecipeType() { return jeiDelbaseModPlugin.BLOCK_CUTTING_STATION_RECIPE; }
     public @NotNull Component getTitle() { return Component.literal("Block Cutting Station"); }
     public @NotNull IDrawable getBackground() { return this.background; }
     public @NotNull IDrawable getIcon() { return this.icon; }
-    public void setRecipe(@Nonnull IRecipeLayoutBuilder builder, @Nonnull blockCuttingStationRecipes recipe, @Nonnull IFocusGroup focusGroup) {
+    public void setRecipe(@Nonnull IRecipeLayoutBuilder builder, @Nonnull blockCuttingStationRecipes_forge1_20_1 recipe, @Nonnull IFocusGroup focusGroup) {
         ItemStack itemStack = recipe.getResultItem();
         builder.addSlot(RecipeIngredientRole.INPUT, 57, 18).addItemStack(recipe.getInput());
         builder.addSlot(RecipeIngredientRole.INPUT, 103, 18).addItemStack(recipe.getPlans());

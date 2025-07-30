@@ -1,21 +1,30 @@
 package com.dephoegon.delbase.aid.recipe;
 
+import net.minecraft.core.registries.Registries;
 import net.minecraft.world.item.crafting.RecipeSerializer;
-import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.registries.DeferredRegister;
-import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.registries.RegistryObject;
+import net.minecraft.world.item.crafting.RecipeType;
+import net.neoforged.bus.api.IEventBus;
+import net.neoforged.neoforge.registries.DeferredHolder;
+import net.neoforged.neoforge.registries.DeferredRegister;
 
-import static com.dephoegon.delbase.delbase.Mod_ID;
+import static com.dephoegon.delbase.Delabse.Mod_ID;
 
 public class modRecipes {
-    public static final DeferredRegister<RecipeSerializer<?>> SERIALIZERS =
-            DeferredRegister.create(ForgeRegistries.RECIPE_SERIALIZERS, Mod_ID);
+    private static final String blockCutterRecipeName = "block_cutting";
+    public static final DeferredRegister<RecipeSerializer<?>> RECIPE_SERIALIZERS = DeferredRegister.create(Registries.RECIPE_SERIALIZER, Mod_ID);
+    public static final DeferredRegister<RecipeType<?>> RECIPE_TYPES = DeferredRegister.create(Registries.RECIPE_TYPE, Mod_ID);
 
-    public static final RegistryObject<RecipeSerializer<blockCuttingStationRecipes>> BLOCK_CUTTING_SERIALIZER =
-            SERIALIZERS.register(blockCuttingStationRecipes.Type.ID, () -> blockCuttingStationRecipes.Serializer.INSTANCE);
+    public static final DeferredHolder<RecipeSerializer<?>, RecipeSerializer<blockCutterRecipe>> BLOCK_CUTTER_SERIALIZER =
+            RECIPE_SERIALIZERS.register(blockCutterRecipeName, blockCutterRecipe.Serializer::new);
+
+    public static final DeferredHolder<RecipeType<?>, RecipeType<blockCutterRecipe>> BLOCK_CUTTER_TYPE =
+            RECIPE_TYPES.register(blockCutterRecipeName, () -> new RecipeType<>() {
+                @Override
+                public String toString() { return blockCutterRecipeName; }
+            });
 
     public static void register(IEventBus eventBus) {
-        SERIALIZERS.register(eventBus);
+        RECIPE_SERIALIZERS.register(eventBus);
+        RECIPE_TYPES.register(eventBus);
     }
 }

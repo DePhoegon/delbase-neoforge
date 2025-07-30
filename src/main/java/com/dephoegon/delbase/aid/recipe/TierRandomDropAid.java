@@ -2,6 +2,8 @@ package com.dephoegon.delbase.aid.recipe;
 
 import com.dephoegon.delbase.aid.config.Config;
 import net.minecraft.world.SimpleContainer;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.Random;
@@ -12,8 +14,7 @@ public class TierRandomDropAid {
     public static @NotNull SimpleContainer stoneContainer(int size) {
         SimpleContainer stone = new SimpleContainer(size);
         for (int i = 0; i < size; i++) {
-            Random random = new Random();
-            int RNGs = random.nextInt(5);
+            int RNGs = getSize(0, 0, 5);
             switch (RNGs) {
                 case 0 -> stone.setItem(i, STICK.getDefaultInstance());
                 case 2 -> stone.setItem(i, BLACKSTONE.getDefaultInstance());
@@ -26,8 +27,7 @@ public class TierRandomDropAid {
     public static @NotNull SimpleContainer woodContainer(int size) {
         SimpleContainer stone = new SimpleContainer(size);
         for (int i = 0; i < size; i++) {
-            Random random = new Random();
-            int RNGs = random.nextInt(11);
+            int RNGs = getSize(0, 0, 11);
             switch (RNGs) {
                 case 0 -> stone.setItem(i, STICK.getDefaultInstance());
                 case 1 -> stone.setItem(i, ACACIA_PLANKS.getDefaultInstance());
@@ -43,24 +43,38 @@ public class TierRandomDropAid {
         return stone;
     }
     public static @NotNull SimpleContainer netheriteToolsBonus(int diamond) {
-        int bonusSize = Config.NETHERRITE_BONUS_ROLLS.get();
-        SimpleContainer stone = new SimpleContainer(bonusSize+diamond);
-        for (int i = 0; i < diamond; i++) { stone.setItem(i, DIAMOND.getDefaultInstance()); }
-        for (int i = 0; i < bonusSize; i++) {
-            Random random = new Random();
-            int RNGs = random.nextInt(5);
-            if (RNGs > 2) { stone.setItem(i+diamond, STICK.getDefaultInstance()); }
-        }
-        return stone;
+        SimpleContainer stickContainer = ToolsBonus();
+        SimpleContainer containerConfetti = new SimpleContainer(diamond + stickContainer.getContainerSize());
+        for (int i = 0; i < diamond; i++) { containerConfetti.setItem(i, DIAMOND.getDefaultInstance()); }
+        for (int j = 0; j < stickContainer.getContainerSize(); j++) { containerConfetti.setItem(diamond + j, stickContainer.getItem(j)); }
+        return containerConfetti;
     }
     public static @NotNull SimpleContainer ToolsBonus() {
-        int bonusSize = Config.NETHERRITE_BONUS_ROLLS.get();
-        SimpleContainer stone = new SimpleContainer(bonusSize);
+        int size = getSize(Config.NETHERRITE_BONUS_ROLLS.get(), 2, 5);
+        SimpleContainer confettiContainer = new SimpleContainer(size);
+
+        for (int i = 0; i < size; i++) { confettiContainer.setItem(i, STICK.getDefaultInstance()); }
+        return confettiContainer;
+    }
+    /**
+     * Returns a random size based on the bonus size, threshold, and upper limit.
+     * If bonusSize is 0, it returns a random number between 1 and upperLimit.
+     * Otherwise, it counts how many times a random number exceeds the threshold.
+     *
+     * @param bonusSize   The number of rolls to perform.
+     * @param threshold   The threshold to compare against.
+     * @param upperLimit  The upper limit for the random number generation.
+     * @return           The calculated size/Random Number. Lowest Return Value is 1.
+     */
+    private static int getSize(int bonusSize, int threshold, int upperLimit) {
+        int size = 0;
+        Random random = new Random();
+        if (bonusSize == 0) { return random.nextInt(upperLimit); }
         for (int i = 0; i < bonusSize; i++) {
-            Random random = new Random();
-            int RNGs = random.nextInt(5);
-            if (RNGs > 2) { stone.setItem(i, STICK.getDefaultInstance()); }
+            int RNGs = random.nextInt(upperLimit);
+            if (RNGs > threshold) { size++; }
         }
-        return stone;
+        if (size < 1) { size = 1; }
+        return size;
     }
 }

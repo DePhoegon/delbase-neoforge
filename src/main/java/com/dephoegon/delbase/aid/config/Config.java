@@ -19,13 +19,6 @@ public class Config {
     public static final ModConfigSpec.IntValue WOOD_SALVAGE_ROLLS;
     public static final ModConfigSpec.IntValue STONE_SALVAGE_ROLLS;
     public static final ModConfigSpec.IntValue NETHERRITE_BONUS_ROLLS;
-    public static final ModConfigSpec.IntValue NETHERRITE_CHEST_DIAMOND_BONUS;
-    public static final ModConfigSpec.IntValue NETHERRITE_HELMET_DIAMOND_BONUS;
-    public static final ModConfigSpec.IntValue NETHERRITE_LEGGINGS_DIAMOND_BONUS;
-    public static final ModConfigSpec.IntValue NETHERRITE_BOOTS_DIAMOND_BONUS;
-    public static final ModConfigSpec.IntValue NETHERRITE_SWORD_BONUS;
-    public static final ModConfigSpec.IntValue NETHERRITE_AXE_BONUS;
-    public static final ModConfigSpec.IntValue NETHERRITE_PICKAXE_BONUS;
 
     static {
 
@@ -44,15 +37,6 @@ public class Config {
                 .defineInRange("Stone Rolls", 2, 1, 4);
         NETHERRITE_BONUS_ROLLS = BUILDER.comment("Bonus Amounts of sticks (1-4) with tools.")
                 .defineInRange("Tools Stick rolls", 2, 1, 4);
-        NETHERRITE_BOOTS_DIAMOND_BONUS = BUILDER.comment("Number of Diamond Returned with The singular Netherrite Ingot")
-                .defineInRange("Netherrite Boots Bonus",1, 1, 4);
-        NETHERRITE_CHEST_DIAMOND_BONUS = BUILDER.defineInRange("Netherrite Chestplate Bonus",1, 1, 8);
-        NETHERRITE_LEGGINGS_DIAMOND_BONUS = BUILDER.defineInRange("Netherrite Leggings Bonus", 1, 1,7);
-        NETHERRITE_HELMET_DIAMOND_BONUS = BUILDER.defineInRange("Netherrite Helmet Bonus", 1, 1, 5);
-        NETHERRITE_SWORD_BONUS = BUILDER.comment("Tool Bonuses for netherrite. Shovel is set to 1")
-                .defineInRange("Nether Sword Bonus",1,1,2);
-        NETHERRITE_AXE_BONUS = BUILDER.defineInRange("Nether Axe Bonus", 1, 1, 3);
-        NETHERRITE_PICKAXE_BONUS = BUILDER.defineInRange("Nether Pickaxe Bonus", 1,1,3);
 
 
         // Client&Server Side Configs

@@ -1,7 +1,9 @@
 package com.dephoegon.delbase.block.entity;
 
 import com.dephoegon.delbase.aid.config.Config;
-import com.dephoegon.delbase.aid.recipe.blockCuttingStationRecipes;
+import com.dephoegon.delbase.aid.recipe.blockCutterRecipe;
+import com.dephoegon.delbase.aid.recipe.blockCutterRecipeInput;
+import com.dephoegon.delbase.aid.recipe.modRecipes;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.HolderLookup;
@@ -15,6 +17,7 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.ContainerData;
 import net.minecraft.world.item.*;
+import net.minecraft.world.item.crafting.RecipeHolder;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.entity.BlockEntity;
@@ -175,7 +178,7 @@ public class blockCuttingStation extends BlockEntity implements MenuProvider {
         Containers.dropContents(this.level, this.worldPosition, inventory);
     }
     public static void tick(Level pLevel, BlockPos pPos, BlockState pState, blockCuttingStation pBlockEntity) {
-        if(hasRecipe(pBlockEntity)) {
+        if(pBlockEntity.hasRecipe()) {
             pBlockEntity.progress++;
             setChanged(pLevel, pPos, pState);
             if(pBlockEntity.progress > pBlockEntity.maxProgress) { craftItem(pBlockEntity); }
@@ -184,131 +187,122 @@ public class blockCuttingStation extends BlockEntity implements MenuProvider {
             setChanged(pLevel, pPos, pState);
         }
     }
-    private static boolean hasRecipe(@NotNull blockCuttingStation entity) {
-        Level level = entity.level;
-        SimpleContainer inventory = new SimpleContainer(entity.itemHandler.getSlots());
-        for (int i =0; i < entity.itemHandler.getSlots(); i++) { inventory.setItem(i, entity.itemHandler.getStackInSlot(i)); }
-        assert level != null;
-        Optional<blockCuttingStationRecipes> match = level.getRecipeManager()
-                .getRecipeFor(blockCuttingStationRecipes.Type.INSTANCE, inventory, level);
-        if (match.isPresent()){
-            Item planSlotItem;
-            if (entity.itemHandler.getStackInSlot(planSlot).isEmpty()) { return false; } else { planSlotItem = entity.itemHandler.getStackInSlot(planSlot).getItem(); }
-            ItemStack resultItem = match.get().getResultItem();
-            int count = resultItem.getCount();
-            if (resultItem.getItem() instanceof BlockItem tOutput) {
-                if (tOutput.getBlock() instanceof SlabBlock) {
-                    count = 1;
-                    if (planSlotItem != SLAB_PLANS.get().asItem()) { return false; }
-                }
-                if (tOutput.getBlock() instanceof WallBlock && planSlotItem != WALL_PLANS.get().asItem()) { return false; }
-                if (tOutput.getBlock() instanceof StairBlock && planSlotItem != STAIR_PLANS.get().asItem()) { return false; }
-                if (tOutput.getBlock() instanceof FenceBlock && planSlotItem != FENCE_PLANS.get().asItem()) { return false; }
-                if (tOutput.getBlock() instanceof FenceGateBlock && planSlotItem != FENCE_GATE_PLANS.get().asItem()) { return false; }
-            } // Just because I like to enforce plan usage, and possibly avoid any overlooked items.
-            // Counting Aids
-            return canInsertAmountIntoOutputSlot(inventory, count) && canInsertItemIntoOutputSlot(inventory, resultItem);
-        } else return false;
+    private Optional<RecipeHolder<blockCutterRecipe>> getCurrentRecipe() {
+        if (this.getLevel() == null) { return Optional.empty(); }
+        return this.getLevel().getRecipeManager().getRecipeFor(modRecipes.BLOCK_CUTTER_TYPE.get(), new blockCutterRecipeInput(inputHandle.getStackInSlot(inputSlot), planHandle.getStackInSlot(planSlot)), this.getLevel());
+    }
+
+    private boolean hasRecipe() {
+        Level level = this.level;
+        if (level == null) { return false; } // If the level is null, exit the method.
+        SimpleContainer inventory = new SimpleContainer(this.itemHandler.getSlots());
+        for (int i =0; i < this.itemHandler.getSlots(); i++) { inventory.setItem(i, this.itemHandler.getStackInSlot(i)); }
+
+        Optional<RecipeHolder<blockCutterRecipe>> recipe = getCurrentRecipe();
+        if (recipe.isEmpty()) { return false; }
+
+        Item planSlotItem;
+        if (this.itemHandler.getStackInSlot(planSlot).isEmpty()) { return false; } else { planSlotItem = this.itemHandler.getStackInSlot(planSlot).getItem(); }
+        ItemStack resultItem = recipe.get().value().getResultItem(null);
+        int count = resultItem.getCount();
+        if (resultItem.getItem() instanceof BlockItem tOutput) {
+            if (tOutput.getBlock() instanceof SlabBlock) {
+                count = 1;
+                if (planSlotItem != SLAB_PLANS.get().asItem()) { return false; }
+            }
+            if (tOutput.getBlock() instanceof WallBlock && planSlotItem != WALL_PLANS.get().asItem()) { return false; }
+            if (tOutput.getBlock() instanceof StairBlock && planSlotItem != STAIR_PLANS.get().asItem()) { return false; }
+            if (tOutput.getBlock() instanceof FenceBlock && planSlotItem != FENCE_PLANS.get().asItem()) { return false; }
+            if (tOutput.getBlock() instanceof FenceGateBlock && planSlotItem != FENCE_GATE_PLANS.get().asItem()) { return false; }
+        } // hard coded checks for the plans slot item, as it is not a recipe input. Prevents custom recipes from being used in the block cutting station for the intended types of blocks.
+        // Counting Aids
+        return canInsertAmountIntoOutputSlot(inventory, count) && canInsertItemIntoOutputSlot(inventory, resultItem);
     }
     // hasRecipe for checking for if an item is in a slot or not.
 
     private static void craftItem(@NotNull blockCuttingStation entity) {
+        Optional<RecipeHolder<blockCutterRecipe>> recipe = entity.getCurrentRecipe();
         Level level = entity.getLevel();
         BlockPos worldPosition = entity.worldPosition;
+        if (recipe.isEmpty() || level == null) { return; } // If no recipe is found, exit the method. Should not happen, but just in case.
+
+        // container for output items
         SimpleContainer inventory = new SimpleContainer(entity.itemHandler.getSlots());
         for (int i = 0; i < entity.itemHandler.getSlots(); i++) { inventory.setItem(i, entity.itemHandler.getStackInSlot(i)); }
 
-        assert level != null;
-        Optional<blockCuttingStationRecipes> match = level.getRecipeManager()
-                .getRecipeFor(blockCuttingStationRecipes.Type.INSTANCE, inventory, level);
-
-        if (match.isPresent()) {
-            Item resultItem = match.get().getResultItem().getItem();
-            String keyString = "none";
-            boolean skipOutputSlot = false;
-            int count = match.get().getResultItem().getCount();
-            if (entity.itemHandler.getStackInSlot(planSlot).getItem() == ARMOR_COMPOUND.get().asItem()) {
-                Item le_item = entity.itemHandler.getStackInSlot(inputSlot).getItem();
-                int armCompCount = match.get().getPlans().getCount();
-                boolean compoundEat = true;
-                if (le_item instanceof ArmorItem recycle) {
-                    if (recycle.getMaterial() == ArmorMaterials.NETHERITE) {
-                        count = 1;
-                        int bonusCount = netheriteDiamondBonus(recycle);
-                        SimpleContainer bonus = new SimpleContainer(bonusCount);
-                        for (int i = 0; i < bonusCount; i++) {
-                            bonus.setItem(i, DIAMOND.getDefaultInstance());
-                        }
-                        Containers.dropContents(level, worldPosition, bonus);
-                    }
+        ItemStack outputStack = recipe.get().value().output();
+        Item resultItem = outputStack.getItem();
+        String keyString = "none";
+        boolean skipOutputSlot = false;
+        int outputStackCount = outputStack.getCount();
+        int inputCount = recipe.get().value().getInputCount();
+        if (inputCount < 1) { inputCount = 1; } // prevent stack overflow, as the input count is used to determine how many items are in the input slot.
+        if (inputCount > entity.itemHandler.getStackInSlot(inputSlot).getMaxStackSize()) { inputCount = entity.itemHandler.getStackInSlot(inputSlot).getMaxStackSize(); } // prevents invalid input counts, as the input count is used to determine how many items are in the input slot.
+        if (entity.itemHandler.getStackInSlot(planSlot).getItem() == ARMOR_COMPOUND.get().asItem()) {
+            Item le_item = entity.itemHandler.getStackInSlot(inputSlot).getItem();
+            int armCompCount = recipe.get().value().getPlanCount();
+            boolean compoundEat = true;
+            if (le_item instanceof ArmorItem recycle) {
+                if (recycle.getMaterial() == ArmorMaterials.NETHERITE) {
+                    int bonusCount = outputStackCount;
+                    outputStackCount = 1;
+                    SimpleContainer bonus = new SimpleContainer(bonusCount);
+                    for (int i = 0; i < bonusCount; i++) { bonus.setItem(i, DIAMOND.getDefaultInstance()); }
+                    Containers.dropContents(level, worldPosition, bonus);
                 }
-                if (le_item instanceof TieredItem tieredItem) {
-                    if (tieredItem.getTier() == Tiers.STONE) {
-                        skipOutputSlot = true;
-                        compoundEat = threshHold(100, 25);
-                        keyString = "stone";
-                    }
-                    if (tieredItem.getTier() == Tiers.WOOD) {
-                        skipOutputSlot = true;
-                        compoundEat = threshHold(100, 50);
-                        keyString = "wood";
-                    }
-                    if (tieredItem.getTier() == Tiers.NETHERITE) {
-                        skipOutputSlot = true;
-                        compoundEat = threshHold(100, 10);
-                        keyString = "netherite";
-                        if (le_item instanceof SwordItem) {
-                            count = Config.NETHERRITE_SWORD_BONUS.get();
-                        }
-                        if (le_item instanceof AxeItem) {
-                            count = Config.NETHERRITE_AXE_BONUS.get();
-                        }
-                        if (le_item instanceof PickaxeItem) {
-                            count = Config.NETHERRITE_PICKAXE_BONUS.get();
-                        }
-                        if (le_item instanceof HoeItem) {
-                            count = 1;
-                        }
-                    }
-                    if ((le_item instanceof SwordItem || le_item instanceof AxeItem || le_item instanceof PickaxeItem || le_item instanceof HoeItem) && keyString.equals("none")) {
-                        skipOutputSlot = true;
-                        keyString = "tools";
-                        //Special Behaviors for the Tiers of items
-                    }
-                }
-                if (compoundEat){ entity.itemHandler.extractItem(planSlot, armCompCount, false); }
             }
-            entity.itemHandler.extractItem(inputSlot, 1, false);
-            if (skipOutputSlot) {
-                int returnSize;
-                SimpleContainer stone = null;
-                if (keyString.equals("stone")) {
-                    returnSize = Config.STONE_SALVAGE_ROLLS.get();
-                    stone = stoneContainer(returnSize);
-                    //stone confetti
+            if (le_item instanceof TieredItem tieredItem) {
+                if (tieredItem.getTier() == Tiers.STONE) {
+                    skipOutputSlot = true;
+                    compoundEat = threshHold(100, 25);
+                    keyString = "stone";
                 }
-                if (keyString.equals("wood")){
-                    returnSize = Config.WOOD_SALVAGE_ROLLS.get();
-                    stone = woodContainer(returnSize);
-                    //wooden confetti
+                if (tieredItem.getTier() == Tiers.WOOD) {
+                    skipOutputSlot = true;
+                    compoundEat = threshHold(100, 50);
+                    keyString = "wood";
                 }
-                if (keyString.equals("netherite")) {
-                    stone = netheriteToolsBonus(count);
-                    entity.itemHandler.setStackInSlot(outputSlot, new ItemStack(resultItem,
-                            entity.itemHandler.getStackInSlot(outputSlot).getCount() + 1));
-                    //put into the slot, as Netherite is a high tier. diamond(s) still allowed pop out like confetti.
+                if (tieredItem.getTier() == Tiers.NETHERITE) {
+                    skipOutputSlot = true;
+                    compoundEat = threshHold(100, 10);
+                    keyString = "netherite";
                 }
-                if (keyString.equals("tools")) {
-                    stone = ToolsBonus();
-                    entity.itemHandler.setStackInSlot(outputSlot, new ItemStack(resultItem, entity.itemHandler.getStackInSlot(outputSlot).getCount() + count));
-                    //pops sticks like confetti, puts the output item
+                if ((le_item instanceof SwordItem || le_item instanceof AxeItem || le_item instanceof PickaxeItem || le_item instanceof HoeItem) && keyString.equals("none")) {
+                    skipOutputSlot = true;
+                    keyString = "tools";
+                    //Special Behaviors for the Tiers of items
                 }
-                Containers.dropContents(level, worldPosition, stone);
-            } else {
-                entity.itemHandler.setStackInSlot(outputSlot, new ItemStack(resultItem, entity.itemHandler.getStackInSlot(outputSlot).getCount() + count));
             }
-            entity.resetProgress();
+            if (compoundEat){ entity.itemHandler.extractItem(planSlot, armCompCount, false); }
         }
+        entity.itemHandler.extractItem(inputSlot, inputCount, false);
+        int outputCountTmp = entity.itemHandler.getStackInSlot(outputSlot).getCount();
+        if (skipOutputSlot) {
+            int returnSize;
+            SimpleContainer confettiDropper = null;
+            if (keyString.equals("stone")) {
+                returnSize = Config.STONE_SALVAGE_ROLLS.get();
+                confettiDropper = stoneContainer(returnSize);
+                //stone confetti
+            }
+            if (keyString.equals("wood")){
+                returnSize = Config.WOOD_SALVAGE_ROLLS.get();
+                confettiDropper = woodContainer(returnSize);
+                //wooden confetti
+            }
+            if (keyString.equals("netherite")) {
+                confettiDropper = netheriteToolsBonus(outputStackCount);
+                entity.itemHandler.setStackInSlot(outputSlot, new ItemStack(resultItem, entity.itemHandler.getStackInSlot(outputSlot).getCount() + 1));
+                //put into the slot, as Netherite is a high tier. diamond(s) still allowed pop out like confetti.
+            }
+            if (keyString.equals("tools")) {
+                confettiDropper = ToolsBonus();
+                entity.itemHandler.setStackInSlot(outputSlot, new ItemStack(resultItem, entity.itemHandler.getStackInSlot(outputSlot).getCount() + outputStackCount));
+                //pops sticks like confetti, puts the output item
+            }
+            Containers.dropContents(level, worldPosition, confettiDropper);
+        } else { entity.itemHandler.setStackInSlot(outputSlot, new ItemStack(resultItem, entity.itemHandler.getStackInSlot(outputSlot).getCount() + outputStackCount)); }
+        entity.resetProgress();
     }
     private void resetProgress() {
         this.progress = 0;
