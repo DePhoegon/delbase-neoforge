@@ -1,6 +1,6 @@
 package com.dephoegon.delbase.item;
 
-import com.dephoegon.delbase.Delabse;
+import com.dephoegon.delbase.Delbase;
 import com.dephoegon.delbase.aid.block.item.blockDye;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.Item;
@@ -9,7 +9,7 @@ import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
 public class shiftingDyes {
-    private static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(Delabse.Mod_ID);
+    private static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(Delbase.Mod_ID);
     
     public static final DeferredItem<Item> CLEANSE_SHIFT_DYE = ITEMS.register("cleanse_shift_dye",
             () -> new blockDye(DyeColor.WHITE, new Item.Properties().stacksTo(64),

@@ -18,7 +18,7 @@ import org.jetbrains.annotations.NotNull;
 import javax.annotation.Nullable;
 import java.util.function.Supplier;
 
-import static com.dephoegon.delbase.Delabse.Mod_ID;
+import static com.dephoegon.delbase.Delbase.Mod_ID;
 import static net.minecraft.world.level.block.Blocks.OAK_PLANKS;
 import static net.minecraft.world.level.block.Blocks.STONE;
 

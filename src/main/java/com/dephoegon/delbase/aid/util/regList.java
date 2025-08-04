@@ -1,5 +1,6 @@
 package com.dephoegon.delbase.aid.util;
 
+import com.dephoegon.delbase.block.entity.menuTypes;
 import com.dephoegon.delbase.block.entity.modBlockEntities;
 import net.neoforged.bus.api.IEventBus;
 
@@ -36,6 +37,8 @@ public class regList {
         modBlockEntities.registerBlockEntities(eventBus);
 
         // Special
+        menuTypes.registerMenus(eventBus);
+        // recipes ->
     }
 
 }

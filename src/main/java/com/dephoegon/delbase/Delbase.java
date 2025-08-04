@@ -2,15 +2,11 @@ package com.dephoegon.delbase;
 
 import com.dephoegon.delbase.aid.config.Config;
 import com.mojang.logging.LogUtils;
-import net.minecraft.client.Minecraft;
-import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.ModContainer;
-import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.config.ModConfig;
-import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
@@ -18,8 +14,8 @@ import net.neoforged.neoforge.event.server.ServerStartingEvent;
 import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/neoforge.mods.toml file
-@Mod(Delabse.Mod_ID)
-public class Delabse
+@Mod(Delbase.Mod_ID)
+public class Delbase
 {
     // Define mod id in a common place for everything to reference
     public static final String Mod_ID = "delbase";
@@ -29,7 +25,7 @@ public class Delabse
 
     // The constructor for the mod class is the first code run when your mod is loaded.
     // FML will recognize some parameter types like IEventBus or ModContainer and pass them in automatically.
-    public Delabse(IEventBus modEventBus, ModContainer modContainer)
+    public Delbase(IEventBus modEventBus, ModContainer modContainer)
     {
         // Register the commonSetup method for mod-loading
         modEventBus.addListener(this::commonSetup);
@@ -64,18 +60,5 @@ public class Delabse
     {
         // Do something when the server starts
         LOGGER.info("HELLO from server starting");
-    }
-
-    // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
-    @EventBusSubscriber(modid = Mod_ID, bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
-    public static class ClientModEvents
-    {
-        @SubscribeEvent
-        public static void onClientSetup(FMLClientSetupEvent ignoredEvent)
-        {
-            // Some client setup code
-            LOGGER.info("HELLO FROM CLIENT SETUP");
-            LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());
-        }
     }
 }

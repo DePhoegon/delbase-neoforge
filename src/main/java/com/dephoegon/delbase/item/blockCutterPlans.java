@@ -1,6 +1,6 @@
 package com.dephoegon.delbase.item;
 
-import com.dephoegon.delbase.Delabse;
+import com.dephoegon.delbase.Delbase;
 import com.dephoegon.delbase.aid.block.item.compoundPlans;
 import com.dephoegon.delbase.aid.block.item.cutterPlans;
 import net.minecraft.world.item.Item;
@@ -11,7 +11,7 @@ import org.jetbrains.annotations.NotNull;
 
 @SuppressWarnings("SameParameterValue")
 public class blockCutterPlans {
-    private static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(Delabse.Mod_ID);
+    private static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(Delbase.Mod_ID);
 
     public static final DeferredItem<Item> WALL_PLANS = regPlans("wall_plans", 1);
     public static final DeferredItem<Item> SLAB_PLANS = regPlans("slab_plans", 1);

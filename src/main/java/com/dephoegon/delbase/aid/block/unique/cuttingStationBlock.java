@@ -6,12 +6,14 @@ import com.dephoegon.delbase.block.entity.modBlockEntities;
 import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.ItemInteractionResult;
+import net.minecraft.world.SimpleMenuProvider;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.BlockGetter;
@@ -34,7 +36,6 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.stream.Stream;
-
 
 @SuppressWarnings("RedundantMethodOverride")
 public class cuttingStationBlock extends horizontalFacingBlockEntities {
@@ -140,7 +141,7 @@ public class cuttingStationBlock extends horizontalFacingBlockEntities {
         if(!pLevel.isClientSide()) {
             BlockEntity entity = pLevel.getBlockEntity(pPos);
             if(entity instanceof blockCuttingStation) {
-                ((ServerPlayer) pPlayer).openMenu((blockCuttingStation) entity);
+                ((ServerPlayer) pPlayer).openMenu(new SimpleMenuProvider((blockCuttingStation) entity, Component.translatable("gui.delbase.block_cutter")), pPos);
             } else {
                 throw new IllegalStateException("DelBase Container Provider is Missing - Block Cutting Station");
             }

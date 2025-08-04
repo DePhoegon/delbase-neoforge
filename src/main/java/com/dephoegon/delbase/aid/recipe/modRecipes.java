@@ -7,7 +7,7 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
-import static com.dephoegon.delbase.Delabse.Mod_ID;
+import static com.dephoegon.delbase.Delbase.Mod_ID;
 
 public class modRecipes {
     private static final String blockCutterRecipeName = "block_cutting";

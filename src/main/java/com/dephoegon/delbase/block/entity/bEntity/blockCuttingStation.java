@@ -5,7 +5,7 @@ import com.dephoegon.delbase.aid.recipe.blockCutterRecipe;
 import com.dephoegon.delbase.aid.recipe.blockCutterRecipeInput;
 import com.dephoegon.delbase.aid.recipe.modRecipes;
 import com.dephoegon.delbase.block.entity.modBlockEntities;
-import com.dephoegon.delbase.block.entity_old.blockCuttingStationMenu;
+import com.dephoegon.delbase.block.entity.screen.blockCuttingMenu;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.HolderLookup;
@@ -40,7 +40,15 @@ public class blockCuttingStation extends BlockEntity implements MenuProvider, Wo
     public static final int inputSlot = 0;
     public static final int planSlot = 2;
     public static final int blockCuttingStationSlotCount = 3;
+    static final String inventoryKey = "inventory";
 
+    public static final ItemStackHandler iHandler = new ItemStackHandler(blockCuttingStationSlotCount) {
+        public boolean isItemValid(int slot, @NotNull ItemStack stack) {
+            return false;
+        }
+        @SuppressWarnings("RedundantMethodOverride")
+        protected void onContentsChanged(int slot) {  }
+    };
     private final ItemStackHandler itemHandler = new ItemStackHandler(blockCuttingStationSlotCount) {
         @Override
         protected void onContentsChanged(int slot) {
@@ -60,8 +68,16 @@ public class blockCuttingStation extends BlockEntity implements MenuProvider, Wo
                 }
             }
             setChanged();
+            if (level != null && !(level.isClientSide())) { level.sendBlockUpdated(getBlockPos(), getBlockState(), getBlockState(), 3); }
+        }
+        protected void onLoad() {
+            inputHandle.setStackInSlot(0, itemHandler.getStackInSlot(inputSlot));
+            outputHandle.setStackInSlot(0, itemHandler.getStackInSlot(outputSlot));
+            planHandle.setStackInSlot(0, itemHandler.getStackInSlot(planSlot));
+            super.onLoad();
         }
     };
+    public final ItemStackHandler getWholeInventory() { return itemHandler; }
     private final ItemStackHandler inputHandle = new ItemStackHandler(1) {
         public boolean isItemValid(int slot, @NotNull ItemStack stack) { return !isPlansSlotItem(stack.getItem()); }
         protected void onContentsChanged(int slot) {
@@ -121,32 +137,33 @@ public class blockCuttingStation extends BlockEntity implements MenuProvider, Wo
         };
     }
     @Override
-    public @NotNull Component getDisplayName() { return Component.literal("Block Cutting Station"); }
+    public @NotNull Component getDisplayName() { return Component.translatable("gui.delbase.block_cutter"); }
     public @NotNull ItemStack getPlanSlotItem() { return planHandle.getStackInSlot(0); }
+    public static Item getPlanSlotItem(@NotNull BlockEntity blockEntity) {
+        if (blockEntity instanceof blockCuttingStation cuttingStation) {
+            return cuttingStation.getPlanSlotItem().getItem();
+        }
+        return ItemStack.EMPTY.getItem();
+    }
     public void setPlanSlotItem(@NotNull ItemStack stack) {
         if (isPlansSlotItem(stack.getItem())) { planHandle.setStackInSlot(0, stack); }
         else { planHandle.setStackInSlot(0, ItemStack.EMPTY); }
     }
     @Nullable
     @Override
-    public AbstractContainerMenu createMenu(int pContainerId, @NotNull Inventory pInventory, @NotNull Player pPlayer) {
-        return new blockCuttingStationMenu(pContainerId, pInventory,this, this.data);
-    }
+    public AbstractContainerMenu createMenu(int pContainerId, @NotNull Inventory pInventory, @NotNull Player pPlayer) { return new blockCuttingMenu(pContainerId, pInventory,this, this.data); }
     @Override
     public void onLoad() { super.onLoad(); }
     @Override
     protected void saveAdditional(@NotNull CompoundTag tag, HolderLookup.@NotNull Provider registries) {
-        tag.put("inventory", itemHandler.serializeNBT(registries));
+        tag.put(inventoryKey, itemHandler.serializeNBT(registries));
         tag.putInt("block_cutting_station.progress", progress);
         super.saveAdditional(tag, registries);
     }
     @Override
     public void loadAdditional(@NotNull CompoundTag nbt, HolderLookup.@NotNull Provider registries) {
         super.loadAdditional(nbt, registries);
-        itemHandler.deserializeNBT(registries, nbt.getCompound("inventory"));
-        planHandle.setStackInSlot(0, itemHandler.getStackInSlot(planSlot));
-        inputHandle.setStackInSlot(0, itemHandler.getStackInSlot(inputSlot));
-        outputHandle.setStackInSlot(0, itemHandler.getStackInSlot(outputSlot));
+        itemHandler.deserializeNBT(registries, nbt.getCompound(inventoryKey)); // Deserialize Calls onLoad() in ItemStackHandler
         progress = nbt.getInt("block_cutting_station.progress");
     }
 

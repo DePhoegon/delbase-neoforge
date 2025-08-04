@@ -12,7 +12,7 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 import java.util.function.Supplier;
 
 import static com.dephoegon.delbase.block.gravity.gravColorSands.*;
-import static com.dephoegon.delbase.Delabse.Mod_ID;
+import static com.dephoegon.delbase.Delbase.Mod_ID;
 import static net.minecraft.world.level.block.Blocks.RED_SAND;
 import static net.minecraft.world.level.block.Blocks.SAND;
 

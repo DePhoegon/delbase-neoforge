@@ -17,7 +17,7 @@ import javax.annotation.Nullable;
 import java.util.function.Supplier;
 
 import static com.dephoegon.delbase.block.wall.wallStrippedWood.*;
-import static com.dephoegon.delbase.Delabse.Mod_ID;
+import static com.dephoegon.delbase.Delbase.Mod_ID;
 import static net.minecraft.world.level.block.Blocks.*;
 
 public class wallWood {

@@ -15,7 +15,7 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 
 import java.util.function.Supplier;
 
-import static com.dephoegon.delbase.Delabse.Mod_ID;
+import static com.dephoegon.delbase.Delbase.Mod_ID;
 import static com.dephoegon.delbase.block.general.genChiseledSandStones.*;
 import static net.minecraft.world.level.block.Blocks.CHISELED_SANDSTONE;
 import static net.minecraft.world.level.block.Blocks.RED_SANDSTONE;

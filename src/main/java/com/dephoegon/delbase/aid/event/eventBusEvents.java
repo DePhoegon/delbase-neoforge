@@ -11,7 +11,7 @@ import net.neoforged.neoforge.client.event.RegisterColorHandlersEvent;
 import net.neoforged.neoforge.event.server.ServerStartedEvent;
 import org.jetbrains.annotations.NotNull;
 
-import static com.dephoegon.delbase.Delabse.Mod_ID;
+import static com.dephoegon.delbase.Delbase.Mod_ID;
 import static com.dephoegon.delbase.aid.util.creativeTabsArrayLists.*;
 
 @SuppressWarnings("unused")

@@ -16,7 +16,7 @@ import javax.annotation.Nullable;
 import java.util.function.Supplier;
 
 import static com.dephoegon.delbase.block.general.miscSpecialCases.ASH_BLOCK;
-import static com.dephoegon.delbase.Delabse.Mod_ID;
+import static com.dephoegon.delbase.Delbase.Mod_ID;
 
 public class ashBlocks {
     private static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(Mod_ID);

@@ -1,8 +1,10 @@
-package com.dephoegon.delbase.block.entity_old;
+package com.dephoegon.delbase.block.entity.screen;
 
 import com.dephoegon.delbase.aid.slots.itemSlot;
 import com.dephoegon.delbase.aid.slots.planSlots;
 import com.dephoegon.delbase.aid.slots.resultSlots;
+import com.dephoegon.delbase.block.entity.bEntity.blockCuttingStation;
+import com.dephoegon.delbase.block.entity.menuTypes;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
@@ -10,23 +12,20 @@ import net.minecraft.world.inventory.*;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
-import net.neoforged.neoforge.capabilities.Capabilities;
 import net.neoforged.neoforge.items.IItemHandler;
 import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
 
-import static com.dephoegon.delbase.block.entity_old.blockCuttingStation.*;
 import static com.dephoegon.delbase.block.entity.base.machineBlocks.BLOCK_CUTTING_STATION;
+import static com.dephoegon.delbase.block.entity_old.blockCuttingStation.*;
 
-public class blockCuttingStationMenu extends AbstractContainerMenu {
+public class blockCuttingMenu extends AbstractContainerMenu {
     private final blockCuttingStation blockEntity;
     private final Level level;
     private final ContainerData data;
-    public blockCuttingStationMenu(int pContainerId, Inventory inv, @NotNull FriendlyByteBuf extraData) {
+    public blockCuttingMenu(int pContainerId, Inventory inv, @NotNull FriendlyByteBuf extraData) {
         this(pContainerId, inv, inv.player.level().getBlockEntity(extraData.readBlockPos()), new SimpleContainerData(2));
     }
-    public blockCuttingStationMenu
-            (int pContainerId, Inventory inv, BlockEntity entity, ContainerData data) {
+    public blockCuttingMenu(int pContainerId, Inventory inv, BlockEntity entity, ContainerData data) {
         super(menuTypes.BLOCK_CUTTING_STATION_MENU.get(), pContainerId);
         checkContainerSize(inv, blockCuttingStationSlotCount);
         blockEntity = ((blockCuttingStation) entity);
@@ -36,13 +35,11 @@ public class blockCuttingStationMenu extends AbstractContainerMenu {
         addPlayerInventory(inv);
         addPlayerHotbar(inv);
 
-        @Nullable IItemHandler itemHandler = this.blockEntity.getCapability(Capabilities.ItemHandler.BLOCK, null);
-         if (itemHandler != null) {
-            this.addSlot(new itemSlot(itemHandler, inputSlot, 57, 18));
-            this.addSlot(new planSlots(itemHandler, planSlot, 103, 18));
-            this.addSlot(new resultSlots(itemHandler, outputSlot, 80, 60));
+        IItemHandler itemHandler = blockEntity.getWholeInventory();
+        this.addSlot(new itemSlot(itemHandler, inputSlot, 57, 18));
+        this.addSlot(new planSlots(itemHandler, planSlot, 103, 18));
+        this.addSlot(new resultSlots(itemHandler, outputSlot, 80, 60));
 
-        }
         addDataSlots(data);
     }
     public boolean isCrafting() {
@@ -69,9 +66,7 @@ public class blockCuttingStationMenu extends AbstractContainerMenu {
     public @NotNull ItemStack quickMoveStack(@NotNull Player playerIn, int index) {
         Slot sourceSlot = slots.get(index);
         //noinspection ConstantConditions
-        if (sourceSlot == null || !sourceSlot.hasItem()) {
-            return ItemStack.EMPTY;
-        }
+        if (sourceSlot == null || !sourceSlot.hasItem()) { return ItemStack.EMPTY; }
         ItemStack sourceStack = sourceSlot.getItem();
         ItemStack copyOfSourceStack = sourceStack.copy();
 
@@ -87,19 +82,15 @@ public class blockCuttingStationMenu extends AbstractContainerMenu {
             System.out.println("DelBase (BlockCuttingScreen) - Invalid SlotIndex: "+index);
             return ItemStack.EMPTY;
         }
-        if (sourceStack.getCount() == 0) {
-            sourceSlot.set(ItemStack.EMPTY);
-        } else {
-            sourceSlot.setChanged();
-        }
+        if (sourceStack.getCount() == 0) { sourceSlot.set(ItemStack.EMPTY); }
+        else { sourceSlot.setChanged(); }
         sourceSlot.onTake(playerIn, sourceStack);
         return copyOfSourceStack;
     }
 
     @Override
     public boolean stillValid(@NotNull Player pPlayer) {
-        return stillValid(ContainerLevelAccess.create(level, blockEntity.getBlockPos()),
-                pPlayer, BLOCK_CUTTING_STATION.get());
+        return stillValid(ContainerLevelAccess.create(level, blockEntity.getBlockPos()), pPlayer, BLOCK_CUTTING_STATION.get());
     }
     private void addPlayerInventory(Inventory playerInventory) {
         for (int i = 0; i < 3; ++i) {
