@@ -1,6 +1,6 @@
 package com.dephoegon.delbase.block.slab;
 
-import com.dephoegon.delbase.aid.block.stock.slabBlock;
+import com.dephoegon.delbase.aid.block.fromBaseGameExtensions.slabBlock;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;

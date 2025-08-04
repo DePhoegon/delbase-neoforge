@@ -1,6 +1,6 @@
 package com.dephoegon.delbase.aid.block.colorShift.wall;
 
-import com.dephoegon.delbase.aid.block.stock.wallBlock;
+import com.dephoegon.delbase.aid.block.fromBaseGameExtensions.wallBlock;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;
 

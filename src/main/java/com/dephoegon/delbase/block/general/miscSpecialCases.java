@@ -1,7 +1,7 @@
 package com.dephoegon.delbase.block.general;
 
-import com.dephoegon.delbase.aid.block.stock.axisBlock;
-import com.dephoegon.delbase.aid.block.stock.genBlock;
+import com.dephoegon.delbase.aid.block.fromBaseGameExtensions.axisBlock;
+import com.dephoegon.delbase.aid.block.fromBaseGameExtensions.genBlock;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;

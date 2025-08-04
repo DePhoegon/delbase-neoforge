@@ -1,6 +1,6 @@
 package com.dephoegon.delbase.aid.block.colorShift.axis;
 
-import com.dephoegon.delbase.aid.block.stock.axisBlock;
+import com.dephoegon.delbase.aid.block.fromBaseGameExtensions.axisBlock;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;

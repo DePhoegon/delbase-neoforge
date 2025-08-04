@@ -1,8 +1,8 @@
 package com.dephoegon.delbase.aid.event;
 
-import com.dephoegon.delbase.aid.block.alt.concreteSlab;
-import com.dephoegon.delbase.aid.block.alt.concreteStair;
-import com.dephoegon.delbase.aid.block.alt.concreteWall;
+import com.dephoegon.delbase.aid.block.modExtensions.concreteSlab;
+import com.dephoegon.delbase.aid.block.modExtensions.concreteStair;
+import com.dephoegon.delbase.aid.block.modExtensions.concreteWall;
 import com.dephoegon.delbase.aid.block.colorShift.axis.cutSandStone;
 import com.dephoegon.delbase.aid.block.colorShift.fence.*;
 import com.dephoegon.delbase.aid.block.colorShift.gen.chiseledSandStone;

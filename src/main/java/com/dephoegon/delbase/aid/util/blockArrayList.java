@@ -1,7 +1,7 @@
 package com.dephoegon.delbase.aid.util;
 
 import com.dephoegon.delbase.aid.block.colorShift.grav.solidSandBlock;
-import com.dephoegon.delbase.aid.block.stock.energySlab;
+import com.dephoegon.delbase.aid.block.modExtensions.energySlab;
 import net.minecraft.world.level.block.Block;
 import org.jetbrains.annotations.NotNull;
 

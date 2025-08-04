@@ -1,7 +1,7 @@
 package com.dephoegon.delbase.block.fence;
 
-import com.dephoegon.delbase.aid.block.alt.leafFence;
-import com.dephoegon.delbase.aid.block.alt.leafFenceGate;
+import com.dephoegon.delbase.aid.block.modExtensions.leafFence;
+import com.dephoegon.delbase.aid.block.modExtensions.leafFenceGate;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;

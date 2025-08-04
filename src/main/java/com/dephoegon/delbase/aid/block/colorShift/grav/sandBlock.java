@@ -1,6 +1,6 @@
 package com.dephoegon.delbase.aid.block.colorShift.grav;
 
-import com.dephoegon.delbase.aid.block.stock.gravBlock;
+import com.dephoegon.delbase.aid.block.fromBaseGameExtensions.gravBlock;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.tags.FluidTags;

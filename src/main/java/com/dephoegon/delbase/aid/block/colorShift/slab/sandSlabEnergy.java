@@ -1,6 +1,6 @@
 package com.dephoegon.delbase.aid.block.colorShift.slab;
 
-import com.dephoegon.delbase.aid.block.stock.energySlab;
+import com.dephoegon.delbase.aid.block.modExtensions.energySlab;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.tags.FluidTags;

@@ -1,7 +1,7 @@
 package com.dephoegon.delbase.block.wall;
 
-import com.dephoegon.delbase.aid.block.alt.leafWall;
-import com.dephoegon.delbase.aid.block.stock.wallBlock;
+import com.dephoegon.delbase.aid.block.modExtensions.leafWall;
+import com.dephoegon.delbase.aid.block.fromBaseGameExtensions.wallBlock;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;

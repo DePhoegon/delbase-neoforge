@@ -20,7 +20,7 @@ import javax.annotation.Nonnull;
 import java.util.List;
 
 import static com.dephoegon.delbase.Delabse.Mod_ID;
-import static com.dephoegon.delbase.block.general.machineBlocks.BLOCK_CUTTING_STATION;
+import static com.dephoegon.delbase.block.entity.base.machineBlocks.BLOCK_CUTTING_STATION;
 import static com.dephoegon.delbase.delbase.Mod_ID;
 import static net.minecraft.world.item.Items.*;
 

@@ -1,6 +1,6 @@
 package com.dephoegon.delbase.aid.block.item;
 
-import com.dephoegon.delbase.aid.block.stock.*;
+import com.dephoegon.delbase.aid.block.fromBaseGameExtensions.*;
 import com.dephoegon.delbase.aid.util.kb;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;

@@ -1,5 +1,5 @@
 package com.dephoegon.delbase.aid.block.colorShift.fence;
-import com.dephoegon.delbase.aid.block.stock.fenceGateBlock;
+import com.dephoegon.delbase.aid.block.fromBaseGameExtensions.fenceGateBlock;
 import net.minecraft.world.level.block.Block;
 
 public class concreteFenceGate extends fenceGateBlock {

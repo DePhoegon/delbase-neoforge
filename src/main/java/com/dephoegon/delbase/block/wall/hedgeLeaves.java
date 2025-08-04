@@ -1,6 +1,6 @@
 package com.dephoegon.delbase.block.wall;
 
-import com.dephoegon.delbase.aid.block.alt.woodWall;
+import com.dephoegon.delbase.aid.block.modExtensions.woodWall;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;

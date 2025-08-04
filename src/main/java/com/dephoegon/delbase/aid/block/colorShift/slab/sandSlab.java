@@ -1,6 +1,6 @@
 package com.dephoegon.delbase.aid.block.colorShift.slab;
 
-import com.dephoegon.delbase.aid.block.stock.slabBlock;
+import com.dephoegon.delbase.aid.block.fromBaseGameExtensions.slabBlock;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.tags.FluidTags;

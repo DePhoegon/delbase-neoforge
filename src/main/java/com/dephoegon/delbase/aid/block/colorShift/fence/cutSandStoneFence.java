@@ -1,6 +1,6 @@
 package com.dephoegon.delbase.aid.block.colorShift.fence;
 
-import com.dephoegon.delbase.aid.block.stock.fenceBlock;
+import com.dephoegon.delbase.aid.block.fromBaseGameExtensions.fenceBlock;
 import net.minecraft.world.level.block.Block;
 
 public class cutSandStoneFence extends fenceBlock {

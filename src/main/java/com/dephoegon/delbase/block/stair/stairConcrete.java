@@ -1,6 +1,6 @@
 package com.dephoegon.delbase.block.stair;
 
-import com.dephoegon.delbase.aid.block.alt.concreteStair;
+import com.dephoegon.delbase.aid.block.modExtensions.concreteStair;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;

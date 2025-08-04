@@ -1,6 +1,6 @@
 package com.dephoegon.delbase.aid.block.colorShift.stair;
 
-import com.dephoegon.delbase.aid.block.stock.stairBlock;
+import com.dephoegon.delbase.aid.block.fromBaseGameExtensions.stairBlock;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;
 

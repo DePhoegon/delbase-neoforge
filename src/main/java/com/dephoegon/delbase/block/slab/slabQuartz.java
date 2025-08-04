@@ -1,6 +1,6 @@
 package com.dephoegon.delbase.block.slab;
 
-import com.dephoegon.delbase.aid.block.alt.quartzSlab;
+import com.dephoegon.delbase.aid.block.modExtensions.quartzSlab;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;

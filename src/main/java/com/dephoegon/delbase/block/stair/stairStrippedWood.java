@@ -1,6 +1,6 @@
 package com.dephoegon.delbase.block.stair;
 
-import com.dephoegon.delbase.aid.block.alt.woodStair;
+import com.dephoegon.delbase.aid.block.modExtensions.woodStair;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;

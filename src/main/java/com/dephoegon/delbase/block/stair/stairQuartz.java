@@ -1,6 +1,6 @@
 package com.dephoegon.delbase.block.stair;
 
-import com.dephoegon.delbase.aid.block.alt.quartzStair;
+import com.dephoegon.delbase.aid.block.modExtensions.quartzStair;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;

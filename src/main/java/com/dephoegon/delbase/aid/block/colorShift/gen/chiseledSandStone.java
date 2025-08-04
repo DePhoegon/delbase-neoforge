@@ -1,6 +1,6 @@
 package com.dephoegon.delbase.aid.block.colorShift.gen;
 
-import com.dephoegon.delbase.aid.block.stock.genBlock;
+import com.dephoegon.delbase.aid.block.fromBaseGameExtensions.genBlock;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;
 

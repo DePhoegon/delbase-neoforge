@@ -1,6 +1,6 @@
 package com.dephoegon.delbase.block.slab;
 
-import com.dephoegon.delbase.aid.block.alt.leafSlab;
+import com.dephoegon.delbase.aid.block.modExtensions.leafSlab;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;

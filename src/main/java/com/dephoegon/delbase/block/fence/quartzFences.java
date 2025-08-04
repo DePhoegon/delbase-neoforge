@@ -1,7 +1,7 @@
 package com.dephoegon.delbase.block.fence;
 
-import com.dephoegon.delbase.aid.block.alt.quartzFence;
-import com.dephoegon.delbase.aid.block.alt.quartzGateBlock;
+import com.dephoegon.delbase.aid.block.modExtensions.quartzFence;
+import com.dephoegon.delbase.aid.block.modExtensions.quartzGateBlock;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;

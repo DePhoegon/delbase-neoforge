@@ -1,8 +1,8 @@
 package com.dephoegon.delbase.block.fence;
 
-import com.dephoegon.delbase.aid.block.stock.fenceBlock;
-import com.dephoegon.delbase.aid.block.stock.fenceGateBlock;
-import com.dephoegon.delbase.aid.block.stock.genBlock;
+import com.dephoegon.delbase.aid.block.fromBaseGameExtensions.fenceBlock;
+import com.dephoegon.delbase.aid.block.fromBaseGameExtensions.fenceGateBlock;
+import com.dephoegon.delbase.aid.block.fromBaseGameExtensions.genBlock;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
