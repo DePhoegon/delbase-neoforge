@@ -15,8 +15,8 @@ import net.minecraft.world.level.block.entity.BlockEntity;
 import net.neoforged.neoforge.items.IItemHandler;
 import org.jetbrains.annotations.NotNull;
 
+import static com.dephoegon.delbase.block.entity.bEntity.blockCuttingStation.*;
 import static com.dephoegon.delbase.block.entity.base.machineBlocks.BLOCK_CUTTING_STATION;
-import static com.dephoegon.delbase.block.entity_old.blockCuttingStation.*;
 
 public class blockCuttingMenu extends AbstractContainerMenu {
     private final blockCuttingStation blockEntity;

@@ -1,10 +1,7 @@
 package com.dephoegon.delbase.aid.block.fromBaseGameExtensions;
 
 import com.dephoegon.delbase.aid.util.kb;
-import com.dephoegon.delbase.block.entity_old.blockCuttingStation;
-import com.mojang.serialization.Codec;
-import com.mojang.serialization.MapCodec;
-import com.mojang.serialization.codecs.RecordCodecBuilder;
+import com.dephoegon.delbase.block.entity.bEntity.blockCuttingStation;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.network.chat.Component;
@@ -27,7 +24,6 @@ import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.phys.BlockHitResult;
 import net.neoforged.neoforge.common.extensions.IBlockExtension;
 import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
@@ -104,7 +100,8 @@ public abstract class horizontalFacingBlockEntities extends BaseEntityBlock impl
             if (blockEntity instanceof blockCuttingStation) {
                 ((blockCuttingStation) blockEntity).drops();
             }
-        }super.onRemove(pState, pLevel, pPos, pNewState, pIsMoving);
+        }
+        super.onRemove(pState, pLevel, pPos, pNewState, pIsMoving);
     }
     @SuppressWarnings("RedundantCast")
     public @NotNull InteractionResult use(@NotNull BlockState pState, @NotNull Level pLevel, @NotNull BlockPos pPos, @NotNull Player pPlayer, @NotNull InteractionHand pHand, @NotNull BlockHitResult pHit) {

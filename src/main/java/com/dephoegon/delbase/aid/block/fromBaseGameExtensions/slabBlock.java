@@ -25,7 +25,7 @@ import static com.dephoegon.delbase.aid.util.burnChance.rngBurn;
 import static com.dephoegon.delbase.aid.util.modPlantingAid.isPlantable;
 import static net.neoforged.neoforge.common.ItemAbilities.AXE_STRIP;
 
-public class slabBlock extends SlabBlock implements IBlockStateExtension {
+public class slabBlock extends SlabBlock {
     private final String tip0;
     private final String tip1;
     private final String tip2;
