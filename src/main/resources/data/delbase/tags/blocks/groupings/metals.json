@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "#delbase:fences/misc_metallike_fences",
+    "#delbase:fences/misc_metallike_fence_gates",
+    "#delbase:slabs/slab_misc_metallike",
+    "#delbase:stairs/stair_misc_metallike",
+    "#delbase:walls/wall_misc_metallike"
+  ]
+}

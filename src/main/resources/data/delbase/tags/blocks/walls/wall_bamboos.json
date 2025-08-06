@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "delbase:bamboo_wall",
+    "delbase:stripped_bamboo_wall",
+    "delbase:bamboo_plank_wall",
+    "delbase:stripped_bamboo_plank_wall",
+    "delbase:bamboo_mosaic_wall",
+    "delbase:stripped_bamboo_mosaic_wall"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    "delbase:ash_slab",
+    "delbase:ash_stair",
+    "delbase:ash_wall",
+    "delbase:ash_log",
+    "delbase:ash_block",
+    "delbase:ash_fence",
+    "delbase:ash_fence_gate"
+  ]
+}

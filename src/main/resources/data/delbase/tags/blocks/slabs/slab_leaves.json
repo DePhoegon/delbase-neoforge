@@ -1,0 +1,14 @@
+{
+  "replace": false,
+  "values": [
+    "delbase:oak_leaf_slab",
+    "delbase:spruce_leaf_slab",
+    "delbase:jungle_leaf_slab",
+    "delbase:birch_leaf_slab",
+    "delbase:dark_oak_leaf_slab",
+    "delbase:mangrove_leaf_slab",
+    "delbase:cherry_leaf_slab",
+    "delbase:azalea_leaf_slab",
+    "delbase:flowering_azalea_leaf_slab"
+  ]
+}

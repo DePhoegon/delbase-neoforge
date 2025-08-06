@@ -1,0 +1,15 @@
+{
+  "replace": false,
+  "values": [
+    "delbase:oak_hedge",
+    "delbase:spruce_hedge",
+    "delbase:birch_hedge",
+    "delbase:jungle_hedge",
+    "delbase:acacia_hedge",
+    "delbase:dark_oak_hedge",
+    "delbase:mangrove_hedge",
+    "delbase:cherry_hedge",
+    "delbase:azalea_hedge",
+    "delbase:flowering_azalea_hedge"
+  ]
+}

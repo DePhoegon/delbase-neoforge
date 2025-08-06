@@ -1,0 +1,14 @@
+{
+  "replace": false,
+  "values": [
+    "delbase:dried_kelp_slab",
+    "delbase:shroomlight_slab",
+    "delbase:mud_slab",
+    "delbase:muddy_mangrove_root_slab",
+    "delbase:mangrove_root_slab",
+    "delbase:ochre_froglight_slab",
+    "delbase:verdant_froglight_slab",
+    "delbase:pearlescent_froglight_slab",
+    "#delbase:slabs/slab_leaves"
+  ]
+}

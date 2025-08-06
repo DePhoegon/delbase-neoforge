@@ -1,0 +1,23 @@
+{
+  "replace": false,
+  "values": [
+    "delbase:sand_stone_fence",
+    "delbase:red_sand_stone_fence",
+    "delbase:lime_sand_stone_fence",
+    "delbase:blood_sand_stone_fence",
+    "delbase:white_sand_stone_fence",
+    "delbase:orange_sand_stone_fence",
+    "delbase:magenta_sand_stone_fence",
+    "delbase:light_blue_sand_stone_fence",
+    "delbase:yellow_sand_stone_fence",
+    "delbase:pink_sand_stone_fence",
+    "delbase:gray_sand_stone_fence",
+    "delbase:light_gray_sand_stone_fence",
+    "delbase:cyan_sand_stone_fence",
+    "delbase:purple_sand_stone_fence",
+    "delbase:blue_sand_stone_fence",
+    "delbase:brown_sand_stone_fence",
+    "delbase:green_sand_stone_fence",
+    "delbase:black_sand_stone_fence"
+  ]
+}

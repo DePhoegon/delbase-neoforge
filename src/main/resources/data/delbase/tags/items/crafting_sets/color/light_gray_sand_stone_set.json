@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "#delbase:colors/light_gray/gen_block/chiseled_sand_stone",
+    "#delbase:colors/light_gray/gen_block/cut_sand_stone",
+    "#delbase:colors/light_gray/gen_block/smooth_sand_stone",
+    "#delbase:colors/light_gray/gen_block/sand_stone"
+  ]
+}

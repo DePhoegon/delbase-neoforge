@@ -1,0 +1,29 @@
+{
+  "replace": false,
+  "values": [
+    "delbase:red_netherbrick_fence",
+    "delbase:cobbled_basalt_fence",
+    "delbase:basalt_fence",
+    "delbase:smooth_basalt_fence",
+    "delbase:end_stone_fence",
+    "delbase:dripstone_fence",
+    "delbase:cracked_polished_blackstone_brick_fence",
+    "delbase:chiseled_polished_blackstone_fence",
+    "delbase:polished_basalt_fence",
+    "delbase:bone_block_fence",
+    "delbase:purpur_block_fence",
+    "delbase:netherrack_fence",
+    "delbase:magma_block_fence",
+    "delbase:coal_block_fence",
+    "delbase:stone_fence",
+    "delbase:cobblestone_fence",
+    "delbase:deepslate_fence",
+    "delbase:cobbled_deepslate_fence",
+    "delbase:deepslate_tile_fence",
+    "delbase:polished_deepslate_fence",
+    "delbase:deepslate_brick_fence",
+    "delbase:mud_brick_fence",
+    "delbase:packed_mud_fence",
+    "delbase:brick_fence"
+  ]
+}

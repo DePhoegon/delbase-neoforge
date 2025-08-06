@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "#delbase:fences/wooden_fences",
+    "#delbase:fences/stripped_wooden_fences",
+    "#delbase:fences/misc_woodlike_fences"
+  ]
+}

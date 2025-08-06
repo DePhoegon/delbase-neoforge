@@ -1,0 +1,22 @@
+{
+  "replace": false,
+  "values": [
+    "delbase:white_terracotta_wall",
+    "delbase:orange_terracotta_wall",
+    "delbase:magenta_terracotta_wall",
+    "delbase:light_blue_terracotta_wall",
+    "delbase:yellow_terracotta_wall",
+    "delbase:lime_terracotta_wall",
+    "delbase:pink_terracotta_wall",
+    "delbase:gray_terracotta_wall",
+    "delbase:light_gray_terracotta_wall",
+    "delbase:cyan_terracotta_wall",
+    "delbase:purple_terracotta_wall",
+    "delbase:blue_terracotta_wall",
+    "delbase:brown_terracotta_wall",
+    "delbase:green_terracotta_wall",
+    "delbase:red_terracotta_wall",
+    "delbase:black_terracotta_wall",
+    "delbase:terracotta_wall"
+  ]
+}

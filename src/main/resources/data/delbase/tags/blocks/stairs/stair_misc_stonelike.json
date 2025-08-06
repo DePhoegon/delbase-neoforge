@@ -1,0 +1,18 @@
+{
+  "replace": false,
+  "values": [
+    "delbase:end_stone_stair",
+    "delbase:bone_block_stair",
+    "delbase:basalt_stair",
+    "delbase:polished_basalt_stair",
+    "delbase:smooth_basalt_stair",
+    "delbase:cracked_polished_blackstone_brick_stair",
+    "delbase:chiseled_polished_blackstone_stair",
+    "delbase:dripstone_stair",
+    "delbase:netherrack_stair",
+    "delbase:magma_block_stair",
+    "delbase:coal_block_stair",
+    "delbase:deepslate_stair",
+    "delbase:packed_mud_stair"
+  ]
+}

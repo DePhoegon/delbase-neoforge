@@ -1,0 +1,19 @@
+{
+  "replace": false,
+  "values": [
+    "delbase:ash_wall",
+    "#delbase:walls/wall_chiseled_sand_stone",
+    "#delbase:walls/wall_concrete",
+    "#delbase:walls/wall_cut_sand_stone",
+    "#delbase:walls/wall_log",
+    "#delbase:walls/wall_misc_stonelike",
+    "#delbase:walls/wall_misc_metallike",
+    "#delbase:walls/wall_misc_gemlike",
+    "#delbase:walls/wall_misc_woodlike",
+    "#delbase:walls/wall_sand",
+    "#delbase:walls/wall_sand_stone",
+    "#delbase:walls/wall_smooth_sand_stone",
+    "#delbase:walls/wall_wood",
+    "#delbase:walls/wall_terracotta"
+  ]
+}

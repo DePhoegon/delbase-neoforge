@@ -1,0 +1,19 @@
+{
+  "replace": false,
+  "values": [
+    "delbase:ash_stair",
+    "#delbase:stairs/stair_chiseled_sand_stone",
+    "#delbase:stairs/stair_concrete",
+    "#delbase:stairs/stair_cut_sand_stone",
+    "#delbase:stairs/stair_log",
+    "#delbase:stairs/stair_misc_metallike",
+    "#delbase:stairs/stair_misc_stonelike",
+    "#delbase:stairs/stair_misc_gemlike",
+    "#delbase:stairs/stair_misc_woodlike",
+    "#delbase:stairs/stair_sand_stone",
+    "#delbase:stairs/stair_smooth_sand_stone",
+    "#delbase:stairs/stair_wood",
+    "#delbase:stairs/stair_sand",
+    "#delbase:stairs/stair_terracotta"
+  ]
+}

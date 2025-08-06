@@ -1,0 +1,15 @@
+{
+  "replace": false,
+  "values": [
+    "delbase:oak_leaf_fence",
+    "delbase:spruce_leaf_fence",
+    "delbase:birch_leaf_fence",
+    "delbase:acacia_leaf_fence",
+    "delbase:jungle_leaf_fence",
+    "delbase:dark_oak_leaf_fence",
+    "delbase:mangrove_leaf_fence",
+    "delbase:azalea_leaf_fence",
+    "delbase:flowering_azalea_leaf_fence",
+    "delbase:cherry_leaf_fence"
+  ]
+}

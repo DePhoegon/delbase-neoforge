@@ -1,0 +1,25 @@
+{
+  "replace": false,
+  "values": [
+    "delbase:acacia_wood_fence_gate",
+    "delbase:acacia_log_fence_gate",
+    "delbase:birch_wood_fence_gate",
+    "delbase:birch_log_fence_gate",
+    "delbase:mangrove_wood_fence_gate",
+    "delbase:mangrove_log_fence_gate",
+    "delbase:crimson_hyphae_fence_gate",
+    "delbase:crimson_stem_fence_gate",
+    "delbase:dark_oak_wood_fence_gate",
+    "delbase:dark_oak_log_fence_gate",
+    "delbase:jungle_wood_fence_gate",
+    "delbase:jungle_log_fence_gate",
+    "delbase:oak_wood_fence_gate",
+    "delbase:oak_log_fence_gate",
+    "delbase:spruce_wood_fence_gate",
+    "delbase:spruce_log_fence_gate",
+    "delbase:warped_hyphae_fence_gate",
+    "delbase:warped_stem_fence_gate",
+    "delbase:cherry_log_fence_gate",
+    "delbase:cherry_wood_fence_gate"
+  ]
+}

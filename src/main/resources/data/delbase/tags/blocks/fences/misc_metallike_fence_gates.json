@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "delbase:raw_gold_fence_gate",
+    "delbase:raw_copper_fence_gate",
+    "delbase:raw_iron_fence_gate"
+  ]
+}

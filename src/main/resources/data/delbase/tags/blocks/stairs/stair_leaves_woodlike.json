@@ -1,0 +1,15 @@
+{
+  "replace": false,
+  "values": [
+    "delbase:oak_leaf_stair",
+    "delbase:spruce_leaf_stair",
+    "delbase:jungle_leaf_stair",
+    "delbase:birch_leaf_stair",
+    "delbase:acacia_leaf_stair",
+    "delbase:dark_oak_leaf_stair",
+    "delbase:mangrove_leaf_stair",
+    "delbase:cherry_leaf_stair",
+    "delbase:azalea_leaf_stair",
+    "delbase:flowering_azalea_leaf_stair"
+  ]
+}

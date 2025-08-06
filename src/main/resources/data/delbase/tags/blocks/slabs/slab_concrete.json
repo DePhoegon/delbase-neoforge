@@ -1,0 +1,21 @@
+{
+  "replace": false,
+  "values": [
+    "delbase:red_concrete_slab",
+    "delbase:gray_concrete_slab",
+    "delbase:white_concrete_slab",
+    "delbase:orange_concrete_slab",
+    "delbase:magenta_concrete_slab",
+    "delbase:light_blue_concrete_slab",
+    "delbase:yellow_concrete_slab",
+    "delbase:lime_concrete_slab",
+    "delbase:pink_concrete_slab",
+    "delbase:light_gray_concrete_slab",
+    "delbase:cyan_concrete_slab",
+    "delbase:purple_concrete_slab",
+    "delbase:blue_concrete_slab",
+    "delbase:green_concrete_slab",
+    "delbase:brown_concrete_slab",
+    "delbase:black_concrete_slab"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "#delbase:fences/concrete_fence_gates",
+    "#delbase:fences/concrete_fences",
+    "#delbase:slabs/slab_concrete",
+    "#delbase:stairs/stair_concrete",
+    "#delbase:walls/wall_concrete"
+  ]
+}

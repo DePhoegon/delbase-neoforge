@@ -1,0 +1,22 @@
+{
+  "replace": false,
+  "values": [
+    "delbase:sand_fence_gate",
+    "delbase:red_sand_fence_gate",
+    "delbase:blood_sand_fence_gate",
+    "delbase:white_sand_fence_gate",
+    "delbase:orange_sand_fence_gate",
+    "delbase:magenta_sand_fence_gate",
+    "delbase:light_blue_sand_fence_gate",
+    "delbase:yellow_sand_fence_gate",
+    "delbase:pink_sand_fence_gate",
+    "delbase:gray_sand_fence_gate",
+    "delbase:light_gray_sand_fence_gate",
+    "delbase:cyan_sand_fence_gate",
+    "delbase:purple_sand_fence_gate",
+    "delbase:blue_sand_fence_gate",
+    "delbase:brown_sand_fence_gate",
+    "delbase:green_sand_fence_gate",
+    "delbase:black_sand_fence_gate"
+  ]
+}

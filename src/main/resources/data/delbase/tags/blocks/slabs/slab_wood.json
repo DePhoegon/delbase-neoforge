@@ -1,0 +1,27 @@
+{
+  "replace": false,
+  "values": [
+    "delbase:stripped_spruce_wood_slab",
+    "delbase:stripped_oak_wood_slab",
+    "delbase:stripped_warped_hyphae_slab",
+    "delbase:stripped_crimson_hyphae_slab",
+    "delbase:stripped_dark_oak_wood_slab",
+    "delbase:stripped_acacia_wood_slab",
+    "delbase:stripped_jungle_wood_slab",
+    "delbase:stripped_birch_wood_slab",
+    "delbase:stripped_mangrove_wood_slab",
+    "delbase:stripped_cherry_wood_slab",
+    "delbase:stripped_bamboo_block_slab",
+    "delbase:spruce_wood_slab",
+    "delbase:oak_wood_slab",
+    "delbase:warped_hyphae_slab",
+    "delbase:crimson_hyphae_slab",
+    "delbase:dark_oak_wood_slab",
+    "delbase:acacia_wood_slab",
+    "delbase:jungle_wood_slab",
+    "delbase:birch_wood_slab",
+    "delbase:mangrove_wood_slab",
+    "delbase:cherry_wood_slab",
+    "delbase:bamboo_block_slab"
+  ]
+}

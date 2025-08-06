@@ -1,0 +1,21 @@
+{
+  "replace": false,
+  "values": [
+    "delbase:white_concrete_fence",
+    "delbase:orange_concrete_fence",
+    "delbase:magenta_concrete_fence",
+    "delbase:light_blue_concrete_fence",
+    "delbase:yellow_concrete_fence",
+    "delbase:lime_concrete_fence",
+    "delbase:pink_concrete_fence",
+    "delbase:gray_concrete_fence",
+    "delbase:light_gray_concrete_fence",
+    "delbase:cyan_concrete_fence",
+    "delbase:purple_concrete_fence",
+    "delbase:blue_concrete_fence",
+    "delbase:brown_concrete_fence",
+    "delbase:green_concrete_fence",
+    "delbase:red_concrete_fence",
+    "delbase:black_concrete_fence"
+  ]
+}

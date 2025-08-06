@@ -1,0 +1,22 @@
+{
+  "replace": false,
+  "values": [
+    "delbase:white_terracotta_slab",
+    "delbase:orange_terracotta_slab",
+    "delbase:magenta_terracotta_slab",
+    "delbase:light_blue_terracotta_slab",
+    "delbase:lime_terracotta_slab",
+    "delbase:yellow_terracotta_slab",
+    "delbase:pink_terracotta_slab",
+    "delbase:gray_terracotta_slab",
+    "delbase:light_gray_terracotta_slab",
+    "delbase:cyan_terracotta_slab",
+    "delbase:purple_terracotta_slab",
+    "delbase:blue_terracotta_slab",
+    "delbase:brown_terracotta_slab",
+    "delbase:green_terracotta_slab",
+    "delbase:red_terracotta_slab",
+    "delbase:black_terracotta_slab",
+    "delbase:terracotta_slab"
+  ]
+}

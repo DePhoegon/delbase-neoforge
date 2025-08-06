@@ -1,0 +1,21 @@
+{
+  "replace": false,
+  "values": [
+    "delbase:blood_chiseled_sand_stone",
+    "delbase:white_chiseled_sand_stone",
+    "delbase:orange_chiseled_sand_stone",
+    "delbase:magenta_chiseled_sand_stone",
+    "delbase:light_blue_chiseled_sand_stone",
+    "delbase:yellow_chiseled_sand_stone",
+    "delbase:lime_chiseled_sand_stone",
+    "delbase:pink_chiseled_sand_stone",
+    "delbase:gray_chiseled_sand_stone",
+    "delbase:light_gray_chiseled_sand_stone",
+    "delbase:cyan_chiseled_sand_stone",
+    "delbase:purple_chiseled_sand_stone",
+    "delbase:blue_chiseled_sand_stone",
+    "delbase:green_chiseled_sand_stone",
+    "delbase:brown_chiseled_sand_stone",
+    "delbase:black_chiseled_sand_stone"
+  ]
+}

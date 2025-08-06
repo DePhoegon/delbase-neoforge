@@ -1,0 +1,25 @@
+{
+  "replace": false,
+  "values": [
+    "delbase:stripped_acacia_wood_fence",
+    "delbase:stripped_acacia_log_fence",
+    "delbase:stripped_birch_wood_fence",
+    "delbase:stripped_birch_log_fence",
+    "delbase:stripped_mangrove_wood_fence",
+    "delbase:stripped_mangrove_log_fence",
+    "delbase:stripped_crimson_hyphae_fence",
+    "delbase:stripped_crimson_stem_fence",
+    "delbase:stripped_dark_oak_wood_fence",
+    "delbase:stripped_dark_oak_log_fence",
+    "delbase:stripped_jungle_wood_fence",
+    "delbase:stripped_jungle_log_fence",
+    "delbase:stripped_oak_wood_fence",
+    "delbase:stripped_oak_log_fence",
+    "delbase:stripped_spruce_wood_fence",
+    "delbase:stripped_spruce_log_fence",
+    "delbase:stripped_warped_hyphae_fence",
+    "delbase:stripped_warped_stem_fence",
+    "delbase:stripped_cherry_log_fence",
+    "delbase:stripped_cherry_wood_fence"
+  ]
+}
