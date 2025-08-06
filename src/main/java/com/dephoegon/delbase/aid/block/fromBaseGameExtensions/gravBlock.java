@@ -3,6 +3,7 @@ package com.dephoegon.delbase.aid.block.fromBaseGameExtensions;
 import com.dephoegon.delbase.aid.util.blockArrayList;
 import com.dephoegon.delbase.aid.util.kb;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.ColorRGBA;
@@ -11,13 +12,16 @@ import net.minecraft.world.entity.item.FallingBlockEntity;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.ColoredFallingBlock;
 import net.minecraft.world.level.block.state.BlockState;
+import net.neoforged.neoforge.common.util.TriState;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
 
+import static com.dephoegon.delbase.aid.util.modPlantingAid.isPlantable;
 import static net.minecraft.world.level.block.Blocks.RED_SAND;
 import static net.minecraft.world.level.block.Blocks.SAND;
 
@@ -82,4 +86,10 @@ public class gravBlock extends ColoredFallingBlock {
         else { last = false; }
         return last;
     }
+    public @NotNull TriState canSustainPlant(@NotNull BlockState state, @NotNull BlockGetter level, @NotNull BlockPos soilPosition, @NotNull Direction facing, @NotNull BlockState plant) {
+        if (isPlantable(state, isSand(), isDirtLike(), soilPosition, level, null)) { return TriState.TRUE; }
+        return TriState.DEFAULT;
+    }
+    protected boolean isSand() { return false; }
+    protected boolean isDirtLike() { return false; }
 }

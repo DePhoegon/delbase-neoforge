@@ -710,8 +710,8 @@ public class creativeTabsArrayLists {
         out.add(BLACK_SMOOTH_SAND_STONE);
         return out;
     }
-    public static @NotNull ArrayList<DeferredBlock<SandBlock>> setSands() {
-        ArrayList<DeferredBlock<SandBlock>> out = new ArrayList<>();
+    public static @NotNull ArrayList<DeferredBlock<ColoredFallingBlock>> setSands() {
+        ArrayList<DeferredBlock<ColoredFallingBlock>> out = new ArrayList<>();
         out.add(BLOOD_SAND);
         out.add(WHITE_SAND);
         out.add(ORANGE_SAND);

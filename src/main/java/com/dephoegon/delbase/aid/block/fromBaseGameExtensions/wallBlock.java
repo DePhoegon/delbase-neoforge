@@ -14,14 +14,17 @@ import net.minecraft.world.level.block.WallBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.WallSide;
 import net.neoforged.neoforge.common.ItemAbility;
+import net.neoforged.neoforge.common.extensions.IBlockStateExtension;
+import net.neoforged.neoforge.common.util.TriState;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
 
 import static com.dephoegon.delbase.aid.util.burnChance.rngBurn;
+import static com.dephoegon.delbase.aid.util.modPlantingAid.isPlantable;
 import static net.neoforged.neoforge.common.ItemAbilities.AXE_STRIP;
 
-public class wallBlock extends WallBlock {
+public class wallBlock extends WallBlock implements IBlockStateExtension {
     private final String tip0;
     private final String tip1;
     private final String tip2;
@@ -84,4 +87,11 @@ public class wallBlock extends WallBlock {
             return stripped.setValue(EAST_WALL, east).setValue(WATERLOGGED, waterLogged).setValue(UP, up).setValue(WEST_WALL, west).setValue(NORTH_WALL, north).setValue(SOUTH_WALL, south);
         } else { return null; }
     }
+    public @NotNull TriState canSustainPlant(@NotNull BlockState state, @NotNull BlockGetter level, @NotNull BlockPos soilPosition, @NotNull Direction facing, @NotNull BlockState plant) {
+        String stateString = state.getValue(WallBlock.UP) ? "up" : "down";
+        if (isPlantable(state, isSand(), isDirtLike(), soilPosition, level, stateString)) { return TriState.TRUE; }
+        return TriState.DEFAULT;
+    }
+    protected boolean isSand() { return false; }
+    protected boolean isDirtLike() { return false; }
 }

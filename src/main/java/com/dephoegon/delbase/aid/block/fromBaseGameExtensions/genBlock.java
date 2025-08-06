@@ -10,11 +10,13 @@ import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
+import net.neoforged.neoforge.common.util.TriState;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
 
 import static com.dephoegon.delbase.aid.util.burnChance.rngBurn;
+import static com.dephoegon.delbase.aid.util.modPlantingAid.isPlantable;
 
 public class genBlock extends Block {
     private final String tip0;
@@ -61,4 +63,10 @@ public class genBlock extends Block {
     }
     @SuppressWarnings({"SameReturnValue", "unused"})
     public static boolean never(BlockState state, BlockGetter blockGetter, BlockPos pos) { return false; }
+    public @NotNull TriState canSustainPlant(@NotNull BlockState state, @NotNull BlockGetter level, @NotNull BlockPos soilPosition, @NotNull Direction facing, @NotNull BlockState plant) {
+        if (isPlantable(state, isSand(), isDirtLike(), soilPosition, level, null)) { return TriState.TRUE; }
+        return TriState.DEFAULT;
+    }
+    protected boolean isSand() { return false; }
+    protected boolean isDirtLike() { return false; }
 }

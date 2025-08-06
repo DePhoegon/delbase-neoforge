@@ -10,4 +10,5 @@ public class sandStair extends stairBlock {
     public sandStair(Block block) {
         super(block, Properties.ofFullCopy(block), "", "", "", false, 0, 0, null);
     }
+    protected boolean isSand() { return true; }
 }

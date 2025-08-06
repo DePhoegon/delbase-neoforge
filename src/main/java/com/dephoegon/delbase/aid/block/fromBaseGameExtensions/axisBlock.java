@@ -11,11 +11,13 @@ import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.RotatedPillarBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
+import net.neoforged.neoforge.common.util.TriState;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
 
 import static com.dephoegon.delbase.aid.util.burnChance.rngBurn;
+import static com.dephoegon.delbase.aid.util.modPlantingAid.isPlantable;
 
 public class axisBlock extends RotatedPillarBlock {
     private final String tip0;
@@ -60,4 +62,10 @@ public class axisBlock extends RotatedPillarBlock {
         if (flame) { return spread; }
         return 0;
     }
+    public @NotNull TriState canSustainPlant(@NotNull BlockState state, @NotNull BlockGetter level, @NotNull BlockPos soilPosition, @NotNull Direction facing, @NotNull BlockState plant) {
+        if (isPlantable(state, isSand(), isDirtLike(), soilPosition, level, null)) { return TriState.TRUE; }
+        return TriState.DEFAULT;
+    }
+    protected boolean isSand() { return false; }
+    protected boolean isDirtLike() { return false; }
 }

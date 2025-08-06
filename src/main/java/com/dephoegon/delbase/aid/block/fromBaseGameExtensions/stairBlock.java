@@ -16,15 +16,18 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.Half;
 import net.minecraft.world.level.block.state.properties.StairsShape;
 import net.neoforged.neoforge.common.ItemAbility;
+import net.neoforged.neoforge.common.extensions.IBlockStateExtension;
+import net.neoforged.neoforge.common.util.TriState;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
 import static com.dephoegon.delbase.aid.util.burnChance.rngBurn;
+import static com.dephoegon.delbase.aid.util.modPlantingAid.isPlantable;
 import static net.neoforged.neoforge.common.ItemAbilities.AXE_STRIP;
 
-public class stairBlock extends StairBlock {
+public class stairBlock extends StairBlock implements IBlockStateExtension {
     private final String tip0;
     private final String tip1;
     private final String tip2;
@@ -88,4 +91,11 @@ public class stairBlock extends StairBlock {
             return stripped.setValue(FACING, facing).setValue(WATERLOGGED, waterlogged).setValue(HALF, half).setValue(SHAPE, shape);
         } else { return null; }
     }
+    public @NotNull TriState canSustainPlant(@NotNull BlockState state, @NotNull BlockGetter level, @NotNull BlockPos soilPosition, @NotNull Direction facing, @NotNull BlockState plant) {
+        String blockType = level.getBlockState(soilPosition).getValue(StairBlock.HALF) == Half.TOP ? "top" : "bottom";
+        if (isPlantable(state, isSand(), isDirtLike(), soilPosition, level, blockType)) { return TriState.TRUE; }
+        return TriState.DEFAULT;
+    }
+    protected boolean isSand() { return false; }
+    protected boolean isDirtLike() { return false; }
 }

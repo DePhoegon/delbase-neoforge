@@ -10,4 +10,5 @@ public class sandWall extends wallBlock {
     public sandWall(Block block) {
         super(Properties.ofFullCopy(block), "", "", "", false, 0, 0, null);
     }
+    protected boolean isSand() { return true; }
 }
