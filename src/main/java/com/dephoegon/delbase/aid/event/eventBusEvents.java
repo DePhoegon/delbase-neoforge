@@ -24,7 +24,7 @@ public class eventBusEvents {
     }
     @SuppressWarnings("unused")
     @net.neoforged.bus.api.SubscribeEvent
-    public static void registerBlockColors(net.neoforged.neoforge.client.event.RegisterColorHandlersEvent.@NotNull Block event) {
+    public static void registerBlockColors(@NotNull RegisterColorHandlersEvent.Block event) {
         BlockColor DEFAULT_LEAVES = (state, reader, pos, color) -> reader != null && pos != null ? BiomeColors.getAverageFoliageColor(reader, pos) : FoliageColor.getDefaultColor();
         BlockColor BIRCH_LEAVES = (state, reader, pos, color) -> FoliageColor.getBirchColor();
         BlockColor SPRUCE_LEAVES = (state, reader, pos, color) -> FoliageColor.getEvergreenColor();
@@ -35,7 +35,7 @@ public class eventBusEvents {
     }
     @SuppressWarnings("unused")
     @net.neoforged.bus.api.SubscribeEvent
-    public static void registerItemColors(RegisterColorHandlersEvent.@NotNull Item event) {
+    public static void registerItemColors(@NotNull RegisterColorHandlersEvent.Item event) {
         ColoredLeaves().forEach((block) -> event.register((stack, color) -> event.getBlockColors().getColor(((BlockItem) stack.getItem()).getBlock().defaultBlockState(), null, null, color), block.get()));
         MangroveColoredLeaves().forEach((block) -> event.register((itemColor, itemLike) -> FoliageColor.getMangroveColor(), block.get().asItem()));
     }
