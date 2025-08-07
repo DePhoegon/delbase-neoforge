@@ -1,0 +1,6 @@
+{
+"parent": "minecraft:block/fence_inventory",
+"textures": {
+"texture": "delbase:block/blood_sand_stone_top"
+}
+}

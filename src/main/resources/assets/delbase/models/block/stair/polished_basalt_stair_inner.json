@@ -1,0 +1,10 @@
+{
+  "parent": "delbase:block/template/inner_stairs_column",
+  "textures": {
+    "bottom": "minecraft:block/polished_basalt_top",
+    "top": "minecraft:block/polished_basalt_top",
+    "side": "minecraft:block/polished_basalt_side",
+    "inside": "delbase:block/polished_basalt_inside_side",
+    "inside_base": "minecraft:block/polished_basalt_top"
+  }
+}

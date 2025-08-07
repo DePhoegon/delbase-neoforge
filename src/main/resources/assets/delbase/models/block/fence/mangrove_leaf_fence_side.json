@@ -1,0 +1,7 @@
+{
+  "parent": "delbase:block/template/fence_side_leaves",
+  "textures": {
+    "texture": "minecraft:block/mangrove_leaves",
+    "postside": "minecraft:block/mangrove_leaves"
+  }
+}

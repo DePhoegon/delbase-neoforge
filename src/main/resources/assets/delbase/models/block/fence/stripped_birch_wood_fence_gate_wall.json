@@ -1,0 +1,7 @@
+{
+  "parent": "delbase:block/template/fence_gate_wall",
+  "textures": {
+    "texture": "minecraft:block/stripped_birch_log",
+    "postside": "minecraft:block/stripped_birch_log"
+  }
+}

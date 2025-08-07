@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "delbase:block/slab/stripped_jungle_wood_slab"
+    },
+    "type=double": {
+      "model": "delbase:block/slab/stripped_jungle_wood_slab_double"
+    },
+    "type=top": {
+      "model": "delbase:block/slab/stripped_jungle_wood_slab_top"
+    }
+  }
+}

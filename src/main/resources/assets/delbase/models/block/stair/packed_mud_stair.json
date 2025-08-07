@@ -1,0 +1,9 @@
+{
+  "parent": "delbase:block/template/stairs",
+  "textures": {
+    "bottom": "minecraft:block/packed_mud",
+    "top": "minecraft:block/packed_mud",
+    "side": "minecraft:block/packed_mud",
+    "inside": "minecraft:block/packed_mud"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "parent": "delbase:block/template/stairs_column",
+  "textures": {
+    "bottom": "minecraft:block/ochre_froglight_top",
+    "top": "minecraft:block/ochre_froglight_top",
+    "side": "minecraft:block/ochre_froglight_side",
+    "inside": "minecraft:block/ochre_froglight_side",
+    "inside_base": "minecraft:block/ochre_froglight_top"
+  }
+}

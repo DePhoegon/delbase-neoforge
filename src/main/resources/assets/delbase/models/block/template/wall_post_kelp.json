@@ -1,0 +1,19 @@
+{
+  "textures": {
+    "particle": "#top"
+  },
+  "elements": [
+    {   "from": [ 4, 0, 4 ],
+      "to": [ 12, 16, 12 ],
+      "faces": {
+        "down":  { "uv": [ 5, 4, 12, 11 ],  "texture": "#top", "cullface": "down" },
+        "up":    { "uv": [ 5, 4, 12, 11 ],  "texture": "#top", "cullface": "up" },
+        "north": { "uv": [ 4, 0, 11, 15 ], "texture": "#wall" },
+        "south": { "uv": [ 4, 0, 11, 15 ], "texture": "#wall" },
+        "west":  { "uv": [ 4, 0, 11, 15 ], "texture": "#wall" },
+        "east":  { "uv": [ 4, 0, 11, 15 ], "texture": "#wall" }
+      },
+      "__comment": "Center post, Separate Texture for top & bottom for textured walls"
+    }
+  ]
+}

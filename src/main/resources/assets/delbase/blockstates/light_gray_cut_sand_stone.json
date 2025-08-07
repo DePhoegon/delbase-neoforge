@@ -1,0 +1,16 @@
+{ 
+  "variants": { 
+   "axis=x": { 
+      "model": "delbase:block/pillar/light_gray_cut_sand_stone", 
+      "x": 90, 
+      "y": 90 
+    }, 
+   "axis=y": { 
+      "model": "delbase:block/pillar/light_gray_cut_sand_stone" 
+    }, 
+   "axis=z": { 
+      "model": "delbase:block/pillar/light_gray_cut_sand_stone", 
+      "x": 90 
+    } 
+  } 
+} 

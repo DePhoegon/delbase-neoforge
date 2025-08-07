@@ -1,0 +1,7 @@
+{
+  "parent": "delbase:block/template/wall_inventory_leaves",
+  "textures": {
+    "wall": "minecraft:block/oak_leaves",
+    "top": "minecraft:block/oak_leaves"
+  }
+}

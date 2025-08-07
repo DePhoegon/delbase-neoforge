@@ -1,0 +1,10 @@
+{
+  "parent": "delbase:block/template/outer_stairs_column",
+  "textures": {
+    "bottom": "minecraft:block/deepslate_top",
+    "top": "minecraft:block/deepslate_top",
+    "side": "minecraft:block/deepslate",
+    "inside": "minecraft:block/deepslate",
+    "inside_base": "minecraft:block/deepslate_top"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "delbase:block/template/fence_gate_wall_open",
+  "textures": {
+    "texture": "minecraft:block/red_nether_bricks",
+    "postside": "minecraft:block/red_nether_bricks"
+  }
+}

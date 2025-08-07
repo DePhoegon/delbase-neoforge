@@ -1,0 +1,77 @@
+{
+  "render_type": "cutout",
+  "textures": {
+    "particle": "#wall"
+  },
+  "elements": [
+    {
+      "from": [ 5, 0, 8 ],
+      "to": [ 11, 14, 8 ],
+      "faces": {
+        "north": { "texture": "#wall", "cullface": "north", "tintindex": 0 }
+      },
+      "__comment": "wall, Separate Texture for top & bottom for textured walls"
+    },
+    {
+      "from": [ 8, 0, 0 ],
+      "to": [ 8, 14, 8 ],
+      "faces": {
+        "west":  { "texture": "#wall", "tintindex": 0 },
+        "east":  { "texture": "#wall", "tintindex": 0 }
+      },
+      "__comment": "wall, Separate Texture for top & bottom for textured walls"
+    },
+    {
+      "from": [ 5, 13.998, 0 ],
+      "to": [ 11, 14, 8 ],
+      "faces": {
+        "down":  { "texture": "#top", "cullface": "down", "tintindex": 0 },
+        "up":    { "texture": "#top", "tintindex": 0 }
+      },
+      "__comment": "wall, Separate Texture for top & bottom for textured walls"
+    },
+    {
+      "from": [ 5, 0, 0 ],
+      "to": [ 11, 0.002, 8 ],
+      "faces": {
+        "down":  { "texture": "#top", "cullface": "down", "tintindex": 0 },
+        "up":    { "texture": "#top", "tintindex": 0 }
+      },
+      "__comment": "wall, Separate Texture for top & bottom for textured walls"
+    },
+    {
+      "from": [ 5, 0, 7.998 ],
+      "to": [ 11, 14, 8 ],
+      "faces": {
+        "north": { "texture": "#wall", "cullface": "north", "tintindex": 0 }
+      },
+      "__comment": "wall, Separate Texture for top & bottom for textured walls"
+    },
+    {
+      "from": [ 5, 0, 0 ],
+      "to": [ 11, 14, 0.002 ],
+      "faces": {
+        "north": { "texture": "#wall", "cullface": "north", "tintindex": 0 }
+      },
+      "__comment": "wall, Separate Texture for top & bottom for textured walls"
+    },
+    {
+      "from": [ 10.998, 0, 0 ],
+      "to": [ 11, 14, 8 ],
+      "faces": {
+        "west":  { "texture": "#wall", "tintindex": 0 },
+        "east":  { "texture": "#wall", "tintindex": 0 }
+      },
+      "__comment": "wall, Separate Texture for top & bottom for textured walls"
+    },
+    {
+      "from": [ 5, 0, 0 ],
+      "to": [ 5.002, 14, 8 ],
+      "faces": {
+        "west":  { "texture": "#wall", "tintindex": 0 },
+        "east":  { "texture": "#wall", "tintindex": 0 }
+      },
+      "__comment": "wall, Separate Texture for top & bottom for textured walls"
+    }
+  ]
+}

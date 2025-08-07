@@ -1,0 +1,7 @@
+{
+  "parent": "delbase:block/template/fence_gate_root",
+  "textures": {
+    "texture": "minecraft:block/flowering_azalea_leaves",
+    "postside": "minecraft:block/flowering_azalea_leaves"
+  }
+}

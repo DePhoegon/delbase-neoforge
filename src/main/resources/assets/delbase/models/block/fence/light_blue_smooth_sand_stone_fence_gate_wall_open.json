@@ -1,0 +1,6 @@
+{
+"parent": "minecraft:block/template_fence_gate_wall_open",
+"textures": {
+"texture": "delbase:block/light_blue_sand_stone_top"
+}
+}

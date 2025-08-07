@@ -1,0 +1,9 @@
+{
+  "parent": "delbase:block/template/outer_stairs",
+  "textures": {
+    "bottom": "minecraft:block/acacia_log",
+    "top": "minecraft:block/acacia_log",
+    "side": "minecraft:block/acacia_log",
+    "inside": "minecraft:block/acacia_log"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "delbase:block/template/fence_gate_open",
+  "textures": {
+    "texture": "minecraft:block/ochre_froglight_top",
+    "postside": "minecraft:block/ochre_froglight_side"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "delbase:block/template/fence_gate",
+  "textures": {
+    "texture": "minecraft:block/deepslate",
+    "postside": "minecraft:block/deepslate_top"
+  }
+}

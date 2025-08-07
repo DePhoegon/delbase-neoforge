@@ -1,0 +1,6 @@
+{
+"parent": "minecraft:block/fence_post",
+"textures": {
+"texture": "delbase:block/gray_sand_stone_top"
+}
+}

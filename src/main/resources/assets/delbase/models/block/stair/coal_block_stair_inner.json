@@ -1,0 +1,9 @@
+{
+  "parent": "delbase:block/template/inner_stairs",
+  "textures": {
+    "bottom": "minecraft:block/coal_block",
+    "top": "minecraft:block/coal_block",
+    "side": "minecraft:block/coal_block",
+    "inside": "minecraft:block/coal_block"
+  }
+}

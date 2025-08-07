@@ -1,0 +1,6 @@
+{
+  "parent": "delbase:block/template/fence_side_wood_tweak",
+  "textures": {
+    "texture": "minecraft:block/cherry_log_top"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "delbase:block/template/fence_inventory",
+  "textures": {
+    "texture": "minecraft:block/acacia_log",
+    "postside": "minecraft:block/acacia_log"
+  }
+}

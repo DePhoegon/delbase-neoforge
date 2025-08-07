@@ -1,0 +1,10 @@
+{
+  "parent": "delbase:block/template/outer_stairs_column",
+  "textures": {
+    "bottom": "minecraft:block/pearlescent_froglight_top",
+    "top": "minecraft:block/pearlescent_froglight_top",
+    "side": "minecraft:block/pearlescent_froglight_side",
+    "inside": "minecraft:block/pearlescent_froglight_side",
+    "inside_base": "minecraft:block/pearlescent_froglight_top"
+  }
+}

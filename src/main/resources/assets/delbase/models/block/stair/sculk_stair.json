@@ -1,0 +1,9 @@
+{
+  "parent": "delbase:block/template/stairs",
+  "textures": {
+    "bottom": "minecraft:block/sculk",
+    "top": "minecraft:block/sculk",
+    "side": "minecraft:block/sculk",
+    "inside": "minecraft:block/sculk"
+  }
+}

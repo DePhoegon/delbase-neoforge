@@ -1,0 +1,10 @@
+{
+  "parent": "delbase:block/template/stairs_column",
+  "textures": {
+    "bottom": "minecraft:block/acacia_log_top",
+    "top": "minecraft:block/acacia_log_top",
+    "side": "minecraft:block/acacia_log",
+    "inside": "delbase:block/acacia_log_inside_side",
+    "inside_base": "minecraft:block/acacia_log_top"
+  }
+}
