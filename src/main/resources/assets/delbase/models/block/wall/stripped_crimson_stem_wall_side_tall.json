@@ -1,0 +1,7 @@
+{
+  "parent": "delbase:block/template/wall_side_tall",
+  "textures": {
+    "wall": "minecraft:block/crimson_planks",
+    "top": "delbase:block/crimson_planks_wall_top"
+  }
+}

@@ -1,0 +1,7 @@
+{ 
+  "parent": "delbase:block/template/wall_side_tall",
+  "textures": { 
+    "wall": "delbase:block/orange_cut_sand_stone",
+    "top": "delbase:block/orange_sand_stone_top"
+  } 
+} 

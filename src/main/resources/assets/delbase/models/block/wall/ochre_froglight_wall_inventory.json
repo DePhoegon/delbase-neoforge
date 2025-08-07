@@ -1,0 +1,7 @@
+{
+  "parent": "delbase:block/template/wall_inventory",
+  "textures": {
+    "wall": "minecraft:block/ochre_froglight_side",
+    "top": "minecraft:block/ochre_froglight_side"
+  }
+}

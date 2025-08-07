@@ -1,0 +1,7 @@
+{ 
+  "parent": "minecraft:block/cube_column", 
+  "textures": { 
+    "end": "delbase:block/brown_sand_stone_top",
+    "side": "delbase:block/brown_sand_stone_top"
+  } 
+} 

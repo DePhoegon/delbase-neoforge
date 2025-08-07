@@ -1,0 +1,8 @@
+{
+  "parent": "delbase:block/template/slab_root",
+  "textures": {
+    "bottom": "minecraft:block/mangrove_roots_top",
+    "top": "minecraft:block/mangrove_roots_top",
+    "side": "minecraft:block/mangrove_roots_side"
+  }
+}

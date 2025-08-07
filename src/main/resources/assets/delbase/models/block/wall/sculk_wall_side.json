@@ -1,0 +1,7 @@
+{
+  "parent": "delbase:block/template/wall_side",
+  "textures": {
+    "wall": "minecraft:block/sculk",
+    "top": "minecraft:block/sculk"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "delbase:block/template/wall_post",
+  "textures": {
+    "wall": "minecraft:block/shroomlight",
+    "top": "minecraft:block/shroomlight"
+  }
+}

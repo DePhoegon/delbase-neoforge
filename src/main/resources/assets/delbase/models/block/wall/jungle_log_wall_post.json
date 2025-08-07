@@ -1,0 +1,7 @@
+{
+  "parent": "delbase:block/template/wall_post",
+  "textures": {
+    "wall": "minecraft:block/jungle_log",
+    "top": "minecraft:block/jungle_log"
+  }
+}

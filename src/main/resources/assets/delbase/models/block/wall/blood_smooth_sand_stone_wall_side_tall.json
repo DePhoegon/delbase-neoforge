@@ -1,0 +1,6 @@
+{ 
+  "parent": "minecraft:block/template_wall_side_tall", 
+  "textures": { 
+    "wall": "delbase:block/blood_sand_stone_top"
+  } 
+}

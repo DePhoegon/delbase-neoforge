@@ -1,0 +1,7 @@
+{ 
+  "parent": "delbase:block/template/wall_post",
+  "textures": { 
+    "wall": "delbase:block/light_blue_cut_sand_stone",
+    "top": "delbase:block/light_blue_sand_stone_top"
+  } 
+} 

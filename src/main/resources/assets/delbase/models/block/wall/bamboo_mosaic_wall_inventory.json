@@ -1,0 +1,7 @@
+{
+  "parent": "delbase:block/template/wall_inventory",
+  "textures": {
+    "wall": "minecraft:block/bamboo_mosaic",
+    "top": "minecraft:block/bamboo_mosaic"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "delbase:block/template/wall_inventory",
+  "textures": {
+    "wall": "minecraft:block/crimson_stem",
+    "top": "minecraft:block/crimson_stem_top"
+  }
+}

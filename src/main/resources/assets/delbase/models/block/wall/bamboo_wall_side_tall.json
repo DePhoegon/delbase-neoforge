@@ -1,0 +1,7 @@
+{
+  "parent": "delbase:block/template/wall_side_tall_twist",
+  "textures": {
+    "wall": "minecraft:block/bamboo_block",
+    "top": "delbase:block/bamboo_block_wall_top"
+  }
+}

@@ -1,0 +1,7 @@
+{ 
+  "parent": "delbase:block/template/slab",
+  "textures": { 
+    "bottom": "delbase:block/light_gray_sand_stone_bottom",
+    "side": "delbase:block/light_gray_sand_stone" 
+  } 
+} 

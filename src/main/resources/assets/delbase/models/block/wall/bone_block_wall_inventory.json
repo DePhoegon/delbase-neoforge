@@ -1,0 +1,7 @@
+{
+  "parent": "delbase:block/template/wall_inventory",
+  "textures": {
+    "wall": "minecraft:block/bone_block_side",
+    "top": "minecraft:block/bone_block_top"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "delbase:block/template/wall_inventory",
+  "textures": {
+    "wall": "minecraft:block/cyan_terracotta",
+    "top": "minecraft:block/cyan_terracotta"
+  }
+}

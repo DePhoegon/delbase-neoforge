@@ -1,0 +1,7 @@
+{
+  "parent": "delbase:block/template/wall_inventory",
+  "textures": {
+    "wall": "minecraft:block/muddy_mangrove_roots_side",
+    "top": "minecraft:block/muddy_mangrove_roots_side"
+  }
+}

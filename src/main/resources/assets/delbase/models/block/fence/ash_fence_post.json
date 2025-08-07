@@ -1,0 +1,7 @@
+{
+  "parent": "delbase:block/template/fence_post",
+  "textures": {
+    "texture": "delbase:block/ash_log",
+    "postside": "delbase:block/ash_log"
+  }
+}

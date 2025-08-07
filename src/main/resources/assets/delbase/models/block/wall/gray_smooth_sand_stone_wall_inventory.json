@@ -1,0 +1,6 @@
+{ 
+  "parent": "minecraft:block/wall_inventory", 
+  "textures": { 
+    "wall": "delbase:block/gray_sand_stone_top"
+  } 
+} 
