@@ -1,0 +1,16 @@
+{
+  "required": true,
+  "package": "com.dephoegon.delbase.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+    "FenceBlockMixin",
+    "FenceGateBlockMixin",
+    "RotatedPillarBlockMixin",
+    "SlabBlockMixin",
+    "StairBlockMixin",
+    "WallBlockMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

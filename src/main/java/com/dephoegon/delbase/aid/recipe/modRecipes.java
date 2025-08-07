@@ -10,7 +10,7 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 import static com.dephoegon.delbase.Delbase.Mod_ID;
 
 public class modRecipes {
-    private static final String blockCutterRecipeName = "block_cutting";
+    public static final String blockCutterRecipeName = "block_cutting";
     public static final DeferredRegister<RecipeSerializer<?>> RECIPE_SERIALIZERS = DeferredRegister.create(Registries.RECIPE_SERIALIZER, Mod_ID);
     public static final DeferredRegister<RecipeType<?>> RECIPE_TYPES = DeferredRegister.create(Registries.RECIPE_TYPE, Mod_ID);
 
