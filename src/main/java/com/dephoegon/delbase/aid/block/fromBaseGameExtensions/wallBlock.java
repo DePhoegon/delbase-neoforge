@@ -14,7 +14,6 @@ import net.minecraft.world.level.block.WallBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.WallSide;
 import net.neoforged.neoforge.common.ItemAbility;
-import net.neoforged.neoforge.common.extensions.IBlockStateExtension;
 import net.neoforged.neoforge.common.util.TriState;
 import org.jetbrains.annotations.NotNull;
 

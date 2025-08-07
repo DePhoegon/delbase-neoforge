@@ -2,8 +2,6 @@ package com.dephoegon.delbase.aid.recipe;
 
 import com.dephoegon.delbase.aid.config.Config;
 import net.minecraft.world.SimpleContainer;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.Random;

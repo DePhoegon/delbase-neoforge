@@ -13,6 +13,7 @@ import net.minecraft.world.level.block.SoundType;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
+import org.jetbrains.annotations.NotNull;
 
 import javax.annotation.Nullable;
 import java.util.function.Supplier;
@@ -115,7 +116,7 @@ public class strippedWoodenFences {
         DeferredBlock<T> exit = BLOCKS.register(name, block);
         ITEMS.register(name, () -> new BlockItem(exit.get(),
                 new Item.Properties().stacksTo(64)){
-            public int getBurnTime(ItemStack stack, @Nullable RecipeType<?> recipeType) {
+            public int getBurnTime(@NotNull ItemStack stack, @Nullable RecipeType<?> recipeType) {
                 return burn;
             }
         });

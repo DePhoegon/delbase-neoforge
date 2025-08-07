@@ -13,7 +13,6 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 import org.jetbrains.annotations.NotNull;
 
-import javax.annotation.Nullable;
 import java.util.List;
 
 import static com.dephoegon.delbase.aid.event.typeSelector.*;
@@ -32,7 +31,7 @@ public class blockDye extends DyeItem {
     }
 
     @Override
-    public void appendHoverText(@NotNull ItemStack stack, @Nullable Item.TooltipContext level, @NotNull List<Component> toolTip, @NotNull TooltipFlag flag) {
+    public void appendHoverText(@NotNull ItemStack stack, Item.@NotNull TooltipContext level, @NotNull List<Component> toolTip, @NotNull TooltipFlag flag) {
         super.appendHoverText(stack, level, toolTip, flag);
         if(!(kb.HShift()) && !(kb.HCtrl()) && tip0 != null) toolTip.add(Component.translatable(tip0)); //if neither pressed, show tip0 (if not empty)
         if(kb.HCtrl() && tip2 != null) toolTip.add(Component.translatable(tip2)); //if ctrl, show tip2 (if not empty), do first

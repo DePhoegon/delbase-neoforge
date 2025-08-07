@@ -20,7 +20,6 @@ import static com.dephoegon.delbase.block.general.ashBlocks.*;
 import static com.dephoegon.delbase.block.general.miscSpecialCases.ASH_BLOCK;
 import static net.minecraft.world.level.block.StairBlock.SHAPE;
 import static net.minecraft.world.level.block.state.properties.BlockStateProperties.*;
-import static net.minecraft.world.level.block.state.properties.BlockStateProperties.IN_WALL;
 
 public class burnChance {
     private static boolean ashReplaceRNG() {

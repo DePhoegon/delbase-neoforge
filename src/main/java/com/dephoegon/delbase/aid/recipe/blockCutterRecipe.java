@@ -15,8 +15,6 @@ import net.minecraft.world.level.Level;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-import java.util.Map;
-
 public record blockCutterRecipe(inputCountAid inputItem, inputCountAid planItem, ItemStack output) implements Recipe<blockCutterRecipeInput> {
 
     public @NotNull NonNullList<Ingredient> getIngredients() {

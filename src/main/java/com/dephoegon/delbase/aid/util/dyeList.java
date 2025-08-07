@@ -3,7 +3,6 @@ package com.dephoegon.delbase.aid.util;
 import net.minecraft.world.item.ItemStack;
 
 import static com.dephoegon.delbase.item.shiftingDyes.*;
-import static com.dephoegon.delbase.item.shiftingDyes.BLACK_SHIFT_DYE;
 
 public class dyeList {
     public static final ItemStack cleanse = new ItemStack(CLEANSE_SHIFT_DYE.get());

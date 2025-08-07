@@ -11,7 +11,6 @@ import net.minecraft.world.level.block.state.BlockState;
 import org.jetbrains.annotations.NotNull;
 
 import static com.dephoegon.delbase.aid.util.dyeList.*;
-import static com.dephoegon.delbase.aid.util.dyeList.black;
 import static com.dephoegon.delbase.item.shiftingDyes.*;
 
 public class colorMixInteraction {
