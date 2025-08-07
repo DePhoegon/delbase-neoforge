@@ -1,6 +1,7 @@
 package com.dephoegon.delbase.aid.recipe;
 
 import com.dephoegon.delbase.Delbase;
+import com.dephoegon.delbase.block.entity.screen.blockCutterScreen;
 import mezz.jei.api.IModPlugin;
 import mezz.jei.api.registration.IGuiHandlerRegistration;
 import mezz.jei.api.registration.IRecipeCategoryRegistration;
@@ -33,6 +34,6 @@ public class JeiPlugin implements IModPlugin {
 
     @Override
     public void registerGuiHandlers(@NotNull IGuiHandlerRegistration registration) {
-        registration.addRecipeClickArea();
+        registration.addRecipeClickArea(blockCutterScreen.class, 103, 40, 20, 20, blockCuttingStationRecipeCategory_JEI.RECIPE_TYPE);
     }
 }
