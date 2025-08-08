@@ -8,8 +8,17 @@ import net.minecraft.network.codec.StreamCodec;
 import net.minecraft.world.item.crafting.Ingredient;
 
 public record inputCountAid(Ingredient ingredient, int count) {
+    // Custom codec that handles simple string item references
+    private static final Codec<Ingredient> SIMPLE_INGREDIENT_CODEC = Codec.STRING.xmap(
+        itemString -> Ingredient.of(net.minecraft.core.registries.BuiltInRegistries.ITEM.get(net.minecraft.resources.ResourceLocation.parse(itemString))),
+        ingredient -> {
+            // This is only used for encoding, not needed for JSON parsing
+            return ingredient.getItems()[0].getItem().toString();
+        }
+    );
+
     public static final MapCodec<inputCountAid> CODEC = RecordCodecBuilder.mapCodec(instance -> instance.group(
-            Ingredient.CODEC.fieldOf("item").forGetter(inputCountAid::ingredient),
+            SIMPLE_INGREDIENT_CODEC.fieldOf("item").forGetter(inputCountAid::ingredient),
             Codec.INT.optionalFieldOf("count", 1).forGetter(inputCountAid::count)
     ).apply(instance, inputCountAid::new));
 

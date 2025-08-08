@@ -46,7 +46,6 @@ public class blockCuttingStation extends BlockEntity implements MenuProvider, Wo
         public boolean isItemValid(int slot, @NotNull ItemStack stack) {
             return false;
         }
-        @SuppressWarnings("RedundantMethodOverride")
         protected void onContentsChanged(int slot) {  }
     };
     private final ItemStackHandler itemHandler = new ItemStackHandler(blockCuttingStationSlotCount) {
@@ -79,7 +78,10 @@ public class blockCuttingStation extends BlockEntity implements MenuProvider, Wo
     };
     public final ItemStackHandler getWholeInventory() { return itemHandler; }
     private final ItemStackHandler inputHandle = new ItemStackHandler(1) {
-        public boolean isItemValid(int slot, @NotNull ItemStack stack) { return !isPlansSlotItem(stack.getItem()); }
+        public boolean isItemValid(int slot, @NotNull ItemStack stack) {
+            // Check if it's NOT a plans slot item (including recipe-based ones)
+            return !isPlansSlotItem(stack.getItem(), level);
+        }
         protected void onContentsChanged(int slot) {
             if (inputHandle.getStackInSlot(0) != itemHandler.getStackInSlot(inputSlot)) {
                 itemHandler.setStackInSlot(inputSlot, inputHandle.getStackInSlot(0));
@@ -97,12 +99,15 @@ public class blockCuttingStation extends BlockEntity implements MenuProvider, Wo
         }
     };
     private final ItemStackHandler planHandle = new ItemStackHandler(1){
-        public boolean isItemValid(int slot, @NotNull ItemStack stack) { return isPlansSlotItem(stack.getItem().asItem()); }
+        public boolean isItemValid(int slot, @NotNull ItemStack stack) { return isPlansSlotItem(stack.getItem().asItem(), level); }
         @Override
         protected void onContentsChanged(int slot) {
             if (planHandle.getStackInSlot(0) != itemHandler.getStackInSlot(planSlot)) { itemHandler.setStackInSlot(planSlot, planHandle.getStackInSlot(0)); }
         }
     };
+    public final ItemStackHandler getPlanHandle() { return planHandle; }
+    public final ItemStackHandler getInputHandle() { return inputHandle; }
+    public final ItemStackHandler getOutputHandle() { return outputHandle; }
 
     protected final ContainerData data;
     private int progress = 0;
@@ -144,7 +149,7 @@ public class blockCuttingStation extends BlockEntity implements MenuProvider, Wo
         return ItemStack.EMPTY.getItem();
     }
     public void setPlanSlotItem(@NotNull ItemStack stack) {
-        if (isPlansSlotItem(stack.getItem())) { planHandle.setStackInSlot(0, stack); }
+        if (isPlansSlotItem(stack.getItem(), level)) { planHandle.setStackInSlot(0, stack); }
         else { planHandle.setStackInSlot(0, ItemStack.EMPTY); }
     }
     @Nullable

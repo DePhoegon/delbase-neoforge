@@ -43,7 +43,7 @@ public class blockCutterScreen extends AbstractContainerScreen<blockCuttingMenu>
         RenderSystem.setShaderColor(1.0F,1.0F,1.0F,1.0F);
         Item item = blockCuttingStation.iHandler.getStackInSlot(planSlot).getItem();
         ResourceLocation TEXTURE = EMPTY_TEXTURE;
-        if (isPlansSlotItem(item)) {
+        if (isPlansSlotItem(item, minecraft != null ? minecraft.level : null)) {
             if (item == WALL_PLANS.get().asItem()) { TEXTURE = PLANS_WALL_TEXTURE; }
             if (item == FENCE_GATE_PLANS.get().asItem()) { TEXTURE = PLANS_FENCE_GATE_TEXTURE; }
             if (item == FENCE_PLANS.get().asItem()) { TEXTURE = PLANS_FENCE_TEXTURE; }

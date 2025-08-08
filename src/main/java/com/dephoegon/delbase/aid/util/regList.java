@@ -116,7 +116,6 @@ public class regList {
         // Special
         menuTypes.registerMenus(eventBus);
         modRecipes.register(eventBus);
-        // recipes ->
     }
 
 }

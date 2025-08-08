@@ -37,6 +37,8 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.stream.Stream;
 
+import static com.dephoegon.delbase.aid.slots.planSlots.isPlansSlotItem;
+
 @SuppressWarnings("RedundantMethodOverride")
 public class cuttingStationBlock extends horizontalFacingBlockEntities {
     public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
@@ -148,12 +150,20 @@ public class cuttingStationBlock extends horizontalFacingBlockEntities {
         }
         return InteractionResult.sidedSuccess(pLevel.isClientSide());
     }
+    protected @NotNull InteractionResult useWithoutItem(@NotNull BlockState state, @NotNull Level level, @NotNull BlockPos pos, @NotNull Player player, @NotNull BlockHitResult hitResult) {
+        if (!level.isClientSide()) {
+            BlockEntity entity = level.getBlockEntity(pos);
+            if (entity instanceof blockCuttingStation) {
+                ((ServerPlayer) player).openMenu(new SimpleMenuProvider((blockCuttingStation) entity, Component.translatable("gui.delbase.block_cutter")), pos);
+            } else { throw new IllegalStateException("DelBase Container Provider is Missing - Block Cutting Station"); }
+        }
+        return InteractionResult.sidedSuccess(level.isClientSide());
+    }
     protected @NotNull ItemInteractionResult useItemOn(@NotNull ItemStack stack, @NotNull BlockState state, @NotNull Level level, @NotNull BlockPos pos, @NotNull Player player, @NotNull InteractionHand hand, @NotNull BlockHitResult hit) {
-        // if (level.isClientSide()) { return super.useItemOn(stack, state, level, pos, player, hand, hit); } // Unsure if this is needed, but leaving it here for now.
         BlockEntity entity = level.getBlockEntity(pos);
         if (entity instanceof blockCuttingStation) {
             if (((blockCuttingStation) entity).getPlanSlotItem().isEmpty()) {
-                if (!stack.isEmpty()) {
+                if (!stack.isEmpty() && isPlansSlotItem(stack.getItem(), level)) {
                     int maxStackSize = stack.getMaxStackSize();
                     int copyCount = stack.getCount() > maxStackSize ? maxStackSize : stack.getCount() < 1 ? 0 : stack.getCount();
                     if (copyCount < 1) { return ItemInteractionResult.FAIL; }
@@ -161,6 +171,11 @@ public class cuttingStationBlock extends horizontalFacingBlockEntities {
                     ((blockCuttingStation) entity).setPlanSlotItem(copy);
                     stack.shrink(copyCount);
                     level.playSound(player, pos, SoundEvents.ITEM_PICKUP, SoundSource.BLOCKS, 1.0F, 2.0F);
+                    return ItemInteractionResult.SUCCESS;
+                }
+            } else {
+                if (!level.isClientSide()) {
+                    ((ServerPlayer) player).openMenu(new SimpleMenuProvider((blockCuttingStation) entity, Component.translatable("gui.delbase.block_cutter")), pos);
                     return ItemInteractionResult.SUCCESS;
                 }
             }

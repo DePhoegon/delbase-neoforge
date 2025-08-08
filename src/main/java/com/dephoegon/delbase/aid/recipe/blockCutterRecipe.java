@@ -39,6 +39,7 @@ public record blockCutterRecipe(inputCountAid inputItem, inputCountAid planItem,
     public int getPlanCount() { return planItem.count(); }
     public @NotNull RecipeSerializer<?> getSerializer() { return modRecipes.BLOCK_CUTTER_SERIALIZER.get(); }
     public @NotNull RecipeType<?> getType() { return modRecipes.BLOCK_CUTTER_TYPE.get(); }
+    public boolean isSpecial() { return true;  }
 
     public static class Serializer implements RecipeSerializer<blockCutterRecipe> {
         public static final String ID = "block_cutter_recipe";
@@ -47,7 +48,7 @@ public record blockCutterRecipe(inputCountAid inputItem, inputCountAid planItem,
                         .group(
                             inputCountAid.CODEC.fieldOf("input").forGetter(blockCutterRecipe::inputItem),
                             inputCountAid.CODEC.fieldOf("plans").forGetter(blockCutterRecipe::planItem),
-                            ItemStack.CODEC.fieldOf("output").forGetter(blockCutterRecipe::output)
+                            ItemStack.STRICT_CODEC.fieldOf("output").forGetter(blockCutterRecipe::output)
                         ).apply(instance, blockCutterRecipe::new)
                 );
 

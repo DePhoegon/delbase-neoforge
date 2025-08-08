@@ -37,7 +37,7 @@ public class blockCuttingMenu extends AbstractContainerMenu {
 
         IItemHandler itemHandler = blockEntity.getWholeInventory();
         this.addSlot(new itemSlot(itemHandler, inputSlot, 57, 18));
-        this.addSlot(new planSlots(itemHandler, planSlot, 103, 18));
+        this.addSlot(new planSlots(itemHandler, planSlot, 103, 18, this.level));
         this.addSlot(new resultSlots(itemHandler, outputSlot, 80, 60));
 
         addDataSlots(data);

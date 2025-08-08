@@ -103,16 +103,4 @@ public abstract class horizontalFacingBlockEntities extends BaseEntityBlock impl
         }
         super.onRemove(pState, pLevel, pPos, pNewState, pIsMoving);
     }
-    @SuppressWarnings("RedundantCast")
-    public @NotNull InteractionResult use(@NotNull BlockState pState, @NotNull Level pLevel, @NotNull BlockPos pPos, @NotNull Player pPlayer, @NotNull InteractionHand pHand, @NotNull BlockHitResult pHit) {
-        if (!pLevel.isClientSide()) {
-            BlockEntity entity = pLevel.getBlockEntity(pPos);
-            if(entity instanceof blockCuttingStation) {
-                ((ServerPlayer) pPlayer).openMenu((blockCuttingStation) entity);
-            } else {
-                throw new IllegalStateException("DelBase Block Cutting Station, Container Provider missing");
-            }
-        }
-        return InteractionResult.sidedSuccess(pLevel.isClientSide());
-    }
 }
