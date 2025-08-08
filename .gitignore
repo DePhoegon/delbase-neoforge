@@ -26,8 +26,9 @@ run/logs
 run/mods
 run/patchouli_books
 run/resourcepacks
+run/downloads
 run/saves
-run/options.txt
+run/*.txt
 run/*.json
 run/crash-reports
 run/servers.*

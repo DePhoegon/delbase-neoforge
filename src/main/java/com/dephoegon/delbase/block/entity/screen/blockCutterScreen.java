@@ -1,6 +1,5 @@
 package com.dephoegon.delbase.block.entity.screen;
 
-import com.dephoegon.delbase.block.entity.bEntity.blockCuttingStation;
 import com.mojang.blaze3d.systems.RenderSystem;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
@@ -13,7 +12,6 @@ import org.jetbrains.annotations.NotNull;
 
 import static com.dephoegon.delbase.Delbase.Mod_ID;
 import static com.dephoegon.delbase.aid.slots.planSlots.isPlansSlotItem;
-import static com.dephoegon.delbase.block.entity.bEntity.blockCuttingStation.planSlot;
 import static com.dephoegon.delbase.item.blockCutterPlans.*;
 import static net.minecraft.resources.ResourceLocation.fromNamespaceAndPath;
 
@@ -41,7 +39,10 @@ public class blockCutterScreen extends AbstractContainerScreen<blockCuttingMenu>
     protected void renderBg(@NotNull GuiGraphics pPoseStack, float pPartialTick, int pMouseX, int pMouseY) {
         RenderSystem.setShader(GameRenderer::getPositionTexShader);
         RenderSystem.setShaderColor(1.0F,1.0F,1.0F,1.0F);
-        Item item = blockCuttingStation.iHandler.getStackInSlot(planSlot).getItem();
+
+        // Get the item from the specific block entity instance through the menu
+        Item item = menu.getBlockEntity().getPlanSlotItem().getItem();
+
         ResourceLocation TEXTURE = EMPTY_TEXTURE;
         if (isPlansSlotItem(item, minecraft != null ? minecraft.level : null)) {
             if (item == WALL_PLANS.get().asItem()) { TEXTURE = PLANS_WALL_TEXTURE; }

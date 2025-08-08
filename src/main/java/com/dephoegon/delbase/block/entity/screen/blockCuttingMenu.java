@@ -104,4 +104,5 @@ public class blockCuttingMenu extends AbstractContainerMenu {
             this.addSlot(new Slot(playerInventory, i, 8 + i * 18, 144));
         }
     }
+    public blockCuttingStation getBlockEntity() { return blockEntity; }
 }

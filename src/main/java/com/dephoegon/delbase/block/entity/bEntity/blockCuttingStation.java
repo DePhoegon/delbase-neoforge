@@ -42,12 +42,6 @@ public class blockCuttingStation extends BlockEntity implements MenuProvider, Wo
     public static final int blockCuttingStationSlotCount = 3;
     static final String inventoryKey = "inventory";
 
-    public static final ItemStackHandler iHandler = new ItemStackHandler(blockCuttingStationSlotCount) {
-        public boolean isItemValid(int slot, @NotNull ItemStack stack) {
-            return false;
-        }
-        protected void onContentsChanged(int slot) {  }
-    };
     private final ItemStackHandler itemHandler = new ItemStackHandler(blockCuttingStationSlotCount) {
         @Override
         protected void onContentsChanged(int slot) {
@@ -105,13 +99,13 @@ public class blockCuttingStation extends BlockEntity implements MenuProvider, Wo
             if (planHandle.getStackInSlot(0) != itemHandler.getStackInSlot(planSlot)) { itemHandler.setStackInSlot(planSlot, planHandle.getStackInSlot(0)); }
         }
     };
-    public final ItemStackHandler getPlanHandle() { return planHandle; }
-    public final ItemStackHandler getInputHandle() { return inputHandle; }
-    public final ItemStackHandler getOutputHandle() { return outputHandle; }
 
     protected final ContainerData data;
     private int progress = 0;
     private int maxProgress = BLOCK_CUTTING_STATION_CRAFT_TIME.get();
+    private boolean wasCrafting = false;
+    private int outputDisableTimer = 0;
+
     public blockCuttingStation(BlockPos pWorldPosition, BlockState pBlockState) {
         super(modBlockEntities.BLOCK_CUTTING_STATION_BE.get(), pWorldPosition, pBlockState);
         // Crafting Progress Container
@@ -142,6 +136,7 @@ public class blockCuttingStation extends BlockEntity implements MenuProvider, Wo
     @Override
     public @NotNull Component getDisplayName() { return Component.translatable("gui.delbase.block_cutter"); }
     public @NotNull ItemStack getPlanSlotItem() { return planHandle.getStackInSlot(0); }
+    @SuppressWarnings("unused")
     public static Item getPlanSlotItem(@NotNull BlockEntity blockEntity) {
         if (blockEntity instanceof blockCuttingStation cuttingStation) {
             return cuttingStation.getPlanSlotItem().getItem();
@@ -161,6 +156,8 @@ public class blockCuttingStation extends BlockEntity implements MenuProvider, Wo
     protected void saveAdditional(@NotNull CompoundTag tag, HolderLookup.@NotNull Provider registries) {
         tag.put(inventoryKey, itemHandler.serializeNBT(registries));
         tag.putInt("block_cutting_station.progress", progress);
+        tag.putBoolean("block_cutting_station.was_crafting", wasCrafting);
+        tag.putInt("block_cutting_station.output_disable_timer", outputDisableTimer);
         super.saveAdditional(tag, registries);
     }
     @Override
@@ -168,6 +165,29 @@ public class blockCuttingStation extends BlockEntity implements MenuProvider, Wo
         super.loadAdditional(nbt, registries);
         itemHandler.deserializeNBT(registries, nbt.getCompound(inventoryKey)); // Deserialize Calls onLoad() in ItemStackHandler
         progress = nbt.getInt("block_cutting_station.progress");
+        wasCrafting = nbt.getBoolean("block_cutting_station.was_crafting");
+        outputDisableTimer = nbt.getInt("block_cutting_station.output_disable_timer");
+    }
+
+    // Method to check if hopper output should be disabled (final 5 ticks + 5 ticks after)
+    public boolean isOutputDisabled() {
+        if (wasCrafting && hasRecipe() && progress > (maxProgress - 5)) { return true; }
+        return outputDisableTimer > 5;
+    }
+
+    // Force synchronization and unlock output - useful for debugging or manual override
+    public static void forceSyncAndUnlock(blockCuttingStation entity) {
+        if (entity == null || entity.level == null || entity.level.isClientSide()) { return; }
+        Level level = entity.level;
+        // Force a full block update to sync client/server
+        level.sendBlockUpdated(entity.getBlockPos(), entity.getBlockState(), entity.getBlockState(), 3);
+        entity.setChanged();
+
+        // Clear the disable timer to immediately unlock
+        // entity.outputDisableTimer = 0; // Commented out to keep the disable timer logic intact and give the block fully sync before timer runs out
+
+        // Notify neighboring blocks (hoppers) that extraction is available
+        level.neighborChanged(entity.getBlockPos().below(), entity.getBlockState().getBlock(), entity.getBlockPos());
     }
 
     public void drops(){
@@ -177,13 +197,40 @@ public class blockCuttingStation extends BlockEntity implements MenuProvider, Wo
         Containers.dropContents(this.level, this.worldPosition, inventory);
     }
     public static void tick(Level pLevel, BlockPos pPos, BlockState pState, blockCuttingStation pBlockEntity) {
-        if(pBlockEntity.hasRecipe()) {
+        boolean currentlyCrafting = pBlockEntity.hasRecipe();
+        boolean wasOutputDisabled = pBlockEntity.isOutputDisabled();
+
+        // Handle output disable timer
+        if (pBlockEntity.outputDisableTimer > 0) {
+            pBlockEntity.outputDisableTimer--;
+        }
+
+        if (currentlyCrafting) {
             pBlockEntity.progress++;
             setChanged(pLevel, pPos, pState);
-            if(pBlockEntity.progress > pBlockEntity.maxProgress) { craftItem(pBlockEntity); }
+
+            // Track crafting state
+            if (!pBlockEntity.wasCrafting) { pBlockEntity.wasCrafting = true; }
+
+            if (pBlockEntity.progress > pBlockEntity.maxProgress) {
+                craftItem(pBlockEntity);
+                // Start disable timer for 10 ticks after completion (5 ticks protection)
+                pBlockEntity.outputDisableTimer = 10;
+            }
         } else {
             pBlockEntity.resetProgress();
             setChanged(pLevel, pPos, pState);
+            if (pBlockEntity.wasCrafting) {
+                forceSyncAndUnlock(pBlockEntity);
+                pBlockEntity.wasCrafting = false;
+            }
+        }
+
+        // Notify neighbors when output becomes available again
+        boolean isOutputDisabled = pBlockEntity.isOutputDisabled();
+        if (wasOutputDisabled && !isOutputDisabled) {
+            // Output just became available - notify hoppers below
+            pLevel.neighborChanged(pPos.below(), pState.getBlock(), pPos);
         }
     }
     private Optional<RecipeHolder<blockCutterRecipe>> getCurrentRecipe() {
@@ -291,16 +338,16 @@ public class blockCuttingStation extends BlockEntity implements MenuProvider, Wo
             }
             if (keyString.equals("netherite")) {
                 confettiDropper = netheriteToolsBonus(outputStackCount);
-                entity.itemHandler.setStackInSlot(outputSlot, new ItemStack(resultItem, entity.itemHandler.getStackInSlot(outputSlot).getCount() + 1));
+                entity.itemHandler.setStackInSlot(outputSlot, new ItemStack(resultItem, outputCountTmp + 1));
                 //put into the slot, as Netherite is a high tier. diamond(s) still allowed pop out like confetti.
             }
             if (keyString.equals("tools")) {
                 confettiDropper = ToolsBonus();
-                entity.itemHandler.setStackInSlot(outputSlot, new ItemStack(resultItem, entity.itemHandler.getStackInSlot(outputSlot).getCount() + outputStackCount));
+                entity.itemHandler.setStackInSlot(outputSlot, new ItemStack(resultItem, outputCountTmp + outputStackCount));
                 //pops sticks like confetti, puts the output item
             }
             Containers.dropContents(level, worldPosition, confettiDropper);
-        } else { entity.itemHandler.setStackInSlot(outputSlot, new ItemStack(resultItem, entity.itemHandler.getStackInSlot(outputSlot).getCount() + outputStackCount)); }
+        } else { entity.itemHandler.setStackInSlot(outputSlot, new ItemStack(resultItem, outputCountTmp + outputStackCount)); }
         entity.resetProgress();
     }
     private void resetProgress() { this.progress = 0; }
@@ -332,15 +379,27 @@ public class blockCuttingStation extends BlockEntity implements MenuProvider, Wo
 
     @Override
     public @NotNull ItemStack removeItem(int slot, int amount) {
+        // Extra protection for output slot during disabled period
+        if (slot == outputSlot && isOutputDisabled()) {
+            return ItemStack.EMPTY; // Don't allow ANY removal during disabled period
+        }
+
         setChanged();
         ItemStack stack = itemHandler.getStackInSlot(slot);
-        stack.shrink(amount);
+        if (stack.isEmpty()) { return ItemStack.EMPTY; }
+
+        ItemStack extractedStack = stack.split(amount);
         itemHandler.setStackInSlot(slot, stack.isEmpty() ? ItemStack.EMPTY : stack);
-        return stack;
+        return extractedStack;
     }
 
     @Override
     public @NotNull ItemStack removeItemNoUpdate(int slot) {
+        // Extra protection for output slot during disabled period
+        if (slot == outputSlot && isOutputDisabled()) {
+            return ItemStack.EMPTY; // Don't allow ANY removal during disabled period
+        }
+
         setChanged();
         ItemStack stack = itemHandler.getStackInSlot(slot);
         itemHandler.setStackInSlot(slot, ItemStack.EMPTY);
@@ -372,13 +431,19 @@ public class blockCuttingStation extends BlockEntity implements MenuProvider, Wo
 
     @Override
     public boolean canPlaceItemThroughFace(int index, @NotNull ItemStack itemStack, @Nullable Direction direction) {
+        if (index == outputSlot) { return false; }
         boolean isTakeable = canTakeItemThroughFace(index, itemStack, direction);
         if (!isTakeable) { return false; } // If it can't take item through face, then can't place item through face.
         return canPlaceItem(index, itemStack); // If it can take item through face, then check if it can place item in the slot.
     }
     public boolean canTakeItemThroughFace(int index, @NotNull ItemStack stack, @Nullable Direction direction) {
         return switch (index){
-            case outputSlot -> Direction.DOWN == direction;
+            case outputSlot -> {
+                // Only allow extraction from bottom AND when output is not disabled AND there's actually an item
+                if (Direction.DOWN != direction) yield false;
+                if (isOutputDisabled()) yield false;
+                yield !itemHandler.getStackInSlot(outputSlot).isEmpty();
+            }
             case planSlot -> Direction.NORTH == direction || Direction.SOUTH == direction || Direction.EAST == direction || Direction.WEST == direction;
             case inputSlot -> !(Direction.DOWN == direction || Direction.NORTH == direction || Direction.SOUTH == direction || Direction.EAST == direction || Direction.WEST == direction);
             default -> false;

@@ -16,7 +16,5 @@ public record blockCutterRecipeInput(ItemStack input, ItemStack plans) implement
             default -> ItemStack.EMPTY;
         };
     }
-    public int size() {
-        return 2;
-    }
+    public int size() { return 2; }
 }
