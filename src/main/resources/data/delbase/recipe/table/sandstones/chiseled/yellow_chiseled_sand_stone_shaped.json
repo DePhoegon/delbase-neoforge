@@ -1,6 +1,7 @@
 { 
   "type": "minecraft:crafting_shaped", 
-  "pattern": [ "yy","yy" ], 
+  "category": "building_blocks",
+  "pattern": [ "yy","yy" ],
   "key": { 
     "y": { 
       "item": "delbase:yellow_cut_sand_stone" 

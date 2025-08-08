@@ -1,6 +1,7 @@
 { 
   "type": "minecraft:crafting_shaped", 
-  "pattern": [ "yyy","yyy" ], 
+  "category": "misc",
+  "pattern": [ "yyy","yyy" ],
   "key": { 
     "y": { 
       "item": "delbase:magenta_solid_sand"

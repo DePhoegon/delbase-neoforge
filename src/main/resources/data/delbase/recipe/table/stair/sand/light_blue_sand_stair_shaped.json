@@ -1,6 +1,7 @@
 { 
   "type": "minecraft:crafting_shaped", 
-  "pattern": [ "y  ","yy ","yyy" ], 
+  "category": "building_blocks",
+  "pattern": [ "y  ","yy ","yyy" ],
   "key": { 
     "y": { 
       "item": "delbase:light_blue_solid_sand"
