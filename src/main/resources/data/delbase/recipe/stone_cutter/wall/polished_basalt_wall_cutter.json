@@ -3,6 +3,8 @@
   "ingredient": {
     "tag": "delbase:grouped/basalt_blocks"
   },
-  "result": "delbase:polished_basalt_wall",
-  "count": 1
+  "result": {
+    "count": 1,
+    "id": "delbase:polished_basalt_wall"
+  }
 }

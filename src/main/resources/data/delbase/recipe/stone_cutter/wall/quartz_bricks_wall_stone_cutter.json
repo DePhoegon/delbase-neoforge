@@ -3,6 +3,8 @@
   "ingredient": {
     "tag": "delbase:grouped/quartz_blocks"
   },
-  "result": "delbase:quartz_brick_wall",
-  "count": 1
+  "result": {
+    "count": 1,
+    "id": "delbase:quartz_brick_wall"
+  }
 }

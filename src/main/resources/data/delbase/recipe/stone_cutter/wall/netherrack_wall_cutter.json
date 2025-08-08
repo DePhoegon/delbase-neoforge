@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "minecraft:netherrack"
   },
-  "result": "delbase:netherrack_wall",
-  "count": 1
+  "result": {
+    "count": 1,
+    "id": "delbase:netherrack_wall"
+  }
 }

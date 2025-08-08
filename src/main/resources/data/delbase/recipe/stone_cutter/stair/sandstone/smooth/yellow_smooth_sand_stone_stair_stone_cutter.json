@@ -3,6 +3,8 @@
   "ingredient": {
     "tag": "delbase:crafting_sets/color/yellow_sand_stone_set"
   }, 
-  "result": "delbase:yellow_smooth_sand_stone_stair",
-  "count": 1 
+  "result": {
+    "count": 1,
+    "id": "delbase:yellow_smooth_sand_stone_stair"
+  }
 } 

@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "minecraft:purpur_block"
   },
-  "result": "delbase:purpur_block_wall",
-  "count": 1
+  "result": {
+    "count": 1,
+    "id": "delbase:purpur_block_wall"
+  }
 }

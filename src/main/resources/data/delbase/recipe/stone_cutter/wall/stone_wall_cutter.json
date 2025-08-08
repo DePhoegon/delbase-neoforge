@@ -3,6 +3,8 @@
   "ingredient": {
     "tag": "delbase:grouped/stone_blocks"
   },
-  "result": "delbase:stone_wall",
-  "count": 1
+  "result": {
+    "count": 1,
+    "id": "delbase:stone_wall"
+  }
 }

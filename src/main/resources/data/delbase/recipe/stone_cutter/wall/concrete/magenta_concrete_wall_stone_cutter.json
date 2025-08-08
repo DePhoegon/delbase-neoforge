@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "minecraft:magenta_concrete"
   },
-  "result": "delbase:magenta_concrete_wall",
-  "count": 1
+  "result": {
+    "count": 1,
+    "id": "delbase:magenta_concrete_wall"
+  }
 } 

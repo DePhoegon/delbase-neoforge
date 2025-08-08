@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "minecraft:packed_mud"
   },
-  "result": "delbase:packed_mud_wall",
-  "count": 1
+  "result": {
+    "count": 1,
+    "id": "delbase:packed_mud_wall"
+  }
 }

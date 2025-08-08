@@ -3,6 +3,8 @@
   "ingredient": {
     "tag": "delbase:grouped/deepslate_blocks"
   },
-  "result": "delbase:deepslate_wall",
-  "count": 1
+  "result": {
+    "count": 1,
+    "id": "delbase:deepslate_wall"
+  }
 }

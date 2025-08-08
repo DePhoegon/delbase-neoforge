@@ -3,6 +3,8 @@
   "ingredient": {
     "tag": "delbase:crafting_sets/color/light_blue_sand_stone_set"
   }, 
-  "result": "delbase:light_blue_smooth_sand_stone_wall",
-  "count": 1 
+  "result": {
+    "count": 1,
+    "id": "delbase:light_blue_smooth_sand_stone_wall"
+  }
 } 

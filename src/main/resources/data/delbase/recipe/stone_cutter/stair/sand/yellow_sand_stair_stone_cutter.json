@@ -3,6 +3,8 @@
   "ingredient": { 
     "item": "delbase:yellow_solid_sand"
   }, 
-  "result": "delbase:yellow_sand_stair",
-  "count": 1 
+  "result": {
+    "count": 1,
+    "id": "delbase:yellow_sand_stair"
+  }
 } 

@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "minecraft:dripstone_block"
   },
-  "result": "delbase:dripstone_wall",
-  "count": 1
+  "result": {
+    "count": 1,
+    "id": "delbase:dripstone_wall"
+  }
 }

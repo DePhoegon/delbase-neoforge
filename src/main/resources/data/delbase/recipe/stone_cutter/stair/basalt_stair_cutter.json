@@ -3,6 +3,8 @@
   "ingredient": {
     "tag": "delbase:grouped/basalt_blocks"
   },
-  "result": "delbase:basalt_stair",
-  "count": 1
+  "result": {
+    "count": 1,
+    "id": "delbase:basalt_stair"
+  }
 }

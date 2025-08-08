@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "minecraft:purple_terracotta"
   },
-  "result": "delbase:purple_terracotta_wall",
-  "count": 1
+  "result": {
+    "count": 1,
+    "id": "delbase:purple_terracotta_wall"
+  }
 }

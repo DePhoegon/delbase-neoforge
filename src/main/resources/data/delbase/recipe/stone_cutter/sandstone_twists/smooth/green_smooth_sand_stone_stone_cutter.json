@@ -3,6 +3,8 @@
   "ingredient": {
     "tag": "delbase:crafting_sets/color/green_sand_stone_set"
   }, 
-  "result": "delbase:green_smooth_sand_stone",
-  "count": 1 
+  "result": {
+    "count": 1,
+    "id": "delbase:green_smooth_sand_stone"
+  }
 } 

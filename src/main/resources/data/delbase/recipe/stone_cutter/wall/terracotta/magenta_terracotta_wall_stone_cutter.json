@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "minecraft:magenta_terracotta"
   },
-  "result": "delbase:magenta_terracotta_wall",
-  "count": 1
+  "result": {
+    "count": 1,
+    "id": "delbase:magenta_terracotta_wall"
+  }
 }

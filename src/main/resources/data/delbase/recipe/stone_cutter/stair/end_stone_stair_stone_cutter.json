@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "minecraft:end_stone"
   },
-  "result": "delbase:end_stone_stair",
-  "count": 1
+  "result": {
+    "count": 1,
+    "id": "delbase:end_stone_stair"
+  }
 }

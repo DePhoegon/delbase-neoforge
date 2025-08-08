@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "delbase:solid_sand"
   },
-  "result": "delbase:sand_wall",
-  "count": 1
+  "result": {
+    "count": 1,
+    "id": "delbase:sand_wall"
+  }
 }

@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "minecraft:lime_terracotta"
   },
-  "result": "delbase:lime_terracotta_stair",
-  "count": 1
+  "result": {
+    "count": 1,
+    "id": "delbase:lime_terracotta_stair"
+  }
 }
