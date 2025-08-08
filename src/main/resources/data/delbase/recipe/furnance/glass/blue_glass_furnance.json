@@ -1,0 +1,12 @@
+{ 
+  "type": "minecraft:smelting", 
+  "category": "blocks",
+  "cookingtime": 200,
+  "experience": 0.1,
+  "ingredient": {
+    "item": "delbase:blue_sand"
+  },
+  "result": {
+    "id": "minecraft:blue_stained_glass"
+  }
+} 

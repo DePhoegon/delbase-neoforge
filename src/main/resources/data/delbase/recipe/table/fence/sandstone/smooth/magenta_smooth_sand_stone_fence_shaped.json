@@ -1,0 +1,20 @@
+{
+"type": "minecraft:crafting_shaped",
+"category": "decorations",
+  "pattern": [
+"#S#",
+"#S#"
+],
+"key": {
+"S": {
+"item": "minecraft:stick"
+},
+"#": {
+"item": "delbase:magenta_smooth_sand_stone"
+}
+},
+"result": {
+"id": "delbase:magenta_smooth_sand_stone_fence",
+"count": 4
+}
+}

@@ -1,0 +1,20 @@
+{
+"type": "minecraft:crafting_shaped",
+"category": "decorations",
+  "pattern": [
+"#S#",
+"#S#"
+],
+"key": {
+"S": {
+"item": "minecraft:stick"
+},
+"#": {
+"item": "minecraft:chiseled_quartz_block"
+}
+},
+"result": {
+"id": "delbase:chiseled_quartz_block_fence",
+"count": 4
+}
+}

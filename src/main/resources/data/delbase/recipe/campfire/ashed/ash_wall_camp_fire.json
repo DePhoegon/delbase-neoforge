@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:campfire_cooking",
+  "category": "misc",
+  "cookingtime": 300,
+  "experience": 0.35,
+  "ingredient": {
+    "tag": "delbase:ash_wall"
+  },
+  "result": {
+    "id": "delbase:ash_wall"
+  }
+}

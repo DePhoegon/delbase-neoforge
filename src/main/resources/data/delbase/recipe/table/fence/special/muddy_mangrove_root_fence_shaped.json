@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "decorations",
+  "pattern": [
+    "#S#",
+    "#S#"
+  ],
+  "key": {
+    "S": {
+      "item": "minecraft:stick"
+    },
+    "#": {
+      "item": "minecraft:muddy_mangrove_roots"
+    }
+  },
+  "result": {
+    "id": "delbase:muddy_mangrove_root_fence",
+    "count": 4
+  }
+}

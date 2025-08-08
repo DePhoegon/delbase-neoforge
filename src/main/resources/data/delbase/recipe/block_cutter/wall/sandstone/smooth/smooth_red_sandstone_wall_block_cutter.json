@@ -1,0 +1,15 @@
+{
+  "type": "delbase:block_cutting",
+  "input": {
+    "item": "minecraft:smooth_red_sandstone",
+    "count": 1
+  },
+  "plans": {
+    "item": "delbase:wall_plans",
+    "count": 1
+  },
+  "output": {
+    "id": "delbase:red_smooth_sand_stone_wall",
+    "count": 1
+  }
+}

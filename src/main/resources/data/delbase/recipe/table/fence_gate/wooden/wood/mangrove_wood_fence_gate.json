@@ -1,0 +1,20 @@
+{
+"type": "minecraft:crafting_shaped",
+"category": "redstone",
+  "pattern": [
+"S#S",
+"S#S"
+],
+"key": {
+"S": {
+"item": "minecraft:stick"
+},
+"#": {
+"item": "minecraft:mangrove_wood"
+}
+},
+"result": {
+"id": "delbase:mangrove_wood_fence_gate",
+"count": 4
+}
+}

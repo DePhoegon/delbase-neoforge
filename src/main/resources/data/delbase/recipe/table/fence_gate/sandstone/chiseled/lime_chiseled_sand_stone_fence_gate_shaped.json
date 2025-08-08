@@ -1,0 +1,20 @@
+{
+"type": "minecraft:crafting_shaped",
+"category": "redstone",
+  "pattern": [
+"S#S",
+"S#S"
+],
+"key": {
+"S": {
+"item": "minecraft:stick"
+},
+"#": {
+"item": "delbase:lime_chiseled_sand_stone"
+}
+},
+"result": {
+"id": "delbase:lime_chiseled_sand_stone_fence_gate",
+"count": 2
+}
+}

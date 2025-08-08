@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:mud"
+    }
+  },
+  "result": {
+    "id": "delbase:mud_wall",
+    "count": 6
+  }
+}

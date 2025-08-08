@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "delbase:grouped/raw_foods"
+    },
+    {
+      "tag": "delbase:grouped/compound"
+    },
+    {
+      "tag": "delbase:grouped/sands"
+    }
+  ],
+  "result":{
+    "id": "delbase:armor_compound",
+    "count": 9
+  }
+}

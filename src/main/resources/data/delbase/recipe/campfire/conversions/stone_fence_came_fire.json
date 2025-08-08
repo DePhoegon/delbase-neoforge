@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:campfire_cooking",
+  "category": "misc",
+  "cookingtime": 300,
+  "experience": 0.35,
+  "ingredient": {
+    "item": "delbase:cobblestone_fence"
+  },
+  "result": {
+    "id": "delbase:stone_fence"
+  }
+}

@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "minecraft:packed_mud"
-  },
-  "result": "delbase:packed_mud_slab",
-  "count": 2
-}

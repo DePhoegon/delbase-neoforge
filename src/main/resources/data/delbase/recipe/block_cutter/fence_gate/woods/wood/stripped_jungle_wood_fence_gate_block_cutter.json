@@ -1,0 +1,15 @@
+{
+  "type": "delbase:block_cutting",
+  "input": {
+    "item": "minecraft:stripped_jungle_wood",
+    "count": 1
+  },
+  "plans": {
+    "item": "delbase:fence_gate_plans",
+    "count": 1
+  },
+  "output": {
+    "id": "delbase:stripped_jungle_wood_fence_gate",
+    "count": 1
+  }
+}

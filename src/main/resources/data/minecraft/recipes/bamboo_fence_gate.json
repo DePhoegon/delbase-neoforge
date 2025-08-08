@@ -15,7 +15,8 @@
     "#W#"
   ],
   "result": {
-    "item": "minecraft:bamboo_fence_gate"
+    "count": 1,
+    "id": "minecraft:bamboo_fence_gate"
   },
   "show_notification": true
 }

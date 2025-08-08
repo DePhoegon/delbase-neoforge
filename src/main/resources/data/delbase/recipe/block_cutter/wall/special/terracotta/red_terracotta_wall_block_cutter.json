@@ -1,0 +1,15 @@
+{
+  "type": "delbase:block_cutting",
+  "input": {
+    "item": "minecraft:red_terracotta",
+    "count": 1
+  },
+  "plans": {
+    "item": "delbase:wall_plans",
+    "count": 1
+  },
+  "output": {
+    "id": "delbase:red_terracotta_wall",
+    "count": 1
+  }
+}

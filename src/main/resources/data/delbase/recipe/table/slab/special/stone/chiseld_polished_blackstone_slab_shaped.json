@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:chiseled_polished_blackstone"
+    }
+  },
+  "result": {
+    "id": "delbase:chiseled_polished_blackstone_slab",
+    "count": 6
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "type": "delbase:block_cutting",
+  "input": {
+    "item": "minecraft:stripped_mangrove_log",
+    "count": 1
+  },
+  "plans": {
+    "item": "delbase:slab_plans",
+    "count": 1
+  },
+  "output": {
+    "id": "delbase:stripped_mangrove_log_slab",
+    "count": 2
+  }
+}

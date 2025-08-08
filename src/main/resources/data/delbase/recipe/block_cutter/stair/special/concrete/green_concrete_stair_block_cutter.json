@@ -1,0 +1,15 @@
+{
+  "type": "delbase:block_cutting",
+  "input": {
+    "item": "minecraft:green_concrete",
+    "count": 1
+  },
+  "plans": {
+    "item": "delbase:stair_plans",
+    "count": 1
+  },
+  "output": {
+    "id": "delbase:green_concrete_stair",
+    "count": 1
+  }
+}

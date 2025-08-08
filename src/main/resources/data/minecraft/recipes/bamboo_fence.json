@@ -1,6 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "misc",
+  "category": "redstone",
   "group": "wooden_custom_fence",
   "key": {
     "#": {
@@ -16,7 +16,7 @@
   ],
   "result": {
     "count": 3,
-    "item": "minecraft:bamboo_fence"
+    "id": "minecraft:bamboo_fence"
   },
   "show_notification": true
 }

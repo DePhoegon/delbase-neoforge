@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "pattern": [
+    "S#S",
+    "S#S"
+  ],
+  "key": {
+    "S": {
+      "item": "minecraft:stick"
+    },
+    "#": {
+      "item": "minecraft:azalea_leaves"
+    }
+  },
+  "result": {
+    "id": "delbase:azalea_leaf_fence_gate",
+    "count": 2
+  }
+}

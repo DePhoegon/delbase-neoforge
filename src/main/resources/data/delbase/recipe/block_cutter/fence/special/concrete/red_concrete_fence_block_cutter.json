@@ -1,0 +1,15 @@
+{
+  "type": "delbase:block_cutting",
+  "input": {
+    "item": "minecraft:red_concrete",
+    "count": 1
+  },
+  "plans": {
+    "item": "delbase:fence_plans",
+    "count": 1
+  },
+  "output": {
+    "id": "delbase:red_concrete_fence",
+    "count": 1
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "type": "delbase:block_cutting",
+  "input": {
+    "item": "minecraft:cherry_wood",
+    "count": 1
+  },
+  "plans": {
+    "item": "delbase:stair_plans",
+    "count": 1
+  },
+  "output": {
+    "id": "delbase:cherry_wood_stair",
+    "count": 1
+  }
+}

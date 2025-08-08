@@ -1,0 +1,20 @@
+{
+"type": "minecraft:crafting_shaped",
+"category": "decorations",
+  "pattern": [
+"#S#",
+"#S#"
+],
+"key": {
+"S": {
+"item": "minecraft:stick"
+},
+"#": {
+"item": "minecraft:brown_concrete"
+}
+},
+"result": {
+"id": "delbase:brown_concrete_fence",
+"count": 4
+}
+}

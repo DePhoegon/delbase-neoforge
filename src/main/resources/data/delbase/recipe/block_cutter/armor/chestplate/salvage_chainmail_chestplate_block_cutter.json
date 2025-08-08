@@ -1,0 +1,15 @@
+{
+  "type": "delbase:block_cutting",
+  "input": {
+    "item": "minecraft:chainmail_chestplate",
+    "count": 1
+  },
+  "plans": {
+    "item": "delbase:armor_compound",
+    "count": 1
+  },
+  "output": {
+    "id": "minecraft:chain",
+    "count": 7
+  }
+}

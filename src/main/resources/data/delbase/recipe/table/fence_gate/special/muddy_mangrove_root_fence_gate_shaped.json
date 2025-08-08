@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "pattern": [
+    "S#S",
+    "S#S"
+  ],
+  "key": {
+    "S": {
+      "item": "minecraft:stick"
+    },
+    "#": {
+      "item": "minecraft:muddy_mangrove_roots"
+    }
+  },
+  "result": {
+    "id": "delbase:muddy_mangrove_root_fence_gate",
+    "count": 2
+  }
+}

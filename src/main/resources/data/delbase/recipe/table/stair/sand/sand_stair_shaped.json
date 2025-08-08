@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [ "y  ","yy ","yyy" ],
+  "key": {
+    "y": {
+      "item": "delbase:solid_sand"
+    }
+  },
+  "result":{
+    "id": "delbase:sand_stair",
+    "count": 4
+  }
+}

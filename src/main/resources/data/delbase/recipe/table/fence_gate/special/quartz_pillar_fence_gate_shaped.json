@@ -1,0 +1,20 @@
+{
+"type": "minecraft:crafting_shaped",
+"category": "redstone",
+  "pattern": [
+"S#S",
+"S#S"
+],
+"key": {
+"S": {
+"item": "minecraft:stick"
+},
+"#": {
+"item": "minecraft:quartz_pillar"
+}
+},
+"result": {
+"id": "delbase:quartz_pillar_fence_gate",
+"count": 2
+}
+}

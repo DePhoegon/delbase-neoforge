@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smelting",
+  "category": "blocks",
+  "cookingtime": 200,
+  "experience": 0.1,
+  "ingredient": {
+    "item": "minecraft:cobbled_deepslate_stairs"
+  },
+  "result": {
+    "id": "delbase:deepslate_stair"
+  }
+}

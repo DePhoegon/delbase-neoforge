@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "decorations",
+  "pattern": [
+    "S#S",
+    "S#S"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:stick"
+    },
+    "S": {
+      "item": "minecraft:smooth_red_sandstone"
+    }
+  },
+  "result": {
+    "id": "delbase:red_smooth_sand_stone_fence",
+    "count": 4
+  }
+}

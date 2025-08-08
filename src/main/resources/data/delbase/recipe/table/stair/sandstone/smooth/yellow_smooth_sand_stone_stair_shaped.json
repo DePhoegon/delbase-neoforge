@@ -1,0 +1,17 @@
+{
+"type": "minecraft:crafting_shaped",
+"pattern": [
+"#  ",
+"## ",
+"###"
+],
+"key": {
+"#": {
+"item": "delbase:yellow_smooth_sand_stone"
+}
+},
+"result": {
+"id": "delbase:yellow_smooth_sand_stone_stair",
+"count": 4
+}
+}

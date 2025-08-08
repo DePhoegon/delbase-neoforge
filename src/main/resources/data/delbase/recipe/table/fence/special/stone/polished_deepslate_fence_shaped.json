@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "decorations",
+  "pattern": [
+    "#S#",
+    "#S#"
+  ],
+  "key": {
+    "S": {
+      "item": "minecraft:stick"
+    },
+    "#": {
+      "item": "minecraft:polished_deepslate"
+    }
+  },
+  "result": {
+    "id": "delbase:polished_deepslate_fence",
+    "count": 4
+  }
+}

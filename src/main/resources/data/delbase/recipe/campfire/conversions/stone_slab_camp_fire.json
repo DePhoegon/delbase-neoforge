@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:campfire_cooking",
+  "category": "misc",
+  "cookingtime": 300,
+  "experience": 0.35,
+  "ingredient": {
+    "item": "minecraft:cobblestone_slab"
+  },
+  "result": {
+    "id": "minecraft:stone_slab"
+  }
+}

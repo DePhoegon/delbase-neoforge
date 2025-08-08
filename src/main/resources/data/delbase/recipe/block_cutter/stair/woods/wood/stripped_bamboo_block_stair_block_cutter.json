@@ -1,0 +1,15 @@
+{
+  "type": "delbase:block_cutting",
+  "input": {
+    "item": "minecraft:stripped_bamboo_block",
+    "count": 1
+  },
+  "plans": {
+    "item": "delbase:stair_plans",
+    "count": 1
+  },
+  "output": {
+    "id": "delbase:stripped_bamboo_block_stair",
+    "count": 1
+  }
+}

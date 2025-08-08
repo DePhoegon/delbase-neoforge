@@ -1,0 +1,16 @@
+{
+"type": "minecraft:crafting_shaped",
+"pattern": [
+"###",
+"###"
+],
+"key": {
+"#": {
+"item": "minecraft:quartz_pillar"
+}
+},
+"result": {
+"id": "delbase:quartz_pillar_wall",
+"count": 6
+}
+}

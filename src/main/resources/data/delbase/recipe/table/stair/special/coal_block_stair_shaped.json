@@ -1,0 +1,17 @@
+{
+"type": "minecraft:crafting_shaped",
+"pattern": [
+"#  ",
+"## ",
+"###"
+],
+"key": {
+"#": {
+"item": "minecraft:coal_block"
+}
+},
+"result": {
+"id": "delbase:coal_block_stair",
+"count": 4
+}
+}

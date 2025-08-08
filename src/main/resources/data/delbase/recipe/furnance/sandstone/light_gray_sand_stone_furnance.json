@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smelting",
+  "category": "blocks",
+  "cookingtime": 200,
+  "experience": 0.1,
+  "ingredient": {
+    "item": "delbase:light_gray_solid_sand"
+  },
+  "result": {
+    "id": "delbase:light_gray_sand_stone"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "type": "delbase:block_cutting",
+  "input": {
+    "item": "minecraft:smooth_quartz",
+    "count": 1
+  },
+  "plans": {
+    "item": "delbase:fence_gate_plans",
+    "count": 1
+  },
+  "output": {
+    "id": "delbase:smooth_quartz_fence_gate",
+    "count": 1
+  }
+}

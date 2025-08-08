@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "pattern": [
+    "S#S",
+    "S#S"
+  ],
+  "key": {
+    "S": {
+      "item": "minecraft:stick"
+    },
+    "#": {
+      "item": "minecraft:cherry_wood"
+    }
+  },
+  "result": {
+    "id": "delbase:cherry_wood_fence_gate",
+    "count": 2
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "tag": "delbase:grouped/quartz_blocks"
+  },
+  "result": {
+    "count": 2,
+    "id": "delbase:chiseled_quartz_slab"
+  }
+}

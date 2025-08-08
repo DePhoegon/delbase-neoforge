@@ -1,0 +1,17 @@
+{
+"type": "minecraft:crafting_shaped",
+"pattern": [
+"#  ",
+"## ",
+"###"
+],
+"key": {
+"#": {
+"item": "minecraft:quartz_bricks"
+}
+},
+"result": {
+"id": "delbase:quartz_brick_stair",
+"count": 4
+}
+}

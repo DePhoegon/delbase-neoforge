@@ -1,0 +1,15 @@
+{
+  "type": "delbase:block_cutting",
+  "input": {
+    "item": "delbase:cyan_solid_sand",
+    "count": 1
+  },
+  "plans": {
+    "item": "delbase:fence_plans",
+    "count": 1
+  },
+  "output": {
+    "id": "delbase:cyan_sand_fence",
+    "count": 1
+  }
+}

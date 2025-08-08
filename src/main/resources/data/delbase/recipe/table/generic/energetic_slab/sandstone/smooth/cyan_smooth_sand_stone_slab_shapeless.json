@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "delbase:cyan_smooth_sand_stone_slab"
+    },
+    {
+      "tag": "delbase:energy_dust"
+    }
+  ],
+  "result":{
+    "id": "delbase:cyan_smooth_sand_stone_slab_energy",
+    "count": 1
+  }
+}
