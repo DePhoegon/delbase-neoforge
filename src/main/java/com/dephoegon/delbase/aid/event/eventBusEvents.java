@@ -5,6 +5,7 @@ import net.minecraft.client.renderer.BiomeColors;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.level.FoliageColor;
 import net.neoforged.api.distmarker.Dist;
+import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.neoforge.client.event.RegisterColorHandlersEvent;
@@ -18,12 +19,12 @@ import static com.dephoegon.delbase.aid.util.creativeTabsArrayLists.*;
 @EventBusSubscriber(modid = Mod_ID, bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class eventBusEvents {
     @SuppressWarnings("unused")
-    @net.neoforged.bus.api.SubscribeEvent
+    @SubscribeEvent
     public static void clientSetup(final FMLClientSetupEvent event) {
 
     }
     @SuppressWarnings("unused")
-    @net.neoforged.bus.api.SubscribeEvent
+    @SubscribeEvent
     public static void registerBlockColors(@NotNull RegisterColorHandlersEvent.Block event) {
         BlockColor DEFAULT_LEAVES = (state, reader, pos, color) -> reader != null && pos != null ? BiomeColors.getAverageFoliageColor(reader, pos) : FoliageColor.getDefaultColor();
         BlockColor BIRCH_LEAVES = (state, reader, pos, color) -> FoliageColor.getBirchColor();
@@ -34,7 +35,7 @@ public class eventBusEvents {
         MangroveColoredLeaves().forEach((block) -> event.register(DEFAULT_LEAVES, block.get()));
     }
     @SuppressWarnings("unused")
-    @net.neoforged.bus.api.SubscribeEvent
+    @SubscribeEvent
     public static void registerItemColors(@NotNull RegisterColorHandlersEvent.Item event) {
         ColoredLeaves().forEach((block) -> event.register((stack, color) -> event.getBlockColors().getColor(((BlockItem) stack.getItem()).getBlock().defaultBlockState(), null, null, color), block.get()));
         MangroveColoredLeaves().forEach((block) -> event.register((itemColor, itemLike) -> FoliageColor.getMangroveColor(), block.get().asItem()));
