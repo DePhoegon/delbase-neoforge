@@ -100,9 +100,7 @@ public class blockCuttingStation extends BlockEntity implements MenuProvider, Wo
         public boolean isItemValid(int slot, @NotNull ItemStack stack) { return isPlansSlotItem(stack.getItem().asItem()); }
         @Override
         protected void onContentsChanged(int slot) {
-            if (planHandle.getStackInSlot(0) != itemHandler.getStackInSlot(planSlot)) {
-                itemHandler.setStackInSlot(planSlot, planHandle.getStackInSlot(0));
-            }
+            if (planHandle.getStackInSlot(0) != itemHandler.getStackInSlot(planSlot)) { itemHandler.setStackInSlot(planSlot, planHandle.getStackInSlot(0)); }
         }
     };
 
@@ -185,7 +183,7 @@ public class blockCuttingStation extends BlockEntity implements MenuProvider, Wo
     }
     private Optional<RecipeHolder<blockCutterRecipe>> getCurrentRecipe() {
         if (this.getLevel() == null) { return Optional.empty(); }
-        return this.getLevel().getRecipeManager().getRecipeFor(modRecipes.BLOCK_CUTTER_TYPE.get(), new blockCutterRecipeInput(inputHandle.getStackInSlot(inputSlot), planHandle.getStackInSlot(planSlot)), this.getLevel());
+        return this.getLevel().getRecipeManager().getRecipeFor(modRecipes.BLOCK_CUTTER_TYPE.get(), new blockCutterRecipeInput(inputHandle.getStackInSlot(0), planHandle.getStackInSlot(0)), this.getLevel());
     }
 
     private boolean hasRecipe() {
