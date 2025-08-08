@@ -37,6 +37,9 @@ public class regList {
         shiftingDyes.register(eventBus);
         blockCutterPlans.register(eventBus);
 
+        // Copper Blocks
+        slabCopers.registerBlock(eventBus);
+
         //Pillars
         axiCutSandStones.registerBlock(eventBus);
 

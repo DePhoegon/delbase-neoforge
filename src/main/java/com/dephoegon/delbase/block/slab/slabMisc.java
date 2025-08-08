@@ -1,7 +1,7 @@
 package com.dephoegon.delbase.block.slab;
 
-import com.dephoegon.delbase.aid.block.modExtensions.leafSlab;
 import com.dephoegon.delbase.aid.block.fromBaseGameExtensions.slabBlock;
+import com.dephoegon.delbase.aid.block.modExtensions.leafSlab;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -47,9 +47,6 @@ public class slabMisc {
                     ,"","","", false, 0, 0, null));
     public static final DeferredBlock<SlabBlock> RAW_GOLD_SLAB = registerBlock("raw_gold_slab",
             ()-> new slabBlock(BlockBehaviour.Properties.ofFullCopy(RAW_GOLD_BLOCK).sound(SoundType.METAL)
-                    ,"","","", false, 0, 0, null));
-    public static final DeferredBlock<SlabBlock> RAW_COPPER_SLAB = registerBlock("raw_copper_slab",
-            ()-> new slabBlock(BlockBehaviour.Properties.ofFullCopy(RAW_COPPER_BLOCK).sound(SoundType.METAL)
                     ,"","","", false, 0, 0, null));
     public static final DeferredBlock<SlabBlock> RAW_IRON_SLAB = registerBlock("raw_iron_slab",
             ()-> new slabBlock(BlockBehaviour.Properties.ofFullCopy(RAW_IRON_BLOCK).sound(SoundType.METAL)

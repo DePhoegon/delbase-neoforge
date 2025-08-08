@@ -33,6 +33,7 @@ import static com.dephoegon.delbase.block.gravity.solidSandColors.*;
 import static com.dephoegon.delbase.block.slab.slabChiseledSandStones.*;
 import static com.dephoegon.delbase.block.slab.slabChiseledSandStonesEnergy.*;
 import static com.dephoegon.delbase.block.slab.slabConcrete.*;
+import static com.dephoegon.delbase.block.slab.slabCopers.*;
 import static com.dephoegon.delbase.block.slab.slabCutSandStones.*;
 import static com.dephoegon.delbase.block.slab.slabCutSandStonesEnergy.*;
 import static com.dephoegon.delbase.block.slab.slabLeaves.*;
@@ -854,6 +855,18 @@ public class creativeTabsArrayLists {
         out.add(BLACK_CUT_SAND_STONE_SLAB_ENERGY);
         return out;
     }
+    public static @NotNull ArrayList<DeferredBlock<SlabBlock>> setCopperSlabs() {
+        ArrayList<DeferredBlock<SlabBlock>> out = new ArrayList<>();
+        out.add(RAW_COPPER_SLAB);
+        out.add(RAW_EXPOSED_COPPER_SLAB);
+        out.add(RAW_WEATHERED_COPPER_SLAB);
+        out.add(RAW_OXIDIZED_COPPER_SLAB);
+        out.add(RAW_WAXED_COPPER_SLAB);
+        out.add(RAW_WAXED_EXPOSED_COPPER_SLAB);
+        out.add(RAW_WAXED_WEATHERED_COPPER_SLAB);
+        out.add(RAW_WAXED_OXIDIZED_COPPER_SLAB);
+        return out;
+    }
     public static @NotNull ArrayList<DeferredBlock<SlabBlock>> setMiscSlabs() {
         ArrayList<DeferredBlock<SlabBlock>> out = new ArrayList<>();
         out.add(END_STONE_SLAB);
@@ -864,7 +877,6 @@ public class creativeTabsArrayLists {
         out.add(POLISHED_BASALT_SLAB);
         out.add(SMOOTH_BASALT_SLAB);
         out.add(RAW_GOLD_SLAB);
-        out.add(RAW_COPPER_SLAB);
         out.add(RAW_IRON_SLAB);
         out.add(COAL_BLOCK_SLAB);
         out.add(CRACKED_POLISHED_BLACKSTONE_BRICK_SLAB);
