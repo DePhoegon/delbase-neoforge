@@ -1,0 +1,42 @@
+Slabs:
+- Copper Block
+- Exposed Copper Block
+- Weathered Copper Block
+- Oxidized Copper Block
+- Waxed Copper Block
+- Waxed Exposed Copper Block
+- Waxed Weathered Copper Block
+- Waxed Oxidized Copper Block
+- Chiseled Copper Block
+- Chiseled Exposed Copper Block
+- Chiseled Weathered Copper Block
+- Chiseled Oxidized Copper Block
+- Chiseled Waxed Copper Block
+- Chiseled Waxed Exposed Copper Block
+- Chiseled Waxed Weathered Copper Block
+- Chiseled Waxed Oxidized Copper Block
+- Copper Grate
+- Exposed Copper Grate
+- Weathered Copper Grate
+- Oxidized Copper Grate
+- Waxed Copper Grate
+- Waxed Exposed Copper Grate
+- Waxed Weathered Copper Grate
+- Waxed Oxidized Copper Grate
+- Copper Bulb
+- Exposed Copper Bulb
+- Weathered Copper Bulb
+- Oxidized Copper Bulb
+- Waxed Copper Bulb
+- Waxed Exposed Copper Bulb
+- Waxed Weathered Copper Bulb
+- Waxed Oxidized Copper Bulb
+- Chiseled Tuff
+- Chiseled Tuff Brick
+
+Class file for Slabs:
+- copperBulbSlab
+- copperSlab
+
+Weathering:
+Toggled Lighting (bulb):

@@ -80,6 +80,12 @@ public class slabMisc {
     public static final DeferredBlock<SlabBlock> MUD_SLAB = registerBlock("mud_slab",
             ()-> new slabBlock(BlockBehaviour.Properties.ofFullCopy(MUD).sound(SoundType.MUD)
                     ,"","","", false, 0, 0, null));
+    public static final DeferredBlock<SlabBlock> CHISELED_TUFF_SLAB = registerBlock("chiseled_tuff_slab",
+            ()-> new slabBlock(BlockBehaviour.Properties.ofFullCopy(CHISELED_TUFF).sound(SoundType.STONE)
+                    ,"","","", false, 0, 0, null));
+    public static final DeferredBlock<SlabBlock> CHISELED_TUFF_BRICK_SLAB = registerBlock("chiseled_tuff_brick_slab",
+            ()-> new slabBlock(BlockBehaviour.Properties.ofFullCopy(CHISELED_TUFF_BRICKS).sound(SoundType.STONE)
+                    ,"","","", false, 0, 0, null));
     public static final DeferredBlock<SlabBlock> MUDDY_MANGROVE_ROOT_SLAB = registerBlock("muddy_mangrove_root_slab",
             ()-> new leafSlab(MUDDY_MANGROVE_ROOTS, SoundType.MUDDY_MANGROVE_ROOTS, false, null));
     public static final DeferredBlock<SlabBlock> MANGROVE_ROOT_SLAB = registerBlock("mangrove_root_slab",

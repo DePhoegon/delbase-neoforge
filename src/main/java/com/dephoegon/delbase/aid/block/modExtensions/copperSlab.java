@@ -7,31 +7,30 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import org.jetbrains.annotations.NotNull;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
 import static com.dephoegon.delbase.aid.util.WeatherState.getStateByOrder;
-import static com.dephoegon.delbase.block.slab.slabCopers.*;
+import static com.dephoegon.delbase.block.slab.slabCopers.getSlabCopperBLOCKS;
 
 public class copperSlab extends slabBlock implements weatheringCopper {
     private final int oxidizedStage;
     private final boolean isWaxed;
     public final int mapOrder; // Store the unique MapOrder
 
-    public copperSlab(Properties properties, @NotNull String normToolTip, String shiftToolTip, String ctrlToolTip, boolean flames, int fireChance, int fireSpread, int oxidizedStage, boolean isWaxed, int MapOrder) {
-        super(properties, normToolTip, shiftToolTip, ctrlToolTip, flames, fireChance, fireSpread, null);
+    public copperSlab(Properties properties, @NotNull String normToolTip, String shiftToolTip, String ctrlToolTip, int oxidizedStage, boolean isWaxed, int MapOrder) {
+        super(properties, normToolTip, shiftToolTip, ctrlToolTip, false, 0, 0, null);
         this.oxidizedStage = oxidizedStage;
         this.isWaxed = isWaxed;
         this.mapOrder = MapOrder; // Set the unique map order
     }
-
-    public copperSlab(Properties properties, boolean flames, int fireChance, int fireSpread, int oxidizedStage, boolean isWaxed, int MapOrder) {
-        super(properties, flames, fireChance, fireSpread, null);
+    public copperSlab(Properties properties, int oxidizedStage, boolean isWaxed, int MapOrder) {
+        super(properties, false, 0, 0, null);
         this.oxidizedStage = oxidizedStage;
         this.isWaxed = isWaxed;
         this.mapOrder = MapOrder; // Set the unique map order
     }
-
 
     public boolean isWaxed() { return this.isWaxed; }
     public int getOxidizedStage() { return this.oxidizedStage; }
@@ -40,7 +39,8 @@ public class copperSlab extends slabBlock implements weatheringCopper {
     public float getChanceModifier() { return this.getChanceModifier(getStateByOrder(this.oxidizedStage)); }
 
     public List<DeferredBlock<? extends Block>> getWeatheredSetList() {
-        return List.of(RAW_COPPER_SLAB, RAW_EXPOSED_COPPER_SLAB, RAW_WEATHERED_COPPER_SLAB, RAW_OXIDIZED_COPPER_SLAB,
-                RAW_WAXED_COPPER_SLAB, RAW_WAXED_EXPOSED_COPPER_SLAB, RAW_WAXED_WEATHERED_COPPER_SLAB, RAW_WAXED_OXIDIZED_COPPER_SLAB);
+        List<DeferredBlock<? extends Block>> outList = new ArrayList<>();
+        getSlabCopperBLOCKS().getEntries().forEach(entry -> outList.add((DeferredBlock<? extends Block>) entry));
+        return outList;
     }
 }

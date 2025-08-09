@@ -865,6 +865,38 @@ public class creativeTabsArrayLists {
         out.add(RAW_WAXED_EXPOSED_COPPER_SLAB);
         out.add(RAW_WAXED_WEATHERED_COPPER_SLAB);
         out.add(RAW_WAXED_OXIDIZED_COPPER_SLAB);
+        out.add(COPPER_SLAB);
+        out.add(EXPOSED_COPPER_SLAB);
+        out.add(WEATHERED_COPPER_SLAB);
+        out.add(OXIDIZED_COPPER_SLAB);
+        out.add(WAXED_COPPER_SLAB);
+        out.add(WAXED_EXPOSED_COPPER_SLAB);
+        out.add(WAXED_WEATHERED_COPPER_SLAB);
+        out.add(WAXED_OXIDIZED_COPPER_SLAB);
+        out.add(CHISELED_COPPER_SLAB);
+        out.add(CHISELED_EXPOSED_COPPER_SLAB);
+        out.add(CHISELED_WEATHERED_COPPER_SLAB);
+        out.add(CHISELED_OXIDIZED_COPPER_SLAB);
+        out.add(CHISELED_WAXED_COPPER_SLAB);
+        out.add(CHISELED_WAXED_EXPOSED_COPPER_SLAB);
+        out.add(CHISELED_WAXED_WEATHERED_COPPER_SLAB);
+        out.add(CHISELED_WAXED_OXIDIZED_COPPER_SLAB);
+        out.add(COPPER_GRATING_SLAB);
+        out.add(EXPOSED_COPPER_GRATING_SLAB);
+        out.add(WEATHERED_COPPER_GRATING_SLAB);
+        out.add(OXIDIZED_COPPER_GRATING_SLAB);
+        out.add(WAXED_COPPER_GRATING_SLAB);
+        out.add(WAXED_EXPOSED_COPPER_GRATING_SLAB);
+        out.add(WAXED_WEATHERED_COPPER_GRATING_SLAB);
+        out.add(WAXED_OXIDIZED_COPPER_GRATING_SLAB);
+        out.add(COPPER_BULB_SLAB);
+        out.add(EXPOSED_COPPER_BULB_SLAB);
+        out.add(WEATHERED_COPPER_BULB_SLAB);
+        out.add(OXIDIZED_COPPER_BULB_SLAB);
+        out.add(WAXED_COPPER_BULB_SLAB);
+        out.add(WAXED_EXPOSED_COPPER_BULB_SLAB);
+        out.add(WAXED_WEATHERED_COPPER_BULB_SLAB);
+        out.add(WAXED_OXIDIZED_COPPER_BULB_SLAB);
         return out;
     }
     public static @NotNull ArrayList<DeferredBlock<SlabBlock>> setMiscSlabs() {
