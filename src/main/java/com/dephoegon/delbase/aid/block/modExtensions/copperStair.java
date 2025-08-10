@@ -1,6 +1,6 @@
 package com.dephoegon.delbase.aid.block.modExtensions;
 
-import com.dephoegon.delbase.aid.block.fromBaseGameExtensions.slabBlock;
+import com.dephoegon.delbase.aid.block.fromBaseGameExtensions.stairBlock;
 import com.dephoegon.delbase.aid.util.weatheringCopper;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
@@ -12,22 +12,23 @@ import java.util.List;
 import java.util.Optional;
 
 import static com.dephoegon.delbase.aid.util.weatherState.getStateByOrder;
-import static com.dephoegon.delbase.block.slab.slabCopperWaxed.getWaxedSlabCopperBLOCKS;
-import static com.dephoegon.delbase.block.slab.slabCoppers.getSlabCopperBLOCKS;
+import static com.dephoegon.delbase.block.stair.stairCopperWaxed.getWaxedStairCopperBLOCKS;
+import static com.dephoegon.delbase.block.stair.stairCoppers.getStairCopperBLOCKS;
 
-public class copperSlab extends slabBlock implements weatheringCopper {
+public class copperStair extends stairBlock implements weatheringCopper {
     private final int oxidizedStage;
     private final boolean isWaxed;
     public final int mapOrder; // Store the unique MapOrder
 
-    public copperSlab(Properties properties, BlockState strippedState, @NotNull String normToolTip, String shiftToolTip, String ctrlToolTip, int oxidizedStage, boolean isWaxed, int MapOrder) {
-        super(properties, normToolTip, shiftToolTip, ctrlToolTip, false, 0, 0, strippedState);
+    public copperStair(@NotNull Block block, Properties properties, @NotNull String normToolTip, String shiftToolTip, String ctrlToolTip, BlockState strippedState, int oxidizedStage, boolean isWaxed, int MapOrder) {
+        super(block, properties, normToolTip, shiftToolTip, ctrlToolTip, false, 0,0, strippedState);
         this.oxidizedStage = oxidizedStage;
         this.isWaxed = isWaxed;
         this.mapOrder = MapOrder; // Set the unique map order
     }
-    public copperSlab(Properties properties, BlockState strippedState, int oxidizedStage, boolean isWaxed, int MapOrder) {
-        super(properties, false, 0, 0, strippedState);
+
+    public copperStair(@NotNull Block block, Properties properties, BlockState strippedState, int oxidizedStage, boolean isWaxed, int MapOrder) {
+        super(block, properties, false, 0, 0, strippedState);
         this.oxidizedStage = oxidizedStage;
         this.isWaxed = isWaxed;
         this.mapOrder = MapOrder; // Set the unique map order
@@ -41,8 +42,8 @@ public class copperSlab extends slabBlock implements weatheringCopper {
 
     public List<DeferredBlock<? extends Block>> getWeatheredSetList() {
         List<DeferredBlock<? extends Block>> outList = new ArrayList<>();
-        getSlabCopperBLOCKS().getEntries().forEach(entry -> outList.add((DeferredBlock<? extends Block>) entry));
-        getWaxedSlabCopperBLOCKS().getEntries().forEach(entry -> outList.add((DeferredBlock<? extends Block>) entry));
+        getStairCopperBLOCKS().getEntries().forEach(entry -> outList.add((DeferredBlock<? extends Block>) entry));
+        getWaxedStairCopperBLOCKS().getEntries().forEach(entry -> outList.add((DeferredBlock<? extends Block>) entry));
         return outList;
     }
 }

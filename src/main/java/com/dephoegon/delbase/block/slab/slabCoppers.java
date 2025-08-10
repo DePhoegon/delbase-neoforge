@@ -15,7 +15,7 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 import java.util.function.Supplier;
 
 import static com.dephoegon.delbase.Delbase.Mod_ID;
-import static com.dephoegon.delbase.aid.util.WeatherState.*;
+import static com.dephoegon.delbase.aid.util.weatherState.*;
 import static net.minecraft.world.level.block.Blocks.*;
 
 public class slabCoppers {

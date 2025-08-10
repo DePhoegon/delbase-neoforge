@@ -57,6 +57,8 @@ public class delbaseCreativeTabs {
         ArrayList<DeferredBlock<? extends ItemLike>> out = new ArrayList<>();
         out.addAll(setCopperSlabs());
         out.addAll(setWaxedCopperSlabs());
+        out.addAll(setCopperStairs());
+        out.addAll(setWaxedCopperStairs());
         return out;
     }
     public static @NotNull ArrayList<DeferredBlock<? extends ItemLike>> getDelBlockList() {

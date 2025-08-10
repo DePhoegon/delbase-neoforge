@@ -22,8 +22,9 @@ public class regList {
         blockArrayList.setBlockArrays();
         //Special block
         miscSpecialCases.registerBlock(eventBus);
-        // Copper Blocks (Non-Waxed)
+        // Copper Blocks (Non-Waxed), called for in waxed versions
         slabCoppers.registerBlock(eventBus);
+        stairCoppers.registerBlock(eventBus);
         // Sand
         gravColorSands.registerBlock(eventBus);
         // SandStone
@@ -41,6 +42,7 @@ public class regList {
 
         // Copper Blocks (Waxed)
         slabCopperWaxed.registerBlock(eventBus);
+        stairCopperWaxed.registerBlock(eventBus);
 
         //Pillars
         axiCutSandStones.registerBlock(eventBus);

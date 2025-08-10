@@ -52,6 +52,8 @@ import static com.dephoegon.delbase.block.slab.slabTerracotta.*;
 import static com.dephoegon.delbase.block.slab.slabWood.*;
 import static com.dephoegon.delbase.block.stair.stairChiseledSandStones.*;
 import static com.dephoegon.delbase.block.stair.stairConcrete.*;
+import static com.dephoegon.delbase.block.stair.stairCopperWaxed.*;
+import static com.dephoegon.delbase.block.stair.stairCoppers.*;
 import static com.dephoegon.delbase.block.stair.stairCutSandStones.*;
 import static com.dephoegon.delbase.block.stair.stairLeaves.*;
 import static com.dephoegon.delbase.block.stair.stairMisc.*;
@@ -854,6 +856,54 @@ public class creativeTabsArrayLists {
         out.add(GREEN_CUT_SAND_STONE_SLAB_ENERGY);
         out.add(BROWN_CUT_SAND_STONE_SLAB_ENERGY);
         out.add(BLACK_CUT_SAND_STONE_SLAB_ENERGY);
+        return out;
+    }
+    public static @NotNull ArrayList<DeferredBlock<StairBlock>> setWaxedCopperStairs() {
+        ArrayList<DeferredBlock<StairBlock>> out = new ArrayList<>();
+        out.add(RAW_WAXED_COPPER_STAIRS);
+        out.add(RAW_WAXED_EXPOSED_COPPER_STAIRS);
+        out.add(RAW_WAXED_WEATHERED_COPPER_STAIRS);
+        out.add(RAW_WAXED_OXIDIZED_COPPER_STAIRS);
+        out.add(WAXED_COPPER_STAIRS);
+        out.add(WAXED_EXPOSED_COPPER_STAIRS);
+        out.add(WAXED_WEATHERED_COPPER_STAIRS);
+        out.add(WAXED_OXIDIZED_COPPER_STAIRS);
+        out.add(CHISELED_WAXED_COPPER_STAIRS);
+        out.add(CHISELED_WAXED_EXPOSED_COPPER_STAIRS);
+        out.add(CHISELED_WAXED_WEATHERED_COPPER_STAIRS);
+        out.add(CHISELED_WAXED_OXIDIZED_COPPER_STAIRS);
+        out.add(WAXED_COPPER_GRATING_STAIRS);
+        out.add(WAXED_EXPOSED_COPPER_GRATING_STAIRS);
+        out.add(WAXED_WEATHERED_COPPER_GRATING_STAIRS);
+        out.add(WAXED_OXIDIZED_COPPER_GRATING_STAIRS);
+        out.add(WAXED_COPPER_BULB_STAIRS);
+        out.add(WAXED_EXPOSED_COPPER_BULB_STAIRS);
+        out.add(WAXED_WEATHERED_COPPER_BULB_STAIRS);
+        out.add(WAXED_OXIDIZED_COPPER_BULB_STAIRS);
+        return out;
+    }
+    public static @NotNull ArrayList<DeferredBlock<StairBlock>> setCopperStairs() {
+        ArrayList<DeferredBlock<StairBlock>> out = new ArrayList<>();
+        out.add(RAW_COPPER_STAIRS);
+        out.add(RAW_EXPOSED_COPPER_STAIRS);
+        out.add(RAW_WEATHERED_COPPER_STAIRS);
+        out.add(RAW_OXIDIZED_COPPER_STAIRS);
+        out.add(COPPER_STAIRS);
+        out.add(EXPOSED_COPPER_STAIRS);
+        out.add(WEATHERED_COPPER_STAIRS);
+        out.add(OXIDIZED_COPPER_STAIRS);
+        out.add(CHISELED_COPPER_STAIRS);
+        out.add(CHISELED_EXPOSED_COPPER_STAIRS);
+        out.add(CHISELED_WEATHERED_COPPER_STAIRS);
+        out.add(CHISELED_OXIDIZED_COPPER_STAIRS);
+        out.add(COPPER_GRATING_STAIRS);
+        out.add(EXPOSED_COPPER_GRATING_STAIRS);
+        out.add(WEATHERED_COPPER_GRATING_STAIRS);
+        out.add(OXIDIZED_COPPER_GRATING_STAIRS);
+        out.add(COPPER_BULB_STAIRS);
+        out.add(EXPOSED_COPPER_BULB_STAIRS);
+        out.add(WEATHERED_COPPER_BULB_STAIRS);
+        out.add(OXIDIZED_COPPER_BULB_STAIRS);
         return out;
     }
     public static @NotNull ArrayList<DeferredBlock<SlabBlock>> setWaxedCopperSlabs() {

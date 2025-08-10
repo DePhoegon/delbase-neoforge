@@ -16,7 +16,7 @@ import org.jetbrains.annotations.NotNull;
 import java.util.function.Supplier;
 
 import static com.dephoegon.delbase.Delbase.Mod_ID;
-import static com.dephoegon.delbase.aid.util.WeatherState.*;
+import static com.dephoegon.delbase.aid.util.weatherState.*;
 import static com.dephoegon.delbase.block.slab.slabCoppers.*;
 import static net.minecraft.world.level.block.Blocks.*;
 
@@ -24,7 +24,7 @@ public class slabCopperWaxed {
     private static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(Mod_ID);
     private static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(Mod_ID);
 
-    public static DeferredRegister.Blocks getWaxedSlabCopperBlOCKS() { return BLOCKS; }
+    public static DeferredRegister.Blocks getWaxedSlabCopperBLOCKS() { return BLOCKS; }
 
     public static final DeferredBlock<SlabBlock> RAW_WAXED_COPPER_SLAB = registerAid("raw_waxed_copper_slab", RAW_COPPER_SLAB, RAW_COPPER_BLOCK, UNAFFECTED.getOrder(), 5);
     public static final DeferredBlock<SlabBlock> RAW_WAXED_EXPOSED_COPPER_SLAB = registerAid("raw_waxed_exposed_copper_slab", RAW_EXPOSED_COPPER_SLAB, RAW_COPPER_BLOCK, EXPOSED.getOrder(), 6);

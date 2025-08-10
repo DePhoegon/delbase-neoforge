@@ -15,14 +15,14 @@ import java.util.Map;
 import java.util.Optional;
 import java.util.function.Supplier;
 
-public interface weatheringCopper extends ChangeOverTimeBlock<WeatherState> {
+public interface weatheringCopper extends ChangeOverTimeBlock<weatherState> {
     int getMapOrder();
     List<DeferredBlock<? extends Block>> getWeatheredSetList();
     boolean isWaxed();
     int getOxidizedStage();
 
-    default @NotNull WeatherState getAge() {
-        return WeatherState.getStateByOrder(getCurrentAge((DeferredBlock<? extends Block>) this));
+    default @NotNull weatherState getAge() {
+        return weatherState.getStateByOrder(getCurrentAge((DeferredBlock<? extends Block>) this));
     }
     default int getCurrentAge(DeferredBlock<? extends Block> thisBlock) {
         return ((weatheringCopper) thisBlock.get()).getOxidizedStage();
@@ -55,7 +55,7 @@ public interface weatheringCopper extends ChangeOverTimeBlock<WeatherState> {
         return outMap;
     }
     default Supplier<BiMap<Block, Block>> getPreviousByBlockMapping() { return Suppliers.memoize(() -> getNextByBlockMapping().get().inverse()); }
-    default float getChanceModifier(WeatherState weatherState) { return weatherState == WeatherState.UNAFFECTED ? 0.75F : 1.0F; }
+    default float getChanceModifier(weatherState weatherState) { return weatherState == com.dephoegon.delbase.aid.util.weatherState.UNAFFECTED ? 0.75F : 1.0F; }
     default Block getFirstInSet(DeferredBlock<? extends Block> block) {
         if (!getPreviousByBlockMapping().get().containsKey(block.get())) { return block.get(); }
         return getFirstInSet(
