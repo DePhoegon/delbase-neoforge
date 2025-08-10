@@ -1,10 +1,4 @@
-DONE:
-- Creative Tabs || 8/7/2025
-- Slabs || 8/9/2025
-- Stairs || 8/10/2025
-
-TODO:
-    Walls / Fences / Fences Gates
+    Stairs
     - Copper Block
     - Exposed Copper Block
     - Weathered Copper Block
@@ -37,13 +31,14 @@ TODO:
     - Waxed Exposed Copper Bulb
     - Waxed Weathered Copper Bulb
     - Waxed Oxidized Copper Bulb
-    - Cut Copper Block
-    - Exposed Cut Copper Block
-    - Weathered Cut Copper Block
-    - Oxidized Cut Copper Block
-    - Waxed Cut Copper Block
-    - Waxed Exposed Cut Copper Block
-    - Waxed Weathered Cut Copper Block
-    - Waxed Oxidized Cut Copper Block
     - Chiseled Tuff
     - Chiseled Tuff Brick
+
+Class file for Stairs:
+// - copperBulbStairs
+// - copperStairs
+
+Refactoring:
+// - naming for interface & BLOCK get methods
+
+add weathering to all Copper blocks

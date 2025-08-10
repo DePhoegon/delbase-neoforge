@@ -1265,7 +1265,8 @@ public class creativeTabsArrayLists {
         out.add(SMOOTH_BASALT_STAIR);
         out.add(COBBLED_BASALT_STAIR);
         out.add(RAW_GOLD_STAIR);
-        out.add(RAW_COPPER_STAIR);
+        out.add(CHISELED_TUFF_STAIR);
+        out.add(CHISELED_TUFF_BRICK_STAIR);
         out.add(RAW_IRON_STAIR);
         out.add(COAL_BLOCK_STAIR);
         out.add(CRACKED_POLISHED_BLACKSTONE_BRICK_STAIR);
