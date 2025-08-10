@@ -18,23 +18,23 @@ public class copperBulbSlab extends copperSlab {
     public static final BooleanProperty POWERED;
     public static final BooleanProperty LIT;
 
-    public copperBulbSlab(Properties properties, @NotNull String normToolTip, String shiftToolTip, String ctrlToolTip, int oxidizedStage, boolean isWaxed, int MapOrder) {
-        super(properties, normToolTip, shiftToolTip, ctrlToolTip, oxidizedStage, isWaxed, MapOrder);
+    public copperBulbSlab(Properties properties, BlockState strippedState, @NotNull String normToolTip, String shiftToolTip, String ctrlToolTip, int oxidizedStage, boolean isWaxed, int MapOrder) {
+        super(properties, strippedState, normToolTip, shiftToolTip, ctrlToolTip, oxidizedStage, isWaxed, MapOrder);
         this.registerDefaultState((BlockState)((BlockState)this.defaultBlockState().setValue(LIT, false)).setValue(POWERED, false));
     }
-    public copperBulbSlab(Properties properties, int oxidizedStage, boolean isWaxed, int MapOrder) {
-        super(properties, oxidizedStage, isWaxed, MapOrder);
+    public copperBulbSlab(Properties properties, BlockState strippedState, int oxidizedStage, boolean isWaxed, int MapOrder) {
+        super(properties, strippedState, oxidizedStage, isWaxed, MapOrder);
         this.registerDefaultState((BlockState)((BlockState)this.defaultBlockState().setValue(LIT, false)).setValue(POWERED, false));
     }
 
-    protected void onPlace(BlockState state, @NotNull Level level, @NotNull BlockPos pos, BlockState oldState, boolean movedByPiston) {
+    protected void onPlace(@NotNull BlockState state, @NotNull Level level, @NotNull BlockPos pos, @NotNull BlockState oldState, boolean movedByPiston) {
         if (oldState.getBlock() != state.getBlock() && level instanceof ServerLevel serverlevel) { this.checkAndFlip(state, serverlevel, pos); }
     }
     protected void neighborChanged(@NotNull BlockState state, @NotNull Level level, @NotNull BlockPos pos, @NotNull Block neighborBlock, @NotNull BlockPos neighborPos, boolean movedByPiston) {
         if (level instanceof ServerLevel serverlevel) { this.checkAndFlip(state, serverlevel, pos); }
         super.neighborChanged(state, level, pos, neighborBlock, neighborPos, movedByPiston);
     }
-    public void checkAndFlip(BlockState state, ServerLevel level, BlockPos pos) {
+    public void checkAndFlip(@NotNull BlockState state, @NotNull ServerLevel level, BlockPos pos) {
         boolean flag = level.hasNeighborSignal(pos);
         if (flag != (Boolean)state.getValue(POWERED)) {
             BlockState blockstate = state;
@@ -50,11 +50,11 @@ public class copperBulbSlab extends copperSlab {
         super.createBlockStateDefinition(builder);
         builder.add(new Property[]{LIT, POWERED});
     }
-    public int getLightEmission(BlockState state, net.minecraft.world.level.@NotNull BlockGetter level, @NotNull BlockPos pos) { return state.getValue(LIT) ? 15 : 0; }
+    public int getLightEmission(@NotNull BlockState state, net.minecraft.world.level.@NotNull BlockGetter level, @NotNull BlockPos pos) { return state.getValue(LIT) ? 15 : 0; }
     protected boolean hasAnalogOutputSignal(@NotNull BlockState state) {
         return true;
     }
-    protected int getAnalogOutputSignal(@NotNull BlockState state, Level level, @NotNull BlockPos pos) { return (Boolean)level.getBlockState(pos).getValue(LIT) ? 15 : 0; }
+    protected int getAnalogOutputSignal(@NotNull BlockState state, @NotNull Level level, @NotNull BlockPos pos) { return (Boolean)level.getBlockState(pos).getValue(LIT) ? 15 : 0; }
 
     static {
         POWERED = BlockStateProperties.POWERED;

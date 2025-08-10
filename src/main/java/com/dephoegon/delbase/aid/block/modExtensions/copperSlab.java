@@ -12,21 +12,22 @@ import java.util.List;
 import java.util.Optional;
 
 import static com.dephoegon.delbase.aid.util.WeatherState.getStateByOrder;
-import static com.dephoegon.delbase.block.slab.slabCopers.getSlabCopperBLOCKS;
+import static com.dephoegon.delbase.block.slab.slabCopperWaxed.getWaxedSlabCopperBlOCKS;
+import static com.dephoegon.delbase.block.slab.slabCoppers.getSlabCopperBLOCKS;
 
 public class copperSlab extends slabBlock implements weatheringCopper {
     private final int oxidizedStage;
     private final boolean isWaxed;
     public final int mapOrder; // Store the unique MapOrder
 
-    public copperSlab(Properties properties, @NotNull String normToolTip, String shiftToolTip, String ctrlToolTip, int oxidizedStage, boolean isWaxed, int MapOrder) {
-        super(properties, normToolTip, shiftToolTip, ctrlToolTip, false, 0, 0, null);
+    public copperSlab(Properties properties, BlockState strippedState, @NotNull String normToolTip, String shiftToolTip, String ctrlToolTip, int oxidizedStage, boolean isWaxed, int MapOrder) {
+        super(properties, normToolTip, shiftToolTip, ctrlToolTip, false, 0, 0, strippedState);
         this.oxidizedStage = oxidizedStage;
         this.isWaxed = isWaxed;
         this.mapOrder = MapOrder; // Set the unique map order
     }
-    public copperSlab(Properties properties, int oxidizedStage, boolean isWaxed, int MapOrder) {
-        super(properties, false, 0, 0, null);
+    public copperSlab(Properties properties, BlockState strippedState, int oxidizedStage, boolean isWaxed, int MapOrder) {
+        super(properties, false, 0, 0, strippedState);
         this.oxidizedStage = oxidizedStage;
         this.isWaxed = isWaxed;
         this.mapOrder = MapOrder; // Set the unique map order
@@ -41,6 +42,7 @@ public class copperSlab extends slabBlock implements weatheringCopper {
     public List<DeferredBlock<? extends Block>> getWeatheredSetList() {
         List<DeferredBlock<? extends Block>> outList = new ArrayList<>();
         getSlabCopperBLOCKS().getEntries().forEach(entry -> outList.add((DeferredBlock<? extends Block>) entry));
+        getWaxedSlabCopperBlOCKS().getEntries().forEach(entry -> outList.add((DeferredBlock<? extends Block>) entry));
         return outList;
     }
 }
