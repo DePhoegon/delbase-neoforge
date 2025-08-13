@@ -25,6 +25,7 @@ public class regList {
         // Copper Blocks (Non-Waxed), called for in waxed versions
         slabCoppers.registerBlock(eventBus);
         stairCoppers.registerBlock(eventBus);
+        wallCoppers.registerBlock(eventBus);
         // Sand
         gravColorSands.registerBlock(eventBus);
         // SandStone
@@ -43,6 +44,7 @@ public class regList {
         // Copper Blocks (Waxed)
         slabCopperWaxed.registerBlock(eventBus);
         stairCopperWaxed.registerBlock(eventBus);
+        wallCopperWaxed.registerBlock(eventBus);
 
         //Pillars
         axiCutSandStones.registerBlock(eventBus);

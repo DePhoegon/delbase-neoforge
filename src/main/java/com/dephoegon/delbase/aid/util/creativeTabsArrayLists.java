@@ -68,6 +68,8 @@ import static com.dephoegon.delbase.block.stair.stairWood.*;
 import static com.dephoegon.delbase.block.wall.hedgeLeaves.*;
 import static com.dephoegon.delbase.block.wall.wallChiseledSandStones.*;
 import static com.dephoegon.delbase.block.wall.wallConcrete.*;
+import static com.dephoegon.delbase.block.wall.wallCopperWaxed.*;
+import static com.dephoegon.delbase.block.wall.wallCoppers.*;
 import static com.dephoegon.delbase.block.wall.wallCutSandStones.*;
 import static com.dephoegon.delbase.block.wall.wallMisc.*;
 import static com.dephoegon.delbase.block.wall.wallQuartz.*;
@@ -125,13 +127,13 @@ public class creativeTabsArrayLists {
         out.add(LIGHT_BLUE_CUT_SAND_STONE);
         out.add(YELLOW_CUT_SAND_STONE);
         out.add(LIME_CUT_SAND_STONE);
-        out.add(GREEN_CUT_SAND_STONE);
         out.add(PINK_CUT_SAND_STONE);
         out.add(GRAY_CUT_SAND_STONE);
         out.add(LIGHT_GRAY_CUT_SAND_STONE);
         out.add(CYAN_CUT_SAND_STONE);
         out.add(PURPLE_CUT_SAND_STONE);
         out.add(BLUE_CUT_SAND_STONE);
+        out.add(GREEN_CUT_SAND_STONE);
         out.add(BROWN_CUT_SAND_STONE);
         out.add(BLACK_CUT_SAND_STONE);
         return out;
@@ -149,10 +151,10 @@ public class creativeTabsArrayLists {
         out.add(LIGHT_GRAY_CHISELED_SAND_STONE_FENCE);
         out.add(CYAN_CHISELED_SAND_STONE_FENCE);
         out.add(PURPLE_CHISELED_SAND_STONE_FENCE);
-        out.add(BLACK_CHISELED_SAND_STONE_FENCE);
         out.add(BLUE_CHISELED_SAND_STONE_FENCE);
-        out.add(BROWN_CHISELED_SAND_STONE_FENCE);
         out.add(GREEN_CHISELED_SAND_STONE_FENCE);
+        out.add(BROWN_CHISELED_SAND_STONE_FENCE);
+        out.add(BLACK_CHISELED_SAND_STONE_FENCE);
         out.add(RED_CHISELED_SAND_STONE_FENCE);
         out.add(CHISELED_SAND_STONE_FENCE);
         out.add(BLOOD_CHISELED_SAND_STONE_FENCE);
@@ -171,10 +173,10 @@ public class creativeTabsArrayLists {
         out.add(LIGHT_GRAY_CHISELED_SAND_STONE_FENCE_GATE);
         out.add(CYAN_CHISELED_SAND_STONE_FENCE_GATE);
         out.add(PURPLE_CHISELED_SAND_STONE_FENCE_GATE);
-        out.add(BLACK_CHISELED_SAND_STONE_FENCE_GATE);
         out.add(BLUE_CHISELED_SAND_STONE_FENCE_GATE);
-        out.add(BROWN_CHISELED_SAND_STONE_FENCE_GATE);
         out.add(GREEN_CHISELED_SAND_STONE_FENCE_GATE);
+        out.add(BROWN_CHISELED_SAND_STONE_FENCE_GATE);
+        out.add(BLACK_CHISELED_SAND_STONE_FENCE_GATE);
         out.add(RED_CHISELED_SAND_STONE_FENCE_GATE);
         out.add(CHISELED_SAND_STONE_FENCE_GATE);
         out.add(BLOOD_CHISELED_SAND_STONE_FENCE_GATE);
@@ -858,6 +860,62 @@ public class creativeTabsArrayLists {
         out.add(BLACK_CUT_SAND_STONE_SLAB_ENERGY);
         return out;
     }
+    public static @NotNull ArrayList<DeferredBlock<WallBlock>> setWaxedCopperWalls() {
+        ArrayList<DeferredBlock<WallBlock>> out = new ArrayList<>();
+        out.add(RAW_WAXED_COPPER_WALL);
+        out.add(RAW_EXPOSED_WAXED_COPPER_WALL);
+        out.add(RAW_WEATHERED_WAXED_COPPER_WALL);
+        out.add(RAW_OXIDIZED_WAXED_COPPER_WALL);
+        out.add(WAXED_COPPER_WALL);
+        out.add(WAXED_EXPOSED_COPPER_WALL);
+        out.add(WAXED_WEATHERED_COPPER_WALL);
+        out.add(WAXED_OXIDIZED_COPPER_WALL);
+        out.add(WAXED_CHISELED_COPPER_WALL);
+        out.add(WAXED_CHISELED_EXPOSED_COPPER_WALL);
+        out.add(WAXED_CHISELED_WEATHERED_COPPER_WALL);
+        out.add(WAXED_CHISELED_OXIDIZED_COPPER_WALL);
+        out.add(WAXED_COPPER_GRATE_WALL);
+        out.add(WAXED_EXPOSED_COPPER_GRATE_WALL);
+        out.add(WAXED_WEATHERED_COPPER_GRATE_WALL);
+        out.add(WAXED_OXIDIZED_COPPER_GRATE_WALL);
+        out.add(WAXED_CUT_COPPER_WALL);
+        out.add(WAXED_EXPOSED_CUT_COPPER_WALL);
+        out.add(WAXED_WEATHERED_CUT_COPPER_WALL);
+        out.add(WAXED_OXIDIZED_CUT_COPPER_WALL);
+        out.add(WAXED_BULB_COPPER_WALL);
+        out.add(WAXED_BULB_EXPOSED_COPPER_WALL);
+        out.add(WAXED_BULB_WEATHERED_COPPER_WALL);
+        out.add(WAXED_BULB_OXIDIZED_COPPER_WALL);
+        return out;
+    }
+    public static @NotNull ArrayList<DeferredBlock<WallBlock>> setCopperWalls() {
+        ArrayList<DeferredBlock<WallBlock>> out = new ArrayList<>();
+        out.add(RAW_COPPER_WALL);
+        out.add(RAW_EXPOSED_COPPER_WALL);
+        out.add(RAW_WEATHERED_COPPER_WALL);
+        out.add(RAW_OXIDIZED_COPPER_WALL);
+        out.add(COPPER_WALL);
+        out.add(EXPOSED_COPPER_WALL);
+        out.add(WEATHERED_COPPER_WALL);
+        out.add(OXIDIZED_COPPER_WALL);
+        out.add(CHISELED_COPPER_WALL);
+        out.add(CHISELED_EXPOSED_COPPER_WALL);
+        out.add(CHISELED_WEATHERED_COPPER_WALL);
+        out.add(CHISELED_OXIDIZED_COPPER_WALL);
+        out.add(COPPER_GRATE_WALL);
+        out.add(EXPOSED_COPPER_GRATE_WALL);
+        out.add(WEATHERED_COPPER_GRATE_WALL);
+        out.add(OXIDIZED_COPPER_GRATE_WALL);
+        out.add(CUT_COPPER_WALL);
+        out.add(EXPOSED_CUT_COPPER_WALL);
+        out.add(WEATHERED_CUT_COPPER_WALL);
+        out.add(OXIDIZED_CUT_COPPER_WALL);
+        out.add(BULB_COPPER_WALL);
+        out.add(BULB_EXPOSED_COPPER_WALL);
+        out.add(BULB_WEATHERED_COPPER_WALL);
+        out.add(BULB_OXIDIZED_COPPER_WALL);
+        return out;
+    }
     public static @NotNull ArrayList<DeferredBlock<StairBlock>> setWaxedCopperStairs() {
         ArrayList<DeferredBlock<StairBlock>> out = new ArrayList<>();
         out.add(RAW_WAXED_COPPER_STAIRS);
@@ -1505,7 +1563,6 @@ public class creativeTabsArrayLists {
         out.add(POLISHED_BASALT_WALL);
         out.add(SMOOTH_BASALT_WALL);
         out.add(RAW_GOLD_WALL);
-        out.add(RAW_COPPER_WALL);
         out.add(RAW_IRON_WALL);
         out.add(COAL_BLOCK_WALL);
         out.add(CRACKED_POLISHED_BLACKSTONE_BRICK_WALL);
@@ -1523,6 +1580,8 @@ public class creativeTabsArrayLists {
         out.add(OCHRE_FROGLIGHT_WALL);
         out.add(VERDANT_FROGLIGHT_WALL);
         out.add(PEARLESCENT_FROGLIGHT_WALL);
+        out.add(CHISELED_TUFF_WALL);
+        out.add(CHISELED_TUFF_BRICK_WALL);
         return out;
     }
     public static @NotNull ArrayList<DeferredBlock<WallBlock>> setQuartzWalls() {
@@ -1790,3 +1849,4 @@ public class creativeTabsArrayLists {
         return out;
     }
 }
+

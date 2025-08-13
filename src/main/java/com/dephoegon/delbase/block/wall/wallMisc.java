@@ -1,7 +1,7 @@
 package com.dephoegon.delbase.block.wall;
 
-import com.dephoegon.delbase.aid.block.modExtensions.leafWall;
 import com.dephoegon.delbase.aid.block.fromBaseGameExtensions.wallBlock;
+import com.dephoegon.delbase.aid.block.modExtensions.leafWall;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -43,8 +43,6 @@ public class wallMisc {
             () -> new wallBlock(BlockBehaviour.Properties.ofFullCopy(SMOOTH_BASALT).sound(SoundType.STONE), false, 0, 0, null));
     public static final DeferredBlock<WallBlock> RAW_GOLD_WALL = registerBlock("raw_gold_wall",
             () -> new wallBlock(BlockBehaviour.Properties.ofFullCopy(RAW_GOLD_BLOCK).sound(SoundType.METAL), false, 0, 0, null));
-    public static final DeferredBlock<WallBlock> RAW_COPPER_WALL = registerBlock("raw_copper_wall",
-            () -> new wallBlock(BlockBehaviour.Properties.ofFullCopy(RAW_COPPER_BLOCK).sound(SoundType.METAL), false, 0, 0, null));
     public static final DeferredBlock<WallBlock> RAW_IRON_WALL = registerBlock("raw_iron_wall",
             () -> new wallBlock(BlockBehaviour.Properties.ofFullCopy(RAW_IRON_BLOCK).sound(SoundType.METAL), false, 0, 0, null));
     public static final DeferredBlock<WallBlock> COAL_BLOCK_WALL = registerBlock("coal_block_wall",
@@ -79,6 +77,10 @@ public class wallMisc {
             () -> new wallBlock(BlockBehaviour.Properties.ofFullCopy(VERDANT_FROGLIGHT).sound(SoundType.FROGLIGHT).lightLevel((blockstate) -> 15), false, 0, 0, null));
     public static final DeferredBlock<WallBlock> PEARLESCENT_FROGLIGHT_WALL = registerBlock("pearlescent_froglight_wall",
             () -> new wallBlock(BlockBehaviour.Properties.ofFullCopy(PEARLESCENT_FROGLIGHT).sound(SoundType.FROGLIGHT).lightLevel((blockstate) -> 15), false, 0, 0, null));
+    public static final DeferredBlock<WallBlock> CHISELED_TUFF_WALL = registerBlock("chiseled_tuff_wall",
+            () -> new wallBlock(BlockBehaviour.Properties.ofFullCopy(CHISELED_TUFF).sound(SoundType.STONE), false, 0, 0, null));
+    public static final DeferredBlock<WallBlock> CHISELED_TUFF_BRICK_WALL = registerBlock("chiseled_tuff_brick_wall",
+            () -> new wallBlock(BlockBehaviour.Properties.ofFullCopy(CHISELED_TUFF_BRICKS).sound(SoundType.STONE), false, 0, 0, null));
 
     public static void registerBlock(IEventBus eventBus) {
         BLOCKS.register(eventBus);

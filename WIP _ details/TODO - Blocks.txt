@@ -2,9 +2,10 @@ DONE:
 - Creative Tabs || 8/7/2025
 - Slabs || 8/9/2025
 - Stairs || 8/10/2025
+- Walls || 8/12/2025
 
 TODO:
-    Walls / Fences / Fences Gates
+     Fences / Fences Gates
     - Copper Block
     - Exposed Copper Block
     - Weathered Copper Block

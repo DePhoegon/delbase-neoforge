@@ -2,6 +2,8 @@ package com.dephoegon.delbase.block.stair;
 
 import com.dephoegon.delbase.aid.block.modExtensions.copperBulbStair;
 import com.dephoegon.delbase.aid.block.modExtensions.copperStair;
+import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.StairBlock;
@@ -65,6 +67,6 @@ public class stairCopperWaxed {
         return toReturn;
     }
     private static <T extends Block> void registerBlockItem(String name, DeferredBlock<T> block) {
-
+        ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties().stacksTo(64)));
     }
 }
