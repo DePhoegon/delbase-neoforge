@@ -1,0 +1,6 @@
+{
+"parent": "undefinedblock/template_wall_side",
+"textures": {
+"wall": "undefined:block/0"
+}
+}

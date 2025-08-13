@@ -1,0 +1,8 @@
+{
+"parent": "undefinedblock/outer_stairs",
+"textures": {
+"bottom": "delbase:block/chiseled_tuff_bricks",
+"top": "delbase:block/chiseled_tuff_bricks",
+"side": "delbase:block/chiseled_tuff_bricks"
+}
+}

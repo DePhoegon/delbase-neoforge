@@ -1,0 +1,6 @@
+{
+"parent": "undefinedblock/wall_inventory",
+"textures": {
+"wall": "undefined:block/0"
+}
+}

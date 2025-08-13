@@ -1,0 +1,13 @@
+{
+"variants": {
+"type=bottom": {
+"model": "undefined:block/slab/raw_waxed_weathered_copper_metal_slab"
+},
+"type=double": {
+"model": "undefined:block/slab/raw_waxed_weathered_copper_metal_slab_double"
+},
+"type=top": {
+"model": "undefined:block/slab/raw_waxed_weathered_copper_metal_slab_top"
+}
+}
+}

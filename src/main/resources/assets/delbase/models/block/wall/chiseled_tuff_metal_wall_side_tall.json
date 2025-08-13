@@ -1,0 +1,6 @@
+{
+"parent": "undefinedblock/template_wall_side_tall",
+"textures": {
+"wall": "delbase:block/chiseled_tuff"
+}
+}
