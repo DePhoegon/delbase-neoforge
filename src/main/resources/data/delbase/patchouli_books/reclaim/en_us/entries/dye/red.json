@@ -1,0 +1,16 @@
+{
+  "name": "Red Dye",
+  "icon": "delbase:red_shift_dye",
+  "category": "delbase:dye_category",
+  "pages": [
+    {
+      "type": "patchouli:crafting",
+      "recipe": "delbase:table/generic/dye/red_shaped"
+    },
+    {
+      "title": "Red",
+      "type": "patchouli:image",
+      "images": [ "delbase:textures/screens/red.png" ]
+    }
+  ]
+}

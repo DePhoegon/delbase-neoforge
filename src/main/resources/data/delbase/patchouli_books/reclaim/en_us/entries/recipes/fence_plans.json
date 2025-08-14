@@ -1,0 +1,16 @@
+{
+  "name": "Fence Crafting",
+  "icon": "delbase:fence_plans",
+  "category": "delbase:recipes",
+  "pages": [
+    {
+      "type": "patchouli:crafting",
+      "recipe": "delbase:table/generic/fence_plan_shaped",
+      "text": "Will only make Fences.$(br)-Fence Gates need a separate plan$(br2)1 Block per Fence"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(item)Paper$()s and an Energy Dust will create a reusable plan.$(br)$(br)$(l:tag/energy_dust#energy_dust)Energy Dust$(/l)$(br)-Either one can be used."
+    }
+  ]
+}

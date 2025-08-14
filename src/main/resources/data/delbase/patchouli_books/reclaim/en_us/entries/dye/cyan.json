@@ -1,0 +1,16 @@
+{
+  "name": "Cyan Dye",
+  "icon": "delbase:cyan_shift_dye",
+  "category": "delbase:dye_category",
+  "pages": [
+    {
+      "type": "patchouli:crafting",
+      "recipe": "delbase:table/generic/dye/cyan_shaped"
+    },
+    {
+      "title": "Cyan",
+      "type": "patchouli:image",
+      "images": [ "delbase:textures/screens/cyan.png" ]
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "name": "Cleanse Dye",
+  "icon": "delbase:cleanse_shift_dye",
+  "category": "delbase:dye_category",
+  "pages": [
+    {
+      "type": "patchouli:crafting",
+      "text": "Getting the basic cleansing Dye.$(br)Cleanse Dye Acts like White Dye for Interactions with some things.$(br)Can get colors out of some blocks.",
+      "recipe": "delbase:table/generic/dye/cleanse_shaped"
+    },
+    {
+      "title": "Cleanse",
+      "type": "patchouli:image",
+      "images": [ "delbase:textures/screens/cleanse.png" ]
+    }
+  ]
+}

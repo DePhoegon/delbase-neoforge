@@ -1,0 +1,20 @@
+{ 
+  "type": "minecraft:block", 
+  "pools": [ 
+    { 
+      "rolls": 1.0, 
+      "bonus_rolls": 0.0, 
+      "entries": [ 
+        { 
+          "type": "minecraft:item", 
+          "name": "delbase:light_blue_cut_sand_stone_wall"
+        } 
+      ], 
+      "conditions": [ 
+        { 
+          "condition": "minecraft:survives_explosion" 
+        } 
+      ] 
+    } 
+  ] 
+} 

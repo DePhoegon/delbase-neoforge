@@ -1,0 +1,17 @@
+{
+  "name": "Colors Ahoy",
+  "icon": "minecraft:red_dye",
+  "category": "delbase:get_started",
+  "pages": [
+    {
+      "title": "Sands",
+      "type": "patchouli:image",
+      "images": [ "delbase:textures/screens/sands.png" ]
+    },
+    {
+      "title": "SandStones",
+      "type": "patchouli:image",
+      "images": ["delbase:textures/screens/sandstone.png"]
+    }
+  ]
+}

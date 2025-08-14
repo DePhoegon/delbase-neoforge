@@ -1,0 +1,53 @@
+{
+  "name": "Block Variants",
+  "icon": "minecraft:red_dye",
+  "category": "delbase:get_started",
+  "pages": [
+    {
+      "title": "Stairs",
+      "type": "patchouli:spotlight",
+      "item": "delbase:quartz_pillar_stair",
+      "text": "Check JEI for the full range of stairs$(br)-Quartz$(br)-Woods$(br)-Sands/Sandstones$(br)-Concretes$(br)-Terracotta"
+    },
+    {
+      "title": "Slabs",
+      "type": "patchouli:spotlight",
+      "item": "delbase:dried_kelp_slab",
+      "text": "Check JEI for the full range of slabs$(br)-Quartz$(br)-Woods$(br)-Sands/Sandstones$(br)-Concretes$(br)-Terracotta"
+    },
+    {
+      "title": "Walls",
+      "type": "patchouli:spotlight",
+      "item": "delbase:lime_terracotta_wall",
+      "text": "Check JEI for the full range of walls$(br)-Quartz$(br)-Woods$(br)-Sands/Sandstones$(br)-Concretes$(br)-Terracotta"
+    },
+    {
+      "title": "Fences",
+      "type": "patchouli:spotlight",
+      "item": "delbase:pink_concrete_fence",
+      "text": "Check JEI for the full range of fences$(br)-Quartz$(br)-Woods$(br)-Sands/Sandstones$(br)-Concretes$(br)-Terracotta"
+    },
+    {
+      "title": "Fence Gates",
+      "type": "patchouli:spotlight",
+      "item": "delbase:birch_log_fence_gate",
+      "text": "Check JEI for the full range of fence gates$(br)-Quartz$(br)-Woods$(br)-Sands/Sandstones$(br)-Concretes$(br)-Terracotta"
+    },
+    {
+      "title": "Hedges",
+      "type": "patchouli:spotlight",
+      "item": "delbase:oak_hedge",
+      "text": "Check JEI for the full range of hedges$(br)-Leafy Things"
+    },
+    {
+      "title": "Shapes",
+      "type": "patchouli:image",
+      "images": [ "delbase:textures/screens/shapes.png" ]
+    },
+    {
+      "title": "Hedges",
+      "type": "patchouli:image",
+      "images": [ "delbase:textures/screens/hedges.png" ]
+    }
+  ]
+}

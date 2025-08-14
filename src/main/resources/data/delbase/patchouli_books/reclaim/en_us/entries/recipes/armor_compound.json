@@ -1,0 +1,19 @@
+{
+  "name": "Armor Compound",
+  "icon": "delbase:armor_compound",
+  "category": "delbase:recipes",
+  "pages": [
+    {
+      "title": "The Dissolve Compound",
+      "type": "patchouli:spotlight",
+      "item": "delbase:armor_compound",
+      "text": "Compound meant to Dissolve tools & armor into there components."
+    },
+    {
+      "title": "Armor Compound",
+      "type": "patchouli:crafting",
+      "recipe": "delbase:table/generic/armor_compound_shapeless",
+      "text": "-1 $(l:tag/energy_dust#energy_dust)Energy Dust$(/l)$(br)-1 $(l:tag/raw_food#raw_food)Raw Foods$(/l)$(br)-1 $(l:tag/dye#dye)Dyes$(/l)$(br)-1 $(l:tag/sands)Sand$(/l)"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "name": "Dye Lists",
+  "icon": "minecraft:name_tag",
+  "category": "delbase:tags",
+  "pages": [
+    {
+      "title": "Dyes tag",
+      "type": "patchouli:text",
+      "anchor": "dye",
+      "text": "-$(l:dye/cleanse)Cleanse Shift Dye$(/l)$(br)-Black Dye$(br)-$(l:dye/black)Black Shift Dye$(/l)$(br)-Brown Dye$(br)-$(l:dye/brown)Brown Shift Dye$(/l)$(br)-Cyan Dye$(br)-$(l:dye/cyan)Cyan Shift Dye$(/l)$(br)-Gray Dye$(br)-$(l:dye/gray)Gray Shift Dye$(/l)$(br)-Green Dye"
+    },
+    {
+      "title": "Dyes tag",
+      "type": "patchouli:text",
+      "text": "-$(l:dye/green)Green Shift Dye$(/l)$(br)-Light Blue Dye$(br)-$(l:dye/light_blue)Light Blue Shift Dye$(/l)$(br)-Light Gray Dye$(br)-$(l:dye/light_gray)Light Gray Shift Dye$(/l)$(br)-Lime Dye$(br)-$(l:dye/lime)Lime Shift Dye$(/l)$(br)-Magenta Dye$(br)-$(l:dye/magenta)Magenta Shift Dye$(/l)$(br)-Orange Dye"
+    },
+    {
+      "title": "Dyes tag",
+      "type": "patchouli:text",
+      "text": "-$(l:dye/orange)Orange Shift Dye$(/l)$(br)-Pink Dye$(br)-$(l:dye/pink)Pink Shift Dye$(/l)$(br)-Purple Dye$(br)-$(l:dye/purple)Purple Shift Dye$(/l)$(br)-Red Dye$(br)-$(l:dye/red)Red Shift Dye$(/l)$(br)-White Dye$(br)-$(l:dye/white)White Shift Dye$(/l)$(br)-Yellow Dye$(br)-$(l:dye/yellow)Yellow Shift Dye$(/l)"
+    }
+  ]
+}

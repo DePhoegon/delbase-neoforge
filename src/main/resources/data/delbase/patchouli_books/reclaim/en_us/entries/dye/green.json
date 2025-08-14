@@ -1,0 +1,16 @@
+{
+  "name": "Green Dye",
+  "icon": "delbase:green_shift_dye",
+  "category": "delbase:dye_category",
+  "pages": [
+    {
+      "type": "patchouli:crafting",
+      "recipe": "delbase:table/generic/dye/green_shaped"
+    },
+    {
+      "title": "Green",
+      "type": "patchouli:image",
+      "images": [ "delbase:textures/screens/green.png" ]
+    }
+  ]
+}

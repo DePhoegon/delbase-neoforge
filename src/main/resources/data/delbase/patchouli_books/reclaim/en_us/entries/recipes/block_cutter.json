@@ -1,0 +1,17 @@
+{
+  "name": "Block Cutting Station",
+  "icon": "delbase:block_cutting_station",
+  "category": "delbase:recipes",
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "delbase:block_cutting_station",
+      "text": "The one and only 'machine' needed for this Mod"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "delbase:table/generic/block_cutter_station_shaped",
+      "text": "-$(item)Iron ingot$()$(br)-$(item)Cobblestone$() x4$(br)-an $(l:tag/energy_dust)Energy Dust$(/l)$(br)-$(item)Sticks$() x2$(br)-A Piece of $(item)Paper$()"
+    }
+  ]
+}

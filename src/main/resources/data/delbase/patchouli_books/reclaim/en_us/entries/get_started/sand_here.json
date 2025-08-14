@@ -1,0 +1,40 @@
+{
+  "name": "Floating Sand",
+  "icon": "minecraft:sand",
+  "category": "delbase:get_started",
+  "pages": [
+    {
+      "title": "How?",
+      "type": "patchouli:spotlight",
+      "item": "minecraft:sand",
+      "text": "Sand can be held in place by one of two methods.$(br2)1. By using an 'Energetic Slab' above it, up to 6 sand blocks below it.$(br)2. by Turning it into solidified Sand in a camp fire"
+    },
+    {
+      "title": "It Floats",
+      "type": "patchouli:image",
+      "images": ["delbase:textures/screens/floats.png"]
+    },
+    {
+      "title": "Energetic Sand",
+      "type": "patchouli:spotlight",
+      "item": "delbase:sand_stone_slab_energy",
+      "text": "Valid Slabs that can be made into Energetic Slabs$(br2)-Chiseled SandStone Slabs$(br)-Cut SandStone Slabs$(br)-Sand Slabs(made from Solidified Sand)$(br)-SandStone Slabs$(br)-Smooth SandStone Slabs"
+    },
+    {
+      "title": "Example Craft",
+      "type": "patchouli:crafting",
+      "recipe": "delbase:table/generic/energetic_slab/sandstone/normal/sandstone_sand_stone_slab_shapeless"
+    },
+    {
+      "title": "Gravity Defying Sand",
+      "type": "patchouli:spotlight",
+      "item": "delbase:solid_sand",
+      "text": "Acts like any other block that does not fall, while keeping sand particles."
+    },
+    {
+      "title": "Sand Hardening",
+      "type": "patchouli:image",
+      "images": ["delbase:textures/screens/campfire.png"]
+    }
+  ]
+}

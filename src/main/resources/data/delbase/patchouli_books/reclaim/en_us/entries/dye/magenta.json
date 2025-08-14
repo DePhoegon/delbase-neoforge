@@ -1,0 +1,16 @@
+{
+  "name": "Magenta Dye",
+  "icon": "delbase:magenta_shift_dye",
+  "category": "delbase:dye_category",
+  "pages": [
+    {
+      "type": "patchouli:crafting",
+      "recipe": "delbase:table/generic/dye/magenta_shaped"
+    },
+    {
+      "title": "Magenta",
+      "type": "patchouli:image",
+      "images": [ "delbase:textures/screens/magenta.png" ]
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "name": "Spare Book",
+  "icon": "patchouli:guide_book{\"patchouli:book\": \"delbase:reclaim\"}",
+  "category": "delbase:recipes",
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "patchouli:guide_book{\"patchouli:book\": \"delbase:reclaim\"}",
+      "text": "Spare copy of the book."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "delbase:table/generic/spare_book",
+      "text": "$(br)1 Spare book$(br)-Minecraft $(item)Book$()$(br)-1 $(l:tag/dye)Dye$(/l)"
+    }
+  ]
+}
