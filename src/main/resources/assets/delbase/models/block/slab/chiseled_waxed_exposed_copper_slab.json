@@ -1,0 +1,8 @@
+{
+"parent": "minecraft:block/slab",
+"textures": {
+"bottom": "delbase:block/chiseled_waxed_exposed_copper_block",
+"top": "delbase:block/chiseled_waxed_exposed_copper_block",
+"side": "delbase:block/chiseled_waxed_exposed_copper_block"
+}
+}

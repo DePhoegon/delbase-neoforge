@@ -1,0 +1,8 @@
+{
+"parent": "minecraft:block/slab",
+"textures": {
+"bottom": "delbase:block/waxed_weathered_copper_bulb_block",
+"top": "delbase:block/waxed_weathered_copper_bulb_block",
+"side": "delbase:block/waxed_weathered_copper_bulb_block"
+}
+}

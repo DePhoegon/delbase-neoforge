@@ -1,13 +1,13 @@
 {
-  "variants": {
-    "type=bottom": {
-      "model": "delbase:block/slab/raw_exposed_copper_slab"
-    },
-    "type=double": {
-      "model": "delbase:block/slab/raw_exposed_copper_slab_double"
-    },
-    "type=top": {
-      "model": "delbase:block/slab/raw_exposed_copper_slab_top"
-    }
-  }
+"variants": {
+"type=bottom": {
+"model": "delbase:block/slab/raw_exposed_copper_slab"
+},
+"type=double": {
+"model": "delbase:block/slab/raw_exposed_copper_slab_double"
+},
+"type=top": {
+"model": "delbase:block/slab/raw_exposed_copper_slab_top"
+}
+}
 }

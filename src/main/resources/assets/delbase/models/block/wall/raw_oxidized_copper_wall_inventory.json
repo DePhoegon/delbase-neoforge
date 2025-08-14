@@ -1,0 +1,7 @@
+{
+"parent": "delbase:block/template/wall_inventory_copper",
+"textures": {
+"wall": "delbase:block/raw_oxidized_block",
+"top": "delbase:block/raw_oxidized_block"
+}
+}

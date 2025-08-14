@@ -1,0 +1,8 @@
+{
+"parent": "minecraft:block/slab_top",
+"textures": {
+"bottom": "delbase:block/oxidized_copper_bulb_block",
+"top": "delbase:block/oxidized_copper_bulb_block",
+"side": "delbase:block/oxidized_copper_bulb_block"
+}
+}

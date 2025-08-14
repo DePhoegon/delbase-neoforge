@@ -1,6 +1,0 @@
-{
-"parent": "undefinedblock/wall_inventory",
-"textures": {
-"wall": "delbase:block/chiseled_tuff"
-}
-}

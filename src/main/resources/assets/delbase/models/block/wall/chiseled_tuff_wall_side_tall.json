@@ -1,0 +1,7 @@
+{
+"parent": "delbase:block/template/wall_side_tall",
+"textures": {
+"wall": "delbase:block/2",
+"top": "delbase:block/2"
+}
+}

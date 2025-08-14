@@ -1,0 +1,8 @@
+{
+"parent": "minecraft:block/slab_top",
+"textures": {
+"bottom": "delbase:block/raw_waxed_oxidized_block",
+"top": "delbase:block/raw_waxed_oxidized_block",
+"side": "delbase:block/raw_waxed_oxidized_block"
+}
+}

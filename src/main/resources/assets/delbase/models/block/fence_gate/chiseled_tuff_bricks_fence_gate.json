@@ -1,0 +1,6 @@
+{
+"parent": "delbase:block/template/fence_gate",
+"textures": {
+"texture": "delbase:block/2"
+}
+}

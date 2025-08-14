@@ -1,0 +1,9 @@
+{
+"parent": "delbase:block/template/outer_stairs",
+"textures": {
+"bottom": "delbase:block/2",
+"top": "delbase:block/2",
+"side": "delbase:block/2",
+"inside": "delbase:block/2"
+}
+}

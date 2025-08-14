@@ -97,7 +97,25 @@ async function setVariables(Args) {
     if (typeName != 0) { 
         if (typeName == 'woodtype') {
             useWoodCycle = true;
-        } else { blockName = blockName + '_' + typeName; }
+        }
+        // _copper is used for the custom template names for metals cutting the outer ring of the 16x16 texture
+        if (typeName == 'metal' || typeName == 'copper') {
+            customFenceGate = customFenceGate+'_copper';
+            customFenceSide = customFenceSide+'_copper';
+            customFencePost = customFencePost+'_copper';
+            customFenceInventory = customFenceInventory+'_copper';
+            customFenceGateOpen = customFenceGateOpen+'_copper';
+            customFenceGateWall = customFenceGateWall+'_copper';
+            customFenceGateWallOpen = customFenceGateWallOpen+'_copper';
+            customStairs = customStairs+'_copper';
+            customInnerStair = customInnerStair+'_copper';
+            customouterStairs = customouterStairs+'_copper';
+            customWallInventory = customWallInventory+'_copper';
+            customWallPost = customWallPost+'_copper';
+            customWallSide = customWallSide+'_copper';
+            customWallSideTall = customWallSideTall+'_copper';
+            if (typeName == 'copper') { blockName = blockName + '_' + typeName; }
+        }
     }
     if (Args[2] == 0 || Args[2] == 1) {
         if (Args[2] == 0) { useCustomTemplate = false; } else { useCustomTemplate = true; }

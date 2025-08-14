@@ -1,6 +1,0 @@
-{
-"parent": "undefinedblock/template_wall_side",
-"textures": {
-"wall": "delbase:block/chiseled_tuff_bricks"
-}
-}

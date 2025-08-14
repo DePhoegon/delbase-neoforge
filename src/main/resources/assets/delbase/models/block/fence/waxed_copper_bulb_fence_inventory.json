@@ -1,0 +1,6 @@
+{
+"parent": "delbase:block/template/fence_inventory",
+"textures": {
+"texture": "delbase:block/waxed_copper_bulb_block"
+}
+}
