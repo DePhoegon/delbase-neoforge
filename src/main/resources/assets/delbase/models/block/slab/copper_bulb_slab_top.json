@@ -1,8 +1,8 @@
 {
 "parent": "minecraft:block/slab_top",
 "textures": {
-"bottom": "delbase:block/copper_bulb_block",
-"top": "delbase:block/copper_bulb_block",
-"side": "delbase:block/copper_bulb_block"
+"bottom": "minecraft:block/copper_bulb_block",
+"top": "minecraft:block/copper_bulb_block",
+"side": "minecraft:block/copper_bulb_block"
 }
 }

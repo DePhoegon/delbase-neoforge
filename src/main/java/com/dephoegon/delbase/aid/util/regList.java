@@ -26,6 +26,7 @@ public class regList {
         slabCoppers.registerBlock(eventBus);
         stairCoppers.registerBlock(eventBus);
         wallCoppers.registerBlock(eventBus);
+        fenceCopper.registerBlock(eventBus);
         // Sand
         gravColorSands.registerBlock(eventBus);
         // SandStone
@@ -34,7 +35,7 @@ public class regList {
         slabStrippedWood.registerBlock(eventBus);
         stairStrippedWood.registerBlock(eventBus);
         wallStrippedWood.registerBlock(eventBus);
-        strippedWoodenFences.registerBlock(eventBus);
+        fenceStrippedWooden.registerBlock(eventBus);
     }
     public static void listOrder(IEventBus eventBus) {
         //Items
@@ -45,6 +46,7 @@ public class regList {
         slabCopperWaxed.registerBlock(eventBus);
         stairCopperWaxed.registerBlock(eventBus);
         wallCopperWaxed.registerBlock(eventBus);
+        fenceCopperWaxed.registerBlock(eventBus);
 
         //Pillars
         axiCutSandStones.registerBlock(eventBus);
@@ -104,18 +106,18 @@ public class regList {
         hedgeLeaves.registerBlock(eventBus);
 
         //Fences
-        woodenFences.registerBlock(eventBus);
-        quartzFences.registerBlock(eventBus);
-        sandFences.registerBlock(eventBus);
-        concreteFences.registerBlock(eventBus);
-        terracottaFences.registerBlock(eventBus);
-        smoothSandStoneFences.registerBlock(eventBus);
-        sandStoneFences.registerBlock(eventBus);
+        fenceWooden.registerBlock(eventBus);
+        fenceQuartz.registerBlock(eventBus);
+        fenceSand.registerBlock(eventBus);
+        fenceConcrete.registerBlock(eventBus);
+        fenceTerracotta.registerBlock(eventBus);
+        fenceSmoothSandStone.registerBlock(eventBus);
+        fenceSandStone.registerBlock(eventBus);
         fenceMisc.registerBlock(eventBus);
-        leafFences.registerBlock(eventBus);
-        cutSandStoneFences.registerBlock(eventBus);
-        chiseledSandStoneFences.registerBlock(eventBus);
-        stoneFences.registerBlock(eventBus);
+        fenceLeaf.registerBlock(eventBus);
+        fenceCutSandStone.registerBlock(eventBus);
+        fenceChiseledSandStone.registerBlock(eventBus);
+        fenceStone.registerBlock(eventBus);
 
         // Specials
         ashBlocks.registerBlock(eventBus);

@@ -20,7 +20,7 @@ import static com.dephoegon.delbase.block.general.genChiseledSandStones.*;
 import static net.minecraft.world.level.block.Blocks.CHISELED_SANDSTONE;
 import static net.minecraft.world.level.block.Blocks.RED_SANDSTONE;
 
-public class chiseledSandStoneFences {
+public class fenceChiseledSandStone {
     private static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(Mod_ID);
     private static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(Mod_ID);
 

@@ -1,6 +1,6 @@
 {
 "parent": "delbase:block/template/fence_side_copper",
 "textures": {
-"texture": "delbase:block/waxed_oxidized_copper_block"
+"texture": "minecraft:block/waxed_oxidized_copper_block"
 }
 }

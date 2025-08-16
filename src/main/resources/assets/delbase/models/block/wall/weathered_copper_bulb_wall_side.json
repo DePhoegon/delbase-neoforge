@@ -1,7 +1,7 @@
 {
 "parent": "delbase:block/template/wall_side",
 "textures": {
-"wall": "delbase:block/weathered_copper_bulb_block",
-"top": "delbase:block/weathered_copper_bulb_block"
+"wall": "minecraft:block/weathered_copper_bulb_block",
+"top": "minecraft:block/weathered_copper_bulb_block"
 }
 }

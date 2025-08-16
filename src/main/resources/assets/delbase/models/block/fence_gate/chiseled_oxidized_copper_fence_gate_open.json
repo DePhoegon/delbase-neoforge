@@ -1,6 +1,6 @@
 {
 "parent": "delbase:block/template/fence_gate_open_copper",
 "textures": {
-"texture": "delbase:block/chiseled_oxidized_copper_block"
+"texture": "minecraft:block/chiseled_oxidized_copper_block"
 }
 }

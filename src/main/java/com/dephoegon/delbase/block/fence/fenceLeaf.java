@@ -17,7 +17,7 @@ import java.util.function.Supplier;
 import static com.dephoegon.delbase.Delbase.Mod_ID;
 import static net.minecraft.world.level.block.Blocks.*;
 
-public class leafFences {
+public class fenceLeaf {
     private static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(Mod_ID);
     private static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(Mod_ID);
 

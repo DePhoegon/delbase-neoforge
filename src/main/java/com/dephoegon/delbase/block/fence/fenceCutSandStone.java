@@ -13,12 +13,12 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 
 import java.util.function.Supplier;
 
-import static com.dephoegon.delbase.block.general.genSandStones.*;
 import static com.dephoegon.delbase.Delbase.Mod_ID;
+import static com.dephoegon.delbase.block.general.genSandStones.*;
 import static net.minecraft.world.level.block.Blocks.CUT_SANDSTONE;
 import static net.minecraft.world.level.block.Blocks.RED_SANDSTONE;
 
-public class cutSandStoneFences {
+public class fenceCutSandStone {
     private static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(Mod_ID);
     private static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(Mod_ID);
 

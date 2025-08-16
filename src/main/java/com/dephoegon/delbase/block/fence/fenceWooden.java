@@ -18,11 +18,11 @@ import org.jetbrains.annotations.NotNull;
 import javax.annotation.Nullable;
 import java.util.function.Supplier;
 
-import static com.dephoegon.delbase.block.fence.strippedWoodenFences.*;
 import static com.dephoegon.delbase.Delbase.Mod_ID;
+import static com.dephoegon.delbase.block.fence.fenceStrippedWooden.*;
 import static net.minecraft.world.level.block.Blocks.*;
 
-public class woodenFences {
+public class fenceWooden {
     private static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(Mod_ID);
     private static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(Mod_ID);
     public static final DeferredBlock<FenceBlock> ACACIA_WOOD_FENCE = registerBlock("acacia_wood_fence",
