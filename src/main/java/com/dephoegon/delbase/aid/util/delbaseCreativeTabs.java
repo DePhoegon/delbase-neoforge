@@ -62,9 +62,9 @@ public class delbaseCreativeTabs {
         out.addAll(setCopperWalls());
         out.addAll(setWaxedCopperWalls());
         out.addAll(setCopperFences());
-        out.addAll(setWaxedCopperFences());
+        out.addAll(setWaxedCoperFences());
         out.addAll(setCopperFenceGates());
-        out.addAll(setWaxedCopperFenceGates());
+        out.addAll(setWaxedCoperFenceGates());
         return out;
     }
     public static @NotNull ArrayList<DeferredBlock<? extends ItemLike>> getDelBlockList() {

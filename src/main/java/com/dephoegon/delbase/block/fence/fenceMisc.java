@@ -75,9 +75,6 @@ public class fenceMisc {
     public static final DeferredBlock<FenceGateBlock> RAW_GOLD_FENCE_GATE = registerBlock("raw_gold_fence_gate",
             () -> new fenceGateBlock(BlockBehaviour.Properties.ofFullCopy(RAW_GOLD_BLOCK).sound(SoundType.METAL),
                     "","","", false, 0, 0, null));
-    public static final DeferredBlock<FenceGateBlock> RAW_COPPER_FENCE_GATE = registerBlock("raw_copper_fence_gate",
-            () -> new fenceGateBlock(BlockBehaviour.Properties.ofFullCopy(RAW_COPPER_BLOCK).sound(SoundType.METAL),
-                    "","","", false, 0, 0, null));
     public static final DeferredBlock<FenceBlock> RAW_IRON_FENCE = registerBlock("raw_iron_fence",
             () -> new fenceBlock(BlockBehaviour.Properties.ofFullCopy(RAW_IRON_BLOCK).sound(SoundType.METAL),
                     "","","", false, 0, 0, null));

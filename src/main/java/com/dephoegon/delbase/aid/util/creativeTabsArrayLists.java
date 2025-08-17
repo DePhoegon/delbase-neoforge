@@ -12,6 +12,9 @@ import java.util.ArrayList;
 import static com.dephoegon.delbase.block.axis.axiCutSandStones.*;
 import static com.dephoegon.delbase.block.fence.fenceChiseledSandStone.*;
 import static com.dephoegon.delbase.block.fence.fenceConcrete.*;
+import static com.dephoegon.delbase.block.fence.fenceCopper.*;
+import static com.dephoegon.delbase.block.fence.fenceCopper.RAW_COPPER_FENCE_GATE;
+import static com.dephoegon.delbase.block.fence.fenceCopperWaxed.*;
 import static com.dephoegon.delbase.block.fence.fenceCutSandStone.*;
 import static com.dephoegon.delbase.block.fence.fenceLeaf.*;
 import static com.dephoegon.delbase.block.fence.fenceMisc.*;
@@ -857,6 +860,102 @@ public class creativeTabsArrayLists {
         out.add(GREEN_CUT_SAND_STONE_SLAB_ENERGY);
         out.add(BROWN_CUT_SAND_STONE_SLAB_ENERGY);
         out.add(BLACK_CUT_SAND_STONE_SLAB_ENERGY);
+        return out;
+    }
+    public static @NotNull ArrayList<DeferredBlock<FenceBlock>> setWaxedCoperFences() {
+        ArrayList<DeferredBlock<FenceBlock>> out = new ArrayList<>();
+        out.add(RAW_WAXED_COPPER_FENCE);
+        out.add(RAW_WAXED_EXPOSED_COPPER_FENCE);
+        out.add(RAW_WAXED_WEATHERED_COPPER_FENCE);
+        out.add(RAW_WAXED_OXIDIZED_COPPER_FENCE);
+        out.add(WAXED_COPPER_FENCE);
+        out.add(WAXED_EXPOSED_COPPER_FENCE);
+        out.add(WAXED_WEATHERED_COPPER_FENCE);
+        out.add(WAXED_OXIDIZED_COPPER_FENCE);
+        out.add(CHISELED_WAXED_COPPER_FENCE);
+        out.add(CHISELED_WAXED_EXPOSED_COPPER_FENCE);
+        out.add(CHISELED_WAXED_WEATHERED_COPPER_FENCE);
+        out.add(CHISELED_WAXED_OXIDIZED_COPPER_FENCE);
+        out.add(WAXED_COPPER_GRATING_FENCE);
+        out.add(WAXED_EXPOSED_COPPER_GRATING_FENCE);
+        out.add(WAXED_WEATHERED_COPPER_GRATING_FENCE);
+        out.add(WAXED_OXIDIZED_COPPER_GRATING_FENCE);
+        out.add(WAXED_COPPER_BULB_FENCE);
+        out.add(WAXED_EXPOSED_COPPER_BULB_FENCE);
+        out.add(WAXED_WEATHERED_COPPER_BULB_FENCE);
+        out.add(WAXED_OXIDIZED_COPPER_BULB_FENCE);
+        return out;
+    }
+    public static @NotNull ArrayList<DeferredBlock<FenceGateBlock>> setWaxedCoperFenceGates() {
+        ArrayList<DeferredBlock<FenceGateBlock>> out = new ArrayList<>();
+        out.add(RAW_WAXED_COPPER_FENCE_GATE);
+        out.add(RAW_WAXED_EXPOSED_COPPER_FENCE_GATE);
+        out.add(RAW_WAXED_WEATHERED_COPPER_FENCE_GATE);
+        out.add(RAW_WAXED_OXIDIZED_COPPER_FENCE_GATE);
+        out.add(WAXED_COPPER_FENCE_GATE);
+        out.add(WAXED_EXPOSED_COPPER_FENCE_GATE);
+        out.add(WAXED_WEATHERED_COPPER_FENCE_GATE);
+        out.add(WAXED_OXIDIZED_COPPER_FENCE_GATE);
+        out.add(CHISELED_WAXED_COPPER_FENCE_GATE);
+        out.add(CHISELED_WAXED_EXPOSED_COPPER_FENCE_GATE);
+        out.add(CHISELED_WAXED_WEATHERED_COPPER_FENCE_GATE);
+        out.add(CHISELED_WAXED_OXIDIZED_COPPER_FENCE_GATE);
+        out.add(WAXED_COPPER_GRATING_FENCE_GATE);
+        out.add(WAXED_EXPOSED_COPPER_GRATING_FENCE_GATE);
+        out.add(WAXED_WEATHERED_COPPER_GRATING_FENCE_GATE);
+        out.add(WAXED_OXIDIZED_COPPER_GRATING_FENCE_GATE);
+        out.add(WAXED_COPPER_BULB_FENCE_GATE);
+        out.add(WAXED_EXPOSED_COPPER_BULB_FENCE_GATE);
+        out.add(WAXED_WEATHERED_COPPER_BULB_FENCE_GATE);
+        out.add(WAXED_OXIDIZED_COPPER_BULB_FENCE_GATE);
+        return out;
+    }
+    public static @NotNull ArrayList<DeferredBlock<FenceBlock>> setCopperFences() {
+        ArrayList<DeferredBlock<FenceBlock>> out = new ArrayList<>();
+        out.add(RAW_COPPER_FENCE);
+        out.add(RAW_EXPOSED_COPPER_FENCE);
+        out.add(RAW_WEATHERED_COPPER_FENCE);
+        out.add(RAW_OXIDIZED_COPPER_FENCE);
+        out.add(COPPER_FENCE);
+        out.add(EXPOSED_COPPER_FENCE);
+        out.add(WEATHERED_COPPER_FENCE);
+        out.add(OXIDIZED_COPPER_FENCE);
+        out.add(CHISELED_COPPER_FENCE);
+        out.add(CHISELED_EXPOSED_COPPER_FENCE);
+        out.add(CHISELED_WEATHERED_COPPER_FENCE);
+        out.add(CHISELED_OXIDIZED_COPPER_FENCE);
+        out.add(COPPER_GRATING_FENCE);
+        out.add(EXPOSED_COPPER_GRATING_FENCE);
+        out.add(WEATHERED_COPPER_GRATING_FENCE);
+        out.add(OXIDIZED_COPPER_GRATING_FENCE);
+        out.add(COPPER_BULB_FENCE);
+        out.add(EXPOSED_COPPER_BULB_FENCE);
+        out.add(WEATHERED_COPPER_BULB_FENCE);
+        out.add(OXIDIZED_COPPER_BULB_FENCE);
+        return out;
+    }
+    public static @NotNull ArrayList<DeferredBlock<FenceGateBlock>> setCopperFenceGates() {
+        ArrayList<DeferredBlock<FenceGateBlock>> out = new ArrayList<>();
+        out.add(RAW_COPPER_FENCE_GATE);
+        out.add(RAW_EXPOSED_COPPER_FENCE_GATE);
+        out.add(RAW_WEATHERED_COPPER_FENCE_GATE);
+        out.add(RAW_OXIDIZED_COPPER_FENCE_GATE);
+        out.add(COPPER_FENCE_GATE);
+        out.add(EXPOSED_COPPER_FENCE_GATE);
+        out.add(WEATHERED_COPPER_FENCE_GATE);
+        out.add(OXIDIZED_COPPER_FENCE_GATE);
+        out.add(CHISELED_COPPER_FENCE_GATE);
+        out.add(CHISELED_EXPOSED_COPPER_FENCE_GATE);
+        out.add(CHISELED_WEATHERED_COPPER_FENCE_GATE);
+        out.add(CHISELED_OXIDIZED_COPPER_FENCE_GATE);
+        out.add(COPPER_GRATING_FENCE_GATE);
+        out.add(EXPOSED_COPPER_GRATING_FENCE_GATE);
+        out.add(WEATHERED_COPPER_GRATING_FENCE_GATE);
+        out.add(OXIDIZED_COPPER_GRATING_FENCE_GATE);
+        out.add(COPPER_BULB_FENCE_GATE);
+        out.add(EXPOSED_COPPER_BULB_FENCE_GATE);
+        out.add(WEATHERED_COPPER_BULB_FENCE_GATE);
+        out.add(OXIDIZED_COPPER_BULB_FENCE_GATE);
         return out;
     }
     public static @NotNull ArrayList<DeferredBlock<WallBlock>> setWaxedCopperWalls() {
