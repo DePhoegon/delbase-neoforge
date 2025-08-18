@@ -1,6 +1,7 @@
 {
 "parent": "delbase:block/template/fence_gate_open",
 "textures": {
-"texture": "minecraft:block/exposed_copper_bulb_block"
+"texture": "minecraft:block/exposed_copper_bulb_block",
+"postside": "minecraft:block/exposed_copper_bulb_block"
 }
 }
