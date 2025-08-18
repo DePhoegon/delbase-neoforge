@@ -6,9 +6,9 @@ REM 2 = Template usage = 0 for Built in, 1 for Custom
 REM 3 = Custom Location usage = 0 for Normal, 1 for Custom Location
 REM 4 = Texture Count 1-3
 REM 5 = Mod ID, 0 - Minecraft, 1 - Bridge Mod, 2 left ModID (delbase), 3 right ModID (configured - bop)
-REM 6 = TextureName1
-REM 7 = TextureName2
-REM 8 = TextureName3
+REM 6 = TextureName1 // Top
+REM 7 = TextureName2 // Side
+REM 8 = TextureName3 // Inside side (columns only, stairs use) unused mostly except for woodtypes, refactor needed to open it up to more blocks
 REM if 1 texture count, then TextureName2 and TextureName3 are copies of TextureName1
 REM if 2 texture count, then TextureName3 is a copy of TextureName1
 REM number of textures should match number used
@@ -48,5 +48,7 @@ node .\delbase_json_aid.js cut_waxed copper 1 1 1 2 cut_waxed_copper_block
 node .\delbase_json_aid.js cut_waxed_exposed copper 1 1 1 2 cut_waxed_exposed_copper_block
 node .\delbase_json_aid.js cut_waxed_weathered copper 1 1 1 2 cut_waxed_weathered_copper_block
 node .\delbase_json_aid.js cut_waxed_oxidized copper 1 1 1 2 cut_waxed_oxidized_copper_block
-node .\delbase_json_aid.js chiseled_tuff 0 1 1 1 2 2 chiseled_tuff chiseled_tuff_top 0
-node .\delbase_json_aid.js chiseled_tuff_bricks 0 1 1 1 2 2 chiseled_tuff_bricks chiseled_tuff_bricks_top 0
+node .\delbase_json_aid.js chiseled_tuff 0 1 1 2 2 chiseled_tuff_top chiseled_tuff
+node .\delbase_json_aid.js chiseled_tuff_bricks 0 1 1 2 2 chiseled_tuff_bricks_top chiseled_tuff_bricks
+node .\delbase_json_aid.js exposed copper 1 1 1 2 exposed_copper_block
+node .\delbase_json_aid.js chiseled_waxed copper 1 1 1 2 chiseled_waxed_exposed_copper_block

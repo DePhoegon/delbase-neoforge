@@ -746,7 +746,7 @@ function strmTextureAid(file, texture1, texture2, texture3, tag1, tag2, tag3, ta
             fileOut(file, '\"'+tag4+'\": \"'+textureModID+':'+bPath+texture3+'\",', false)
             fileOut(file, '\"'+tag5+'\": \"'+textureModID+':'+bPath+texture1+'\"\n}\n}', false)
         } else {
-            fileOut(file, '\"'+tag4+'\": \"'+textureModID+':'+bPath+texture1+'\"\n}\n}', false)
+            fileOut(file, '\"'+tag4+'\": \"'+textureModID+':'+bPath+texture1+'\"\n}\n}', false) // tag4 is the inside base (facing up/down) texture
         }
     } else { fileOut(file, '\"'+tag3+'\": \"'+textureModID+':'+bPath+texture3+'\"\n}\n}', false) }
 }
