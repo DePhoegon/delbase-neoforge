@@ -1,5 +1,5 @@
 {
-"parent": "minecraft:block/slab_top",
+"parent": "delbase:block/template/slab_top_copper",
 "textures": {
 "bottom": "minecraft:block/chiseled_copper_block",
 "top": "minecraft:block/chiseled_copper_block",

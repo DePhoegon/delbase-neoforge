@@ -1,9 +1,0 @@
-{
-"parent": "delbase:block/template/outer_stairs_copper",
-"textures": {
-"bottom": "delbase:block/raw_waxed_weathered_block",
-"top": "delbase:block/raw_waxed_weathered_block",
-"side": "delbase:block/raw_waxed_weathered_block",
-"inside": "delbase:block/raw_waxed_weathered_block"
-}
-}

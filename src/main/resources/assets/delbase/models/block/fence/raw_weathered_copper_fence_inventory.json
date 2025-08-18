@@ -1,6 +1,6 @@
 {
 "parent": "delbase:block/template/fence_inventory_copper",
 "textures": {
-"texture": "delbase:block/raw_weathered_block"
+"texture": "minecraft:block/raw_weathered_block"
 }
 }

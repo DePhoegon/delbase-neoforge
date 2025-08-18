@@ -1,8 +1,0 @@
-{
-"parent": "minecraft:block/slab",
-"textures": {
-"bottom": "delbase:block/raw_waxed_oxidized_block",
-"top": "delbase:block/raw_waxed_oxidized_block",
-"side": "delbase:block/raw_waxed_oxidized_block"
-}
-}

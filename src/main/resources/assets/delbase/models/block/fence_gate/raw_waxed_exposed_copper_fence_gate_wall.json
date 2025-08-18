@@ -1,6 +1,0 @@
-{
-"parent": "delbase:block/template/fence_gate_wall_copper",
-"textures": {
-"texture": "delbase:block/raw_waxed_exposed_block"
-}
-}

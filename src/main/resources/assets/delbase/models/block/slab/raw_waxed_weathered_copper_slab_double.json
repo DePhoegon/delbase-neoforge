@@ -1,8 +1,0 @@
-{
-"parent": "minecraft:block/cube_bottom_top",
-"textures": {
-"bottom": "delbase:block/raw_waxed_weathered_block",
-"top": "delbase:block/raw_waxed_weathered_block",
-"side": "delbase:block/raw_waxed_weathered_block"
-}
-}

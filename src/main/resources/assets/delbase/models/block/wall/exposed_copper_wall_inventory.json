@@ -1,0 +1,7 @@
+{
+"parent": "delbase:block/template/wall_inventory_copper",
+"textures": {
+"wall": "minecraft:block/exposed_copper",
+"top": "minecraft:block/exposed_copper"
+}
+}

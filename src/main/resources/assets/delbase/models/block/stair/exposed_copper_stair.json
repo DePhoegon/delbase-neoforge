@@ -1,0 +1,9 @@
+{
+"parent": "delbase:block/template/stairs_copper",
+"textures": {
+"bottom": "minecraft:block/exposed_copper",
+"top": "minecraft:block/exposed_copper",
+"side": "minecraft:block/exposed_copper",
+"inside": "delbase:block/exposed_copper_block"
+}
+}

@@ -1,13 +1,13 @@
 {
 "variants": {
 "type=bottom": {
-"model": "delbase:block/slab/waxed_weathered_copper_bulb_slab"
+"model": "delbase:block/slab/weathered_copper_bulb_slab"
 },
 "type=double": {
-"model": "delbase:block/slab/waxed_weathered_copper_bulb_slab_double"
+"model": "delbase:block/slab/weathered_copper_bulb_slab_double"
 },
 "type=top": {
-"model": "delbase:block/slab/waxed_weathered_copper_bulb_slab_top"
+"model": "delbase:block/slab/weathered_copper_bulb_slab_top"
 }
 }
 }

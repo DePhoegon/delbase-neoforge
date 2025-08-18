@@ -1,7 +1,0 @@
-{
-"parent": "delbase:block/template/wall_side",
-"textures": {
-"wall": "minecraft:block/waxed_exposed_copper_bulb_block",
-"top": "minecraft:block/waxed_exposed_copper_bulb_block"
-}
-}

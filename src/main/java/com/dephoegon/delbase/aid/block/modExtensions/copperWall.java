@@ -33,6 +33,7 @@ public class copperWall extends wallBlock implements weatheringCopper {
     }
 
     public int getMapOrder() { return this.mapOrder; }
+    public int getMapOrder(DeferredBlock<? extends Block> thisBlock) { return this.getMapOrder(); }
     public boolean isWaxed() { return this.isWaxed; }
     public int getOxidizedStage() { return this.oxidizedStage; }
     public @NotNull Optional<BlockState> getNext(@NotNull BlockState blockState) { return this.getNextMod(getIntDeferredBlockMap().get(this.mapOrder)); }

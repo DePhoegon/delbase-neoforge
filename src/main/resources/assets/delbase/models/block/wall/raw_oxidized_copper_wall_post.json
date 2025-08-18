@@ -1,7 +1,7 @@
 {
 "parent": "delbase:block/template/wall_post_copper",
 "textures": {
-"wall": "delbase:block/raw_oxidized_block",
-"top": "delbase:block/raw_oxidized_block"
+"wall": "minecraft:block/raw_oxidized_block",
+"top": "minecraft:block/raw_oxidized_block"
 }
 }

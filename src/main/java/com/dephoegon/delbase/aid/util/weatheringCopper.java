@@ -20,15 +20,13 @@ public interface weatheringCopper extends ChangeOverTimeBlock<weatherState> {
     List<DeferredBlock<? extends Block>> getWeatheredSetList();
     boolean isWaxed();
     int getOxidizedStage();
+    int getMapOrder(DeferredBlock<? extends Block> thisBlock);
 
     default @NotNull weatherState getAge() {
-        return weatherState.getStateByOrder(getCurrentAge((DeferredBlock<? extends Block>) this));
+        return weatherState.getStateByOrder(this.getCurrentAge());
     }
-    default int getCurrentAge(DeferredBlock<? extends Block> thisBlock) {
-        return ((weatheringCopper) thisBlock.get()).getOxidizedStage();
-    }
-    default int getMapOrder(DeferredBlock<? extends Block> thisBlock) {
-        return ((weatheringCopper) thisBlock.get()).getMapOrder();
+    default int getCurrentAge() {
+        return this.getOxidizedStage();
     }
     default @NotNull Optional<BlockState> getNextMod(DeferredBlock<? extends Block> thisBlock) {
         Block out = getNextByBlockMapping().get().get(thisBlock.get());

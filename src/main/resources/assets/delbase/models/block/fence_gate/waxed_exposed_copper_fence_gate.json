@@ -1,6 +1,0 @@
-{
-"parent": "delbase:block/template/fence_gate_copper",
-"textures": {
-"texture": "minecraft:block/waxed_exposed_copper_block"
-}
-}

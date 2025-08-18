@@ -36,6 +36,7 @@ public class copperSlab extends slabBlock implements weatheringCopper {
     public boolean isWaxed() { return this.isWaxed; }
     public int getOxidizedStage() { return this.oxidizedStage; }
     public int getMapOrder() { return this.mapOrder; }
+    public int getMapOrder(DeferredBlock<? extends Block> thisBlock) { return this.getMapOrder(); }
     public @NotNull Optional<BlockState> getNext(@NotNull BlockState blockState) { return this.getNextMod(getIntDeferredBlockMap().get(this.mapOrder)); }
     public float getChanceModifier() { return this.getChanceModifier(getStateByOrder(this.oxidizedStage)); }
 

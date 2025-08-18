@@ -1,9 +1,9 @@
 {
 "parent": "delbase:block/template/outer_stairs_copper",
 "textures": {
-"bottom": "minecraft:block/chiseled_oxidized_copper_block",
-"top": "minecraft:block/chiseled_oxidized_copper_block",
-"side": "minecraft:block/chiseled_oxidized_copper_block",
+"bottom": "minecraft:block/chiseled_oxidized_copper",
+"top": "minecraft:block/chiseled_oxidized_copper",
+"side": "minecraft:block/chiseled_oxidized_copper",
 "inside": "minecraft:block/chiseled_oxidized_copper_block"
 }
 }

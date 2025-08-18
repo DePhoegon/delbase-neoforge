@@ -1,13 +1,13 @@
 {
 "variants": {
 "type=bottom": {
-"model": "delbase:block/slab/raw_waxed_oxidized_copper_slab"
+"model": "delbase:block/slab/raw_oxidized_copper_slab"
 },
 "type=double": {
-"model": "delbase:block/slab/raw_waxed_oxidized_copper_slab_double"
+"model": "delbase:block/slab/raw_oxidized_copper_slab_double"
 },
 "type=top": {
-"model": "delbase:block/slab/raw_waxed_oxidized_copper_slab_top"
+"model": "delbase:block/slab/raw_oxidized_copper_slab_top"
 }
 }
 }
