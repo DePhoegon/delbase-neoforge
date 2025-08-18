@@ -6,12 +6,12 @@
     {   "from": [ 4, 0, 4 ],
       "to": [ 12, 16, 12 ],
       "faces": {
-        "down":  { "uv": [ 1, 1, 15, 15 ], "texture": "#top", "cullface": "down" },
-        "up":    { "uv": [ 1, 1, 15, 15 ], "texture": "#top", "cullface": "up" },
-        "north": { "uv": [ 1, 1, 15, 15 ], "texture": "#wall" },
-        "south": { "uv": [ 1, 1, 15, 15 ], "texture": "#wall" },
-        "west":  { "uv": [ 1, 1, 15, 15 ], "texture": "#wall" },
-        "east":  { "uv": [ 1, 1, 15, 15 ], "texture": "#wall" }
+        "down":  { "uv": [ 4, 4, 12, 12 ], "texture": "#top", "cullface": "down" },
+        "up":    { "uv": [ 4, 4, 12, 12 ], "texture": "#top", "cullface": "up" },
+        "north": { "uv": [ 4, 1, 12, 15 ], "texture": "#wall" },
+        "south": { "uv": [ 4, 1, 12, 15 ], "texture": "#wall" },
+        "west":  { "uv": [ 4, 1, 12, 15 ], "texture": "#wall" },
+        "east":  { "uv": [ 4, 1, 12, 15 ], "texture": "#wall" }
       },
       "__comment": "Center post, Separate Texture for top & bottom for textured walls"
     }
