@@ -1,16 +1,16 @@
 {
-"type": "minecraft:crafting_shaped",
-"category": "building_blocks",
+  "type": "minecraft:crafting_shaped",
+  "category": "building_blocks",
   "pattern": [
-"###"
-],
-"key": {
-"#": {
-"item": "minecraft:raw_copper_block"
-}
-},
-"result": {
-"id": "delbase:raw_copper_slab",
-"count": 6
-}
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:raw_copper_block"
+    }
+  },
+  "result": {
+    "id": "delbase:raw_copper_slab",
+    "count": 6
+  }
 }

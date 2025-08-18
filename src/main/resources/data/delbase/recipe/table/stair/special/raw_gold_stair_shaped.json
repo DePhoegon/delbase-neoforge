@@ -1,18 +1,18 @@
 {
-"type": "minecraft:crafting_shaped",
-"category": "building_blocks",
+  "type": "minecraft:crafting_shaped",
+  "category": "building_blocks",
   "pattern": [
-"#  ",
-"## ",
-"###"
-],
-"key": {
-"#": {
-"item": "minecraft:raw_gold_block"
-}
-},
-"result": {
-"id": "delbase:raw_gold_stair",
-"count": 4
-}
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:raw_gold_block"
+    }
+  },
+  "result": {
+    "id": "delbase:raw_gold_stair",
+    "count": 4
+  }
 }
