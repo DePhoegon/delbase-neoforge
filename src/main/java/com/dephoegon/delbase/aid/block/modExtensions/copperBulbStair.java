@@ -15,16 +15,14 @@ import net.minecraft.world.level.block.state.properties.Property;
 import org.jetbrains.annotations.NotNull;
 
 public class copperBulbStair extends copperStair {
-    public static final BooleanProperty POWERED;
-    public static final BooleanProperty LIT;
+    public static final BooleanProperty POWERED = BlockStateProperties.POWERED;
+    public static final BooleanProperty LIT = BlockStateProperties.LIT;
 
     public copperBulbStair(@NotNull Block block, Properties properties, @NotNull String normToolTip, String shiftToolTip, String ctrlToolTip, BlockState strippedState, int oxidizedStage, boolean isWaxed, int MapOrder) {
         super(block, properties, normToolTip, shiftToolTip, ctrlToolTip, strippedState, oxidizedStage, isWaxed, MapOrder);
-        this.registerDefaultState((BlockState)((BlockState)this.defaultBlockState().setValue(LIT, false)).setValue(POWERED, false));
     }
     public copperBulbStair(@NotNull Block block, Properties properties, BlockState strippedState, int oxidizedStage, boolean isWaxed, int MapOrder) {
         super(block, properties, strippedState, oxidizedStage, isWaxed, MapOrder);
-        this.registerDefaultState((BlockState)((BlockState)this.defaultBlockState().setValue(LIT, false)).setValue(POWERED, false));
     }
 
     protected void onPlace(@NotNull BlockState state, @NotNull Level level, @NotNull BlockPos pos, @NotNull BlockState oldState, boolean movedByPiston) {
@@ -36,15 +34,14 @@ public class copperBulbStair extends copperStair {
     }
     public void checkAndFlip(@NotNull BlockState state, @NotNull ServerLevel level, BlockPos pos) {
         boolean flag = level.hasNeighborSignal(pos);
-        if (flag != (Boolean)state.getValue(POWERED)) {
+        if (flag != (Boolean)state.getValue(BlockStateProperties.POWERED)) {
             BlockState blockstate = state;
-            if (!(Boolean)state.getValue(POWERED)) {
+            if (flag) { // Only when receiving power (not losing power)
                 blockstate = (BlockState)state.cycle(LIT);
                 level.playSound((Player)null, pos, (Boolean)blockstate.getValue(LIT) ? SoundEvents.COPPER_BULB_TURN_ON : SoundEvents.COPPER_BULB_TURN_OFF, SoundSource.BLOCKS);
             }
-            level.setBlock(pos, (BlockState)blockstate.setValue(POWERED, flag), 3);
+            level.setBlock(pos, (BlockState)blockstate.setValue(BlockStateProperties.POWERED, flag), 3);
         }
-
     }
     protected void createBlockStateDefinition(StateDefinition.@NotNull Builder<Block, BlockState> builder) {
         super.createBlockStateDefinition(builder);
@@ -55,9 +52,4 @@ public class copperBulbStair extends copperStair {
         return true;
     }
     protected int getAnalogOutputSignal(@NotNull BlockState state, @NotNull Level level, @NotNull BlockPos pos) { return (Boolean)level.getBlockState(pos).getValue(LIT) ? 15 : 0; }
-
-    static {
-        POWERED = BlockStateProperties.POWERED;
-        LIT = BlockStateProperties.LIT;
-    }
 }

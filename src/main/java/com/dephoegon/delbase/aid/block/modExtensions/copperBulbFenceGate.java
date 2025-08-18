@@ -15,8 +15,7 @@ import net.minecraft.world.level.block.state.properties.Property;
 import org.jetbrains.annotations.NotNull;
 
 public class copperBulbFenceGate extends copperFenceGate {
-    public static final BooleanProperty POWERED;
-    public static final BooleanProperty LIT;
+    public static final BooleanProperty LIT = BlockStateProperties.LIT;
 
     public copperBulbFenceGate(Properties properties, BlockState strippedState, String normToolTip, String shiftToolTip, String ctrlToolTip, int oxidizedStage, boolean isWaxed, int MapOrder) {
         super(properties, strippedState, normToolTip, shiftToolTip, ctrlToolTip, oxidizedStage, isWaxed, MapOrder);
@@ -35,28 +34,22 @@ public class copperBulbFenceGate extends copperFenceGate {
     }
     public void checkAndFlip(@NotNull BlockState state, @NotNull ServerLevel level, BlockPos pos) {
         boolean flag = level.hasNeighborSignal(pos);
-        if (flag != (Boolean)state.getValue(POWERED)) {
+        if (flag != (Boolean)state.getValue(BlockStateProperties.POWERED)) {
             BlockState blockstate = state;
-            if (!(Boolean)state.getValue(POWERED)) {
+            if (flag) { // Only when receiving power (not losing power)
                 blockstate = (BlockState)state.cycle(LIT);
                 level.playSound((Player)null, pos, (Boolean)blockstate.getValue(LIT) ? SoundEvents.COPPER_BULB_TURN_ON : SoundEvents.COPPER_BULB_TURN_OFF, SoundSource.BLOCKS);
             }
-            level.setBlock(pos, (BlockState)blockstate.setValue(POWERED, flag), 3);
+            level.setBlock(pos, (BlockState)blockstate.setValue(BlockStateProperties.POWERED, flag), 3);
         }
-
     }
     protected void createBlockStateDefinition(StateDefinition.@NotNull Builder<Block, BlockState> builder) {
         super.createBlockStateDefinition(builder);
-        builder.add(new Property[]{LIT, POWERED});
+        builder.add(new Property[]{LIT});
     }
     public int getLightEmission(@NotNull BlockState state, net.minecraft.world.level.@NotNull BlockGetter level, @NotNull BlockPos pos) { return state.getValue(LIT) ? 15 : 0; }
     protected boolean hasAnalogOutputSignal(@NotNull BlockState state) {
         return true;
     }
     protected int getAnalogOutputSignal(@NotNull BlockState state, @NotNull Level level, @NotNull BlockPos pos) { return (Boolean)level.getBlockState(pos).getValue(LIT) ? 15 : 0; }
-
-    static {
-        POWERED = BlockStateProperties.POWERED;
-        LIT = BlockStateProperties.LIT;
-    }
 }
