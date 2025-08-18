@@ -79,7 +79,7 @@ public class wallMisc {
             () -> new wallBlock(BlockBehaviour.Properties.ofFullCopy(PEARLESCENT_FROGLIGHT).sound(SoundType.FROGLIGHT).lightLevel((blockstate) -> 15), false, 0, 0, null));
     public static final DeferredBlock<WallBlock> CHISELED_TUFF_WALL = registerBlock("chiseled_tuff_wall",
             () -> new wallBlock(BlockBehaviour.Properties.ofFullCopy(CHISELED_TUFF).sound(SoundType.STONE), false, 0, 0, null));
-    public static final DeferredBlock<WallBlock> CHISELED_TUFF_BRICK_WALL = registerBlock("chiseled_tuff_brick_wall",
+    public static final DeferredBlock<WallBlock> CHISELED_TUFF_BRICKS_WALL = registerBlock("chiseled_tuff_bricks_wall",
             () -> new wallBlock(BlockBehaviour.Properties.ofFullCopy(CHISELED_TUFF_BRICKS).sound(SoundType.STONE), false, 0, 0, null));
 
     public static void registerBlock(IEventBus eventBus) {

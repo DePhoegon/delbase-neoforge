@@ -280,6 +280,8 @@ public class creativeTabsArrayLists {
         out.add(CRACKED_POLISHED_BLACKSTONE_BRICK_FENCE);
         out.add(RAW_GOLD_FENCE);
         out.add(RAW_IRON_FENCE);
+        out.add(CHISELED_TUFF_FENCE);
+        out.add(CHISELED_TUFF_BRICKS_FENCE);
         out.add(PURPUR_BLOCK_FENCE);
         out.add(COAL_BLOCK_FENCE);
         out.add(CHISELED_POLISHED_BLACKSTONE_FENCE);
@@ -312,6 +314,8 @@ public class creativeTabsArrayLists {
         out.add(RAW_GOLD_FENCE_GATE);
         out.add(RAW_COPPER_FENCE_GATE);
         out.add(RAW_IRON_FENCE_GATE);
+        out.add(CHISELED_TUFF_FENCE_GATE);
+        out.add(CHISELED_TUFF_BRICKS_FENCE_GATE);
         out.add(PURPUR_BLOCK_FENCE_GATE);
         out.add(COAL_BLOCK_FENCE_GATE);
         out.add(CHISELED_POLISHED_BLACKSTONE_FENCE_GATE);
@@ -1151,6 +1155,8 @@ public class creativeTabsArrayLists {
         out.add(PACKED_MUD_SLAB);
         out.add(SCULK_SLAB);
         out.add(MUD_SLAB);
+        out.add(CHISELED_TUFF_SLAB);
+        out.add(CHISELED_TUFF_BRICKS_SLAB);
         out.add(MUDDY_MANGROVE_ROOT_SLAB);
         out.add(MANGROVE_ROOT_SLAB);
         out.add(OCHRE_FROGLIGHT_SLAB);
@@ -1442,7 +1448,7 @@ public class creativeTabsArrayLists {
         out.add(COBBLED_BASALT_STAIR);
         out.add(RAW_GOLD_STAIR);
         out.add(CHISELED_TUFF_STAIR);
-        out.add(CHISELED_TUFF_BRICK_STAIR);
+        out.add(CHISELED_TUFF_BRICKS_STAIR);
         out.add(RAW_IRON_STAIR);
         out.add(COAL_BLOCK_STAIR);
         out.add(CRACKED_POLISHED_BLACKSTONE_BRICK_STAIR);
@@ -1699,7 +1705,7 @@ public class creativeTabsArrayLists {
         out.add(VERDANT_FROGLIGHT_WALL);
         out.add(PEARLESCENT_FROGLIGHT_WALL);
         out.add(CHISELED_TUFF_WALL);
-        out.add(CHISELED_TUFF_BRICK_WALL);
+        out.add(CHISELED_TUFF_BRICKS_WALL);
         return out;
     }
     public static @NotNull ArrayList<DeferredBlock<WallBlock>> setQuartzWalls() {

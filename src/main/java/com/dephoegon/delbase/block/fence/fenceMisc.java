@@ -81,6 +81,18 @@ public class fenceMisc {
     public static final DeferredBlock<FenceGateBlock> RAW_IRON_FENCE_GATE = registerBlock("raw_iron_fence_gate",
             () -> new fenceGateBlock(BlockBehaviour.Properties.ofFullCopy(RAW_IRON_BLOCK).sound(SoundType.METAL),
                     "","","", false, 0, 0, null));
+    public static final DeferredBlock<FenceBlock> CHISELED_TUFF_FENCE = registerBlock("chiseled_tuff_fence",
+            () -> new fenceBlock(BlockBehaviour.Properties.ofFullCopy(CHISELED_TUFF).sound(SoundType.TUFF),
+                    "","","", false, 0, 0, null));
+    public static final DeferredBlock<FenceGateBlock> CHISELED_TUFF_FENCE_GATE = registerBlock("chiseled_tuff_fence_gate",
+            () -> new fenceGateBlock(BlockBehaviour.Properties.ofFullCopy(CHISELED_TUFF).sound(SoundType.TUFF),
+                    "","","", false, 0, 0, null));
+    public static final DeferredBlock<FenceBlock> CHISELED_TUFF_BRICKS_FENCE = registerBlock("chiseled_tuff_bricks_fence",
+            () -> new fenceBlock(BlockBehaviour.Properties.ofFullCopy(CHISELED_TUFF_BRICKS).sound(SoundType.TUFF),
+                    "","","", false, 0, 0, null));
+    public static final DeferredBlock<FenceGateBlock> CHISELED_TUFF_BRICKS_FENCE_GATE = registerBlock("chiseled_tuff_bricks_fence_gate",
+            () -> new fenceGateBlock(BlockBehaviour.Properties.ofFullCopy(CHISELED_TUFF_BRICKS).sound(SoundType.TUFF),
+                    "","","", false, 0, 0, null));
     public static final DeferredBlock<FenceBlock> PURPUR_BLOCK_FENCE = registerBlock("purpur_block_fence",
             () -> new fenceBlock(BlockBehaviour.Properties.ofFullCopy(PURPUR_BLOCK),
                     "","","", false, 0, 0, null));

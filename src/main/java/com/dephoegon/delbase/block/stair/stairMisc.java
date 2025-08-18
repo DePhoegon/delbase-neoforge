@@ -45,7 +45,7 @@ public class stairMisc {
             ()-> new stairBlock(RAW_GOLD_BLOCK, BlockBehaviour.Properties.ofFullCopy(RAW_GOLD_BLOCK).sound(SoundType.METAL), false, 0, 0, null));
     public static final DeferredBlock<StairBlock> CHISELED_TUFF_STAIR = registerBlock("chiseled_tuff_stair",
             ()-> new stairBlock(CHISELED_TUFF, BlockBehaviour.Properties.ofFullCopy(CHISELED_TUFF).sound(SoundType.STONE), false, 0, 0, null));
-    public static final DeferredBlock<StairBlock> CHISELED_TUFF_BRICK_STAIR = registerBlock("chiseled_tuff_brick_stair",
+    public static final DeferredBlock<StairBlock> CHISELED_TUFF_BRICKS_STAIR = registerBlock("chiseled_tuff_bricks_stair",
             ()-> new stairBlock(CHISELED_TUFF_BRICKS, BlockBehaviour.Properties.ofFullCopy(CHISELED_TUFF_BRICKS).sound(SoundType.STONE), false, 0, 0, null));
     public static final DeferredBlock<StairBlock> RAW_IRON_STAIR = registerBlock("raw_iron_stair",
             ()-> new stairBlock(RAW_IRON_BLOCK, BlockBehaviour.Properties.ofFullCopy(RAW_IRON_BLOCK).sound(SoundType.METAL), false, 0, 0, null));

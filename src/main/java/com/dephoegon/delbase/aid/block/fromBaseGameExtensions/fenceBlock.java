@@ -4,14 +4,16 @@ import com.dephoegon.delbase.aid.util.kb;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.network.chat.Component;
+import net.minecraft.tags.BlockTags;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.FenceBlock;
-import net.minecraft.world.level.block.PipeBlock;
+import net.minecraft.world.level.block.FenceGateBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.neoforged.neoforge.common.ItemAbility;
@@ -79,12 +81,12 @@ public class fenceBlock extends FenceBlock {
             safeCheck = stripped.getBlock() instanceof FenceBlock;
         } else { safeCheck = false; }
         if (AXE_STRIP == toolAction && context.getItemInHand().canPerformAction(AXE_STRIP) && safeCheck) {
-            Boolean NORTH = world.getBlockState(blockPos).getValue(PipeBlock.NORTH);
-            Boolean SOUTH = world.getBlockState(blockPos).getValue(PipeBlock.SOUTH);
-            Boolean EAST = world.getBlockState(blockPos).getValue(PipeBlock.EAST);
-            Boolean WEST = world.getBlockState(blockPos).getValue(PipeBlock.WEST);
+            Boolean NORTH = world.getBlockState(blockPos).getValue(FenceBlock.NORTH);
+            Boolean SOUTH = world.getBlockState(blockPos).getValue(FenceBlock.SOUTH);
+            Boolean EAST = world.getBlockState(blockPos).getValue(FenceBlock.EAST);
+            Boolean WEST = world.getBlockState(blockPos).getValue(FenceBlock.WEST);
             Boolean WATERLOGGED = world.getBlockState(blockPos).getValue(BlockStateProperties.WATERLOGGED);
-            return stripped.setValue(PipeBlock.NORTH, NORTH).setValue(PipeBlock.SOUTH, SOUTH).setValue(PipeBlock.EAST, EAST).setValue(PipeBlock.WEST, WEST).setValue(BlockStateProperties.WATERLOGGED, WATERLOGGED);
+            return stripped.setValue(FenceBlock.NORTH, NORTH).setValue(FenceBlock.SOUTH, SOUTH).setValue(FenceBlock.EAST, EAST).setValue(FenceBlock.WEST, WEST).setValue(BlockStateProperties.WATERLOGGED, WATERLOGGED);
         } else { return null; }
     }
 }

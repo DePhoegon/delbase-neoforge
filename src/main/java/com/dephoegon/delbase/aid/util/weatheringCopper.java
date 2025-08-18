@@ -15,6 +15,7 @@ import java.util.Map;
 import java.util.Optional;
 import java.util.function.Supplier;
 
+@SuppressWarnings("PatternVariableCanBeUsed")
 public interface weatheringCopper extends ChangeOverTimeBlock<weatherState> {
     int getMapOrder();
     List<DeferredBlock<? extends Block>> getWeatheredSetList();
@@ -67,7 +68,9 @@ public interface weatheringCopper extends ChangeOverTimeBlock<weatherState> {
         );
     }
     default Block getFirstUnwaxedInSet(DeferredBlock<? extends Block> block) {
-        weatheringCopper weatheringBlock = (weatheringCopper) block.get();
+        Block blockInstance = block.get();
+        if (!(blockInstance instanceof weatheringCopper)) { return blockInstance; }
+        weatheringCopper weatheringBlock = (weatheringCopper) blockInstance;
         if (!weatheringBlock.isWaxed()) { return getFirstInSet(block); }
 
         Integer currentKey = getCurrentKey(block);
@@ -77,7 +80,9 @@ public interface weatheringCopper extends ChangeOverTimeBlock<weatherState> {
     }
     default Block getLastUnwaxedInSet(DeferredBlock<? extends Block> block) {
         // If the block is already unwaxed, use the regular getLastInSet method
-        weatheringCopper weatheringBlock = (weatheringCopper) block.get();
+        Block blockInstance = block.get();
+        if (!(blockInstance instanceof weatheringCopper)) { return blockInstance; }
+        weatheringCopper weatheringBlock = (weatheringCopper) blockInstance;
         if (!weatheringBlock.isWaxed()) { return getLastInSet(block); }
 
         Integer currentKey = getCurrentKey(block);
@@ -86,7 +91,9 @@ public interface weatheringCopper extends ChangeOverTimeBlock<weatherState> {
         return lookupBlockLoop(block, false, false, currentKey);
     }
     default Block getFirstWaxedInSet(DeferredBlock<? extends Block> block) {
-        weatheringCopper weatheringBlock = (weatheringCopper) block.get();
+        Block blockInstance = block.get();
+        if (!(blockInstance instanceof weatheringCopper)) { return blockInstance; }
+        weatheringCopper weatheringBlock = (weatheringCopper) blockInstance;
         if (weatheringBlock.isWaxed()) { return getFirstInSet(block); }
 
         Integer currentKey = getCurrentKey(block);
@@ -95,7 +102,9 @@ public interface weatheringCopper extends ChangeOverTimeBlock<weatherState> {
         return lookupBlockLoop(block, true, true, currentKey);
     }
     default Block getLastWaxedInSet(DeferredBlock<? extends Block> block) {
-        weatheringCopper weatheringBlock = (weatheringCopper) block.get();
+        Block blockInstance = block.get();
+        if (!(blockInstance instanceof weatheringCopper)) { return blockInstance; }
+        weatheringCopper weatheringBlock = (weatheringCopper) blockInstance;
         if (weatheringBlock.isWaxed()) { return getLastInSet(block); }
 
         Integer currentKey = getCurrentKey(block);
@@ -107,9 +116,12 @@ public interface weatheringCopper extends ChangeOverTimeBlock<weatherState> {
         for (int key = Key; key >= 0 && key < getIntDeferredBlockMap().size(); key += getFirst ? -1 : 1) {
             DeferredBlock<? extends Block> candidate = getIntDeferredBlockMap().get(key);
             if (candidate != null) {
-                weatheringCopper candidateBlock = (weatheringCopper) candidate.get();
-                if (candidateBlock.isWaxed() == waxedTarget) {
-                    return getFirst ? getFirstInSet(candidate) : getLastInSet(candidate);
+                Block candidateBlock = candidate.get();
+                if (candidateBlock instanceof weatheringCopper) {
+                    weatheringCopper weatheringCandidate = (weatheringCopper) candidateBlock;
+                    if (weatheringCandidate.isWaxed() == waxedTarget) {
+                        return getFirst ? getFirstInSet(candidate) : getLastInSet(candidate);
+                    }
                 }
             }
         }

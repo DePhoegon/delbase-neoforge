@@ -83,7 +83,7 @@ public class slabMisc {
     public static final DeferredBlock<SlabBlock> CHISELED_TUFF_SLAB = registerBlock("chiseled_tuff_slab",
             ()-> new slabBlock(BlockBehaviour.Properties.ofFullCopy(CHISELED_TUFF).sound(SoundType.STONE)
                     ,"","","", false, 0, 0, null));
-    public static final DeferredBlock<SlabBlock> CHISELED_TUFF_BRICK_SLAB = registerBlock("chiseled_tuff_brick_slab",
+    public static final DeferredBlock<SlabBlock> CHISELED_TUFF_BRICKS_SLAB = registerBlock("chiseled_tuff_bricks_slab",
             ()-> new slabBlock(BlockBehaviour.Properties.ofFullCopy(CHISELED_TUFF_BRICKS).sound(SoundType.STONE)
                     ,"","","", false, 0, 0, null));
     public static final DeferredBlock<SlabBlock> MUDDY_MANGROVE_ROOT_SLAB = registerBlock("muddy_mangrove_root_slab",
