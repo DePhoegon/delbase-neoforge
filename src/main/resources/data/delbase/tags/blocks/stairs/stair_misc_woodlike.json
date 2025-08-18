@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
+    "delbase:ash_stair",
     "delbase:dried_kelp_stair",
     "delbase:shroomlight_stair",
     "delbase:mud_stair",

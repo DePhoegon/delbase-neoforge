@@ -1,10 +1,10 @@
 {
   "replace": false,
   "values": [
-    "delbase:ash_slab",
     "#delbase:slabs/slab_chiseled_sand_stone",
     "#delbase:slabs/slab_concrete",
     "#delbase:slabs/slab_cut_sand_stone",
+    "#delbase:slabs/slab_leaves",
     "#delbase:slabs/slab_log",
     "#delbase:slabs/slab_misc_gemlike",
     "#delbase:slabs/slab_misc_metallike",

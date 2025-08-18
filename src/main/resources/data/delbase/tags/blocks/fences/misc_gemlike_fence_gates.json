@@ -6,7 +6,6 @@
     "delbase:quartz_block_fence_gate",
     "delbase:smooth_quartz_fence_gate",
     "delbase:chiseled_quartz_block_fence_gate",
-    "delbase:quartz_pillar_fence_gate",
-    "delbase:sculk_fence_gate"
+    "delbase:quartz_pillar_fence_gate"
   ]
 }

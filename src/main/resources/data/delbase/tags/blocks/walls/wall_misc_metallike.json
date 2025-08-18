@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "delbase:raw_iron_wall",
+    "delbase:raw_gold_wall",
+    "#delbase:walls/wall_copper"
+  ]
+}
+

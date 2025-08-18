@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "delbase:raw_iron_stair",
+    "delbase:raw_gold_stair",
+    "#delbase:stairs/stair_copper"
+  ]
+}
+

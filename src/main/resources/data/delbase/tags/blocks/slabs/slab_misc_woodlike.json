@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
+    "delbase:ash_slab",
     "delbase:dried_kelp_slab",
     "delbase:shroomlight_slab",
     "delbase:mud_slab",

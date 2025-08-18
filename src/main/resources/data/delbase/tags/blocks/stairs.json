@@ -1,7 +1,6 @@
 {
   "replace": false,
   "values": [
-    "delbase:ash_stair",
     "#delbase:stairs/stair_chiseled_sand_stone",
     "#delbase:stairs/stair_concrete",
     "#delbase:stairs/stair_cut_sand_stone",

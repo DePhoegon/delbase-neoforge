@@ -1,15 +1,12 @@
 {
   "replace": false,
   "values": [
-    "delbase:ash_fence",
     "delbase:dried_kelp_fence",
     "delbase:shroomlight_fence",
-    "delbase:mud_fence",
     "delbase:muddy_mangrove_root_fence",
     "delbase:mangrove_root_fence",
     "delbase:ochre_froglight_fence",
     "delbase:verdant_froglight_fence",
-    "delbase:pearlescent_froglight_fence",
-    "#delbase:fences/leaves_fences"
+    "delbase:pearlescent_froglight_fence"
   ]
 }

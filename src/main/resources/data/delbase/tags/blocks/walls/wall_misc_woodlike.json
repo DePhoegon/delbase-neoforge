@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
+    "delbase:ash_wall",
     "delbase:dried_kelp_wall",
     "delbase:shroomlight_wall",
     "delbase:mud_wall",
