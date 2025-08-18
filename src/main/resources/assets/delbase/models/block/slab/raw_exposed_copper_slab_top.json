@@ -1,8 +1,8 @@
 {
 "parent": "delbase:block/template/slab_top_copper",
 "textures": {
-"bottom": "minecraft:block/raw_exposed_block",
-"top": "minecraft:block/raw_exposed_block",
-"side": "minecraft:block/raw_exposed_block"
+"bottom": "delbase:block/raw_exposed_copper_block",
+"top": "delbase:block/raw_exposed_copper_block",
+"side": "delbase:block/raw_exposed_copper_block"
 }
 }

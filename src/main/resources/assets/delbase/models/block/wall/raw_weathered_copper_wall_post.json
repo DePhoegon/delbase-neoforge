@@ -1,7 +1,7 @@
 {
 "parent": "delbase:block/template/wall_post_copper",
 "textures": {
-"wall": "minecraft:block/raw_weathered_block",
-"top": "minecraft:block/raw_weathered_block"
+"wall": "delbase:block/raw_weathered_copper_block",
+"top": "delbase:block/raw_weathered_copper_block"
 }
 }

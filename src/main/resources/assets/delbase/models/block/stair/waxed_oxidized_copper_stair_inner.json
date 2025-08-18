@@ -1,0 +1,9 @@
+{
+"parent": "delbase:block/template/inner_stairs_copper",
+"textures": {
+"bottom": "delbase:block/oxidized_copper",
+"top": "delbase:block/oxidized_copper",
+"side": "delbase:block/oxidized_copper",
+"inside": "delbase:block/oxidized_copper"
+}
+}

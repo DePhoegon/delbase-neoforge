@@ -1,9 +1,9 @@
 {
 "parent": "delbase:block/template/outer_stairs",
 "textures": {
-"bottom": "minecraft:block/weathered_copper_bulb_block",
-"top": "minecraft:block/weathered_copper_bulb_block",
-"side": "minecraft:block/weathered_copper_bulb_block",
-"inside": "minecraft:block/weathered_copper_bulb_block"
+"bottom": "minecraft:block/weathered_copper_bulb",
+"top": "minecraft:block/weathered_copper_bulb",
+"side": "minecraft:block/weathered_copper_bulb",
+"inside": "minecraft:block/weathered_copper_bulb"
 }
 }

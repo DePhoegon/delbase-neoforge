@@ -1,8 +1,8 @@
 {
 "parent": "minecraft:block/cube_bottom_top",
 "textures": {
-"bottom": "delbase:block/2",
-"top": "delbase:block/2",
-"side": "delbase:block/2"
+"bottom": "minecraft:block/chiseled_tuff",
+"top": "minecraft:block/chiseled_tuff",
+"side": "minecraft:block/chiseled_tuff"
 }
 }

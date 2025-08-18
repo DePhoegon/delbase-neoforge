@@ -1,7 +1,7 @@
 {
 "parent": "delbase:block/template/fence_side",
 "textures": {
-"texture": "minecraft:block/oxidized_copper_bulb_block",
-"postside": "minecraft:block/oxidized_copper_bulb_block"
+"texture": "minecraft:block/oxidized_copper_bulb",
+"postside": "minecraft:block/oxidized_copper_bulb"
 }
 }

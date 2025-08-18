@@ -1,9 +1,9 @@
 {
 "parent": "delbase:block/template/stairs_copper",
 "textures": {
-"bottom": "minecraft:block/cut_weathered_copper",
-"top": "minecraft:block/cut_weathered_copper",
-"side": "minecraft:block/cut_weathered_copper",
-"inside": "minecraft:block/cut_weathered_copper_block"
+"bottom": "minecraft:block/weathered_cut_copper",
+"top": "minecraft:block/weathered_cut_copper",
+"side": "minecraft:block/weathered_cut_copper",
+"inside": "minecraft:block/weathered_cut_copper"
 }
 }

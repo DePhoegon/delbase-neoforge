@@ -1,7 +1,7 @@
 {
 "parent": "delbase:block/template/wall_side",
 "textures": {
-"wall": "delbase:block/2",
-"top": "delbase:block/2"
+"wall": "minecraft:block/chiseled_tuff_bricks",
+"top": "minecraft:block/chiseled_tuff_bricks"
 }
 }

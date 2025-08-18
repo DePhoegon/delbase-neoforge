@@ -1,9 +1,9 @@
 {
 "parent": "delbase:block/template/stairs",
 "textures": {
-"bottom": "delbase:block/2",
-"top": "delbase:block/2",
-"side": "delbase:block/2",
-"inside": "delbase:block/2"
+"bottom": "minecraft:block/chiseled_tuff_bricks",
+"top": "minecraft:block/chiseled_tuff_bricks",
+"side": "minecraft:block/chiseled_tuff_bricks",
+"inside": "minecraft:block/chiseled_tuff_bricks"
 }
 }

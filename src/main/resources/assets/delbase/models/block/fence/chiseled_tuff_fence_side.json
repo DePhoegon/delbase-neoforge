@@ -1,6 +1,7 @@
 {
 "parent": "delbase:block/template/fence_side",
 "textures": {
-"texture": "delbase:block/2"
+"texture": "minecraft:block/chiseled_tuff",
+"postside": "minecraft:block/chiseled_tuff"
 }
 }
