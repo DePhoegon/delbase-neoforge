@@ -65,7 +65,7 @@ public class fenceCopperWaxed {
     public static DeferredBlock<FenceGateBlock> WAXED_WEATHERED_COPPER_GRATING_FENCE_GATE = registerGateAid("waxed_weathered_copper_grating_fence_gate", WEATHERED_COPPER_GRATE, WEATHERED_COPPER_GRATING_FENCE_GATE, EXPOSED.getOrder(), 37);
     public static DeferredBlock<FenceBlock> WAXED_OXIDIZED_COPPER_GRATING_FENCE = registerAid("waxed_oxidized_copper_grating_fence", OXIDIZED_COPPER_GRATE, OXIDIZED_COPPER_GRATING_FENCE, OXIDIZED.getOrder(), 38);
     public static DeferredBlock<FenceGateBlock> WAXED_OXIDIZED_COPPER_GRATING_FENCE_GATE = registerGateAid("waxed_oxidized_copper_grating_fence_gate", OXIDIZED_COPPER_GRATE, OXIDIZED_COPPER_GRATING_FENCE_GATE, OXIDIZED.getOrder(), 38);
-
+/*
     public static DeferredBlock<FenceBlock> WAXED_COPPER_BULB_FENCE = registerBulbAid("waxed_copper_bulb_fence", COPPER_BULB, COPPER_BULB_FENCE, UNAFFECTED.getOrder(), 45);
     public static DeferredBlock<FenceGateBlock> WAXED_COPPER_BULB_FENCE_GATE = registerBulbGateAid("waxed_copper_bulb_fence_gate", COPPER_BULB, COPPER_BULB_FENCE_GATE, UNAFFECTED.getOrder(), 45);
     public static DeferredBlock<FenceBlock> WAXED_EXPOSED_COPPER_BULB_FENCE = registerBulbAid("waxed_exposed_copper_bulb_fence", EXPOSED_COPPER_BULB, EXPOSED_COPPER_BULB_FENCE, EXPOSED.getOrder(), 46);
@@ -74,6 +74,7 @@ public class fenceCopperWaxed {
     public static DeferredBlock<FenceGateBlock> WAXED_WEATHERED_COPPER_BULB_FENCE_GATE = registerBulbGateAid("waxed_weathered_copper_bulb_fence_gate", WEATHERED_COPPER_BULB, WEATHERED_COPPER_BULB_FENCE_GATE, EXPOSED.getOrder(), 47);
     public static DeferredBlock<FenceBlock> WAXED_OXIDIZED_COPPER_BULB_FENCE = registerBulbAid("waxed_oxidized_copper_bulb_fence", OXIDIZED_COPPER_BULB, OXIDIZED_COPPER_BULB_FENCE, OXIDIZED.getOrder(), 48);
     public static DeferredBlock<FenceGateBlock> WAXED_OXIDIZED_COPPER_BULB_FENCE_GATE = registerBulbGateAid("waxed_oxidized_copper_bulb_fence_gate", OXIDIZED_COPPER_BULB, OXIDIZED_COPPER_BULB_FENCE_GATE, OXIDIZED.getOrder(), 48);
+*/
 
     public static void registerBlock(IEventBus eventBus) {
         FENCE_BLOCKS.register(eventBus);

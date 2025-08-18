@@ -64,7 +64,7 @@ public class fenceCopper {
     public static final DeferredBlock<FenceGateBlock> WEATHERED_COPPER_GRATING_FENCE_GATE = registerGateAid("weathered_copper_grating_fence_gate", WEATHERED_COPPER_GRATE, WEATHERED.getOrder(), 32);
     public static final DeferredBlock<FenceBlock> OXIDIZED_COPPER_GRATING_FENCE = registerAid("oxidized_copper_grating_fence", OXIDIZED_COPPER_GRATE, OXIDIZED.getOrder(), 33);
     public static final DeferredBlock<FenceGateBlock> OXIDIZED_COPPER_GRATING_FENCE_GATE = registerGateAid("oxidized_copper_grating_fence_gate", OXIDIZED_COPPER_GRATE, OXIDIZED.getOrder(), 33);
-
+/*
     public static final DeferredBlock<FenceBlock> COPPER_BULB_FENCE = registerBulbAid("copper_bulb_fence", COPPER_BULB, UNAFFECTED.getOrder(), 40);
     public static final DeferredBlock<FenceGateBlock> COPPER_BULB_FENCE_GATE = registerBulbGateAid("copper_bulb_fence_gate", COPPER_BULB, UNAFFECTED.getOrder(), 40);
     public static final DeferredBlock<FenceBlock> EXPOSED_COPPER_BULB_FENCE = registerBulbAid("exposed_copper_bulb_fence", EXPOSED_COPPER_BULB, EXPOSED.getOrder(), 41);
@@ -73,7 +73,7 @@ public class fenceCopper {
     public static final DeferredBlock<FenceGateBlock> WEATHERED_COPPER_BULB_FENCE_GATE = registerBulbGateAid("weathered_copper_bulb_fence_gate", WEATHERED_COPPER_BULB, WEATHERED.getOrder(), 42);
     public static final DeferredBlock<FenceBlock> OXIDIZED_COPPER_BULB_FENCE = registerBulbAid("oxidized_copper_bulb_fence", OXIDIZED_COPPER_BULB, OXIDIZED.getOrder(), 43);
     public static final DeferredBlock<FenceGateBlock> OXIDIZED_COPPER_BULB_FENCE_GATE = registerBulbGateAid("oxidized_copper_bulb_fence_gate", OXIDIZED_COPPER_BULB, OXIDIZED.getOrder(), 43);
-
+*/
     public static void registerBlock(IEventBus eventBus) {
         FENCE_BLOCKS.register(eventBus);
         FENCE_GATE_BLOCKS.register(eventBus);

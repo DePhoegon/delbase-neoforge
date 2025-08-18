@@ -43,11 +43,12 @@ public class slabCoppers {
     public static final DeferredBlock<SlabBlock> EXPOSED_COPPER_GRATING_SLAB = registerAid("exposed_copper_grating_slab", EXPOSED_COPPER_GRATE, EXPOSED.getOrder(), 31);
     public static final DeferredBlock<SlabBlock> WEATHERED_COPPER_GRATING_SLAB = registerAid("weathered_copper_grating_slab", WEATHERED_COPPER_GRATE, WEATHERED.getOrder(), 32);
     public static final DeferredBlock<SlabBlock> OXIDIZED_COPPER_GRATING_SLAB = registerAid("oxidized_copper_grating_slab", OXIDIZED_COPPER_GRATE, OXIDIZED.getOrder(), 33);
-
+/*
     public static final DeferredBlock<SlabBlock> COPPER_BULB_SLAB = registerBulbAid("copper_bulb_slab", COPPER_BULB, UNAFFECTED.getOrder(), 40);
     public static final DeferredBlock<SlabBlock> EXPOSED_COPPER_BULB_SLAB = registerBulbAid("exposed_copper_bulb_slab", EXPOSED_COPPER_BULB, EXPOSED.getOrder(), 41);
     public static final DeferredBlock<SlabBlock> WEATHERED_COPPER_BULB_SLAB = registerBulbAid("weathered_copper_bulb_slab", WEATHERED_COPPER_BULB, WEATHERED.getOrder(), 42);
     public static final DeferredBlock<SlabBlock> OXIDIZED_COPPER_BULB_SLAB = registerBulbAid("oxidized_copper_bulb_slab", OXIDIZED_COPPER_BULB, OXIDIZED.getOrder(), 43);
+*/
 
     public static void registerBlock(IEventBus eventBus) {
         BLOCKS.register(eventBus);

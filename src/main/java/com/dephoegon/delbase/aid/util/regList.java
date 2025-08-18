@@ -27,6 +27,7 @@ public class regList {
         stairCoppers.registerBlock(eventBus);
         wallCoppers.registerBlock(eventBus);
         fenceCopper.registerBlock(eventBus);
+
         // Sand
         gravColorSands.registerBlock(eventBus);
         // SandStone

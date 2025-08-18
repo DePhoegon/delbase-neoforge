@@ -50,11 +50,12 @@ public class wallCopperWaxed {
     public static final DeferredBlock<WallBlock> WAXED_EXPOSED_CUT_COPPER_WALL = registerAid("waxed_exposed_cut_copper_wall", EXPOSED_CUT_COPPER_WALL, EXPOSED_CUT_COPPER, EXPOSED.getOrder(), 46);
     public static final DeferredBlock<WallBlock> WAXED_WEATHERED_CUT_COPPER_WALL = registerAid("waxed_weathered_cut_copper_wall", WEATHERED_CUT_COPPER_WALL, WEATHERED_CUT_COPPER, WEATHERED.getOrder(), 47);
     public static final DeferredBlock<WallBlock> WAXED_OXIDIZED_CUT_COPPER_WALL = registerAid("waxed_oxidized_cut_copper_wall", OXIDIZED_CUT_COPPER_WALL, OXIDIZED_CUT_COPPER, OXIDIZED.getOrder(), 48);
-
+/*
     public static final DeferredBlock<WallBlock> WAXED_BULB_COPPER_WALL = registerBulbAid("waxed_bulb_copper_wall", BULB_COPPER_WALL, COPPER_BULB, UNAFFECTED.getOrder(), 55);
     public static final DeferredBlock<WallBlock> WAXED_BULB_EXPOSED_COPPER_WALL = registerBulbAid("waxed_bulb_exposed_copper_wall", BULB_EXPOSED_COPPER_WALL, EXPOSED_COPPER_BULB, EXPOSED.getOrder(), 56);
     public static final DeferredBlock<WallBlock> WAXED_BULB_WEATHERED_COPPER_WALL = registerBulbAid("waxed_bulb_weathered_copper_wall", BULB_WEATHERED_COPPER_WALL, WEATHERED_COPPER_BULB, WEATHERED.getOrder(), 57);
     public static final DeferredBlock<WallBlock> WAXED_BULB_OXIDIZED_COPPER_WALL = registerBulbAid("waxed_bulb_oxidized_copper_wall", BULB_OXIDIZED_COPPER_WALL, OXIDIZED_COPPER_BULB, OXIDIZED.getOrder(), 58);
+*/
 
     public static void registerBlock(IEventBus eventBus) {
         BLOCKS.register(eventBus);

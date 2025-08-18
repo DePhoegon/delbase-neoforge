@@ -45,11 +45,12 @@ public class stairCopperWaxed {
     public static final DeferredBlock<StairBlock> WAXED_EXPOSED_COPPER_GRATING_STAIRS = registerAid("waxed_exposed_copper_grating_stairs", EXPOSED_COPPER_GRATING_STAIRS, WAXED_EXPOSED_COPPER_GRATE, EXPOSED.getOrder(), 36);
     public static final DeferredBlock<StairBlock> WAXED_WEATHERED_COPPER_GRATING_STAIRS = registerAid("waxed_weathered_copper_grating_stairs", WEATHERED_COPPER_GRATING_STAIRS, WAXED_WEATHERED_COPPER_GRATE, WEATHERED.getOrder(), 37);
     public static final DeferredBlock<StairBlock> WAXED_OXIDIZED_COPPER_GRATING_STAIRS = registerAid("waxed_oxidized_copper_grating_stairs", OXIDIZED_COPPER_GRATING_STAIRS, WAXED_OXIDIZED_COPPER_GRATE, OXIDIZED.getOrder(), 38);
-
+/*
     public static final DeferredBlock<StairBlock> WAXED_COPPER_BULB_STAIRS = registerBulbAid("waxed_copper_bulb_stairs", COPPER_BULB_STAIRS, WAXED_COPPER_BULB, UNAFFECTED.getOrder(), 45);
     public static final DeferredBlock<StairBlock> WAXED_EXPOSED_COPPER_BULB_STAIRS = registerBulbAid("waxed_exposed_copper_bulb_stairs", EXPOSED_COPPER_BULB_STAIRS, WAXED_EXPOSED_COPPER_BULB, EXPOSED.getOrder(), 46);
     public static final DeferredBlock<StairBlock> WAXED_WEATHERED_COPPER_BULB_STAIRS = registerBulbAid("waxed_weathered_copper_bulb_stairs", WEATHERED_COPPER_BULB_STAIRS, WAXED_WEATHERED_COPPER_BULB, WEATHERED.getOrder(), 47);
     public static final DeferredBlock<StairBlock> WAXED_OXIDIZED_COPPER_BULB_STAIRS = registerBulbAid("waxed_oxidized_copper_bulb_stairs", OXIDIZED_COPPER_BULB_STAIRS, WAXED_OXIDIZED_COPPER_BULB, OXIDIZED.getOrder(), 48);
+*/
 
     public static void registerBlock(IEventBus eventBus) {
         BLOCKS.register(eventBus);

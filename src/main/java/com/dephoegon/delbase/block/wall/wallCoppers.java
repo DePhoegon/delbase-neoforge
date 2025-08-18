@@ -48,11 +48,12 @@ public class wallCoppers {
     public static final DeferredBlock<WallBlock> EXPOSED_CUT_COPPER_WALL = registerAid("exposed_cut_copper_wall", CUT_COPPER, EXPOSED.getOrder(), 41);
     public static final DeferredBlock<WallBlock> WEATHERED_CUT_COPPER_WALL = registerAid("weathered_cut_copper_wall", CUT_COPPER, WEATHERED.getOrder(), 42);
     public static final DeferredBlock<WallBlock> OXIDIZED_CUT_COPPER_WALL = registerAid("oxidized_cut_copper_wall", CUT_COPPER, OXIDIZED.getOrder(), 43);
-
+/*
     public static final DeferredBlock<WallBlock> BULB_COPPER_WALL = registerBulbAid("bulb_copper_wall", COPPER_BULB, UNAFFECTED.getOrder(), 50);
     public static final DeferredBlock<WallBlock> BULB_EXPOSED_COPPER_WALL = registerBulbAid("bulb_exposed_copper_wall", COPPER_BULB, EXPOSED.getOrder(), 51);
     public static final DeferredBlock<WallBlock> BULB_WEATHERED_COPPER_WALL = registerBulbAid("bulb_weathered_copper_wall", COPPER_BULB, WEATHERED.getOrder(), 52);
     public static final DeferredBlock<WallBlock> BULB_OXIDIZED_COPPER_WALL = registerBulbAid("bulb_oxidized_copper_wall", COPPER_BULB, OXIDIZED.getOrder(), 53);
+*/
 
     public static void registerBlock(IEventBus eventBus) {
         BLOCKS.register(eventBus);
