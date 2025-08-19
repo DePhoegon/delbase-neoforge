@@ -1,0 +1,13 @@
+{
+"variants": {
+"type=bottom": {
+"model": "delbase:block/slab/oxidized_copper_grate_slab"
+},
+"type=double": {
+"model": "delbase:block/slab/oxidized_copper_grate_slab_double"
+},
+"type=top": {
+"model": "delbase:block/slab/oxidized_copper_grate_slab_top"
+}
+}
+}

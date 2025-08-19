@@ -1,0 +1,8 @@
+{
+"parent": "delbase:block/template/slab_top_copper_grate",
+"textures": {
+"bottom": "minecraft:block/weathered_copper_grate",
+"top": "minecraft:block/weathered_copper_grate",
+"side": "minecraft:block/weathered_copper_grate"
+}
+}

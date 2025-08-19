@@ -1,0 +1,7 @@
+{
+"parent": "delbase:block/template/wall_inventory_copper_grate",
+"textures": {
+"wall": "minecraft:block/weathered_copper_grate",
+"top": "minecraft:block/weathered_copper_grate"
+}
+}

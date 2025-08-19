@@ -1,4 +1,3 @@
 {
-  "render_type": "cutout",
-  "parent": "delbase:block/template/fence_side_copper"
+  "parent": "delbase:block/template/fence_side_leaves"
 }

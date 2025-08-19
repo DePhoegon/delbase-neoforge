@@ -1,4 +1,49 @@
 {
   "render_type": "cutout",
-  "parent": "delbase:block/template/wall_post_copper"
+  "parent": "block/block",
+  "textures": {
+    "particle": "#wall"
+  },
+  "elements": [
+    {
+      "from": [ 4, 0, 4 ],
+      "to": [ 12, 16, 12 ],
+      "faces": {
+        "down":  { "texture": "#wall", "uv": [ 4, 4, 12, 12 ], "tintindex": 0, "cullface": "down" },
+        "up":    { "texture": "#wall", "uv": [ 4, 4, 12, 12 ], "tintindex": 0, "cullface": "up" },
+        "north": { "texture": "#wall", "uv": [ 4, 1, 12, 15 ], "tintindex": 0 },
+        "south": { "texture": "#wall", "uv": [ 4, 1, 12, 15 ], "tintindex": 0 },
+        "west":  { "texture": "#wall", "uv": [ 4, 1, 12, 15 ], "tintindex": 0 },
+        "east":  { "texture": "#wall", "uv": [ 4, 1, 12, 15 ], "tintindex": 0 }
+      },
+      "__comment": "Center post, UV clipped at 1-15 cutting out texture borders"
+    },
+    {
+      "from": [ 4, 0, 11.998 ],
+      "to": [ 12, 16, 12 ],
+      "faces": {
+        "north": { "texture": "#wall", "uv": [ 4, 1, 12, 15 ], "tintindex": 0 },
+        "south": { "texture": "#wall", "uv": [ 4, 1, 12, 15 ], "tintindex": 0 }
+      },
+      "__comment": "Center post, Separate Texture for top & bottom for textured walls"
+    },
+    {
+      "from": [ 11.998, 0, 4 ],
+      "to": [ 12, 16, 12 ],
+      "faces": {
+        "west":  { "texture": "#wall", "uv": [ 4, 1, 12, 15 ], "tintindex": 0 },
+        "east":  { "texture": "#wall", "uv": [ 4, 1, 12, 15 ], "tintindex": 0 }
+      },
+      "__comment": "Center post, Separate Texture for top & bottom for textured walls"
+    },
+    {
+      "from": [ 4, 0, 4 ],
+      "to": [ 4.998, 16, 12 ],
+      "faces": {
+        "west":  { "texture": "#wall", "uv": [ 4, 1, 12, 15 ], "tintindex": 0 },
+        "east":  { "texture": "#wall", "uv": [ 4, 1, 12, 15 ], "tintindex": 0 }
+      },
+      "__comment": "Center post, Separate Texture for top & bottom for textured walls"
+    }
+  ]
 }

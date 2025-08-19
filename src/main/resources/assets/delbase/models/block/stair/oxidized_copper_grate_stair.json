@@ -1,0 +1,9 @@
+{
+"parent": "delbase:block/template/stairs_copper_grate",
+"textures": {
+"bottom": "minecraft:block/oxidized_copper_grate",
+"top": "minecraft:block/oxidized_copper_grate",
+"side": "minecraft:block/oxidized_copper_grate",
+"inside": "minecraft:block/oxidized_copper_grate"
+}
+}

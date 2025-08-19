@@ -1,0 +1,7 @@
+{
+"parent": "delbase:block/template/fence_gate_copper_grate",
+"textures": {
+"texture": "minecraft:block/exposed_copper_grate",
+"postside": "minecraft:block/exposed_copper_grate"
+}
+}
