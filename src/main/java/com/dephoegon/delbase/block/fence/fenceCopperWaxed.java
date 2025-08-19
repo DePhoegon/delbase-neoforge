@@ -57,14 +57,14 @@ public class fenceCopperWaxed {
     public static DeferredBlock<FenceBlock> CHISELED_WAXED_OXIDIZED_COPPER_FENCE = registerAid("chiseled_waxed_oxidized_copper_fence", OXIDIZED_CHISELED_COPPER, CHISELED_OXIDIZED_COPPER_FENCE, OXIDIZED.getOrder(), 28);
     public static DeferredBlock<FenceGateBlock> CHISELED_WAXED_OXIDIZED_COPPER_FENCE_GATE = registerGateAid("chiseled_waxed_oxidized_copper_fence_gate", OXIDIZED_CHISELED_COPPER, CHISELED_OXIDIZED_COPPER_FENCE_GATE, OXIDIZED.getOrder(), 28);
 
-    public static DeferredBlock<FenceBlock> WAXED_COPPER_GRATING_FENCE = registerAid("waxed_copper_grating_fence", COPPER_GRATE, COPPER_GRATING_FENCE, UNAFFECTED.getOrder(), 35);
-    public static DeferredBlock<FenceGateBlock> WAXED_COPPER_GRATING_FENCE_GATE = registerGateAid("waxed_copper_grating_fence_gate", COPPER_GRATE, COPPER_GRATING_FENCE_GATE, UNAFFECTED.getOrder(), 35);
-    public static DeferredBlock<FenceBlock> WAXED_EXPOSED_COPPER_GRATING_FENCE = registerAid("waxed_exposed_copper_grating_fence", EXPOSED_COPPER_GRATE, EXPOSED_COPPER_GRATING_FENCE, EXPOSED.getOrder(), 36);
-    public static DeferredBlock<FenceGateBlock> WAXED_EXPOSED_COPPER_GRATING_FENCE_GATE = registerGateAid("waxed_exposed_copper_grating_fence_gate", EXPOSED_COPPER_GRATE, EXPOSED_COPPER_GRATING_FENCE_GATE, EXPOSED.getOrder(), 36);
-    public static DeferredBlock<FenceBlock> WAXED_WEATHERED_COPPER_GRATING_FENCE = registerAid("waxed_weathered_copper_grating_fence", WEATHERED_COPPER_GRATE, WEATHERED_COPPER_GRATING_FENCE, EXPOSED.getOrder(), 37);
-    public static DeferredBlock<FenceGateBlock> WAXED_WEATHERED_COPPER_GRATING_FENCE_GATE = registerGateAid("waxed_weathered_copper_grating_fence_gate", WEATHERED_COPPER_GRATE, WEATHERED_COPPER_GRATING_FENCE_GATE, EXPOSED.getOrder(), 37);
-    public static DeferredBlock<FenceBlock> WAXED_OXIDIZED_COPPER_GRATING_FENCE = registerAid("waxed_oxidized_copper_grating_fence", OXIDIZED_COPPER_GRATE, OXIDIZED_COPPER_GRATING_FENCE, OXIDIZED.getOrder(), 38);
-    public static DeferredBlock<FenceGateBlock> WAXED_OXIDIZED_COPPER_GRATING_FENCE_GATE = registerGateAid("waxed_oxidized_copper_grating_fence_gate", OXIDIZED_COPPER_GRATE, OXIDIZED_COPPER_GRATING_FENCE_GATE, OXIDIZED.getOrder(), 38);
+    public static DeferredBlock<FenceBlock> WAXED_COPPER_GRATE_FENCE = registerAid("waxed_copper_grate_fence", COPPER_GRATE, COPPER_GRATE_FENCE, UNAFFECTED.getOrder(), 35);
+    public static DeferredBlock<FenceGateBlock> WAXED_COPPER_GRATE_FENCE_GATE = registerGateAid("waxed_copper_grate_fence_gate", COPPER_GRATE, COPPER_GRATE_FENCE_GATE, UNAFFECTED.getOrder(), 35);
+    public static DeferredBlock<FenceBlock> WAXED_EXPOSED_COPPER_GRATE_FENCE = registerAid("waxed_exposed_copper_grate_fence", EXPOSED_COPPER_GRATE, EXPOSED_COPPER_GRATE_FENCE, EXPOSED.getOrder(), 36);
+    public static DeferredBlock<FenceGateBlock> WAXED_EXPOSED_COPPER_GRATE_FENCE_GATE = registerGateAid("waxed_exposed_copper_grate_fence_gate", EXPOSED_COPPER_GRATE, EXPOSED_COPPER_GRATE_FENCE_GATE, EXPOSED.getOrder(), 36);
+    public static DeferredBlock<FenceBlock> WAXED_WEATHERED_COPPER_GRATE_FENCE = registerAid("waxed_weathered_copper_grate_fence", WEATHERED_COPPER_GRATE, WEATHERED_COPPER_GRATE_FENCE, EXPOSED.getOrder(), 37);
+    public static DeferredBlock<FenceGateBlock> WAXED_WEATHERED_COPPER_GRATE_FENCE_GATE = registerGateAid("waxed_weathered_copper_grate_fence_gate", WEATHERED_COPPER_GRATE, WEATHERED_COPPER_GRATE_FENCE_GATE, EXPOSED.getOrder(), 37);
+    public static DeferredBlock<FenceBlock> WAXED_OXIDIZED_COPPER_GRATE_FENCE = registerAid("waxed_oxidized_copper_grate_fence", OXIDIZED_COPPER_GRATE, OXIDIZED_COPPER_GRATE_FENCE, OXIDIZED.getOrder(), 38);
+    public static DeferredBlock<FenceGateBlock> WAXED_OXIDIZED_COPPER_GRATE_FENCE_GATE = registerGateAid("waxed_oxidized_copper_grate_fence_gate", OXIDIZED_COPPER_GRATE, OXIDIZED_COPPER_GRATE_FENCE_GATE, OXIDIZED.getOrder(), 38);
 /*
     public static DeferredBlock<FenceBlock> WAXED_COPPER_BULB_FENCE = registerBulbAid("waxed_copper_bulb_fence", COPPER_BULB, COPPER_BULB_FENCE, UNAFFECTED.getOrder(), 45);
     public static DeferredBlock<FenceGateBlock> WAXED_COPPER_BULB_FENCE_GATE = registerBulbGateAid("waxed_copper_bulb_fence_gate", COPPER_BULB, COPPER_BULB_FENCE_GATE, UNAFFECTED.getOrder(), 45);
@@ -75,6 +75,15 @@ public class fenceCopperWaxed {
     public static DeferredBlock<FenceBlock> WAXED_OXIDIZED_COPPER_BULB_FENCE = registerBulbAid("waxed_oxidized_copper_bulb_fence", OXIDIZED_COPPER_BULB, OXIDIZED_COPPER_BULB_FENCE, OXIDIZED.getOrder(), 48);
     public static DeferredBlock<FenceGateBlock> WAXED_OXIDIZED_COPPER_BULB_FENCE_GATE = registerBulbGateAid("waxed_oxidized_copper_bulb_fence_gate", OXIDIZED_COPPER_BULB, OXIDIZED_COPPER_BULB_FENCE_GATE, OXIDIZED.getOrder(), 48);
 */
+
+    public static DeferredBlock<FenceBlock> WAXED_CUT_COPPER_FENCE = registerAid("waxed_cut_copper_fence", CUT_COPPER, CUT_COPPER_FENCE, UNAFFECTED.getOrder(), 55);
+    public static DeferredBlock<FenceGateBlock> WAXED_CUT_COPPER_FENCE_GATE = registerGateAid("waxed_cut_copper_fence_gate", CUT_COPPER, CUT_COPPER_FENCE_GATE, UNAFFECTED.getOrder(), 55);
+    public static DeferredBlock<FenceBlock> WAXED_EXPOSED_CUT_COPPER_FENCE = registerAid("waxed_exposed_cut_copper_fence", EXPOSED_CUT_COPPER, EXPOSED_CUT_COPPER_FENCE, EXPOSED.getOrder(), 56);
+    public static DeferredBlock<FenceGateBlock> WAXED_EXPOSED_CUT_COPPER_FENCE_GATE = registerGateAid("waxed_exposed_cut_copper_fence_gate", EXPOSED_CUT_COPPER, EXPOSED_CUT_COPPER_FENCE_GATE, EXPOSED.getOrder(), 56);
+    public static DeferredBlock<FenceBlock> WAXED_WEATHERED_CUT_COPPER_FENCE = registerAid("waxed_weathered_cut_copper_fence", WEATHERED_CUT_COPPER, WEATHERED_CUT_COPPER_FENCE, EXPOSED.getOrder(), 57);
+    public static DeferredBlock<FenceGateBlock> WAXED_WEATHERED_CUT_COPPER_FENCE_GATE = registerGateAid("waxed_weathered_cut_copper_fence_gate", WEATHERED_CUT_COPPER, WEATHERED_CUT_COPPER_FENCE_GATE, EXPOSED.getOrder(), 57);
+    public static DeferredBlock<FenceBlock> WAXED_OXIDIZED_CUT_COPPER_FENCE = registerAid("waxed_oxidized_cut_copper_fence", OXIDIZED_CUT_COPPER, OXIDIZED_CUT_COPPER_FENCE, OXIDIZED.getOrder(), 58);
+    public static DeferredBlock<FenceGateBlock> WAXED_OXIDIZED_CUT_COPPER_FENCE_GATE = registerGateAid("waxed_oxidized_cut_copper_fence_gate", OXIDIZED_CUT_COPPER, OXIDIZED_CUT_COPPER_FENCE_GATE, OXIDIZED.getOrder(), 58);
 
     public static void registerBlock(IEventBus eventBus) {
         FENCE_BLOCKS.register(eventBus);

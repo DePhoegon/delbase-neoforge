@@ -24,30 +24,30 @@ public class stairCoppers {
 
     public static DeferredRegister.Blocks getStairCopperBLOCKS() { return BLOCKS; }
 
-    public static final DeferredBlock<StairBlock> RAW_COPPER_STAIRS = registerAid("raw_copper_stairs", RAW_COPPER_BLOCK, UNAFFECTED.getOrder(), 0);
-    public static final DeferredBlock<StairBlock> RAW_EXPOSED_COPPER_STAIRS = registerAid("raw_exposed_copper_stairs", RAW_COPPER_BLOCK, EXPOSED.getOrder(), 1);
-    public static final DeferredBlock<StairBlock> RAW_WEATHERED_COPPER_STAIRS = registerAid("raw_weathered_copper_stairs", RAW_COPPER_BLOCK, WEATHERED.getOrder(), 2);
-    public static final DeferredBlock<StairBlock> RAW_OXIDIZED_COPPER_STAIRS = registerAid("raw_oxidized_copper_stairs", RAW_COPPER_BLOCK, OXIDIZED.getOrder(), 3);
+    public static final DeferredBlock<StairBlock> RAW_COPPER_STAIR = registerAid("raw_copper_stair", RAW_COPPER_BLOCK, UNAFFECTED.getOrder(), 0);
+    public static final DeferredBlock<StairBlock> RAW_EXPOSED_COPPER_STAIR = registerAid("raw_exposed_copper_stair", RAW_COPPER_BLOCK, EXPOSED.getOrder(), 1);
+    public static final DeferredBlock<StairBlock> RAW_WEATHERED_COPPER_STAIR = registerAid("raw_weathered_copper_stair", RAW_COPPER_BLOCK, WEATHERED.getOrder(), 2);
+    public static final DeferredBlock<StairBlock> RAW_OXIDIZED_COPPER_STAIR = registerAid("raw_oxidized_copper_stair", RAW_COPPER_BLOCK, OXIDIZED.getOrder(), 3);
 
-    public static final DeferredBlock<StairBlock> COPPER_STAIRS = registerAid("copper_stairs", RAW_COPPER_BLOCK, UNAFFECTED.getOrder(), 10);
-    public static final DeferredBlock<StairBlock> EXPOSED_COPPER_STAIRS = registerAid("exposed_copper_stairs", EXPOSED_COPPER, EXPOSED.getOrder(), 11);
-    public static final DeferredBlock<StairBlock> WEATHERED_COPPER_STAIRS = registerAid("weathered_copper_stairs", WEATHERED_COPPER, WEATHERED.getOrder(), 12);
-    public static final DeferredBlock<StairBlock> OXIDIZED_COPPER_STAIRS = registerAid("oxidized_copper_stairs", OXIDIZED_COPPER, OXIDIZED.getOrder(), 13);
+    public static final DeferredBlock<StairBlock> COPPER_STAIR = registerAid("copper_stair", RAW_COPPER_BLOCK, UNAFFECTED.getOrder(), 10);
+    public static final DeferredBlock<StairBlock> EXPOSED_COPPER_STAIR = registerAid("exposed_copper_stair", EXPOSED_COPPER, EXPOSED.getOrder(), 11);
+    public static final DeferredBlock<StairBlock> WEATHERED_COPPER_STAIR = registerAid("weathered_copper_stair", WEATHERED_COPPER, WEATHERED.getOrder(), 12);
+    public static final DeferredBlock<StairBlock> OXIDIZED_COPPER_STAIR = registerAid("oxidized_copper_stair", OXIDIZED_COPPER, OXIDIZED.getOrder(), 13);
 
-    public static final DeferredBlock<StairBlock> CHISELED_COPPER_STAIRS = registerAid("chiseled_copper_stairs", CHISELED_COPPER, UNAFFECTED.getOrder(), 20);
-    public static final DeferredBlock<StairBlock> CHISELED_EXPOSED_COPPER_STAIRS = registerAid("chiseled_exposed_copper_stairs", EXPOSED_CHISELED_COPPER, EXPOSED.getOrder(), 21);
-    public static final DeferredBlock<StairBlock> CHISELED_WEATHERED_COPPER_STAIRS = registerAid("chiseled_weathered_copper_stairs", WEATHERED_CHISELED_COPPER, WEATHERED.getOrder(), 22);
-    public static final DeferredBlock<StairBlock> CHISELED_OXIDIZED_COPPER_STAIRS = registerAid("chiseled_oxidized_copper_stairs", OXIDIZED_CHISELED_COPPER, OXIDIZED.getOrder(), 23);
+    public static final DeferredBlock<StairBlock> CHISELED_COPPER_STAIR = registerAid("chiseled_copper_stair", CHISELED_COPPER, UNAFFECTED.getOrder(), 20);
+    public static final DeferredBlock<StairBlock> CHISELED_EXPOSED_COPPER_STAIR = registerAid("chiseled_exposed_copper_stair", EXPOSED_CHISELED_COPPER, EXPOSED.getOrder(), 21);
+    public static final DeferredBlock<StairBlock> CHISELED_WEATHERED_COPPER_STAIR = registerAid("chiseled_weathered_copper_stair", WEATHERED_CHISELED_COPPER, WEATHERED.getOrder(), 22);
+    public static final DeferredBlock<StairBlock> CHISELED_OXIDIZED_COPPER_STAIR = registerAid("chiseled_oxidized_copper_stair", OXIDIZED_CHISELED_COPPER, OXIDIZED.getOrder(), 23);
 
-    public static final DeferredBlock<StairBlock> COPPER_GRATING_STAIRS = registerAid("copper_grating_stairs", COPPER_GRATE, UNAFFECTED.getOrder(), 30);
-    public static final DeferredBlock<StairBlock> EXPOSED_COPPER_GRATING_STAIRS = registerAid("exposed_copper_grating_stairs", RAW_COPPER_BLOCK, EXPOSED.getOrder(), 31);
-    public static final DeferredBlock<StairBlock> WEATHERED_COPPER_GRATING_STAIRS = registerAid("weathered_copper_grating_stairs", RAW_COPPER_BLOCK, WEATHERED.getOrder(), 32);
-    public static final DeferredBlock<StairBlock> OXIDIZED_COPPER_GRATING_STAIRS = registerAid("oxidized_copper_grating_stairs", RAW_COPPER_BLOCK, OXIDIZED.getOrder(), 33);
+    public static final DeferredBlock<StairBlock> COPPER_GRATE_STAIR = registerAid("copper_grate_stair", COPPER_GRATE, UNAFFECTED.getOrder(), 30);
+    public static final DeferredBlock<StairBlock> EXPOSED_COPPER_GRATE_STAIR = registerAid("exposed_copper_grate_stair", RAW_COPPER_BLOCK, EXPOSED.getOrder(), 31);
+    public static final DeferredBlock<StairBlock> WEATHERED_COPPER_GRATE_STAIR = registerAid("weathered_copper_grate_stair", RAW_COPPER_BLOCK, WEATHERED.getOrder(), 32);
+    public static final DeferredBlock<StairBlock> OXIDIZED_COPPER_GRATE_STAIR = registerAid("oxidized_copper_grate_stair", RAW_COPPER_BLOCK, OXIDIZED.getOrder(), 33);
 /*
-    public static final DeferredBlock<StairBlock> COPPER_BULB_STAIRS = registerBulbAid("copper_bulb_stairs", RAW_COPPER_BLOCK, UNAFFECTED.getOrder(), 40);
-    public static final DeferredBlock<StairBlock> EXPOSED_COPPER_BULB_STAIRS = registerBulbAid("exposed_copper_bulb_stairs", RAW_COPPER_BLOCK, EXPOSED.getOrder(), 41);
-    public static final DeferredBlock<StairBlock> WEATHERED_COPPER_BULB_STAIRS = registerBulbAid("weathered_copper_bulb_stairs", RAW_COPPER_BLOCK, WEATHERED.getOrder(), 42);
-    public static final DeferredBlock<StairBlock> OXIDIZED_COPPER_BULB_STAIRS = registerBulbAid("oxidized_copper_bulb_stairs", RAW_COPPER_BLOCK, OXIDIZED.getOrder(), 43);
+    public static final DeferredBlock<StairBlock> COPPER_BULB_STAIR = registerBulbAid("copper_bulb_stair", RAW_COPPER_BLOCK, UNAFFECTED.getOrder(), 40);
+    public static final DeferredBlock<StairBlock> EXPOSED_COPPER_BULB_STAIR = registerBulbAid("exposed_copper_bulb_stair", RAW_COPPER_BLOCK, EXPOSED.getOrder(), 41);
+    public static final DeferredBlock<StairBlock> WEATHERED_COPPER_BULB_STAIR = registerBulbAid("weathered_copper_bulb_stair", RAW_COPPER_BLOCK, WEATHERED.getOrder(), 42);
+    public static final DeferredBlock<StairBlock> OXIDIZED_COPPER_BULB_STAIR = registerBulbAid("oxidized_copper_bulb_stair", RAW_COPPER_BLOCK, OXIDIZED.getOrder(), 43);
 */
 
     public static void registerBlock(IEventBus eventBus) {

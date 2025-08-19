@@ -4,6 +4,6 @@
 "bottom": "minecraft:block/exposed_chiseled_copper",
 "top": "minecraft:block/exposed_chiseled_copper",
 "side": "minecraft:block/exposed_chiseled_copper",
-"inside": "minecraft:block/exposed_chiseled_copper_block"
+"inside": "minecraft:block/exposed_chiseled_copper"
 }
 }

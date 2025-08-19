@@ -39,10 +39,10 @@ public class slabCoppers {
     public static final DeferredBlock<SlabBlock> CHISELED_WEATHERED_COPPER_SLAB = registerAid("chiseled_weathered_copper_slab", WEATHERED_CHISELED_COPPER, WEATHERED.getOrder(), 22);
     public static final DeferredBlock<SlabBlock> CHISELED_OXIDIZED_COPPER_SLAB = registerAid("chiseled_oxidized_copper_slab", OXIDIZED_CHISELED_COPPER, OXIDIZED.getOrder(), 23);
 
-    public static final DeferredBlock<SlabBlock> COPPER_GRATING_SLAB = registerAid("copper_grating_slab", COPPER_GRATE, UNAFFECTED.getOrder(), 30);
-    public static final DeferredBlock<SlabBlock> EXPOSED_COPPER_GRATING_SLAB = registerAid("exposed_copper_grating_slab", EXPOSED_COPPER_GRATE, EXPOSED.getOrder(), 31);
-    public static final DeferredBlock<SlabBlock> WEATHERED_COPPER_GRATING_SLAB = registerAid("weathered_copper_grating_slab", WEATHERED_COPPER_GRATE, WEATHERED.getOrder(), 32);
-    public static final DeferredBlock<SlabBlock> OXIDIZED_COPPER_GRATING_SLAB = registerAid("oxidized_copper_grating_slab", OXIDIZED_COPPER_GRATE, OXIDIZED.getOrder(), 33);
+    public static final DeferredBlock<SlabBlock> COPPER_GRATE_SLAB = registerAid("copper_grate_slab", COPPER_GRATE, UNAFFECTED.getOrder(), 30);
+    public static final DeferredBlock<SlabBlock> EXPOSED_COPPER_GRATE_SLAB = registerAid("exposed_copper_grate_slab", EXPOSED_COPPER_GRATE, EXPOSED.getOrder(), 31);
+    public static final DeferredBlock<SlabBlock> WEATHERED_COPPER_GRATE_SLAB = registerAid("weathered_copper_grate_slab", WEATHERED_COPPER_GRATE, WEATHERED.getOrder(), 32);
+    public static final DeferredBlock<SlabBlock> OXIDIZED_COPPER_GRATE_SLAB = registerAid("oxidized_copper_grate_slab", OXIDIZED_COPPER_GRATE, OXIDIZED.getOrder(), 33);
 /*
     public static final DeferredBlock<SlabBlock> COPPER_BULB_SLAB = registerBulbAid("copper_bulb_slab", COPPER_BULB, UNAFFECTED.getOrder(), 40);
     public static final DeferredBlock<SlabBlock> EXPOSED_COPPER_BULB_SLAB = registerBulbAid("exposed_copper_bulb_slab", EXPOSED_COPPER_BULB, EXPOSED.getOrder(), 41);

@@ -4,6 +4,6 @@
 "bottom": "minecraft:block/weathered_chiseled_copper",
 "top": "minecraft:block/weathered_chiseled_copper",
 "side": "minecraft:block/weathered_chiseled_copper",
-"inside": "minecraft:block/weathered_chiseled_copper_block"
+"inside": "minecraft:block/weathered_chiseled_copper"
 }
 }

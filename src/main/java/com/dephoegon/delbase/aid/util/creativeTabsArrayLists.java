@@ -880,10 +880,10 @@ public class creativeTabsArrayLists {
         out.add(CHISELED_WAXED_EXPOSED_COPPER_FENCE);
         out.add(CHISELED_WAXED_WEATHERED_COPPER_FENCE);
         out.add(CHISELED_WAXED_OXIDIZED_COPPER_FENCE);
-        out.add(WAXED_COPPER_GRATING_FENCE);
-        out.add(WAXED_EXPOSED_COPPER_GRATING_FENCE);
-        out.add(WAXED_WEATHERED_COPPER_GRATING_FENCE);
-        out.add(WAXED_OXIDIZED_COPPER_GRATING_FENCE);
+        out.add(WAXED_COPPER_GRATE_FENCE);
+        out.add(WAXED_EXPOSED_COPPER_GRATE_FENCE);
+        out.add(WAXED_WEATHERED_COPPER_GRATE_FENCE);
+        out.add(WAXED_OXIDIZED_COPPER_GRATE_FENCE);
         /*
         out.add(WAXED_COPPER_BULB_FENCE);
         out.add(WAXED_EXPOSED_COPPER_BULB_FENCE);
@@ -906,16 +906,20 @@ public class creativeTabsArrayLists {
         out.add(CHISELED_WAXED_EXPOSED_COPPER_FENCE_GATE);
         out.add(CHISELED_WAXED_WEATHERED_COPPER_FENCE_GATE);
         out.add(CHISELED_WAXED_OXIDIZED_COPPER_FENCE_GATE);
-        out.add(WAXED_COPPER_GRATING_FENCE_GATE);
-        out.add(WAXED_EXPOSED_COPPER_GRATING_FENCE_GATE);
-        out.add(WAXED_WEATHERED_COPPER_GRATING_FENCE_GATE);
-        out.add(WAXED_OXIDIZED_COPPER_GRATING_FENCE_GATE);
+        out.add(WAXED_COPPER_GRATE_FENCE_GATE);
+        out.add(WAXED_EXPOSED_COPPER_GRATE_FENCE_GATE);
+        out.add(WAXED_WEATHERED_COPPER_GRATE_FENCE_GATE);
+        out.add(WAXED_OXIDIZED_COPPER_GRATE_FENCE_GATE);
         /*
         out.add(WAXED_COPPER_BULB_FENCE_GATE);
         out.add(WAXED_EXPOSED_COPPER_BULB_FENCE_GATE);
         out.add(WAXED_WEATHERED_COPPER_BULB_FENCE_GATE);
         out.add(WAXED_OXIDIZED_COPPER_BULB_FENCE_GATE);
         */
+        out.add(WAXED_CUT_COPPER_FENCE_GATE);
+        out.add(WAXED_EXPOSED_CUT_COPPER_FENCE_GATE);
+        out.add(WAXED_WEATHERED_CUT_COPPER_FENCE_GATE);
+        out.add(WAXED_OXIDIZED_CUT_COPPER_FENCE_GATE);
         return out;
     }
     public static @NotNull ArrayList<DeferredBlock<FenceBlock>> setCopperFences() {
@@ -932,16 +936,24 @@ public class creativeTabsArrayLists {
         out.add(CHISELED_EXPOSED_COPPER_FENCE);
         out.add(CHISELED_WEATHERED_COPPER_FENCE);
         out.add(CHISELED_OXIDIZED_COPPER_FENCE);
-        out.add(COPPER_GRATING_FENCE);
-        out.add(EXPOSED_COPPER_GRATING_FENCE);
-        out.add(WEATHERED_COPPER_GRATING_FENCE);
-        out.add(OXIDIZED_COPPER_GRATING_FENCE);
+        out.add(COPPER_GRATE_FENCE);
+        out.add(EXPOSED_COPPER_GRATE_FENCE);
+        out.add(WEATHERED_COPPER_GRATE_FENCE);
+        out.add(OXIDIZED_COPPER_GRATE_FENCE);
         /*
         out.add(COPPER_BULB_FENCE);
         out.add(EXPOSED_COPPER_BULB_FENCE);
         out.add(WEATHERED_COPPER_BULB_FENCE);
         out.add(OXIDIZED_COPPER_BULB_FENCE);
          */
+        out.add(CUT_COPPER_FENCE);
+        out.add(EXPOSED_CUT_COPPER_FENCE);
+        out.add(WEATHERED_CUT_COPPER_FENCE);
+        out.add(OXIDIZED_CUT_COPPER_FENCE);
+        out.add(WAXED_CUT_COPPER_FENCE);
+        out.add(WAXED_EXPOSED_CUT_COPPER_FENCE);
+        out.add(WAXED_WEATHERED_CUT_COPPER_FENCE);
+        out.add(WAXED_OXIDIZED_CUT_COPPER_FENCE);
         return out;
     }
     public static @NotNull ArrayList<DeferredBlock<FenceGateBlock>> setCopperFenceGates() {
@@ -958,16 +970,20 @@ public class creativeTabsArrayLists {
         out.add(CHISELED_EXPOSED_COPPER_FENCE_GATE);
         out.add(CHISELED_WEATHERED_COPPER_FENCE_GATE);
         out.add(CHISELED_OXIDIZED_COPPER_FENCE_GATE);
-        out.add(COPPER_GRATING_FENCE_GATE);
-        out.add(EXPOSED_COPPER_GRATING_FENCE_GATE);
-        out.add(WEATHERED_COPPER_GRATING_FENCE_GATE);
-        out.add(OXIDIZED_COPPER_GRATING_FENCE_GATE);
+        out.add(COPPER_GRATE_FENCE_GATE);
+        out.add(EXPOSED_COPPER_GRATE_FENCE_GATE);
+        out.add(WEATHERED_COPPER_GRATE_FENCE_GATE);
+        out.add(OXIDIZED_COPPER_GRATE_FENCE_GATE);
         /*
         out.add(COPPER_BULB_FENCE_GATE);
         out.add(EXPOSED_COPPER_BULB_FENCE_GATE);
         out.add(WEATHERED_COPPER_BULB_FENCE_GATE);
         out.add(OXIDIZED_COPPER_BULB_FENCE_GATE);
         */
+        out.add(CUT_COPPER_FENCE_GATE);
+        out.add(EXPOSED_CUT_COPPER_FENCE_GATE);
+        out.add(WEATHERED_CUT_COPPER_FENCE_GATE);
+        out.add(OXIDIZED_CUT_COPPER_FENCE_GATE);
         return out;
     }
     public static @NotNull ArrayList<DeferredBlock<WallBlock>> setWaxedCopperWalls() {
@@ -1032,53 +1048,53 @@ public class creativeTabsArrayLists {
     }
     public static @NotNull ArrayList<DeferredBlock<StairBlock>> setWaxedCopperStairs() {
         ArrayList<DeferredBlock<StairBlock>> out = new ArrayList<>();
-        out.add(RAW_WAXED_COPPER_STAIRS);
-        out.add(RAW_WAXED_EXPOSED_COPPER_STAIRS);
-        out.add(RAW_WAXED_WEATHERED_COPPER_STAIRS);
-        out.add(RAW_WAXED_OXIDIZED_COPPER_STAIRS);
-        out.add(WAXED_COPPER_STAIRS);
-        out.add(WAXED_EXPOSED_COPPER_STAIRS);
-        out.add(WAXED_WEATHERED_COPPER_STAIRS);
-        out.add(WAXED_OXIDIZED_COPPER_STAIRS);
-        out.add(CHISELED_WAXED_COPPER_STAIRS);
-        out.add(CHISELED_WAXED_EXPOSED_COPPER_STAIRS);
-        out.add(CHISELED_WAXED_WEATHERED_COPPER_STAIRS);
-        out.add(CHISELED_WAXED_OXIDIZED_COPPER_STAIRS);
-        out.add(WAXED_COPPER_GRATING_STAIRS);
-        out.add(WAXED_EXPOSED_COPPER_GRATING_STAIRS);
-        out.add(WAXED_WEATHERED_COPPER_GRATING_STAIRS);
-        out.add(WAXED_OXIDIZED_COPPER_GRATING_STAIRS);
+        out.add(RAW_WAXED_COPPER_STAIR);
+        out.add(RAW_WAXED_EXPOSED_COPPER_STAIR);
+        out.add(RAW_WAXED_WEATHERED_COPPER_STAIR);
+        out.add(RAW_WAXED_OXIDIZED_COPPER_STAIR);
+        out.add(WAXED_COPPER_STAIR);
+        out.add(WAXED_EXPOSED_COPPER_STAIR);
+        out.add(WAXED_WEATHERED_COPPER_STAIR);
+        out.add(WAXED_OXIDIZED_COPPER_STAIR);
+        out.add(CHISELED_WAXED_COPPER_STAIR);
+        out.add(CHISELED_WAXED_EXPOSED_COPPER_STAIR);
+        out.add(CHISELED_WAXED_WEATHERED_COPPER_STAIR);
+        out.add(CHISELED_WAXED_OXIDIZED_COPPER_STAIR);
+        out.add(WAXED_COPPER_GRATE_STAIR);
+        out.add(WAXED_EXPOSED_COPPER_GRATE_STAIR);
+        out.add(WAXED_WEATHERED_COPPER_GRATE_STAIR);
+        out.add(WAXED_OXIDIZED_COPPER_GRATE_STAIR);
         /*
-        out.add(WAXED_COPPER_BULB_STAIRS);
-        out.add(WAXED_EXPOSED_COPPER_BULB_STAIRS);
-        out.add(WAXED_WEATHERED_COPPER_BULB_STAIRS);
-        out.add(WAXED_OXIDIZED_COPPER_BULB_STAIRS);
+        out.add(WAXED_COPPER_BULB_STAIR);
+        out.add(WAXED_EXPOSED_COPPER_BULB_STAIR);
+        out.add(WAXED_WEATHERED_COPPER_BULB_STAIR);
+        out.add(WAXED_OXIDIZED_COPPER_BULB_STAIR);
         */
         return out;
     }
     public static @NotNull ArrayList<DeferredBlock<StairBlock>> setCopperStairs() {
         ArrayList<DeferredBlock<StairBlock>> out = new ArrayList<>();
-        out.add(RAW_COPPER_STAIRS);
-        out.add(RAW_EXPOSED_COPPER_STAIRS);
-        out.add(RAW_WEATHERED_COPPER_STAIRS);
-        out.add(RAW_OXIDIZED_COPPER_STAIRS);
-        out.add(COPPER_STAIRS);
-        out.add(EXPOSED_COPPER_STAIRS);
-        out.add(WEATHERED_COPPER_STAIRS);
-        out.add(OXIDIZED_COPPER_STAIRS);
-        out.add(CHISELED_COPPER_STAIRS);
-        out.add(CHISELED_EXPOSED_COPPER_STAIRS);
-        out.add(CHISELED_WEATHERED_COPPER_STAIRS);
-        out.add(CHISELED_OXIDIZED_COPPER_STAIRS);
-        out.add(COPPER_GRATING_STAIRS);
-        out.add(EXPOSED_COPPER_GRATING_STAIRS);
-        out.add(WEATHERED_COPPER_GRATING_STAIRS);
-        out.add(OXIDIZED_COPPER_GRATING_STAIRS);
+        out.add(RAW_COPPER_STAIR);
+        out.add(RAW_EXPOSED_COPPER_STAIR);
+        out.add(RAW_WEATHERED_COPPER_STAIR);
+        out.add(RAW_OXIDIZED_COPPER_STAIR);
+        out.add(COPPER_STAIR);
+        out.add(EXPOSED_COPPER_STAIR);
+        out.add(WEATHERED_COPPER_STAIR);
+        out.add(OXIDIZED_COPPER_STAIR);
+        out.add(CHISELED_COPPER_STAIR);
+        out.add(CHISELED_EXPOSED_COPPER_STAIR);
+        out.add(CHISELED_WEATHERED_COPPER_STAIR);
+        out.add(CHISELED_OXIDIZED_COPPER_STAIR);
+        out.add(COPPER_GRATE_STAIR);
+        out.add(EXPOSED_COPPER_GRATE_STAIR);
+        out.add(WEATHERED_COPPER_GRATE_STAIR);
+        out.add(OXIDIZED_COPPER_GRATE_STAIR);
         /*
-        out.add(COPPER_BULB_STAIRS);
-        out.add(EXPOSED_COPPER_BULB_STAIRS);
-        out.add(WEATHERED_COPPER_BULB_STAIRS);
-        out.add(OXIDIZED_COPPER_BULB_STAIRS);
+        out.add(COPPER_BULB_STAIR);
+        out.add(EXPOSED_COPPER_BULB_STAIR);
+        out.add(WEATHERED_COPPER_BULB_STAIR);
+        out.add(OXIDIZED_COPPER_BULB_STAIR);
         */
         return out;
     }
@@ -1096,10 +1112,10 @@ public class creativeTabsArrayLists {
         out.add(CHISELED_WAXED_EXPOSED_COPPER_SLAB);
         out.add(CHISELED_WAXED_WEATHERED_COPPER_SLAB);
         out.add(CHISELED_WAXED_OXIDIZED_COPPER_SLAB);
-        out.add(WAXED_COPPER_GRATING_SLAB);
-        out.add(WAXED_EXPOSED_COPPER_GRATING_SLAB);
-        out.add(WAXED_WEATHERED_COPPER_GRATING_SLAB);
-        out.add(WAXED_OXIDIZED_COPPER_GRATING_SLAB);
+        out.add(WAXED_COPPER_GRATE_SLAB);
+        out.add(WAXED_EXPOSED_COPPER_GRATE_SLAB);
+        out.add(WAXED_WEATHERED_COPPER_GRATE_SLAB);
+        out.add(WAXED_OXIDIZED_COPPER_GRATE_SLAB);
         /*
         out.add(WAXED_COPPER_BULB_SLAB);
         out.add(WAXED_EXPOSED_COPPER_BULB_SLAB);
@@ -1122,10 +1138,10 @@ public class creativeTabsArrayLists {
         out.add(CHISELED_EXPOSED_COPPER_SLAB);
         out.add(CHISELED_WEATHERED_COPPER_SLAB);
         out.add(CHISELED_OXIDIZED_COPPER_SLAB);
-        out.add(COPPER_GRATING_SLAB);
-        out.add(EXPOSED_COPPER_GRATING_SLAB);
-        out.add(WEATHERED_COPPER_GRATING_SLAB);
-        out.add(OXIDIZED_COPPER_GRATING_SLAB);
+        out.add(COPPER_GRATE_SLAB);
+        out.add(EXPOSED_COPPER_GRATE_SLAB);
+        out.add(WEATHERED_COPPER_GRATE_SLAB);
+        out.add(OXIDIZED_COPPER_GRATE_SLAB);
         /*
         out.add(COPPER_BULB_SLAB);
         out.add(EXPOSED_COPPER_BULB_SLAB);
