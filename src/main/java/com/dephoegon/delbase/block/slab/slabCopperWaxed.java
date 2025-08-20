@@ -36,10 +36,10 @@ public class slabCopperWaxed {
     public static final DeferredBlock<SlabBlock> WAXED_WEATHERED_COPPER_SLAB = registerAid("waxed_weathered_copper_slab", WEATHERED_COPPER_SLAB, WAXED_WEATHERED_COPPER, WEATHERED.getOrder(), 17);
     public static final DeferredBlock<SlabBlock> WAXED_OXIDIZED_COPPER_SLAB = registerAid("waxed_oxidized_copper_slab", OXIDIZED_COPPER_SLAB, WAXED_OXIDIZED_COPPER, OXIDIZED.getOrder(), 18);
 
-    public static final DeferredBlock<SlabBlock> CHISELED_WAXED_COPPER_SLAB = registerAid("chiseled_waxed_copper_slab", CHISELED_COPPER_SLAB, WAXED_CHISELED_COPPER, UNAFFECTED.getOrder(), 25);
-    public static final DeferredBlock<SlabBlock> CHISELED_WAXED_EXPOSED_COPPER_SLAB = registerAid("chiseled_waxed_exposed_copper_slab", CHISELED_EXPOSED_COPPER_SLAB, WAXED_EXPOSED_CHISELED_COPPER, EXPOSED.getOrder(), 26);
-    public static final DeferredBlock<SlabBlock> CHISELED_WAXED_WEATHERED_COPPER_SLAB = registerAid("chiseled_waxed_weathered_copper_slab", CHISELED_WEATHERED_COPPER_SLAB, WAXED_WEATHERED_CHISELED_COPPER, WEATHERED.getOrder(), 27);
-    public static final DeferredBlock<SlabBlock> CHISELED_WAXED_OXIDIZED_COPPER_SLAB = registerAid("chiseled_waxed_oxidized_copper_slab", CHISELED_OXIDIZED_COPPER_SLAB, WAXED_OXIDIZED_CHISELED_COPPER, OXIDIZED.getOrder(), 28);
+    public static final DeferredBlock<SlabBlock> WAXED_CHISELED_COPPER_SLAB = registerAid("waxed_chiseled_copper_slab", CHISELED_COPPER_SLAB, WAXED_CHISELED_COPPER, UNAFFECTED.getOrder(), 25);
+    public static final DeferredBlock<SlabBlock> WAXED_CHISELED_EXPOSED_COPPER_SLAB = registerAid("waxed_chiseled_exposed_copper_slab", CHISELED_EXPOSED_COPPER_SLAB, WAXED_EXPOSED_CHISELED_COPPER, EXPOSED.getOrder(), 26);
+    public static final DeferredBlock<SlabBlock> WAXED_CHISELED_WEATHERED_COPPER_SLAB = registerAid("waxed_chiseled_weathered_copper_slab", CHISELED_WEATHERED_COPPER_SLAB, WAXED_WEATHERED_CHISELED_COPPER, WEATHERED.getOrder(), 27);
+    public static final DeferredBlock<SlabBlock> WAXED_CHISELED_OXIDIZED_COPPER_SLAB = registerAid("waxed_chiseled_oxidized_copper_slab", CHISELED_OXIDIZED_COPPER_SLAB, WAXED_OXIDIZED_CHISELED_COPPER, OXIDIZED.getOrder(), 28);
 
     public static final DeferredBlock<SlabBlock> WAXED_COPPER_GRATE_SLAB = registerAid("waxed_copper_grate_slab", COPPER_GRATE_SLAB, WAXED_COPPER_GRATE, UNAFFECTED.getOrder(), 35);
     public static final DeferredBlock<SlabBlock> WAXED_EXPOSED_COPPER_GRATE_SLAB = registerAid("waxed_exposed_copper_grate_slab", EXPOSED_COPPER_GRATE_SLAB, WAXED_EXPOSED_COPPER_GRATE, EXPOSED.getOrder(), 36);

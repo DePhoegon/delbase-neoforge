@@ -1,5 +1,5 @@
 {
-"parent": "minecraft:block/slab",
+"parent": "delbase:block/template/slab_copper",
 "textures": {
 "bottom": "minecraft:block/oxidized_copper",
 "top": "minecraft:block/oxidized_copper",

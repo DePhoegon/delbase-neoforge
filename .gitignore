@@ -30,6 +30,7 @@ run/downloads
 run/saves
 run/*.txt
 run/*.json
+run/*.log
 run/crash-reports
 run/servers.*
 runs

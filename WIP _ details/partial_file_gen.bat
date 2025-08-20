@@ -41,13 +41,13 @@ node .\delbase_json_aid.js waxed_exposed_copper_bulb 0 1 1 1 2 waxed_exposed_cop
 node .\delbase_json_aid.js waxed_weathered_copper_bulb 0 1 1 1 2 waxed_weathered_copper_bulb_block
 node .\delbase_json_aid.js waxed_oxidized_copper_bulb 0 1 1 1 2 waxed_oxidized_copper_bulb_block
 node .\delbase_json_aid.js cut copper 1 1 1 2 cut_copper_block
-node .\delbase_json_aid.js cut_exposed copper 1 1 1 2 cut_exposed_copper_block
-node .\delbase_json_aid.js cut_weathered copper 1 1 1 2 cut_weathered_copper_block
-node .\delbase_json_aid.js cut_oxidized copper 1 1 1 2 cut_oxidized_copper_block
-node .\delbase_json_aid.js cut_waxed copper 1 1 1 2 cut_waxed_copper_block
-node .\delbase_json_aid.js cut_waxed_exposed copper 1 1 1 2 cut_waxed_exposed_copper_block
-node .\delbase_json_aid.js cut_waxed_weathered copper 1 1 1 2 cut_waxed_weathered_copper_block
-node .\delbase_json_aid.js cut_waxed_oxidized copper 1 1 1 2 cut_waxed_oxidized_copper_block
+node .\delbase_json_aid.js exposed_cut copper 1 1 1 2 exposed_cut_copper_block
+node .\delbase_json_aid.js weathered_cut copper 1 1 1 2 weathered_cut_copper_block
+node .\delbase_json_aid.js oxidized_cut copper 1 1 1 2 oxidized_cut_copper_block
+node .\delbase_json_aid.js waxed_cut copper 1 1 1 2 waxed_cut_copper_block
+node .\delbase_json_aid.js waxed_exposed_cut copper 1 1 1 2 waxed_exposed_cut_copper_block
+node .\delbase_json_aid.js waxed_weathered_cut copper 1 1 1 2 waxed_weathered_cut_copper_block
+node .\delbase_json_aid.js waxed_oxidized_cut copper 1 1 1 2 waxed_oxidized_cut_copper_block
 node .\delbase_json_aid.js chiseled_tuff 0 1 1 2 2 chiseled_tuff_top chiseled_tuff
 node .\delbase_json_aid.js chiseled_tuff_bricks 0 1 1 2 2 chiseled_tuff_bricks_top chiseled_tuff_bricks
 node .\delbase_json_aid.js exposed copper 1 1 1 2 exposed_copper_block

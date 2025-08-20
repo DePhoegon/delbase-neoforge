@@ -36,10 +36,10 @@ public class stairCopperWaxed {
     public static final DeferredBlock<StairBlock> WAXED_WEATHERED_COPPER_STAIR = registerAid("waxed_weathered_copper_stair", WEATHERED_COPPER_STAIR, WEATHERED_COPPER, WEATHERED.getOrder(), 17);
     public static final DeferredBlock<StairBlock> WAXED_OXIDIZED_COPPER_STAIR = registerAid("waxed_oxidized_copper_stair", OXIDIZED_COPPER_STAIR, OXIDIZED_COPPER, OXIDIZED.getOrder(), 18);
 
-    public static final DeferredBlock<StairBlock> CHISELED_WAXED_COPPER_STAIR = registerAid("chiseled_waxed_copper_stair", CHISELED_COPPER_STAIR, WAXED_CHISELED_COPPER, UNAFFECTED.getOrder(), 25);
-    public static final DeferredBlock<StairBlock> CHISELED_WAXED_EXPOSED_COPPER_STAIR = registerAid("chiseled_waxed_exposed_copper_stair", CHISELED_EXPOSED_COPPER_STAIR, WAXED_EXPOSED_CHISELED_COPPER, EXPOSED.getOrder(), 26);
-    public static final DeferredBlock<StairBlock> CHISELED_WAXED_WEATHERED_COPPER_STAIR = registerAid("chiseled_waxed_weathered_copper_stair", CHISELED_WEATHERED_COPPER_STAIR, WAXED_WEATHERED_CHISELED_COPPER, WEATHERED.getOrder(), 27);
-    public static final DeferredBlock<StairBlock> CHISELED_WAXED_OXIDIZED_COPPER_STAIR = registerAid("chiseled_waxed_oxidized_copper_stair", CHISELED_OXIDIZED_COPPER_STAIR, WAXED_OXIDIZED_CHISELED_COPPER, OXIDIZED.getOrder(), 28);
+    public static final DeferredBlock<StairBlock> WAXED_CHISELED_COPPER_STAIR = registerAid("waxed_chiseled_copper_stair", CHISELED_COPPER_STAIR, WAXED_CHISELED_COPPER, UNAFFECTED.getOrder(), 25);
+    public static final DeferredBlock<StairBlock> WAXED_CHISELED_EXPOSED_COPPER_STAIR = registerAid("waxed_chiseled_exposed_copper_stair", CHISELED_EXPOSED_COPPER_STAIR, WAXED_EXPOSED_CHISELED_COPPER, EXPOSED.getOrder(), 26);
+    public static final DeferredBlock<StairBlock> WAXED_CHISELED_WEATHERED_COPPER_STAIR = registerAid("waxed_chiseled_weathered_copper_stair", CHISELED_WEATHERED_COPPER_STAIR, WAXED_WEATHERED_CHISELED_COPPER, WEATHERED.getOrder(), 27);
+    public static final DeferredBlock<StairBlock> WAXED_CHISELED_OXIDIZED_COPPER_STAIR = registerAid("waxed_chiseled_oxidized_copper_stair", CHISELED_OXIDIZED_COPPER_STAIR, WAXED_OXIDIZED_CHISELED_COPPER, OXIDIZED.getOrder(), 28);
 
     public static final DeferredBlock<StairBlock> WAXED_COPPER_GRATE_STAIR = registerAid("waxed_copper_grate_stair", COPPER_GRATE_STAIR, WAXED_COPPER_GRATE, UNAFFECTED.getOrder(), 35);
     public static final DeferredBlock<StairBlock> WAXED_EXPOSED_COPPER_GRATE_STAIR = registerAid("waxed_exposed_copper_grate_stair", EXPOSED_COPPER_GRATE_STAIR, WAXED_EXPOSED_COPPER_GRATE, EXPOSED.getOrder(), 36);

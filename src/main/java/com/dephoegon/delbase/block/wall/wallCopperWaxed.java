@@ -27,9 +27,9 @@ public class wallCopperWaxed {
     public static DeferredRegister.Blocks getWaxedWallCopperBLOCKS() { return BLOCKS; }
 
     public static final DeferredBlock<WallBlock> RAW_WAXED_COPPER_WALL = registerAid("raw_waxed_copper_wall", RAW_COPPER_WALL, RAW_COPPER_BLOCK, UNAFFECTED.getOrder(), 5);
-    public static final DeferredBlock<WallBlock> RAW_EXPOSED_WAXED_COPPER_WALL = registerAid("raw_exposed_waxed_copper_wall", RAW_EXPOSED_COPPER_WALL, RAW_COPPER_BLOCK, EXPOSED.getOrder(), 6);
-    public static final DeferredBlock<WallBlock> RAW_WEATHERED_WAXED_COPPER_WALL = registerAid("raw_weathered_waxed_copper_wall", RAW_WEATHERED_COPPER_WALL, RAW_COPPER_BLOCK, WEATHERED.getOrder(), 7);
-    public static final DeferredBlock<WallBlock> RAW_OXIDIZED_WAXED_COPPER_WALL = registerAid("raw_oxidized_waxed_copper_wall", RAW_OXIDIZED_COPPER_WALL, RAW_COPPER_BLOCK, OXIDIZED.getOrder(), 8);
+    public static final DeferredBlock<WallBlock> RAW_WAXED_EXPOSED_COPPER_WALL = registerAid("raw_waxed_exposed_copper_wall", RAW_EXPOSED_COPPER_WALL, RAW_COPPER_BLOCK, EXPOSED.getOrder(), 6);
+    public static final DeferredBlock<WallBlock> RAW_WAXED_WEATHERED_COPPER_WALL = registerAid("raw_waxed_weathered_copper_wall", RAW_WEATHERED_COPPER_WALL, RAW_COPPER_BLOCK, WEATHERED.getOrder(), 7);
+    public static final DeferredBlock<WallBlock> RAW_WAXED_OXIDIZED_COPPER_WALL = registerAid("raw_waxed_oxidized_copper_wall", RAW_OXIDIZED_COPPER_WALL, RAW_COPPER_BLOCK, OXIDIZED.getOrder(), 8);
 
     public static final DeferredBlock<WallBlock> WAXED_COPPER_WALL = registerAid("waxed_copper_wall", COPPER_WALL, COPPER_BLOCK, UNAFFECTED.getOrder(), 15);
     public static final DeferredBlock<WallBlock> WAXED_EXPOSED_COPPER_WALL = registerAid("waxed_exposed_copper_wall", EXPOSED_COPPER_WALL, EXPOSED_COPPER, EXPOSED.getOrder(), 16);
