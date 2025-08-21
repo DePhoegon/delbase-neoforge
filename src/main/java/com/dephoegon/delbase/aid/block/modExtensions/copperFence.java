@@ -2,13 +2,16 @@ package com.dephoegon.delbase.aid.block.modExtensions;
 
 import com.dephoegon.delbase.aid.block.fromBaseGameExtensions.fenceBlock;
 import com.dephoegon.delbase.aid.util.weatheringCopper;
+import net.minecraft.core.BlockPos;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import org.jetbrains.annotations.NotNull;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Optional;
 
 import static com.dephoegon.delbase.aid.util.weatherState.getStateByOrder;
@@ -32,17 +35,34 @@ public class copperFence extends fenceBlock implements weatheringCopper {
         this.mapOrder = MapOrder; // Set the unique map order
     }
 
+    protected void randomTick(@NotNull BlockState state, @NotNull ServerLevel level, @NotNull BlockPos pos, @NotNull RandomSource random) {
+        this.changeOverTime(state, level, pos, random);
+    }
+    public BlockState getPlacementState(@NotNull BlockState stateToCopy, @NotNull BlockState defaultStateToPlace) {
+        Boolean nState = stateToCopy.getValue(NORTH);
+        Boolean sState = stateToCopy.getValue(SOUTH);
+        Boolean eState = stateToCopy.getValue(EAST);
+        Boolean wState = stateToCopy.getValue(WEST);
+        Boolean wLogged = stateToCopy.getValue(WATERLOGGED);
+        return defaultStateToPlace.setValue(NORTH, nState).setValue(SOUTH, sState).setValue(EAST, eState).setValue(WEST, wState).setValue(WATERLOGGED, wLogged);
+    }
     public boolean isWaxed() { return this.isWaxed; }
     public int getOxidizedStage() { return this.oxidizedStage; }
     public int getMapOrder() { return this.mapOrder; }
     public int getMapOrder(DeferredBlock<? extends Block> thisBlock) { return this.getMapOrder(); }
-    public @NotNull Optional<BlockState> getNext(@NotNull BlockState blockState) { return this.getNextMod(getIntDeferredBlockMap().get(this.mapOrder)); }
+    public @NotNull Optional<BlockState> getNext(@NotNull BlockState blockState) { return this.getNextMod(getIntDeferredBlockMap().get(this.mapOrder), blockState); }
     public float getChanceModifier() { return this.getChanceModifier(getStateByOrder(this.oxidizedStage)); }
 
-    public List<DeferredBlock<? extends Block>> getWeatheredSetList() {
-        List<DeferredBlock<? extends Block>> outList = new ArrayList<>();
-        getFenceCopperBLOCKS().getEntries().forEach(entry -> outList.add((DeferredBlock<? extends Block>) entry));
-        getFenceWaxedCopperBLOCKS().getEntries().forEach(entry -> outList.add((DeferredBlock<? extends Block>) entry));
-        return outList;
+    public Map<Integer, DeferredBlock<? extends Block>> getIntDeferredBlockMap() {
+        Map<Integer, DeferredBlock<? extends Block>> intDeferredBlockMap = new HashMap<>(Map.of());
+        getFenceCopperBLOCKS().getEntries().forEach((block) -> {
+            copperFence copperFence = (copperFence) block.get();
+            intDeferredBlockMap.put(copperFence.mapOrder, (DeferredBlock<? extends Block>) block);
+        });
+        getFenceWaxedCopperBLOCKS().getEntries().forEach((block) -> {
+            copperFence copperFence = (copperFence) block.get();
+            intDeferredBlockMap.put(copperFence.mapOrder, (DeferredBlock<? extends Block>) block);
+        });
+        return intDeferredBlockMap;
     }
 }
